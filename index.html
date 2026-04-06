@@ -1,0 +1,2921 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Jurisvista LLP - Leading Law Firm in India</title>
+	<!-- Place favicon.ico in the root directory -->
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<!--All Css Here-->
+	<!-- Droid Font CSS-->
+	<link rel="stylesheet" href="css/droid.css">
+	<!-- Font Awesome CSS-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Animate CSS-->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Owl Carousel CSS-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+	<!-- Datepicker CSS-->
+	<link rel="stylesheet" href="css/jquery.datepicker.css">
+	<!-- Calendar CSS-->
+	<link rel="stylesheet" href="css/zabuto_calendar.css">
+	<!-- Meanmenu CSS-->
+	<!-- Venobox CSS-->
+	<link rel="stylesheet" href="css/venobox.css">
+	<!-- Bootstrap CSS-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="style.css">
+	<!-- Responsive CSS -->
+	<link rel="stylesheet" href="css/responsive.css">
+
+	 <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+	<!-- Modernizr Js -->
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	<style>
+
+		 /* Added sidebar navigation styles */
+		:root {
+			--primary-color: #254B9D;
+			--secondary-color: #019df0;
+			--dark-bg: #1a1a1a;
+			--sidebar-width: 280px;
+		}
+
+		/* Sidebar Styles */
+		.sidebar {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: var(--sidebar-width);
+			height: 100vh;
+			background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a70 100%);
+			box-shadow: 2px 0 15px rgba(37, 75, 157, 0.3);
+			z-index: 998;
+			overflow-y: auto;
+			padding-top: 80px;
+			transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			transform: translateX(-100%);
+		}
+
+		.sidebar.active {
+			transform: translateX(0);
+		}
+
+		.sidebar-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0);
+			z-index: 997;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+		}
+
+		.sidebar-overlay.active {
+			background: rgba(0, 0, 0, 0.7);
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.sidebar-nav {
+			list-style: none;
+			padding: 20px 0;
+			margin: 0;
+		}
+
+		.sidebar-nav li {
+			margin: 0;
+		}
+
+		.sidebar-nav a {
+			display: flex;
+			align-items: center;
+			padding: 18px 25px;
+			color: #ffffff;
+			text-decoration: none;
+			font-size: 15px;
+			font-weight: 600;
+			transition: all 0.3s ease;
+			border-left: 4px solid transparent;
+			position: relative;
+		}
+
+		.sidebar-nav a:hover {
+			background: rgba(255, 255, 255, 0.1);
+			border-left-color: var(--secondary-color);
+			padding-left: 35px;
+			color: var(--secondary-color);
+		}
+
+		.sidebar-nav a i {
+			margin-right: 15px;
+			font-size: 18px;
+			width: 25px;
+			text-align: center;
+		}
+
+		.sidebar-nav a.active {
+			background: rgba(255, 255, 255, 0.15);
+			border-left-color: var(--secondary-color);
+			color: var(--secondary-color);
+		}
+
+		/* Hamburger Menu Styles */
+		.sidebar-toggle {
+			display: none;
+			width: 50px;
+			height: 50px;
+			background: none;
+			border: none;
+			cursor: pointer;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			z-index: 999;
+			position: relative;
+		}
+
+		.sidebar-toggle span {
+			width: 28px;
+			height: 3px;
+			background: var(--primary-color);
+			margin: 4px 0;
+			transition: all 0.3s ease;
+			border-radius: 2px;
+			display: block;
+		}
+
+		.sidebar-toggle.active span:nth-child(1) {
+			transform: rotate(45deg) translate(8px, 8px);
+		}
+
+		.sidebar-toggle.active span:nth-child(2) {
+			opacity: 0;
+		}
+
+		.sidebar-toggle.active span:nth-child(3) {
+			transform: rotate(-45deg) translate(7px, -7px);
+		}
+
+		/* Header Top Area adjustment */
+		.header-bottom-area {
+			position: relative;
+			z-index: 100;
+		}
+
+		/* Main content wrapper */
+		body.sidebar-open {
+			overflow: hidden;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 984px) and (min-width: 768px) {
+			.sidebar-toggle {
+				display: flex;
+				position: absolute;
+				top: 50%;
+				left: 15px;
+				transform: translateY(-50%);
+				z-index: 1001;
+			}
+
+			.header-menu-area {
+				display: none;
+			}
+
+			.sidebar {
+				width: var(--sidebar-width);
+			}
+
+			.header-logo {
+				text-align: center;
+				position: relative;
+				padding-left: 60px;
+			}
+			
+			.header-bottom-area .row {
+				position: relative;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.sidebar-toggle {
+				display: flex;
+				position: absolute;
+				top: 50%;
+				left: 15px;
+				transform: translateY(-50%);
+				z-index: 1001;
+			}
+
+			.header-menu-area {
+				display: none;
+			}
+
+			.sidebar {
+				width: var(--sidebar-width);
+			}
+
+			.header-logo {
+				text-align: center;
+				position: relative;
+				padding-left: 60px;
+			}
+			
+			.header-bottom-area .row {
+				position: relative;
+			}
+		}
+
+		@media (max-width: 576px) {
+			:root {
+				--sidebar-width: 250px;
+			}
+
+			.sidebar-nav a {
+				padding: 15px 20px;
+				font-size: 14px;
+			}
+
+			.sidebar-nav a i {
+				margin-right: 12px;
+				font-size: 16px;
+			}
+		}
+
+		
+		/* Disclaimer overlay and modal styles */
+		.disclaimer-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.6);
+			display: none; /* hidden by default, shown via JS on first visit */
+			align-items: center;
+			justify-content: center;
+			z-index: 99999;
+			backdrop-filter: blur(4px);
+		}
+
+		.disclaimer-modal {
+			background: #fff;
+			border-radius: 12px;
+			box-shadow: 0 20px 60px rgba(37, 75, 157, 0.3);
+			max-width: 600px;
+			width: 90%;
+			max-height: 80vh;
+			overflow-y: auto;
+			animation: slideInUp 0.3s ease;
+		}
+
+		.disclaimer-header {
+			background: linear-gradient(135deg, #254B9D, #019df0);
+			color: #fff;
+			padding: 25px;
+			border-radius: 12px 12px 0 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.disclaimer-header h2 {
+			margin: 0;
+			font-size: 1.8rem;
+			font-weight: 700;
+		}
+
+		.disclaimer-close {
+			background: none;
+			border: none;
+			color: #fff;
+			font-size: 2rem;
+			cursor: pointer;
+			padding: 0;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: transform 0.2s ease;
+		}
+
+		.disclaimer-close:hover {
+			transform: scale(1.2);
+		}
+
+		.disclaimer-content {
+			padding: 30px;
+			color: #333;
+			font-size: 1rem;
+			line-height: 1.7;
+			font-family: 'Mada', sans-serif;
+		}
+
+		.disclaimer-content p { margin-bottom: 15px; }
+		.disclaimer-content ul li { margin-bottom: 10px; }
+
+		.disclaimer-footer {
+			padding: 20px 30px;
+			border-top: 1px solid #e0e0e0;
+			display: flex;
+			gap: 15px;
+			justify-content: flex-end;
+		}
+
+		.disclaimer-btn {
+			padding: 12px 28px;
+			border: none;
+			border-radius: 6px;
+			font-weight: 600;
+			font-size: 1rem;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+
+		.disclaimer-btn-agree {
+			background: linear-gradient(135deg, #254B9D, #019df0);
+			color: #fff;
+			box-shadow: 0 4px 15px rgba(37, 75, 157, 0.2);
+		}
+
+		.disclaimer-btn-agree:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(37, 75, 157, 0.3);
+		}
+
+		.disclaimer-btn-disagree {
+			background: #f0f0f0;
+			color: #333;
+			border: 2px solid #ccc;
+		}
+
+		.disclaimer-btn-disagree:hover {
+			background: #e0e0e0;
+			border-color: #999;
+		}
+
+		body.disclaimer-active { overflow: hidden; }
+
+		/* Added extensive custom animations and effects */
+		/* Updated Hero Slider Styles */
+		.hero-slider-section {
+			position: relative;
+			height: 80vh;
+			overflow: hidden;
+		}
+
+		.hero-slider-container {
+			height: 100%;
+		}
+
+		.hero-slide {
+			height: 80vh;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+
+		.hero-slide::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(255, 255, 255, 0.85);
+			z-index: 1;
+			width: 50%;
+		}
+
+		.hero-content {
+			position: relative;
+			z-index: 2;
+			height: 100%;
+			display: flex;
+			align-items: center;
+		}
+
+		.hero-text {
+			max-width: 600px;
+			text-align: left;
+		}
+
+		.hero-text h1 {
+			font-size: 3.5rem;
+			font-weight: 700;
+			color: #254B9D;
+			margin-bottom: 1.5rem;
+			line-height: 1.2;
+			font-family: 'Droid Serif', serif;
+		}
+
+		.hero-text h2 {
+			font-size: 2rem;
+			font-weight: 600;
+			color: #019df0;
+			margin-bottom: 1.5rem;
+			border-left: 4px solid #254B9D;
+			padding-left: 1rem;
+		}
+
+		.hero-text p {
+			font-size: 1.2rem;
+			color: #333;
+			margin-bottom: 2rem;
+			line-height: 1.6;
+		}
+
+		.hero-btn {
+			display: inline-block;
+			padding: 12px 30px;
+			background: linear-gradient(135deg, #254B9D, #019df0);
+			color: white;
+			border-radius: 5px;
+			font-weight: 600;
+			text-decoration: none;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 15px rgba(37, 75, 157, 0.2);
+		}
+
+		.hero-btn:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 6px 20px rgba(37, 75, 157, 0.3);
+			color: white;
+		}
+
+		/* Owl Carousel Navigation */
+		.hero-slider-container .owl-nav {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			transform: translateY(-50%);
+			display: flex;
+			justify-content: space-between;
+			padding: 0 20px;
+			z-index: 3;
+		}
+
+		.hero-slider-container .owl-nav button {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: rgba(37, 75, 157, 0.8) !important;
+			color: white !important;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s ease;
+		}
+
+		.hero-slider-container .owl-nav button:hover {
+			background: rgba(37, 75, 157, 1) !important;
+			transform: scale(1.1);
+		}
+
+		.hero-slider-container .owl-dots {
+			position: absolute;
+			bottom: 20px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			z-index: 3;
+		}
+
+		.hero-slider-container .owl-dots button span {
+			width: 12px;
+			height: 12px;
+			margin: 5px;
+			background: rgba(37, 75, 157, 0.5) !important;
+			transition: all 0.3s ease;
+		}
+
+		.hero-slider-container .owl-dots button.active span {
+			background: #254B9D !important;
+			transform: scale(1.2);
+		}
+
+		/* Animation Classes */
+		.animate-slide-in-left {
+			animation: slideInLeft 1s ease-out both;
+		}
+
+		.animate-fade-in-up {
+			animation: fadeInUp 1s ease-out 0.3s both;
+		}
+
+		.animate-fade-in-up-delay {
+			animation: fadeInUp 1s ease-out 0.6s both;
+		}
+
+		@keyframes slideInLeft {
+			from {
+				transform: translateX(-100px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeInUp {
+			from {
+				transform: translateY(30px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		/* Responsive Styles for Hero Slider */
+		@media (max-width: 1200px) {
+			.container {
+				max-width: 100%;
+				padding-left: 24px;
+				padding-right: 24px;
+			}
+		}
+		@media (max-width: 992px) {
+			.container {
+				max-width: 100%;
+				padding-left: 16px;
+				padding-right: 16px;
+			}
+			.header-menu-area ul.main-menu {
+				flex-direction: column;
+				gap: 0;
+			}
+			.feature-area .row {
+				flex-direction: column;
+			}
+			.about-area .row {
+				flex-direction: column;
+			}
+		}
+		@media (max-width: 768px) {
+			.hero-slider-section,
+			.hero-slide {
+				height: 60vh;
+			}
+			.hero-text h1 {
+				font-size: 2rem;
+			}
+			.hero-text h2 {
+				font-size: 1.2rem;
+			}
+			.hero-text p {
+				font-size: 1rem;
+			}
+			.header-bottom-area .row {
+				flex-direction: column;
+			}
+			.header-logo {
+				margin-bottom: 10px;
+			}
+			.header-menu-area {
+				width: 100%;
+				text-align: left;
+			}
+			.sidebar-toggle {
+				width: 44px;
+				height: 44px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			.sidebar {
+				width: var(--sidebar-width);
+			}
+			.main-menu {
+				flex-direction: column;
+				gap: 0;
+			}
+			.feature-area .row,
+			.about-area .row,
+			.timeline-area .row,
+			.service-area .row,
+			.fun-factor-area .row,
+			.testimonial-and-quote-area .row,
+			.footer-top-area .row {
+				flex-direction: column;
+			}
+			.feature-area .col-md-4,
+			.feature-area .col-md-8,
+			.about-area .col-md-5,
+			.about-area .col-md-7,
+			.timeline-area .col-md-6,
+			.timeline-area .col-lg-4,
+			.service-area .col-12,
+			.service-area .col-lg-4,
+			.service-area .col-lg-8,
+			.fun-factor-area .col,
+			.testimonial-and-quote-area .col-md-12,
+			.footer-top-area .col-md-6,
+			.footer-top-area .col-lg-3 {
+				width: 100%;
+				max-width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+		@media (max-width: 576px) {
+			.container {
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+			.hero-slider-section,
+			.hero-slide {
+				height: 40vh;
+			}
+			.hero-text h1 {
+				font-size: 1.3rem;
+			}
+			.hero-text h2 {
+				font-size: 1rem;
+			}
+			.sidebar-toggle {
+				width: 36px;
+				height: 36px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			.sidebar-nav a {
+				padding: 12px 12px;
+				font-size: 13px;
+			}
+			.sidebar-nav a i {
+				margin-right: 8px;
+				font-size: 14px;
+			}
+			.main-menu {
+				font-size: 13px;
+			}
+			.footer-top-area .row {
+				flex-direction: column;
+			}
+			.footer-top-area .col-md-6,
+			.footer-top-area .col-lg-3 {
+				width: 100%;
+				max-width: 100%;
+				margin-bottom: 16px;
+			}
+		}
+		/* ...existing code... */
+		.team-card:hover .team-overlay {
+			opacity: 1;
+		}
+
+		.team-social a {
+			display: inline-block;
+			margin: 0 10px;
+			color: #fff;
+			font-size: 20px;
+			transition: all 0.3s ease;
+			transform: translateY(20px);
+		}
+
+		.team-card:hover .team-social a {
+			transform: translateY(0);
+		}
+
+		.team-social a:hover {
+			transform: scale(1.3) rotate(360deg);
+		}
+
+		.team-content h3 {
+			transition: all 0.3s ease;
+		}
+
+		.team-card:hover .team-content h3 {
+			color: #019df0a5;
+			transform: translateX(10px);
+		}
+
+		.btn-learn-more {
+			transition: all 0.3s ease;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.btn-learn-more::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+			transition: left 0.5s ease;
+		}
+
+		.btn-learn-more:hover::before {
+			left: 100%;
+		}
+
+		.btn-learn-more:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+		}
+
+		/* Testimonial Animations */
+		.single-testimonial {
+			animation: slideInLeft 1s ease-out both;
+			transition: all 0.3s ease;
+		}
+
+		.single-testimonial:nth-child(odd) {
+			animation: slideInLeft 1s ease-out both;
+		}
+
+		.single-testimonial:nth-child(even) {
+			animation: slideInRight 1s ease-out both;
+		}
+
+		.single-testimonial:hover {
+			transform: translateX(10px);
+			background: rgba(255, 107, 53, 0.05);
+			padding: 20px;
+			border-radius: 10px;
+		}
+
+		.testimonial-content i {
+			animation: rotateIn 1s ease-out 0.5s both;
+		}
+
+		/* Force testimonials carousel to show only 1 item on ALL screen sizes */
+		.testimonials-carousel.owl-carousel {
+			overflow: hidden !important;
+			position: relative;
+			width: 100%;
+		}
+
+		.testimonials-carousel.owl-carousel .owl-stage-outer {
+			overflow: hidden !important;
+			position: relative;
+			width: 100% !important;
+		}
+
+		.testimonials-carousel.owl-carousel .owl-stage {
+			display: flex !important;
+			width: auto !important;
+			transition-timing-function: ease-in-out !important;
+			-webkit-transition: -webkit-transform 0.6s ease !important;
+			-moz-transition: -moz-transform 0.6s ease !important;
+			-ms-transition: -ms-transform 0.6s ease !important;
+			-o-transition: -o-transform 0.6s ease !important;
+			transition: transform 0.6s ease !important;
+		}
+
+		.testimonials-carousel.owl-carousel .owl-item {
+			width: 100% !important;
+			min-width: 100% !important;
+			max-width: 100% !important;
+			margin: 0 !important;
+			padding: 0 15px !important;
+			flex-shrink: 0 !important;
+			float: none !important;
+		}
+
+		.testimonials-carousel.owl-carousel .owl-item.active {
+			width: 100% !important;
+		}
+
+		/* Ensure only visible item takes space */
+		.testimonials-carousel.owl-carousel .owl-stage-outer {
+			max-width: 100%;
+		}
+
+		.testimonials-carousel .testimonial-card {
+			width: 100% !important;
+			max-width: 100% !important;
+			margin: 0 auto;
+			box-sizing: border-box;
+		}
+
+		@media (max-width: 768px) {
+			.testimonials-carousel.owl-carousel .owl-item {
+				padding: 0 10px !important;
+				width: 100% !important;
+				min-width: 100% !important;
+				max-width: 100% !important;
+			}
+		}
+
+		/* Blog Area Animations */
+		.latest-blog-area .section-title {
+			animation: fadeInDown 1s ease-out both;
+		}
+
+		/* Footer Animations */
+		.footer-container {
+			animation: fadeInUp 1s ease-out both;
+		}
+
+		.single-footer-widget {
+			animation: fadeInUp 0.8s ease-out both;
+		}
+
+		.single-footer-widget:nth-child(1) {
+			animation-delay: 0.2s;
+		}
+
+		.single-footer-widget:nth-child(2) {
+			animation-delay: 0.4s;
+		}
+
+		.single-footer-widget:nth-child(3) {
+			animation-delay: 0.6s;
+		}
+
+		.single-footer-widget:nth-child(4) {
+			animation-delay: 0.8s;
+		}
+
+
+
+		.footer-subscribe-form button {
+			transition: all 0.3s ease;
+		}
+
+		.footer-subscribe-form button:hover {
+			transform: scale(1.1) rotate(15deg);
+			background: #ff6b35;
+		}
+
+		.footer-menu ul li {
+			transition: all 0.3s ease;
+		}
+
+		.footer-menu ul li:hover {
+			transform: translateX(10px);
+		}
+
+		.footer-menu ul li a {
+			position: relative;
+			transition: all 0.3s ease;
+		}
+
+		.footer-menu ul li a::before {
+			content: '→';
+			position: absolute;
+			left: -20px;
+			opacity: 0;
+			transition: all 0.3s ease;
+		}
+
+		.footer-menu ul li:hover a::before {
+			opacity: 1;
+			left: -15px;
+		}
+
+		/* Scroll Animations */
+		.animate-on-scroll {
+			opacity: 0;
+			transform: translateY(50px);
+			transition: all 0.8s ease;
+		}
+
+		.animate-on-scroll.animated {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		/* Background Animations */
+		.bg-animate {
+			background-size: 120% 120%;
+			animation: backgroundMove 20s ease-in-out infinite;
+		}
+
+		@keyframes backgroundMove {
+
+			0%,
+			100% {
+				background-position: 0% 50%;
+			}
+
+			50% {
+				background-position: 100% 50%;
+			}
+		}
+
+		/* Hover Glow Effects */
+		.glow-on-hover {
+			transition: all 0.3s ease;
+		}
+
+		.glow-on-hover:hover {
+			box-shadow: 0 0 20px rgba(53, 191, 255, 0.666);
+			text-shadow: 0 0 10px rgba(53, 127, 255, 0.518);
+		}
+
+		/* Parallax Effect */
+		.parallax-element {
+			transition: transform 0.1s ease-out;
+		}
+
+		/* Custom Keyframes for additional animations */
+		@keyframes fadeInDown {
+			from {
+				transform: translateY(-50px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes wobble {
+			0% {
+				transform: translateX(0%);
+			}
+
+			15% {
+				transform: translateX(-25px) rotate(-5deg);
+			}
+
+			30% {
+				transform: translateX(20px) rotate(3deg);
+			}
+
+			45% {
+				transform: translateX(-15px) rotate(-3deg);
+			}
+
+			60% {
+				transform: translateX(10px) rotate(2deg);
+			}
+
+			75% {
+				transform: translateX(-5px) rotate(-1deg);
+			}
+
+			100% {
+				transform: translateX(0%);
+			}
+		}
+
+		/* Stagger animation delays for multiple elements */
+		.stagger-animation:nth-child(1) {
+			animation-delay: 0.1s;
+		}
+
+		.stagger-animation:nth-child(2) {
+			animation-delay: 0.2s;
+		}
+
+		.stagger-animation:nth-child(3) {
+			animation-delay: 0.3s;
+		}
+
+		.stagger-animation:nth-child(4) {
+			animation-delay: 0.4s;
+		}
+
+		.stagger-animation:nth-child(5) {
+			animation-delay: 0.5s;
+		}
+
+		.stagger-animation:nth-child(6) {
+			animation-delay: 0.6s;
+		}
+
+		/* Responsive animations */
+		@media (max-width: 768px) {
+			.team-card:hover {
+				transform: translateY(-10px);
+			}
+		}
+
+		/* Loading Animation */
+		.page-loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #111d1b;
+			z-index: 9999;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			animation: fadeOut 1s ease-in-out 2s forwards;
+		}
+
+		.loader-content {
+			text-align: center;
+			color: #fff;
+		}
+
+		.spinner {
+			width: 50px;
+			height: 50px;
+			border: 3px solid rgba(255, 255, 255, 0.3);
+			border-top: 3px solid #fff;
+			border-radius: 50%;
+			animation: spin 1s linear infinite;
+			margin: 0 auto 20px;
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes fadeOut {
+			to {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		/* Header Animations */
+		.header-top-area {
+			animation: slideDown 1s ease-out 0.5s both;
+		}
+
+		.header-bottom-area {
+			animation: slideDown 1s ease-out 0.7s both;
+		}
+
+		.header-logo img {
+			transition: all 0.3s ease;
+			animation: bounceIn 1s ease-out 1s both;
+		}
+
+		.header-logo img:hover {
+			transform: scale(1.1) rotate(5deg);
+		}
+
+		.main-menu li {
+			animation: fadeInUp 0.6s ease-out both;
+		}
+
+		.main-menu li:nth-child(1) {
+			animation-delay: 1.2s;
+		}
+
+		.main-menu li:nth-child(2) {
+			animation-delay: 1.3s;
+		}
+
+		.main-menu li:nth-child(3) {
+			animation-delay: 1.4s;
+		}
+
+		.main-menu li:nth-child(4) {
+			animation-delay: 1.5s;
+		}
+
+		.main-menu li:nth-child(5) {
+			animation-delay: 1.6s;
+		}
+
+		.main-menu li:nth-child(6) {
+			animation-delay: 1.7s;
+		}
+
+		.main-menu a {
+			position: relative;
+			transition: all 0.3s ease;
+			overflow: hidden;
+		}
+
+		.main-menu a::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: -100%;
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(90deg, #006aff, #001d7b);
+			transition: left 0.3s ease;
+		}
+
+		.main-menu a:hover::before {
+			left: 0;
+		}
+
+		.main-menu a:hover {
+			transform: translateY(-2px);
+			color: #019df0a5;
+		}
+
+		.social-link {
+			transition: all 0.3s ease;
+			display: inline-block;
+		}
+
+		.social-link:hover {
+			transform: translateY(-3px) scale(1.2);
+			color: #019df0a5;
+		}
+
+		/* Slider Area Animations */
+		.hero-content .title h1 {
+			animation: slideInLeft 1s ease-out 0.5s both;
+		}
+
+		.hero-content .title h2 {
+			animation: slideInLeft 1s ease-out 0.7s both;
+		}
+
+		.hero-content .description p {
+			animation: fadeInUp 0.8s ease-out both;
+		}
+
+		.hero-content .description p:nth-child(1) {
+			animation-delay: 0.9s;
+		}
+
+		.hero-content .description p:nth-child(2) {
+			animation-delay: 1.1s;
+		}
+
+		.hero-content .description p:nth-child(3) {
+			animation-delay: 1.3s;
+		}
+
+		.hero-content a {
+			animation: pulse 2s infinite, fadeInUp 1s ease-out 1.5s both;
+			transition: all 0.3s ease;
+		}
+
+		.hero-content a:hover {
+			transform: translateY(-3px) scale(1.05);
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+		}
+
+		.hero-img img {
+			animation: float 3s ease-in-out infinite, fadeInRight 1s ease-out 0.8s both;
+			transition: all 0.3s ease;
+		}
+
+		.hero-img img:hover {
+			transform: scale(1.05) rotate(2deg);
+		}
+
+		@keyframes slideInLeft {
+			from {
+				transform: translateX(-100px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes slideInRight {
+			from {
+				transform: translateX(100px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeInRight {
+			from {
+				transform: translateX(50px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes pulse {
+
+			0%,
+			100% {
+				transform: scale(1);
+			}
+
+			50% {
+				transform: scale(1.05);
+			}
+		}
+
+		@keyframes float {
+
+			0%,
+			100% {
+				transform: translateY(0px);
+			}
+
+			50% {
+				transform: translateY(-20px);
+			}
+		}
+
+		/* Feature Area Animations */
+		.section-title {
+			animation: zoomIn 1s ease-out both;
+		}
+
+		.single-feature {
+			transition: all 0.3s ease;
+			animation: fadeInUp 0.8s ease-out both;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.single-feature:nth-child(1) {
+			animation-delay: 0.2s;
+		}
+
+		.single-feature:nth-child(2) {
+			animation-delay: 0.4s;
+		}
+
+		.single-feature:nth-child(3) {
+			animation-delay: 0.6s;
+		}
+
+		.single-feature:nth-child(4) {
+			animation-delay: 0.8s;
+		}
+
+		.single-feature::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(53, 154, 255, 0.1), transparent);
+			transition: left 0.5s ease;
+		}
+
+		.single-feature:hover::before {
+			left: 100%;
+		}
+
+		@keyframes zoomIn {
+			from {
+				transform: scale(0.8);
+				opacity: 0;
+			}
+
+			to {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		/* About Area Animations */
+		.about-img img {
+			animation: rotateIn 1s ease-out both;
+			transition: all 0.3s ease;
+		}
+
+		.about-img img:hover {
+			transform: scale(1.1);
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+		}
+
+		.about-content span {
+			animation: slideInRight 1s ease-out 0.3s both;
+		}
+
+		.about-content h1 {
+			animation: slideInRight 1s ease-out 0.5s both;
+		}
+
+		.about-content h5 {
+			animation: slideInRight 1s ease-out 0.7s both;
+		}
+
+		.about-content p {
+			animation: fadeInUp 1s ease-out 0.9s both;
+		}
+
+		.author-signeture img {
+			animation: bounceIn 1s ease-out 1.2s both;
+		}
+
+		@keyframes rotateIn {
+			from {
+				transform: rotate(-180deg) scale(0);
+				opacity: 0;
+			}
+
+			to {
+				transform: rotate(0deg) scale(1);
+				opacity: 1;
+			}
+		}
+
+		/* Team Area Animations */
+		.team-card {
+			transition: all 0.3s ease;
+		}
+
+		.team-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+		}
+
+		.team-photo img {
+			transition: all 0.3s ease;
+		}
+
+		.team-card:hover .team-photo img {
+			transform: scale(1.1);
+		}
+
+		.team-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(255, 107, 53, 0.9);
+			opacity: 0;
+			transition: all 0.3s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.team-slider .owl-stage {
+			display: flex;
+			align-items: stretch;
+		}
+
+		.team-slider .owl-item {
+			display: flex;
+			height: auto;
+			padding: 0 12px;
+		}
+
+		.single-team.team-card {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 18px;
+			padding: 24px;
+			background: rgba(7, 21, 41, 0.8);
+			border-radius: 12px;
+			width: 100%;
+			border-top: 30px solid #019df0a5;
+			transition: all .3s ease;
+		}
+
+		.single-team.team-card:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+		}
+
+		.team-photo {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+
+		.team-photo img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: .5s;
+		}
+
+		.single-team.team-card:hover .team-photo img {
+			transform: scale(1.05);
+			border-color: #019df0a5;
+		}
+
+		.team-photo .team-overlay {
+			position: absolute;
+			inset: 0;
+			background: rgba(0, 0, 0, 0.35);
+			border-radius: 50%;
+			opacity: 0;
+			transition: opacity .25s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.team-photo:hover .team-overlay {
+			opacity: 1;
+		}
+
+		.team-content {
+			flex: 1 1 auto;
+			width: 100%;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.team-info {
+			margin-top: 6px;
+			margin-bottom: 6px;
+		}
+
+		.team-content h2,
+		.team-content h3 {
+			margin: 0 0 6px;
+			font-size: 22px;
+			color: #fff;
+		}
+
+		.team-content h5 {
+			margin: 0 0 10px;
+			color: #e9ecef;
+			font-weight: 600;
+		}
+
+		.team-description p {
+			margin: 0 0 12px;
+			color: #e9ecef;
+			line-height: 1.6;
+			max-width: 520px;
+		}
+
+		.team-action {
+			padding-bottom: 8px;
+		}
+
+		.team-social {
+			display: flex;
+			gap: 10px;
+		}
+
+		.team-social .social-link {
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			background: #fff;
+			color: #333;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			transition: background .2s ease, color .2s ease;
+		}
+
+		.team-social .social-link:hover {
+			background: #0d6efd;
+			color: #fff;
+		}
+
+		/* Override legacy team section styles from style.css */
+		.single-team.team-card .team-content {
+			margin-left: 0 !important;
+		}
+
+		.single-team.team-card .team-content>p {
+			max-width: none !important;
+		}
+
+		.btn.btn-learn-more {
+			padding: 8px 14px;
+			border-radius: 8px;
+			background: #0d6efd;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 600;
+			display: inline-block;
+		}
+
+		.btn.btn-learn-more:hover {
+			background: #0b5ed7;
+			color: #fff;
+		}
+
+		@media (max-width: 575.98px) {
+			.single-team.team-card {
+				padding: 20px;
+				gap: 16px;
+				flex-direction: column;
+				text-align: center;
+			}
+
+			.team-photo {
+				width: 160px;
+				height: 250px;
+			}
+
+			.team-content {
+				text-align: center;
+			}
+		}
+
+		.brand-active .single-brand {
+			padding: 10px;
+			/* space around each brand */
+		}
+
+		.brand-active img {
+			max-height: 150px;
+			/* keeps logos uniform height */
+			object-fit: contain;
+		}
+
+		.brand-active .single-brand img {
+			width: 60px;
+			/* Set the desired width */
+			height: 60px;
+			/* Set the desired height */
+			border-radius: 50%;
+			/* Make the image circular */
+			object-fit: cover;
+			/* Ensure the image covers the area without distortion */
+		}
+
+		.bg-animate {
+			background-size: 120% 120%;
+			animation: backgroundMove 20s ease-in-out infinite;
+		}
+
+		@keyframes backgroundMove {
+
+			0%,
+			100% {
+				background-position: 0% 50%;
+			}
+
+			50% {
+				background-position: 100% 50%;
+			}
+		}
+
+		/* Remove persistent underlines from all links (keep hover effects) */
+		a,
+		a:link,
+		a:visited {
+			text-decoration: none;
+		}
+
+		/* Explicitly ensure header, nav, and footer links have no default underline */
+		.header-top-left a,
+		.header-top-right a,
+		.main-menu a,
+		.footer-menu a,
+		.footer-tweet a,
+		.contact-info a,
+		.footer-container a {
+			text-decoration: none;
+		}
+
+		/* Keep nav hover underline animation only via ::before bar */
+		.main-menu a:hover {
+			text-decoration: none;
+		}
+
+		/* Additional keyframes for header animations */
+		@keyframes slideDown {
+			from {
+				transform: translateY(-100%);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes slideInUp {
+			from {
+				transform: translateY(50px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeInUp {
+			from {
+				transform: translateY(30px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes bounceIn {
+			0% {
+				transform: scale(0.3);
+				opacity: 0;
+			}
+
+			50% {
+				transform: scale(1.05);
+			}
+
+			70% {
+				transform: scale(0.9);
+			}
+
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
+		@media (max-width: 576px) {
+  .about-content .bio-block {
+    padding: 16px !important;
+    line-height: 1.6 !important;
+  }
+  .about-content .bio-block p {
+    text-align: left !important; /* overrides text-justify gaps on small screens */
+    margin-bottom: 8px !important;
+  }
+  .about-content .bio-block h4 {
+    margin-top: 16px !important;
+    font-size: 1.4rem !important;
+  }
+}
+	</style>
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+	<!-- Disclaimer Modal - first visit only -->
+	<div id="disclaimerOverlay" class="disclaimer-overlay">
+		<div class="disclaimer-modal" role="dialog" aria-modal="true" aria-labelledby="disclaimerTitle">
+			<div class="disclaimer-header">
+				<h2 id="disclaimerTitle">Disclaimer</h2>
+				<button id="disclaimerClose" class="disclaimer-close" aria-label="Close Disclaimer">&times;</button>
+			</div>
+			<div class="disclaimer-content">
+				<p><strong>Welcome to Jurisvista LLP</strong></p>
+				<p>
+					This website contains general information about our legal services and is intended for informational purposes only. The information provided on this website does not constitute legal advice and should not be relied upon as such. By accessing this website, you acknowledge that:
+				</p>
+				<ul style="margin-left: 20px; line-height: 1.8;">
+					<li>The content is not a substitute for professional legal advice</li>
+					<li>No attorney-client relationship is established by accessing this website</li>
+					<li>We do not guarantee the accuracy or completeness of the information</li>
+					<li>Your use of this website is at your own risk</li>
+				</ul>
+				<p>
+					If you do not agree with these terms and wish to proceed, you will be redirected away from this site. Do you agree to continue?
+				</p>
+			</div>
+			<div class="disclaimer-footer">
+				<button id="disclaimerAgree" class="disclaimer-btn disclaimer-btn-agree">I Agree</button>
+				<button id="disclaimerDisagree" class="disclaimer-btn disclaimer-btn-disagree">I Disagree</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Added page loader with animation -->
+	<div class="page-loader">
+		<div class="loader-content">
+			<div class="spinner"></div>
+			<h3>Loading...</h3>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<!--Header Area Start-->
+		<header>
+			<div class="header-container">
+				<!--Header Top Area Start-->
+				<div class="header-top-area default-bg">
+					<div class="container">
+						<div class="row row-75">
+							<div class="header-top-wrap col-12">
+								<div class="row">
+									<!--Header Top Left Area Start-->
+									<div class="col-md-4 col-xl-3">
+										<div class="header-top-left">
+											<p class="glow-on-hover">CALL US : <a href="#"> +0120 4961761</a></p>
+										</div>
+									</div>
+									<!--Header Top Left Area End-->
+									<!--Header Top Middle Area Start-->
+									<div class="col-md-4 col-xl-6">
+										<div class="header-top-middle text-center">
+											<ul class="social-link">
+												<li><a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+												</li>
+												<li><a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+												</li>
+												<li><a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+												</li>
+												<li><a href="#" class="social-link"><i
+															class="fa-brands fa-google"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									<!--Header Top Middle Area End-->
+									<!--Header Top Right Area Start-->
+									<div class="col-md-4 col-xl-3">
+										<div class="header-top-right">
+											<p class="glow-on-hover">MAIL US :<a
+													href="mailto:info@jurisvista.in">info@jurisvista.in</a></p>
+										</div>
+									</div>
+									<!--Header Top Right Area End-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Header Top Area End-->
+				<!--Header Bottom Area Start-->
+				<div class="header-bottom-area header-sticky">
+					<div class="container">
+						<div class="row ">
+							<!--Header Logo Start-->
+							<div class="col-md-3">
+								<div class="header-logo">
+									<!--Sidebar Toggle Button-->
+									<button class="sidebar-toggle" id="sidebarToggle">
+										<span></span>
+										<span></span>
+										<span></span>
+									</button>
+									<a href="index.html"><img src="img/bg/logojv4.png"
+											style="max-width: 180px; min-height: 60px;" alt=""></a>
+								</div>
+							</div>
+							<!--Header Logo End-->
+							<!--Header Menu Start-->
+							<div class="col-md-9">
+								<div class="header-menu-area text-right">
+									<nav>
+										<ul class="main-menu">
+											<li class="active"><a href="index.html" class="nav-link-bold">HOME</a>
+											</li>
+											<li><a href="about.html" class="nav-link-bold">ABOUT</a></li>
+											<li><a href="team.html" class="nav-link-bold">TEAM</a></li>
+											<li><a href="service.html" class="nav-link-bold">PRACTICE AREA</a></li>
+											<li><a href="blog.html" class="nav-link-bold">NEWS LETTER</a>
+
+											</li>
+											<li><a href="careers.html" class="nav-link-bold">CAREERS</a></li>
+											<li><a href="contact.html" class="nav-link-bold">CONTACT</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<!--Header Menu End-->
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<!--Mobile Menu Area Start-->
+								<div class="mobile-menu d-lg-none d-xl-none"></div>
+								<!--Mobile Menu Area End-->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--Header Bottom Area End-->
+			</div>
+		</header>
+		
+		<!--Sidebar Overlay-->
+		<div class="sidebar-overlay" id="sidebarOverlay"></div>
+		
+		<!--Sidebar Navigation-->
+		<nav class="sidebar" id="sidebar">
+			<ul class="sidebar-nav">
+				<li><a href="index.html" class="nav-link active"><i class="fa fa-home"></i> HOME</a></li>
+				<li><a href="about.html" class="nav-link"><i class="fa fa-info-circle"></i> ABOUT</a></li>
+				<li><a href="team.html" class="nav-link"><i class="fa fa-users"></i> TEAM</a></li>
+				<li><a href="service.html" class="nav-link"><i class="fa fa-briefcase"></i> PRACTICE AREA</a></li>
+				<li><a href="blog.html" class="nav-link"><i class="fa fa-newspaper-o"></i> NEWS LETTER</a></li>
+				<li><a href="careers.html" class="nav-link"><i class="fa fa-graduation-cap"></i> CAREERS</a></li>
+				<li><a href="contact.html" class="nav-link"><i class="fa fa-envelope"></i> CONTACT</a></li>
+			</ul>
+		</nav>
+		<!--Header Area End-->
+
+		<!--Hero Slider Section Start-->
+		<section class="hero-slider-section">
+			<div class="hero-slider-container owl-carousel owl-theme">
+				<!-- Slide 1 -->
+				<div class="hero-slide" style="background-image: url('img/bg/hd3.jpg')">
+					<div class="container h-100">
+						<div class="hero-content">
+							<div class="hero-text">
+								<h1 class="animate-slide-in-left">JURISVISTA LLP</h1>
+								<h2 class="animate-fade-in-up">Justice Delayed Justice Denied</h2>
+								<p class="animate-fade-in-up-delay">Full-service Indian law firm combining deep legal
+									expertise with innovative, client-centric solutions.</p>
+								<a href="about.html" class="hero-btn animate-fade-in-up-delay">Learn More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide 2 -->
+				<div class="hero-slide" style="background-image: url('img/bg/hd1.jpg')">
+					<div class="container h-100">
+						<div class="hero-content">
+							<div class="hero-text">
+								<h1 class="animate-slide-in-left">LEGAL EXCELLENCE</h1>
+								<h2 class="animate-fade-in-up">Trusted Advisors</h2>
+								<p class="animate-fade-in-up-delay">Trusted advisors helping clients navigate
+									complexities with clarity, strength, and vision.</p>
+								<a href="service.html" class="hero-btn animate-fade-in-up-delay">Our Services</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide 3 -->
+				<div class="hero-slide" style="background-image: url('img/bg/hd2.jpg')">
+					<div class="container h-100">
+						<div class="hero-content">
+							<div class="hero-text">
+								<h1 class="animate-slide-in-left">NATIONWIDE PRESENCE</h1>
+								<h2 class="animate-fade-in-up">Strategic Offices</h2>
+								<p class="animate-fade-in-up-delay">Strategic offices in Delhi NCR and Mumbai, serving
+									clients nationwide with comprehensive legal solutions.</p>
+								<a href="contact.html" class="hero-btn animate-fade-in-up-delay">Contact Us</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Hero Slider Section End-->
+
+		<!--Slider Area Start-->
+		<div class="slider-area">
+			<div class="single-slider bg-animate" style="background-image: url(img/slider/bgimg.jpg)">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-md-8 col-xl-6">
+							<div class="hero-content d-block">
+								<div class="title">
+									<h1>JURISVISTA LLP</h1>
+									<h2>Advocates & Solicitors</h2>
+								</div>
+								<div class="description text-justify">
+									<p>Jurisvista LLP, Advocates & Solicitors, is a full-service, multi-jurisdictional
+										Indian law firm founded in 2025. Our roots trace back to the established legacy
+										of G.S. Gangwar & Associates (Founded in 2002). This transition combines decades
+										of established expertise with a renewed vision for innovative, client-centric
+										solutions driven by integrity, professionalism, and strategic thinking.</p>
+									<p><strong>Our offices:</strong> Strategically located in Delhi NCR and Mumbai, and
+										an extensive nationwide network, our team offers seamless legal services and a
+										thorough understanding of India's complex legal and business environment.</p>
+									<p><strong>Multi-jurisdictional law firm:</strong> We serve a wide spectrum of
+										clients from individuals and start-ups to large corporations and multinational
+										enterprises providing tailored, practical, and sustainable legal solutions
+										across diverse sectors.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-xl-6">
+							<div class="hero-img img-full mt-30" data-wow-duration="1.5s"
+								style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInUp;">
+								<img src="img/bg/statue.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Slider Area End-->
+
+		<!--Feature Area Start-->
+	<div class="feature-area pt-15 pb-20">
+			<div class="container">
+				<div class="row  align-items-center text-justify">
+					<div class="col-md-4">
+						<!--Section Title Start-->
+						<div class="section-title feature-section-title">
+							<h2>Why you <br> <span>Choose</span> us?</h2>
+							<p>Choosing a law firm shouldn't be complicated. Here's what makes us the right partner for
+								you:</p>
+						</div>
+						<!--Section Title End-->
+					</div>
+					<div class="col-md-8">
+						<div class="row">
+							<div class="col-md-6">
+								<!--Single Feature Start-->
+								<div class="single-feature">
+									<h2>Seamless Service Across India</h2>
+									<p>Whether your needs are in Delhi NCR, Mumbai, or anywhere else in India, we've got
+										you covered. Our main offices and extensive network ensure you get reliable,
+										unified legal support nationwide.</p>
+								</div>
+								<!--Single Feature End-->
+							</div>
+							<div class="col-md-6">
+								<!--Single Feature Start-->
+								<div class="single-feature">
+									<h2>You Get Our Full Attention</h2>
+									<p>We believe every client matters. Whether you're an individual or a major
+										corporation, you receive the same high level of attention, detailed focus, and
+										tailored strategy. Your goal is our priority.</p>
+								</div>
+								<!--Single Feature End-->
+							</div>
+							<div class="col-md-6">
+								<!--Single Feature Start-->
+								<div class="single-feature">
+									<h2>End-to-End Legal Solutions</h2>
+									<p>From drafting to litigation to enforcement, we provide comprehensive legal
+										services across diverse sectors and practice areas.</p>
+								</div>
+								<!--Single Feature End-->
+							</div>
+							<div class="col-md-6">
+								<!--Single Feature Start-->
+								<div class="single-feature">
+									<h2>Experienced Team</h2>
+									<p>A network of senior advocates, corporate advisors, and young innovators with over
+										30 years of combined professional expertise.</p>
+								</div>
+								<!--Single Feature End-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Feature Area End-->
+
+		<!--About Area Start-->
+		<div class="about-area"
+			style="background: linear-gradient(135deg, aliceblue 0%, #f0f8ff 100%); padding: 20px 0;">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-lg-10">
+						<div class="about-wrapper"
+							style="background: rgba(255,255,255,0.95); border-radius: 20px; box-shadow: 0 20px 40px rgba(37, 75, 157, 0.1); padding: 20px 40px; border: 1px solid rgba(37, 75, 157, 0.1);">
+							<div class="row align-items-center">
+								<div class="col-md-5 text-center mb-4 mb-md-0">
+									<div class="about-img animate-on-scroll" style="position: relative;">
+										<!-- Modern image container with geometric accent -->
+										<div style="position: relative; display: inline-block;">
+											<div
+												style="position: absolute; top: -15px; right: -15px; width: 60%; height: 60%; background: linear-gradient(135deg, #254B9D, #019df0); border-radius: 15px; z-index: 0;">
+											</div>
+											<img src="img/team/GSGangwarSelf.png"
+												style="border-radius: 15px; width: 180px; height: 240px; object-fit: cover; position: relative; z-index: 1; box-shadow: 0 10px 25px rgba(0,0,0,0.1);"
+												alt="G. S. Gangwar">
+										</div>
+										<!-- Accent element -->
+										<div
+											style="position: absolute; bottom: -10px; left: 10%; width: 80%; height: 8px; background: linear-gradient(90deg, #254B9D, #019df0); border-radius: 4px;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-7">
+									<!-- Restructured content: moved name to bottom, enhanced overview styling -->
+									<div class="about-content animate-on-scroll text-justify">
+
+
+										<!-- Biography block: wrapper keeps the visual styling while maintaining valid HTML -->
+										<div class="bio-block" style="color: #444; font-size: 1.05rem; line-height: 1.9; margin-bottom: 30px; font-family: 'Mada', sans-serif; background: linear-gradient(135deg, rgba(1, 157, 240, 0.05), rgba(37, 75, 157, 0.05)); padding: 25px; border-left: 4px solid #019df0; border-radius: 8px; box-shadow: 0 4px 12px rgba(37, 75, 157, 0.08);">
+											<p style="margin: 0;" class="text-justify">
+												Mr. G. S. Gangwar is the Founder of Jurisvista LLP and a distinguished advocate with decades of experience in litigation, arbitration, and corporate advisory since 2002. His leadership and vision have been the cornerstone of the firm's growth. Known for his strategic thinking and deep understanding of complex disputes, he has successfully represented clients before the Supreme Court of India, High Courts, and multiple Tribunals across the country.
+											</p>
+											<h4 style="color: #254B9D; font-size: 2rem; font-weight: 700; margin-top: 30px; margin-bottom: 0; font-family: 'Droid Serif', serif;">
+												G. S. Gangwar
+											</h4>
+										</div>
+
+										
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--About Area End-->
+
+		<!--Timeline Area Start-->
+
+		<!--Timeline Area End-->
+
+		<!--Service Area Start-->
+
+		<!--Service Area End-->
+
+		<!--Fun Factor Area Start-->
+
+		<!--Fun Factor Area End-->
+
+		<!--Testimonial And Quote Area Start-->
+		<div class="testimonial-and-quote-area pt-0 pb-95 text-justify" style="background-color: aliceblue;">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-12">
+						<div class="testimonial-area">
+							<div class="row">
+								<div class="col-12">
+									<!--Section Title Start-->
+									<div class="section-title text-center mt-10 mb-15">
+										<i class="fa fa-gavel" style="color:#2E4A98; font-size:40px;"></i>
+										<h4>Testimonials</h4>
+										<h2>Client Reviews</h2>
+										<p>We take pride in our growing list of satisfied clients who value our
+											client-first approach, personalized strategies, efficient dispute
+											resolution, and ethical and transparent practice.</p>
+									</div>
+									<!--Section Title End-->
+								</div>
+							</div>
+							<!-- Testimonials carousel with Owl Carousel -->
+							<div class="row">
+								<div class="col-12">
+									<div class="testimonials-carousel owl-carousel owl-theme"
+										style="margin-bottom: 50px;">
+										<!--Single Testimonial Start-->
+										<div class="testimonial-card"
+											style="background: rgba(255,255,255,0.95); border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(46, 74, 152, 0.1); border-left: 5px solid #2E4A98; transition: all 0.3s ease; position: relative;">
+
+											<div class="testimonial-content" style="margin-bottom: 20px;">
+												<p
+													style="font-style: italic; color: #333; line-height: 1.6; margin-bottom: 0; font-size: 16px;">
+													"Jurisvista LLP (Erstwhile G.S Gangwar & Associates) has been a trusted partner in handling our legal matters with unmatched professionalism. Their team combines deep legal expertise with practical business understanding, which makes them stand apart. We value their responsiveness and strategic advice in complex disputes.
+"
+												</p>
+											</div>
+											<div class="testimonial-author"
+												style="border-top: 2px solid #f0f0f0; padding-top: 15px;">
+												<h5
+													style="color: #2E4A98; font-weight: 600; margin-bottom: 5px; font-size: 16px;">
+													— Ashish Pandey, General Counsel
+
+												</h5>
+												<span style="color: #666; font-size: 14px;">Luminous Power Technologies Pvt Ltd
+												</span>
+											</div>
+										</div>
+										<!--Single Testimonial End-->
+
+										<!--Single Testimonial Start-->
+										<div class="testimonial-card"
+											style="background: rgba(255,255,255,0.95); border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(46, 74, 152, 0.1); border-left: 5px solid #019df0; transition: all 0.3s ease; position: relative;">
+
+											<div class="testimonial-content" style="margin-bottom: 20px;">
+												<p
+													style="font-style: italic; color: #333; line-height: 1.6; margin-bottom: 0; font-size: 16px;">
+													"
+The lawyers at Jurisvista LLP understand the agricultural and chemical industry's unique challenges. Their ability to provide clear solutions and quick resolutions has been invaluable to our company. We are confident knowing that our legal interests are in capable hands."
+												</p>
+											</div>
+											<div class="testimonial-author"
+												style="border-top: 2px solid #f0f0f0; padding-top: 15px;">
+												<h5
+													style="color: #019df0; font-weight: 600; margin-bottom: 5px; font-size: 16px;">
+													— Rajesh Aggarwal</h5>
+												<span style="color: #666; font-size: 14px;">Managing Director, Krishi Rasayan Export Pvt Ltd.
+													Ltd.
+												</span>
+											</div>
+										</div>
+										<!--Single Testimonial End-->
+
+										<!--Single Testimonial Start-->
+										<div class="testimonial-card"
+											style="background: rgba(255,255,255,0.95); border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(46, 74, 152, 0.1); border-left: 5px solid #2E4A98; transition: all 0.3s ease; position: relative;">
+
+											<div class="testimonial-content" style="margin-bottom: 20px;">
+												<p
+													style="font-style: italic; color: #333; line-height: 1.6; margin-bottom: 0; font-size: 16px;">
+													"Our association with Jurisvista LLP has been extremely rewarding. From corporate advisory to litigation, they have consistently delivered excellence and reliability. Their team is approachable, detail-oriented, and proactive in safeguarding our business interests.
+"
+												</p>
+											</div>
+											<div class="testimonial-author"
+												style="border-top: 2px solid #f0f0f0; padding-top: 15px;">
+												<h5
+													style="color: #2E4A98; font-weight: 600; margin-bottom: 5px; font-size: 16px;">
+													—  A.K Sharma, Director
+												</h5>
+												<span style="color: #666; font-size: 14px;">
+													Indo Gulf Cropsciences Ltd
+ </span>
+											</div>
+										</div>
+										<!--Single Testimonial End-->
+
+										<!--Single Testimonial Start-->
+										<div class="testimonial-card"
+											style="background: rgba(255,255,255,0.95); border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(46, 74, 152, 0.1); border-left: 5px solid #019df0; transition: all 0.3s ease; position: relative;">
+
+											<div class="testimonial-content" style="margin-bottom: 20px;">
+												<p
+													style="font-style: italic; color: #333; line-height: 1.6; margin-bottom: 0; font-size: 16px;">
+													"What sets Jurisvista LLP apart is their personalized attention and commitment. They take the time to understand our business, anticipate challenges, and craft solutions that are practical and cost-effective. We truly see them as strategic partners rather than just legal advisors."
+"
+												</p>
+											</div>
+											<div class="testimonial-author"
+												style="border-top: 2px solid #f0f0f0; padding-top: 15px;">
+												<h5
+													style="color: #019df0; font-weight: 600; margin-bottom: 5px; font-size: 16px;">
+													— Lavish Aggarwal
+												</h5>
+												<span style="color: #666; font-size: 14px;">Managing Director, Indo Organics Pvt Ltd.
+
+												</span>
+											</div>
+										</div>
+										<!--Single Testimonial End-->
+
+										<!--Single Testimonial Start-->
+										<div class="testimonial-card"
+											style="background: rgba(255,255,255,0.95); border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(46, 74, 152, 0.1); border-left: 5px solid #019df0; transition: all 0.3s ease; position: relative;">
+
+											<div class="testimonial-content" style="margin-bottom: 20px;">
+												<p
+													style="font-style: italic; color: #333; line-height: 1.6; margin-bottom: 0; font-size: 16px;">
+													"For a fast-paced manufacturing business like ours, timely legal support is crucial. Jurisvista LLP has always been prompt, precise, and dependable. Their litigation and advisory services have been instrumental in protecting our company's interests."
+												</p>
+											</div>
+											<div class="testimonial-author"
+												style="border-top: 2px solid #f0f0f0; padding-top: 15px;">
+												<h5
+													style="color: #019df0; font-weight: 600; margin-bottom: 5px; font-size: 16px;">
+													— Mayank Aggarwal,
+												</h5>
+												<span style="color: #666; font-size: 14px;">Owner, Shri Hari Papers
+
+												</span>
+											</div>
+										</div>
+										<!--Single Testimonial End-->
+
+										<!--Single Testimonial Start-->
+										<div class="testimonial-card"
+											style="background: rgba(255,255,255,0.95); border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(46, 74, 152, 0.1); border-left: 5px solid #019df0; transition: all 0.3s ease; position: relative;">
+
+											<div class="testimonial-content" style="margin-bottom: 20px;">
+												<p
+													style="font-style: italic; color: #333; line-height: 1.6; margin-bottom: 0; font-size: 16px;">
+													"Jurisvista LLP has shown exceptional expertise in handling regulatory and commercial disputes for us. Their lawyers combine courtroom strength with practical negotiation skills, which has helped us resolve matters effectively. We are very satisfied with their services.
+"
+												</p>
+											</div>
+											<div class="testimonial-author"
+												style="border-top: 2px solid #f0f0f0; padding-top: 15px;">
+												<h5
+													style="color: #019df0; font-weight: 600; margin-bottom: 5px; font-size: 16px;">
+													— Mahender Singh Khanor,
+												</h5>
+												<span style="color: #666; font-size: 14px;">Director, MEC Electric Contracts Pvt Ltd.
+
+													.</span>
+											</div>
+										</div>
+										<!--Single Testimonial End-->
+<!--Single Testimonial Start-->
+										<div class="testimonial-card"
+											style="background: rgba(255,255,255,0.95); border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(46, 74, 152, 0.1); border-left: 5px solid #019df0; transition: all 0.3s ease; position: relative;">
+
+											<div class="testimonial-content" style="margin-bottom: 20px;">
+												<p
+													style="font-style: italic; color: #333; line-height: 1.6; margin-bottom: 0; font-size: 16px;">
+													"
+We are highly satisfied with the legal support provided by Jurisvista LLP. Their team is professional, efficient, and well-versed in commercial and corporate matters. They deliver clear advice, prompt action, and dependable results. We value their integrity, expertise, and client-focused approach, and look forward to continuing our association."
+												</p>
+											</div>
+											<div class="testimonial-author"
+												style="border-top: 2px solid #f0f0f0; padding-top: 15px;">
+												<h5
+													style="color: #019df0; font-weight: 600; margin-bottom: 5px; font-size: 16px;">
+													— Abhay Gupta</h5>
+												<span style="color: #666; font-size: 14px;">Owner, Shri Ganik Udhyog
+												</span>
+											</div>
+										</div>
+										<!--Single Testimonial End-->
+
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Testimonial And Quote Area End-->
+
+		<!--Latest Blog Area Start-->
+		<div class="latest-blog-area  bg-animate pt-10 pb-20 ">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<!--Section Title Start-->
+						<div class="section-title text-center mb-70">
+							<i class="fa fa-gavel" style="color:#2E4A98; font-size:40px;"></i>
+							<h4>Editorials</h4>
+							<h2>Latest Legal Insights</h2>
+							<p>Our partners actively contribute to the legal discourse through insightful writings,
+								editorials, and thought pieces that bridge theory with practice. Their editorials
+								reflect decades of experience across diverse areas of law.</p>
+						</div>
+						<!--Section Title End-->
+					</div>
+				</div>
+				<div class="row">
+					<!--Single Blog Start-->
+					<div class="col-md-6 col-lg-4">
+						<div class="single-blog mb-30">
+							<div class="blog-img">
+								<a><img src="img/bg/corporatelaws.webp" style="width: 370px; height: 280px;" alt=""></a>
+							</div>
+							<div class="blog-content">
+								<ul class="blog-meta">
+									<li>February 10</li>
+									<li><a href=""> G.S. Gangwar</a></li>
+									<li><a href="">Corporate Governance</a></li>
+								</ul>
+								<h3><a>Corporate Governance in India: Between Regulation and
+										Reality</a></h3>
+								<p>Reflecting on how corporate governance in India has evolved over the past three
+									decades, highlighting both achievements and persistent gaps in ensuring
+									accountability.</p>
+							</div>
+						</div>
+					</div>
+					<!--Single Blog End-->
+					<!--Single Blog Start-->
+					<div class="col-md-6 col-lg-4">
+						<div class="single-blog mb-30">
+							<div class="blog-img">
+								<a><img src="img/bg/divorcelaws.jpeg" style="width: 370px; height: 280px;" alt=""></a>
+							</div>
+							<div class="blog-content">
+								<ul class="blog-meta">
+									<li>February 10</li>
+									<li><a href=""> Umang Gangwar</a></li>
+									<li><a href="">International Arbitration</a></li>
+								</ul>
+								<h3><a>Enforcement of International Arbitral Awards: Challenges
+										for Indian Courts</a></h3>
+								<p>Examining India's approach to recognizing and enforcing arbitral awards compared to
+									jurisdictions like Singapore, the UK, and the USA.</p>
+
+							</div>
+						</div>
+					</div>
+					<!--Single Blog End-->
+					<!--Single Blog Start-->
+					<div class="col-md-6 col-lg-4">
+						<div class="single-blog mb-30">
+							<div class="blog-img">
+								<a><img src="img/bg/investmentlaws.jpg" style="width: 370px; height: 280px;" alt=""></a>
+							</div>
+							<div class="blog-content">
+								<ul class="blog-meta">
+									<li>February 10</li>
+									<li><a href=""> Shyam Sunder</a></li>
+									<li><a href="">Arbitration Law</a></li>
+								</ul>
+								<h3><a>Public Policy Doctrine in Arbitration: A Double-Edged
+										Sword</a></h3>
+								<p>Evaluating how Indian courts interpret "public policy" in arbitration, comparing
+									domestic and international approaches to promote reliable dispute resolution.</p>
+
+							</div>
+						</div>
+					</div>
+					<!--Single Blog End-->
+				</div>
+			</div>
+		</div>
+		<!--Latest Blog Area End-->
+
+		<!--Brand Area Start-->
+		<!--Brand Area Start-->
+<div class="brand-area py-2 py-md-3">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+        <!-- Mobile Layout (flexbox) - visible on mobile only -->
+        <div class="brand-mobile d-flex d-md-none flex-wrap justify-content-center align-items-center gap-2 text-center">
+          <!-- Facebook -->
+          <div class="single-brand text-center mb-2">
+            <a href="#">
+              <img src="img/logo/facebooklogo.png" 
+                   alt="Facebook Logo" 
+                   class="img-fluid brand-logo-img" 
+                   style="max-height: 60px; width: auto;">
+            </a>
+          </div>
+          <!-- LinkedIn -->
+          <div class="single-brand text-center mb-2">
+            <a href="https://www.linkedin.com/company/jurisvistalawoffices/" target="_blank">
+              <img src="img/logo/linkedInlogo.jpg" 
+                   alt="LinkedIn Logo" 
+                   class="img-fluid brand-logo-img" 
+                   style="max-height: 50px; width: auto;">
+            </a>
+          </div>
+          <!-- Instagram -->
+         <div class="single-brand text-center mb-2">
+			  <a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr">
+				<img src="img/logo/instalogo.jpg" 
+					 alt="Instagram Logo" 
+					 class="img-fluid brand-logo-img" 
+					 style="max-height: 50px; width: auto;">
+			  </a>
+			</div>
+          <!-- YouTube -->
+         
+          <!-- Twitter -->
+          <div class="single-brand text-center mb-2">
+            <a href="#">
+              <img src="img/logo/twitter.jpg" 
+                   alt="Twitter Logo" 
+                   class="img-fluid brand-logo-img" 
+                   style="max-height: 50px; width: auto;">
+            </a>
+          </div>
+        </div>
+
+        <!-- Desktop Layout (carousel) - visible on laptop/desktop only -->
+        <div class="brand-active owl-carousel d-none d-md-block">
+          <!-- Single Brand Start -->
+          <div class="single-brand text-center">
+            <a href="#">
+              <img src="img/logo/facebooklogo.png" alt="Facebook Logo">
+            </a>
+          </div>
+          <div class="single-brand text-center">
+            <a href="https://www.linkedin.com/company/jurisvistalawoffices/" target="_blank">
+              <img src="img/logo/linkedInlogo.jpg" alt="LinkedIn Logo">
+            </a>
+          </div>
+          <!-- Single Brand End -->
+          <!-- Single Brand Start -->
+          <div class="single-brand text-center">
+            <a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr">
+              <img src="img/logo/instalogo.jpg" class="img-fluid" alt="Instagram Logo">
+            </a>
+          </div>
+          <!-- Single Brand End -->
+          <!-- Single Brand Start -->
+          <div class="single-brand text-center">
+            <a href="#">
+              <img src="img/logo/youtubelogo.jpg" class="img-fluid" alt="YouTube Logo">
+            </a>
+          </div>
+          <!-- Single Brand End -->
+          <!-- Single Brand Start -->
+          <div class="single-brand text-center">
+            <a href="#">
+              <img src="img/logo/twitter.jpg" class="img-fluid" alt="Twitter Logo">
+            </a>
+          </div>
+          <!-- Single Brand End -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Brand Area End-->
+		<!--Brand Area End-->
+
+		<!--Footer Area Start-->
+		<footer>
+			<div class="footer-container text-justify">
+				<!--Footer Top Area Start-->
+				<div class="footer-top-area black-bg pt-20 pb-9">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-lg-3">
+								<!--Single Footer Widget Start-->
+								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+									<a class="footer-logo" href="index.html"><img src="img/bg/logojv4.png"
+											style="max-height: 150px; max-width: 190px;" alt="Jurisvista LLP Logo"></a>
+									<!-- CHANGE> Updated company description to be more comprehensive and professional  -->
+									<p>Jurisvista LLP is a premier full-service Indian law firm specializing in
+										corporate law, litigation, arbitration, and regulatory compliance. With offices
+										in Delhi NCR and Mumbai, we provide innovative legal solutions backed by deep
+										expertise and unwavering commitment to client success.</p>
+
+								</div>
+								<!--Single Footer Widget End-->
+							</div>
+							<!--Single Footer Widget Start-->
+							<div class="col-md-6 col-lg-3 footer-menu">
+								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+									<!-- CHANGE> Updated menu title and links to be more law firm specific  -->
+									<h3 class="footer-title">Our Services</h3>
+									<ul>
+										<li><a href="about.html">About Jurisvista</a></li>
+										<li><a href="service.html">Legal Practice Areas</a></li>
+										<li><a href="contact.html">Schedule Consultation</a></li>
+										<li><a href="contact.html">Client Resources</a></li>
+										<li><a href="about.html">Legal Insights</a></li>
+										<li><a href="careers.html">Career Opportunities</a></li>
+									</ul>
+								</div>
+							</div>
+							<!--Single Footer Widget End-->
+							<!--Single Footer Widget Start-->
+							<div class="col-md-6 col-lg-3">
+								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+									<!-- CHANGE> Updated to showcase recent legal achievements instead of generic tweets  -->
+									<h3 class="footer-title">Contact Info</h3>
+									<p class="contact-info">
+										<strong>Phone:</strong><br>
+										<a href="tel:+911204961761">+0120 4961761</a>
+										<a href="tel:+919717211123">+91-9717211123</a>
+									</p>
+									<p class="contact-info">
+										<strong>Email & Web:</strong><br>
+										<a href="mailto:info@jurisvista.in">info@jurisvista.in</a>
+										<a href="https://www.jurisvista.in" target="_blank">www.jurisvista.in</a>
+									</p>
+									<div class="business-hours" style="margin-top: 15px;">
+										<p><strong>Business Hours:</strong><br>
+											Mon - Fri: 9:00 AM - 7:00 PM<br>
+											Sat: 10:00 AM - 4:00 PM</p>
+									</div>
+								</div>
+							</div>
+							<!--Single Footer Widget End-->
+							<!--Single Footer Widget Start-->
+							<div class="col-md-6 col-lg-3">
+								<div class="single-footer-widget  animate-on-scroll stagger-animation">
+									<!-- CHANGE> Enhanced contact information with more professional presentation  -->
+									<h3 class="footer-title">Get In Touch</h3>
+									<div class="contact-details">
+										<p><strong>Delhi NCR Office:</strong><br>
+											Off: 1134, Tower-A, i-thum,<br>
+											Plot No. A-40, Sector-62,<br>
+											Noida-201301, (Delhi- NCR), India</p>
+										<p><strong>Mumbai Office:</strong><br>
+											32, Raja Bahadur Mansion,<br>
+											Off. No. 3, First Floor, Ambalal Doshi Marg,<br>
+											Fort, Mumbai - 400023</p>
+									</div>
+
+								</div>
+							</div>
+							<!--Single Footer Widget End-->
+						</div>
+					</div>
+				</div>
+				<!--Footer Top Area End-->
+				<!--Footer Bottom Area Start-->
+				<div class="footer-bottom-area pt-20 pb-20">
+					<div class="container text-center">
+						<!-- CHANGE> Updated copyright text to be more comprehensive and professional  -->
+						<p class="animate-on-scroll">
+							<span>&copy;</span> 2024 Jurisvista LLP. All rights reserved. |
+							<a href="#" style="margin: 0 10px;">Privacy Policy</a> |
+							<a href="#" style="margin: 0 10px;">Terms of Service</a> |
+							<a href="#" style="margin: 0 10px;">Disclaimer</a>
+						</p>
+					</div>
+				</div>
+				<!--Footer Bottom Area End-->
+			</div>
+		</footer>
+		<!--Footer Area End-->
+	</div>
+
+	<!--All Js Here-->
+	<!--Jquery 1.12.4-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!--Waypoints-->
+	<script src="js/waypoints.min.js"></script>
+	<!--Counterup-->
+	<script src="js/jquery.counterup.min.js"></script>
+	<!--Carousel-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<!--Meanmenu-->
+	<script src="js/jquery.meanmenu.min.js"></script>
+	<!--Instafeed-->
+	<script src="js/instafeed.min.js"></script>
+	<!--Datepicker-->
+	<script src="js/jquery.datepicker.min.js"></script>
+	<!--Calendar-->
+	<script src="js/zabuto-calendar.min.js"></script>
+	<!--ScrollUp-->
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<!--Wow-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<!--Venobox-->
+	<script src="js/venobox.min.js"></script>
+	<!--Popper-->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+	<!--Bootstrap-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<!--Plugins-->
+	<script src="js/plugins.js"></script>
+	<!--Main Js-->
+	<script src="js/main.js"></script>
+
+	<!-- Sidebar Toggle Script -->
+	<script>
+		$(document).ready(function () {
+			const sidebar = document.getElementById('sidebar');
+			const sidebarToggle = document.getElementById('sidebarToggle');
+			const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+			// Open sidebar
+			sidebarToggle.addEventListener('click', function () {
+				sidebar.classList.toggle('active');
+				sidebarToggle.classList.toggle('active');
+				sidebarOverlay.classList.toggle('active');
+				document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : 'auto';
+			});
+
+			// Close sidebar when overlay is clicked
+			sidebarOverlay.addEventListener('click', function () {
+				sidebar.classList.remove('active');
+				sidebarToggle.classList.remove('active');
+				sidebarOverlay.classList.remove('active');
+				document.body.style.overflow = 'auto';
+			});
+
+			// Close sidebar when a link is clicked
+			document.querySelectorAll('.sidebar-nav a').forEach(link => {
+				link.addEventListener('click', function () {
+					sidebar.classList.remove('active');
+					sidebarToggle.classList.remove('active');
+					sidebarOverlay.classList.remove('active');
+					document.body.style.overflow = 'auto';
+				});
+			});
+		});
+	</script>
+
+	<!-- Disclaimer Modal Handler - first visit only -->
+	<script>
+		(function () {
+			var STORAGE_KEY = 'disclaimerAgreed_v1';
+			function onReady(fn){ if (document.readyState !== 'loading') { fn(); } else { document.addEventListener('DOMContentLoaded', fn); } }
+			onReady(function() {
+				var overlay = document.getElementById('disclaimerOverlay');
+				var btnAgree = document.getElementById('disclaimerAgree');
+				var btnDisagree = document.getElementById('disclaimerDisagree');
+				var btnClose = document.getElementById('disclaimerClose');
+
+				if (!overlay || !btnAgree || !btnDisagree || !btnClose) { return; }
+
+				var seen = localStorage.getItem(STORAGE_KEY);
+				if (!seen) {
+					overlay.style.display = 'flex';
+					document.body.classList.add('disclaimer-active');
+				} else {
+					overlay.style.display = 'none';
+					document.body.classList.remove('disclaimer-active');
+				}
+
+				btnAgree.addEventListener('click', function() {
+					localStorage.setItem(STORAGE_KEY, 'true');
+					overlay.style.display = 'none';
+					document.body.classList.remove('disclaimer-active');
+				});
+
+				btnDisagree.addEventListener('click', function() {
+					window.location.href = 'https://google.com';
+				});
+
+				btnClose.addEventListener('click', function() {
+					window.location.href = 'https://google.com';
+				});
+			});
+		})();
+	</script>
+
+	<script>
+		$(document).ready(function () {
+
+			// Hide page loader after 2 seconds
+			setTimeout(() => {
+				$('.page-loader').fadeOut(500);
+			}, 500);
+
+			// Initialize the hero slider
+			if ($('.hero-slider-container').length) {
+				$('.hero-slider-container').owlCarousel({
+					items: 1,
+					loop: true,
+					autoplay: true,
+					autoplayTimeout: 6000,
+					autoplayHoverPause: true,
+					animateOut: 'fadeOut',
+					animateIn: 'fadeIn',
+					dots: true,
+					nav: true,
+					navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+					smartSpeed: 1000,
+					responsive: {
+						0: {
+							items: 1,
+							nav: false
+						},
+						768: {
+							items: 1,
+							nav: true
+						},
+						992: {
+							items: 1,
+							nav: true
+						}
+					}
+				});
+			}
+
+			// Reset animations on slide change
+			$('.hero-slider-container').on('changed.owl.carousel', function (event) {
+				// Remove animation classes
+				$('.hero-text h1').removeClass('animate-slide-in-left');
+				$('.hero-text h2').removeClass('animate-fade-in-up');
+				$('.hero-text p').removeClass('animate-fade-in-up-delay');
+				$('.hero-btn').removeClass('animate-fade-in-up-delay');
+
+				// Re-add animation classes after a brief delay
+				setTimeout(function () {
+					$('.hero-text h1').addClass('animate-slide-in-left');
+					$('.hero-text h2').addClass('animate-fade-in-up');
+					$('.hero-text p').addClass('animate-fade-in-up-delay');
+					$('.hero-btn').addClass('animate-fade-in-up-delay');
+				}, 100);
+			});
+
+			// Initialize other sliders if they exist
+			if ($('.team-slider').length) {
+				$('.team-slider').owlCarousel({
+					items: 1,
+					loop: true,
+					autoplay: true,
+					autoplayTimeout: 4000,
+					dots: true,
+					nav: true,
+					navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+					responsive: {
+						0: {
+							items: 1
+						},
+						768: {
+							items: 2
+						},
+						992: {
+							items: 3
+						}
+					}
+				});
+			}
+
+			
+			// Initialize testimonials carousel - show only 1 testimonial at a time
+		// Initialize testimonials carousel - show only 1 testimonial at a time
+if ($('.testimonials-carousel').length) {
+    // Destroy any existing carousel first
+    if ($('.testimonials-carousel').hasClass('owl-loaded')) {
+        $('.testimonials-carousel').trigger('destroy.owl.carousel');
+        $('.testimonials-carousel').removeClass('owl-carousel owl-loaded');
+        $('.testimonials-carousel').find('.owl-stage-outer').children().unwrap();
+    }
+    
+    // Re-add owl-carousel class
+    $('.testimonials-carousel').addClass('owl-carousel');
+    
+    // Initialize with proper settings
+    $('.testimonials-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        dots: false,
+        nav: true,
+        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+        smartSpeed: 800,
+        margin: 0,
+        stagePadding: 0,
+        center: false,
+        autoWidth: false,
+        slideBy: 1,
+        // Force single item on all screen sizes
+        responsive: {
+            0: { items: 1 },
+            480: { items: 1 },
+            768: { items: 1 },
+            992: { items: 1 },
+            1200: { items: 1 },
+            1400: { items: 1 }
+        }
+    });
+}
+
+			// Initialize WOW animations
+			if (typeof WOW !== 'undefined') {
+				new WOW().init();
+			}
+
+			// Scroll-triggered animations
+			function animateOnScroll() {
+				$('.animate-on-scroll').each(function () {
+					var elementTop = $(this).offset().top;
+					var elementBottom = elementTop + $(this).outerHeight();
+					var viewportTop = $(window).scrollTop();
+					var viewportBottom = viewportTop + $(window).height();
+
+					if (elementBottom > viewportTop && elementTop < viewportBottom) {
+						$(this).addClass('animated');
+					}
+				});
+			}
+
+			// Run on scroll
+			$(window).on('scroll', animateOnScroll);
+			// Run on load
+			animateOnScroll();
+
+			// Parallax effect for mouse movement
+			$(document).mousemove(function (e) {
+				var mouseX = e.pageX;
+				var mouseY = e.pageY;
+				var windowWidth = $(window).width();
+				var windowHeight = $(window).height();
+
+				$('.parallax-element').each(function () {
+					var speed = $(this).data('speed') || 0.5;
+					var x = (mouseX - windowWidth / 2) * speed / 100;
+					var y = (mouseY - windowHeight / 2) * speed / 100;
+					$(this).css('transform', 'translate(' + x + 'px, ' + y + 'px)');
+				});
+			});
+
+			// Counter animation
+			$('.counter').each(function () {
+				var $this = $(this);
+				var countTo = $this.text();
+
+				$({ countNum: 0 }).animate({
+					countNum: countTo
+				}, {
+					duration: 2000,
+					easing: 'linear',
+					step: function () {
+						$this.text(Math.floor(this.countNum));
+					},
+					complete: function () {
+						$this.text(this.countNum);
+					}
+				});
+			});
+
+			// Add hover effects to images
+			$('img').hover(
+				function () {
+					$(this).addClass('animated pulse');
+				},
+				function () {
+					$(this).removeClass('animated pulse');
+				}
+			);
+
+			// Add click animation to buttons
+			$('button, .btn, a[href*="appointment"]').click(function () {
+				$(this).addClass('animated wobble');
+				setTimeout(() => {
+					$(this).removeClass('animated wobble');
+				}, 1000);
+			});
+
+			// Smooth scrolling for anchor links
+			$('a[href^="#"]').on('click', function (event) {
+				var target = $(this.getAttribute('href'));
+				if (target.length) {
+					event.preventDefault();
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top - 100
+					}, 1000);
+				}
+			});
+
+			// Add stagger animation to navigation items
+			$('.main-menu li').each(function (index) {
+				$(this).css('animation-delay', (index * 0.1) + 's');
+			});
+
+			// Add floating animation to specific elements
+			setInterval(function () {
+				$('.hero-img img').addClass('animated pulse');
+				setTimeout(function () {
+					$('.hero-img img').removeClass('animated pulse');
+				}, 1000);
+			}, 5000);
+
+			// Add glow effect on scroll
+			$(window).scroll(function () {
+				var scroll = $(window).scrollTop();
+				if (scroll > 100) {
+					$('.header-bottom-area').addClass('animated fadeInDown');
+				}
+			});
+
+			$('.testimonial-card').hover(
+				function () {
+					$(this).css({
+						'transform': 'translateY(-5px)',
+						'box-shadow': '0 15px 40px rgba(46, 74, 152, 0.15)'
+					});
+				},
+				function () {
+					$(this).css({
+						'transform': 'translateY(0)',
+						'box-shadow': '0 10px 30px rgba(46, 74, 152, 0.1)'
+					});
+				}
+			);
+		});
+
+		$(document).ready(function () {
+				
+				// Hide page loader after 2 seconds
+				setTimeout(function() {
+					$('.page-loader').fadeOut(500);
+				}, 500);
+			}
+				);
+
+				// Initialize brand carousel
+			if ($('.brand-active').length) {
+    $('.brand-active').owlCarousel({
+        items: 2,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        dots: false,
+        nav: false,
+        responsive: {
+            0: { items: 2 },
+            768: { items: 4 },
+            992: { items: 6 }
+        }
+    });
+}
+			
+		</script>
+	</script>
+
+	
+</body>
+
+</html>

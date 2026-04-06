@@ -1,0 +1,1642 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Contact || Jurisvista LLP</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Place favicon.ico in the root directory -->
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<!--All Css Here-->
+
+	<!-- Droid Font CSS-->
+	<link rel="stylesheet" href="css/droid.css">
+	<!-- Icofont CSS-->
+	<link rel="stylesheet" href="css/icofont.css">
+	<!-- Font Awesome CSS-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Animate CSS-->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Owl Carousel CSS-->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<!-- Datepicker CSS-->
+	<link rel="stylesheet" href="css/jquery.datepicker.css">
+	<!-- Calendar CSS-->
+	<link rel="stylesheet" href="css/zabuto_calendar.css">
+	<!-- Meanmenu CSS-->
+	<!-- Venobox CSS-->
+	<link rel="stylesheet" href="css/venobox.css">
+	<!-- Bootstrap CSS-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="style.css">
+	<!-- Responsive CSS -->
+	<link rel="stylesheet" href="css/responsive.css">
+
+	 <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+	<!-- Modernizr Js -->
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	<style>
+
+		/* Added sidebar navigation styles */
+		:root {
+			--primary-color: #254B9D;
+			--secondary-color: #019df0;
+			--dark-bg: #1a1a1a;
+			--sidebar-width: 280px;
+		}
+
+		/* Sidebar Styles */
+		.sidebar {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: var(--sidebar-width);
+			height: 100vh;
+			background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a70 100%);
+			box-shadow: 2px 0 15px rgba(37, 75, 157, 0.3);
+			z-index: 998;
+			overflow-y: auto;
+			padding-top: 80px;
+			transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			transform: translateX(-100%);
+		}
+
+		.sidebar.active {
+			transform: translateX(0);
+		}
+
+		.sidebar-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0);
+			z-index: 997;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+		}
+
+		.sidebar-overlay.active {
+			background: rgba(0, 0, 0, 0.7);
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.sidebar-nav {
+			list-style: none;
+			padding: 20px 0;
+			margin: 0;
+		}
+
+		.sidebar-nav li {
+			margin: 0;
+		}
+
+		.sidebar-nav a {
+			display: flex;
+			align-items: center;
+			padding: 18px 25px;
+			color: #ffffff;
+			text-decoration: none;
+			font-size: 15px;
+			font-weight: 600;
+			transition: all 0.3s ease;
+			border-left: 4px solid transparent;
+			position: relative;
+		}
+
+		.sidebar-nav a:hover {
+			background: rgba(255, 255, 255, 0.1);
+			border-left-color: var(--secondary-color);
+			padding-left: 35px;
+			color: var(--secondary-color);
+		}
+
+		.sidebar-nav a i {
+			margin-right: 15px;
+			font-size: 18px;
+			width: 25px;
+			text-align: center;
+		}
+
+		.sidebar-nav a.active {
+			background: rgba(255, 255, 255, 0.15);
+			border-left-color: var(--secondary-color);
+			color: var(--secondary-color);
+		}
+
+		/* Hamburger Menu Styles */
+		.sidebar-toggle {
+			display: none;
+			width: 50px;
+			height: 50px;
+			background: none;
+			border: none;
+			cursor: pointer;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			z-index: 999;
+			position: relative;
+		}
+
+		.sidebar-toggle span {
+			width: 28px;
+			height: 3px;
+			background: var(--primary-color);
+			margin: 4px 0;
+			transition: all 0.3s ease;
+			border-radius: 2px;
+			display: block;
+		}
+
+		.sidebar-toggle.active span:nth-child(1) {
+			transform: rotate(45deg) translate(8px, 8px);
+		}
+
+		.sidebar-toggle.active span:nth-child(2) {
+			opacity: 0;
+		}
+
+		.sidebar-toggle.active span:nth-child(3) {
+			transform: rotate(-45deg) translate(7px, -7px);
+		}
+
+		/* Header Top Area adjustment */
+		.header-bottom-area {
+			position: relative;
+			z-index: 100;
+		}
+
+		/* Updated sidebar toggle positioning for 768-984px range */
+		@media (max-width: 984px) and (min-width: 768px) {
+			.sidebar-toggle {
+				display: flex;
+				position: absolute;
+				top: 50%;
+				left: 15px;
+				transform: translateY(-50%);
+				z-index: 1001;
+			}
+
+			.header-menu-area {
+				display: none;
+			}
+
+			.sidebar {
+				width: var(--sidebar-width);
+			}
+
+			.header-logo {
+				text-align: center;
+				position: relative;
+				padding-left: 60px;
+			}
+			
+			.header-bottom-area .row {
+				position: relative;
+				display: flex;
+				align-items: center;
+				min-height: 80px;
+			}
+			
+			/* Ensure logo and toggle are properly aligned */
+			.header-logo {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+			}
+			
+			.header-logo a {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+			}
+		}
+
+		/* Main content wrapper */
+		body.sidebar-open {
+			overflow: hidden;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.header-logo {
+				position: relative;
+				display: flex;
+				align-items: center;
+				height: 60px;
+			}
+			.sidebar-toggle {
+				display: flex;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 1001;
+				margin-left: 0;
+				margin-right: 12px;
+				background: rgba(255,255,255,0.95);
+				border: 2px solid var(--primary-color);
+				box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+				border-radius: 8px;
+			}
+			.header-logo img {
+				margin-left: 60px;
+			}
+		}
+
+			@media (max-width: 992px) {
+  .header-menu-area ul.main-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media (max-width: 768px) {
+  .main-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+		@media (max-width: 576px) {
+			:root {
+				--sidebar-width: 250px;
+			}
+
+			.sidebar-nav a {
+				padding: 15px 20px;
+				font-size: 14px;
+			}
+
+			.sidebar-nav a i {
+				margin-right: 12px;
+				font-size: 16px;
+			}
+
+			.sidebar-toggle {
+				width: 44px;
+				height: 44px;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+			}
+		}
+
+		
+		/* Loading Animation */
+		.page-loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #111d1b;
+			z-index: 9999;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			animation: fadeOut 1s ease-in-out 2s forwards;
+		}
+
+		.loader-content {
+			text-align: center;
+			color: #fff;
+		}
+
+		.spinner {
+			width: 50px;
+			height: 50px;
+			border: 3px solid rgba(255, 255, 255, 0.3);
+			border-top: 3px solid #fff;
+			border-radius: 50%;
+			animation: spin 1s linear infinite;
+			margin: 0 auto 20px;
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes fadeOut {
+			to {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		/* Header Animations */
+		.header-top-area {
+			animation: slideDown 1s ease-out 0.5s both;
+		}
+
+		.header-bottom-area {
+			animation: slideDown 1s ease-out 0.7s both;
+		}
+
+		.header-logo img {
+			transition: all 0.3s ease;
+			animation: bounceIn 1s ease-out 1s both;
+		}
+
+		.header-logo img:hover {
+			transform: scale(1.1) rotate(5deg);
+		}
+
+		@keyframes slideDown {
+			from {
+				transform: translateY(-100%);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes bounceIn {
+			0% {
+				transform: scale(0.3);
+				opacity: 0;
+			}
+
+			50% {
+				transform: scale(1.05);
+			}
+
+			70% {
+				transform: scale(0.9);
+			}
+
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		/* Social Links Animation */
+		.social-link {
+			transition: all 0.3s ease;
+			display: inline-block;
+		}
+
+		.social-link:hover {
+			transform: translateY(-3px) scale(1.2);
+			color: #019df0a5;
+		}
+
+		/* Glow Effect */
+		.glow-on-hover {
+			transition: all 0.3s ease;
+		}
+
+		.glow-on-hover:hover {
+			box-shadow: 0 0 20px rgba(53, 191, 255, 0.666);
+			text-shadow: 0 0 10px rgba(53, 127, 255, 0.518);
+		}
+
+		/* Menu Animations */
+		.main-menu li {
+			animation: fadeInUp 0.6s ease-out both;
+		}
+
+		.main-menu li:nth-child(1) {
+			animation-delay: 1.2s;
+		}
+
+		.main-menu li:nth-child(2) {
+			animation-delay: 1.3s;
+		}
+
+		.main-menu li:nth-child(3) {
+			animation-delay: 1.4s;
+		}
+
+		.main-menu li:nth-child(4) {
+			animation-delay: 1.5s;
+		}
+
+		.main-menu li:nth-child(5) {
+			animation-delay: 1.6s;
+		}
+
+		.main-menu li:nth-child(6) {
+			animation-delay: 1.7s;
+		}
+
+		.main-menu a {
+			position: relative;
+			transition: all 0.3s ease;
+			overflow: hidden;
+		}
+
+		.main-menu a::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: -100%;
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(90deg, #006aff, #001d7b);
+			transition: left 0.3s ease;
+		}
+
+		.main-menu a:hover::before {
+			left: 0;
+		}
+
+		.main-menu a:hover {
+			transform: translateY(-2px);
+			color: #ff6b35;
+		}
+
+		@keyframes fadeInUp {
+			from {
+				transform: translateY(30px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		/* Page Banner Animation */
+		.page-banner-area {
+			animation: fadeIn 1s ease-out both;
+		}
+
+		.page-banner-content h2 {
+			animation: slideInUp 1s ease-out 0.3s both;
+		}
+
+		.page-banner-content p {
+			animation: slideInUp 1s ease-out 0.5s both;
+		}
+
+		.breadcrumb-pagination {
+			animation: slideInUp 1s ease-out 0.7s both;
+		}
+
+		@keyframes slideInUp {
+			from {
+				transform: translateY(50px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
+		/* Contact Section Animations and Styles */
+		.contact-information {
+			animation: slideInLeft 1s ease-out 0.5s both;
+		}
+
+		.address-box, .info-box {
+			background: white;
+			border-radius: 10px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+			transition: all 0.3s ease;
+			height: 100%;
+		}
+
+		.address-box:hover, .info-box:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+		}
+
+		.address-box h5, .info-box h5 {
+			color: #333;
+			margin-bottom: 15px;
+			font-weight: 600;
+		}
+
+		.address-box p, .info-box p {
+			color: #666;
+			margin-bottom: 0;
+		}
+
+		.info-box a {
+			color: #666;
+			transition: color 0.3s ease;
+		}
+
+		.info-box a:hover {
+			color: #ff6b35;
+			text-decoration: none;
+		}
+
+		.contact-info-row {
+			margin-top: 30px;
+		}
+
+		/* Animations for contact boxes */
+		.address-box, .info-box {
+			animation: fadeInUp 0.8s ease-out both;
+		}
+
+		.address-box:nth-child(1) {
+			animation-delay: 0.7s;
+		}
+
+		.address-box:nth-child(2) {
+			animation-delay: 0.9s;
+		}
+
+		.info-box:nth-child(1) {
+			animation-delay: 1.1s;
+		}
+
+		.info-box:nth-child(2) {
+			animation-delay: 1.3s;
+		}
+
+		/* Responsive styles for contact section (1037-1095) */
+		@media (max-width: 768px) {
+			.contact-information {
+				padding: 0 10px;
+			}
+
+			.address-box, .info-box {
+				margin-bottom: 20px;
+			}
+
+			.address-box h5, .info-box h5 {
+				font-size: 18px;
+				margin-bottom: 12px;
+			}
+
+			.address-box p, .info-box p {
+				font-size: 14px;
+				line-height: 1.6;
+			}
+
+			.info-box a {
+				font-size: 14px;
+				word-break: break-word;
+			}
+
+			.contact-info-row {
+				margin-top: 20px;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.contact-information {
+				padding: 0 5px;
+			}
+
+			.address-box, .info-box {
+				padding: 15px !important;
+				border-radius: 8px;
+			}
+
+			.address-box h5, .info-box h5 {
+				font-size: 16px;
+				margin: auto;
+			}
+
+			.address-box p, .info-box p {
+				font-size: 13px;
+				line-height: 1.5;
+			}
+
+			.info-box a {
+				font-size: 13px;
+				display: block;
+				margin-bottom: 5px;
+			}
+
+			.contact-info-row {
+				margin-top: 15px;
+			}
+		}
+
+		.contact-form {
+			animation: slideInRight 1s ease-out 0.5s both;
+		}
+
+		.contact-form-title h3 {
+			animation: fadeInDown 1s ease-out 0.8s both;
+		}
+
+		.contact-form-title p {
+			animation: fadeInDown 1s ease-out 1s both;
+		}
+
+		.single-input {
+			animation: fadeInUp 0.6s ease-out both;
+		}
+
+		.single-input:nth-child(1) {
+			animation-delay: 1.2s;
+		}
+
+		.single-input:nth-child(2) {
+			animation-delay: 1.3s;
+		}
+
+		.single-input:nth-child(3) {
+			animation-delay: 1.4s;
+		}
+
+		.single-input:nth-child(4) {
+			animation-delay: 1.5s;
+		}
+
+		.single-input:nth-child(5) {
+			animation-delay: 1.6s;
+		}
+
+		.single-input:nth-child(6) {
+			animation-delay: 1.7s;
+		}
+
+		.single-input input,
+		.single-input textarea {
+			transition: all 0.3s ease;
+		}
+
+		.single-input input:focus,
+		.single-input textarea:focus {
+			transform: scale(1.02);
+			box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
+		}
+
+		.sent-btn {
+			transition: all 0.3s ease;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.sent-btn::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+			transition: left 0.5s ease;
+		}
+
+		.sent-btn:hover::before {
+			left: 100%;
+		}
+
+		.sent-btn:hover {
+			transform: translateY(-3px) scale(1.05);
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+		}
+
+		@keyframes slideInLeft {
+			from {
+				transform: translateX(-100px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes slideInRight {
+			from {
+				transform: translateX(100px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeInDown {
+			from {
+				transform: translateY(-50px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		/* New Sections Animations */
+		.office-hours-area {
+			animation: fadeInUp 1s ease-out both;
+		}
+
+		.office-hours-card {
+			transition: all 0.3s ease;
+			animation: zoomIn 0.8s ease-out both;
+		}
+
+		.office-hours-card:nth-child(1) {
+			animation-delay: 0.2s;
+		}
+
+		.office-hours-card:nth-child(2) {
+			animation-delay: 0.4s;
+		}
+
+		.office-hours-card:nth-child(3) {
+			animation-delay: 0.6s;
+		}
+
+		.office-hours-card:hover {
+			transform: translateY(-10px) scale(1.05);
+			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+		}
+
+		@keyframes zoomIn {
+			from {
+				transform: scale(0.8);
+				opacity: 0;
+			}
+
+			to {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		.faq-area {
+			animation: fadeIn 1s ease-out both;
+		}
+
+		.faq-item {
+			animation: slideInUp 0.8s ease-out both;
+			transition: all 0.3s ease;
+		}
+
+		.faq-item:nth-child(1) {
+			animation-delay: 0.2s;
+		}
+
+		.faq-item:nth-child(2) {
+			animation-delay: 0.4s;
+		}
+
+		.faq-item:nth-child(3) {
+			animation-delay: 0.6s;
+		}
+
+		.faq-item:nth-child(4) {
+			animation-delay: 0.8s;
+		}
+
+		.faq-item:hover {
+			transform: translateX(10px);
+			background: rgba(255, 107, 53, 0.05);
+		}
+
+		.faq-question {
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		.faq-question:hover {
+			color: #ff6b35;
+		}
+
+		.faq-answer {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.3s ease;
+		}
+
+		.faq-answer.active {
+			max-height: 200px;
+		}
+
+		/* Map Animation */
+		.map-container {
+			animation: fadeIn 1.5s ease-out both;
+			transition: all 0.3s ease;
+		}
+
+		.map-container:hover {
+			transform: scale(1.02);
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+		}
+
+		/* Brand Area Animation */
+		.brand-active .single-brand img {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			object-fit: cover;
+			transition: all 0.3s ease;
+			animation: float 3s ease-in-out infinite;
+		}
+
+		.brand-active .single-brand:nth-child(1) img {
+			animation-delay: 0s;
+		}
+
+		.brand-active .single-brand:nth-child(2) img {
+			animation-delay: 0.5s;
+		}
+
+		.brand-active .single-brand:nth-child(3) img {
+			animation-delay: 1s;
+		}
+
+		.brand-active .single-brand:nth-child(4) img {
+			animation-delay: 1.5s;
+		}
+
+		.brand-active .single-brand:nth-child(5) img {
+			animation-delay: 2s;
+		}
+
+
+		.brand-active .single-brand img:hover {
+			transform: scale(1.2) rotate(360deg);
+		}
+
+		@keyframes float {
+
+			0%,
+			100% {
+				transform: translateY(0px);
+			}
+
+			50% {
+				transform: translateY(-10px);
+			}
+		}
+
+		/* Footer Animations */
+		.footer-container {
+			animation: fadeInUp 1s ease-out both;
+		}
+
+		.single-footer-widget {
+			animation: fadeInUp 0.8s ease-out both;
+		}
+
+		.single-footer-widget:nth-child(1) {
+			animation-delay: 0.2s;
+		}
+
+		.single-footer-widget:nth-child(2) {
+			animation-delay: 0.4s;
+		}
+
+		.single-footer-widget:nth-child(3) {
+			animation-delay: 0.6s;
+		}
+
+		.single-footer-widget:nth-child(4) {
+			animation-delay: 0.8s;
+		}
+
+		
+
+		@keyframes pulse {
+
+			0%,
+			100% {
+				transform: scale(1);
+			}
+
+			50% {
+				transform: scale(1.05);
+			}
+		}
+
+		/* Scroll to Top Button Animation */
+		.scroll-to-top {
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			width: 50px;
+			height: 50px;
+			background: #ff6b35;
+			color: white;
+			border: none;
+			border-radius: 50%;
+			cursor: pointer;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+			z-index: 1000;
+		}
+
+		.scroll-to-top.visible {
+			opacity: 1;
+			visibility: visible;
+			animation: bounceIn 0.5s ease-out;
+		}
+
+		.scroll-to-top:hover {
+			transform: scale(1.1);
+			background: #e55a2b;
+		}
+
+		/* Responsive Animations */
+		@media (max-width: 768px) {
+
+			.contact-information,
+			.contact-form {
+				animation: fadeInUp 1s ease-out both;
+			}
+
+			.office-hours-card {
+				margin-bottom: 20px;
+			}
+		}
+
+		/* QR code styling (added for contact page) */
+		.qr-code {
+			max-width: 160px;
+			width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+
+		.qr-caption {
+			font-size: 14px;
+			color: #333;
+			margin-top: 8px;
+			text-align: center;
+		}
+
+		@media (max-width: 576px) {
+			.qr-code { max-width: 120px; }
+			.qr-caption { font-size: 13px; }
+		}
+	</style>
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<!-- Added page loader with animation -->
+	<div class="page-loader">
+		<div class="loader-content">
+			<div class="spinner"></div>
+			<h3>Loading...</h3>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<!--Header Area Start-->
+		<header>
+			<div class="header-container">
+				<!--Header Top Area Start-->
+				<div class="header-top-area default-bg">
+					<div class="container">
+						<div class="row">
+							<div class="header-top-wrap col-12">
+								<div class="row">
+									<!--Header Top Left Area Start-->
+									<div class="col-md-4 col-xl-3">
+										<div class="header-top-left">
+											<p class="glow-on-hover">CALL US : <a href="#"> +0120 4961761</a></p>
+										</div>
+									</div>
+									<!--Header Top Left Area End-->
+									<!--Header Top Middle Area Start-->
+									<div class="col-md-4 col-xl-6">
+										<div class="header-top-middle text-center">
+											<ul class="social-link">
+												<li><a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+												</li>
+												<li><a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+												</li>
+												<li><a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+												</li>
+												<li><a href="#" class="social-link"><i
+															class="fa-brands fa-google"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									<!--Header Top Middle Area End-->
+									<!--Header Top Right Area Start-->
+									<div class="col-md-4 col-xl-3">
+										<div class="header-top-right">
+											<p class="glow-on-hover">MAIL US :<a
+													href="mailto:info@jurisvista.in">info@jurisvista.in</a></p>
+										</div>
+									</div>
+									<!--Header Top Right Area End-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Header Top Area End-->
+				<!--Header Bottom Area Start-->
+				<div class="header-bottom-area header-sticky">
+					<div class="container">
+						<div class="row align-items-center">
+							<!--Header Logo Start-->
+							<div class="col-md-3">
+								<div class="header-logo">
+									<!--Sidebar Toggle Button-->
+									<button class="sidebar-toggle" id="sidebarToggle">
+										<span></span>
+										<span></span>
+										<span></span>
+									</button>
+									<a href="index.html"><img src="img/bg/logojv4.png"
+											style="max-width: 180px; min-height: 50px;" alt=""></a>
+								</div>
+							</div>
+							<!--Header Logo End-->
+							<!--Header Menu Start-->
+							<div class="col-md-9">
+								<div class="header-menu-area ">
+									<nav>
+										<ul class="main-menu">
+											<li><a href="index.html" class="nav-link-bold">HOME</a>
+											</li>
+											<li><a href="about.html" class="nav-link-bold">ABOUT</a></li>
+											<li><a href="team.html" class="nav-link-bold">TEAM</a></li>
+											<li><a href="service.html" class="nav-link-bold">PRACTICE AREA</a></li>
+											<li><a href="blog.html" class="nav-link-bold">NEWS LETTER</a>
+
+											</li>
+											<li><a href="careers.html" class="nav-link-bold">CAREERS</a></li>
+											<li class="active"><a href="contact.html" class="nav-link-bold">CONTACT</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<!--Header Menu End-->
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<!--Mobile Menu Area Start-->
+								<div class="mobile-menu d-lg-none d-xl-none"></div>
+								<!--Mobile Menu Area End-->
+								<!--Sidebar Toggle Button-->
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Header Bottom Area End-->
+			</div>
+		</header>
+		
+		<!--Sidebar Overlay-->
+		<div class="sidebar-overlay" id="sidebarOverlay"></div>
+		
+		<!--Sidebar Navigation-->
+		<nav class="sidebar" id="sidebar">
+			<ul class="sidebar-nav">
+				<li><a href="index.html" class="nav-link"><i class="fa fa-home"></i> HOME</a></li>
+				<li><a href="about.html" class="nav-link"><i class="fa fa-info-circle"></i> ABOUT</a></li>
+				<li><a href="team.html" class="nav-link"><i class="fa fa-users"></i> TEAM</a></li>
+				<li><a href="service.html" class="nav-link"><i class="fa fa-briefcase"></i> PRACTICE AREA</a></li>
+				<li><a href="blog.html" class="nav-link"><i class="fa fa-newspaper-o"></i> NEWS LETTER</a></li>
+				<li><a href="careers.html" class="nav-link"><i class="fa fa-graduation-cap"></i> CAREERS</a></li>
+				<li><a href="contact.html" class="nav-link active"><i class="fa fa-envelope"></i> CONTACT</a></li>
+			</ul>
+		</nav>
+		<!--Header Area End-->
+		<!-- Page Banner Area Start-->
+		<div class="page-banner-area bg-img-3 pt-15 pb-10">
+			<div class="container">
+				<div class="row">
+					<div class="page-banner-content col-12 text-center">
+						<h2>Contact us</h2>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Page Banner Area End-->
+
+		<!--Contact Us Area Start-->
+		<div class="contact-us-area pt-10" style="background-color: aliceblue;">
+			<div class="container">
+				<div class="row">
+					<!--Contact Information Start-->
+					<div class="col-md-12 contact-address">
+						<div class="contact-information">
+							<div class="row">
+								<!-- Address Columns -->
+								<div class="col-12 col-md-6 mb-3 mb-md-4 mt-3">
+									<div class="address-box p-3 p-md-4  mb-md-4">
+										<h5>Delhi NCR Office</h5>
+										<p class="text-justify">
+											Off: 1134, Tower-A, i-thum,<br>
+											Plot No. A-40, Sector-62,<br>
+											Noida-201301, (Delhi- NCR), India.
+										</p>
+									</div>
+								</div>
+								<div class="col-12 col-md-6 mb-md-4 mt-3">
+									<div class="address-box p-3 p-md-4  mb-md-4">
+										<h5>Mumbai Office</h5>
+										<p class="text-justify">
+											32, Raja Bahadur Mansion,<br>
+											Off. No. 3, First Floor, Ambalal Doshi Marg,<br>
+											Fort, Mumbai - 400023, India
+										</p>
+									</div>
+								</div>
+								<!-- Contact Info Row -->
+								<div class="col-12">
+									<div class="contact-info-row row mb-3">
+										<div class="col-12 col-md-6 mb-3 mb-md-0">
+											<div class="info-box p-3 p-md-4">
+												<h5>Phone</h5>
+												<p class="text-justify">
+													<a href="tel:+911204961761">+0120 4961761</a><br>
+													<a href="tel:+919717211123">+91-9717211123</a>
+												</p>
+											</div>
+										</div>
+										<div class="col-12 col-md-6">
+											<div class="info-box p-3 p-md-4">
+												<h5>Web</h5>
+												<p class="text-justify">
+													<a href="mailto:info@jurisvista.in">info@jurisvista.in</a><br>
+													<a href="https://www.jurisvista.in" target="_blank">www.jurisvista.in</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--Contact Information End-->
+						<!--Contact Form Start-->
+
+						<!--Contact Form End-->
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<!--Contact Us Area End-->
+
+			<!-- Office Hours Area Start -->
+			<div class="office-hours-area py-2 pt-3" style="background-color: aliceblue;">
+				<div class="container">
+					<div class="row text-center mb-5">
+						<div class="col-12">
+							<h2 class="fw-bold">Office Hours</h2>
+							<p class="lead">We're here to help you during these hours</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 mb-4">
+							<div class="office-hours-card bg-white p-4 rounded shadow text-center">
+								<i class="fa fa-clock-o fa-3x text-primary mb-3"></i>
+								<h4>Weekdays</h4>
+								<p class="mb-0">Monday - Friday<br><strong>9:00 AM - 6:00 PM</strong></p>
+							</div>
+						</div>
+						<div class="col-md-4 mb-4">
+							<div class="office-hours-card bg-white p-4 rounded shadow text-center">
+								<i class="fa fa-calendar fa-3x text-success mb-3"></i>
+								<h4>Saturday</h4>
+								<p class="mb-0">Saturday Only<br><strong>10:00 AM - 4:00 PM</strong></p>
+							</div>
+						</div>
+						<div class="col-md-4 mb-4">
+							<div class="office-hours-card bg-white p-4 rounded shadow text-center">
+								<i class="fa fa-times-circle fa-3x text-danger mb-3"></i>
+								<h4>Sunday</h4>
+								<p class="mb-0">Closed<br><strong>Emergency Only</strong></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Office Hours Area End -->
+
+			<!-- FAQ Area Start -->
+			<div class="faq-area py-3" style="background-color: aliceblue;">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center mb-5">
+							<h2 class="fw-bold">Frequently Asked Questions</h2>
+							<p class="lead">Quick answers to common questions about our legal services</p>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-lg-12">
+							<div class="faq-item bg-white p-4 mb-3 rounded shadow-sm">
+								<div class="faq-question d-flex justify-content-between align-items-center"
+									onclick="toggleFaq(1)">
+									<h5 class="mb-0">How do I schedule a consultation?</h5>
+									<i class="fa fa-plus" id="icon-1"></i>
+								</div>
+								<div class="faq-answer mt-3" id="answer-1">
+									<p class="text-justify">You can schedule a consultation by calling us at +0120 4961761 or +91-9717211123,
+										emailing us at info@jurisvista.in, or filling out the contact form above. We
+										typically respond within 24 hours.</p>
+								</div>
+							</div>
+							<div class="faq-item bg-white p-4 mb-3 rounded shadow-sm">
+								<div class="faq-question d-flex justify-content-between align-items-center"
+									onclick="toggleFaq(2)">
+									<h5 class="mb-0">What are your consultation fees?</h5>
+									<i class="fa fa-plus" id="icon-2"></i>
+								</div>
+								<div class="faq-answer mt-3" id="answer-2">
+									<p class="text-justify">Initial consultations are free for most practice areas. We believe in providing
+										accessible legal advice and will discuss any fees upfront before proceeding with
+										your case.</p>
+								</div>
+							</div>
+							<div class="faq-item bg-white p-4 mb-3 rounded shadow-sm">
+								<div class="faq-question d-flex justify-content-between align-items-center"
+									onclick="toggleFaq(3)">
+									<h5 class="mb-0">Do you handle emergency cases?</h5>
+									<i class="fa fa-plus" id="icon-3"></i>
+								</div>
+								<div class="faq-answer mt-3" id="answer-3">
+									<p class="text-justify">Yes, we handle urgent legal matters. For emergencies outside business hours,
+										please
+										call our main number and follow the prompts for emergency assistance.</p>
+								</div>
+							</div>
+							<div class="faq-item bg-white p-4 mb-3 rounded shadow-sm">
+								<div class="faq-question d-flex justify-content-between align-items-center"
+									onclick="toggleFaq(4)">
+									<h5 class="mb-0">What documents should I bring to my consultation?</h5>
+									<i class="fa fa-plus" id="icon-4"></i>
+								</div>
+								<div class="faq-answer mt-3" id="answer-4">
+									<p class="text-justify">Please bring any relevant documents related to your case, including contracts,
+										correspondence, court papers, or identification. We'll provide a specific list
+										based
+										on your legal matter when you schedule.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- FAQ Area End -->
+
+			<!-- Map Section Start -->
+			<section class="py-3 bg-alternate" style="background-color: aliceblue;">
+				<div class="container">
+					<div class="row text-center mb-5">
+						<div class="col-12">
+							<h2 class="fw-bold">Find Us Here</h2>
+							<p class="lead">Visit our Office in Itum Tower A, Sector 62</p>
+						</div>
+					</div>
+				</div>
+				<div class="container px-0">
+					<div class="row">
+						<div class="col-md-8">
+							<div class="map-container">
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1065686830143!2d77.36980057575688!3d28.62656797566799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce550adec536d%3A0xfc9a748d99d8bd07!2sITHUM%20TOWER%2C%20GALAXY%20BUSINESS%20PARK%2C%20Block%20A%2C%20Industrial%20Area%2C%20Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201309!5e0!3m2!1sen!2sin!4v1754905709213!5m2!1sen!2sin"
+								width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
+						</div>
+						<div class="col-md-4 d-flex align-items-center justify-content-center">
+							<div class="qr-side text-center">
+								<img src="img/bg/locationqr.jpg" alt="Scan to save our contact or visit Jurisvista" class="qr-code" style="max-width:100%;">
+								<p class="qr-caption">Please scan the QR code above</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Map Section End -->
+
+			<!--Brand Area Start-->
+	<!--Brand Area Start-->
+<!--Brand Area Start-->
+<div class="brand-area py-2 py-md-3">
+	<div class="container">
+	  <div class="row justify-content-center align-items-center">
+		<div class="col-12">
+		  <!-- Mobile Layout (flexbox) - visible on mobile only -->
+		  <div class="brand-mobile d-flex d-md-none flex-wrap justify-content-center align-items-center gap-2 text-center">
+			<!-- Facebook -->
+			<div class="single-brand text-center mb-2">
+			  <a href="#">
+				<img src="img/logo/facebooklogo.png" 
+					 alt="Facebook Logo" 
+					 class="img-fluid brand-logo-img" 
+					 style="max-height: 60px; width: auto;">
+			  </a>
+			</div>
+			<!-- LinkedIn -->
+			<div class="single-brand text-center mb-2">
+			  <a href="https://www.linkedin.com/company/jurisvistalawoffices/" target="_blank">
+				<img src="img/logo/linkedInlogo.jpg" 
+					 alt="LinkedIn Logo" 
+					 class="img-fluid brand-logo-img" 
+					 style="max-height: 50px; width: auto;">
+			  </a>
+			</div>
+			<!-- Instagram -->
+			<div class="single-brand text-center mb-2">
+			  <a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr">
+				<img src="img/logo/instalogo.jpg" 
+					 alt="Instagram Logo" 
+					 class="img-fluid brand-logo-img" 
+					 style="max-height: 50px; width: auto;">
+			  </a>
+			</div>
+			<!-- YouTube -->
+			<div class="single-brand text-center mb-2">
+			  <a href="#">
+				<img src="img/logo/youtubelogo.jpg" 
+					 alt="YouTube Logo" 
+					 class="img-fluid brand-logo-img" 
+					 style="max-height: 50px; width: auto;">
+			  </a>
+			</div>
+			<!-- Twitter -->
+			<div class="single-brand text-center mb-2">
+			  <a href="#">
+				<img src="img/logo/twitter.jpg" 
+					 alt="Twitter Logo" 
+					 class="img-fluid brand-logo-img" 
+					 style="max-height: 50px; width: auto;">
+			  </a>
+			</div>
+		  </div>
+  
+		  <!-- Desktop Layout (carousel) - visible on laptop/desktop only -->
+		  <div class="brand-active owl-carousel d-none d-md-block">
+			<!-- Single Brand Start -->
+			<div class="single-brand text-center">
+			  <a href="#">
+				<img src="img/logo/facebooklogo.png" alt="Facebook Logo">
+			  </a>
+			</div>
+			<div class="single-brand text-center">
+			  <a href="https://www.linkedin.com/company/jurisvistalawoffices/" target="_blank">
+				<img src="img/logo/linkedInlogo.jpg" alt="LinkedIn Logo">
+			  </a>
+			</div>
+			<!-- Single Brand End -->
+			<!-- Single Brand Start -->
+			<div class="single-brand text-center">
+			  <a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qrf">
+				<img src="img/logo/instalogo.jpg" class="img-fluid" alt="Instagram Logo">
+			  </a>
+			</div>
+			<!-- Single Brand End -->
+			<!-- Single Brand Start -->
+			<div class="single-brand text-center">
+			  <a href="#">
+				<img src="img/logo/youtubelogo.jpg" class="img-fluid" alt="YouTube Logo">
+			  </a>
+			</div>
+			<!-- Single Brand End -->
+			<!-- Single Brand Start -->
+			<div class="single-brand text-center">
+			  <a href="#">
+				<img src="img/logo/twitter.jpg" class="img-fluid" alt="Twitter Logo">
+			  </a>
+			</div>
+			<!-- Single Brand End -->
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!--Brand Area End-->
+  <!--Brand Area End-->
+
+			<!--Brand Area End-->
+
+			<!--Footer Area Start-->
+		<footer>
+			<div class="footer-container">
+				<!--Footer Top Area Start-->
+				<div class="footer-top-area black-bg pt-20 pb-9">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-lg-3">
+								<!--Single Footer Widget Start-->
+								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+									<a class="footer-logo" href="index.html"><img src="img/bg/logojv4.png"
+											style="max-height: 150px; max-width: 190px;" alt="Jurisvista LLP Logo"></a>
+									<!-- CHANGE> Updated company description to be more comprehensive and professional  -->
+									<p class="text-justify">Jurisvista LLP is a premier full-service Indian law firm specializing in
+										corporate law, litigation, arbitration, and regulatory compliance. With offices
+										in Delhi NCR and Mumbai, we provide innovative legal solutions backed by deep
+										expertise and unwavering commitment to client success.</p>
+									
+								</div>
+								<!--Single Footer Widget End-->
+							</div>
+							<!--Single Footer Widget Start-->
+							<div class="col-md-6 col-lg-3 footer-menu">
+								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+									<!-- CHANGE> Updated menu title and links to be more law firm specific  -->
+									<h3 class="footer-title">Our Services</h3>
+									<ul>
+										<li><a href="about.html">About Jurisvista</a></li>
+										<li><a href="service.html">Legal Practice Areas</a></li>
+										<li><a href="contact.html">Schedule Consultation</a></li>
+										<li><a href="contact.html">Client Resources</a></li>
+										<li><a href="about.html">Legal Insights</a></li>
+										<li><a href="careers.html">Career Opportunities</a></li>
+									</ul>
+								</div>
+							</div>
+							<!--Single Footer Widget End-->
+							<!--Single Footer Widget Start-->
+							<div class="col-md-6 col-lg-3">
+								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+									<!-- CHANGE> Updated to showcase recent legal achievements instead of generic tweets  -->
+									<h3 class="footer-title">Contact Info</h3>
+									<p class="contact-info text-justify">
+										<strong>Phone:</strong><br>
+										<a href="tel:+911204961761">+0120 4961761</a>
+										<a href="tel:+919717211123">+91-9717211123</a>
+									</p>
+									<p class="contact-info text-justify">
+										<strong>Email & Web:</strong><br>
+										<a href="mailto:info@jurisvista.in">info@jurisvista.in</a>
+										<a href="https://www.jurisvista.in" target="_blank">www.jurisvista.in</a>
+									</p>
+									<div class="business-hours" style="margin-top: 15px;">
+										<p><strong>Business Hours:</strong><br>
+											Mon - Fri: 9:00 AM - 7:00 PM<br>
+											Sat: 10:00 AM - 4:00 PM</p>
+									</div>
+								</div>
+							</div>
+							<!--Single Footer Widget End-->
+							<!--Single Footer Widget Start-->
+							<div class="col-md-6 col-lg-3">
+								<div class="single-footer-widget animate-on-scroll stagger-animation">
+									<!-- CHANGE> Enhanced contact information with more professional presentation  -->
+									<h3 class="footer-title">Get In Touch</h3>
+									<div class="contact-details">
+										<p class="text-justify"><strong>Delhi NCR Office:</strong><br>
+											Off: 1134, Tower-A, i-thum,<br>
+											Plot No. A-40, Sector-62,<br>
+											Noida-201301, (Delhi- NCR), India</p>
+										<p class="text-justify"><strong>Mumbai Office:</strong><br>
+											32, Raja Bahadur Mansion,<br>
+											Off. No. 3, First Floor, Ambalal Doshi Marg,<br>
+											Fort, Mumbai - 400023</p>
+									</div>
+
+								</div>
+							</div>
+							<!--Single Footer Widget End-->
+						</div>
+					</div>
+				</div>
+				<!--Footer Top Area End-->
+				<!--Footer Bottom Area Start-->
+				<div class="footer-bottom-area pt-20 pb-20">
+					<div class="container text-center">
+						<!-- CHANGE> Updated copyright text to be more comprehensive and professional  -->
+						<p class="animate-on-scroll">
+							<span>&copy;</span> 2024 Jurisvista LLP. All rights reserved. |
+							<a href="#" style="margin: 0 10px;">Privacy Policy</a> |
+							<a href="#" style="margin: 0 10px;">Terms of Service</a> |
+							<a href="#" style="margin: 0 10px;">Disclaimer</a>
+						</p>
+					</div>
+				</div>
+				<!--Footer Bottom Area End-->
+			</div>
+		</footer>
+			<!--Footer Area End-->
+		</div>
+
+		<!--All Js Here-->
+
+		<!--Jquery 1.12.4-->
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+		<!--Waypoints-->
+		<script src="js/waypoints.min.js"></script>
+		<!--Counterup-->
+		<script src="js/jquery.counterup.min.js"></script>
+		<!--Carousel-->
+		<script src="js/owl.carousel.min.js"></script>
+		<!--Meanmenu-->
+		<script src="js/jquery.meanmenu.min.js"></script>
+		<!--Instafeed-->
+		<script src="js/instafeed.min.js"></script>
+		<!--Datepicker-->
+		<script src="js/jquery.datepicker.min.js"></script>
+		<!--Calendar-->
+		<script src="js/zabuto-calendar.min.js"></script>
+		<!--ScrollUp-->
+		<!--Wow-->
+		<script src="js/wow.min.js"></script>
+		<!--Venobox-->
+		<script src="js/venobox.min.js"></script>
+		<!--Popper-->
+		<script src="js/popper.min.js"></script>
+		<!--Bootstrap-->
+		<script src="js/bootstrap.min.js"></script>
+		<!--Plugins-->
+		<script src="js/plugins.js"></script>
+		<!--Main Js-->
+		<script src="js/main.js"></script>
+		
+		<!-- Sidebar Toggle Script -->
+		<script>
+			$(document).ready(function () {
+				const sidebar = document.getElementById('sidebar');
+				const sidebarToggle = document.getElementById('sidebarToggle');
+				const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+				// Open sidebar
+				sidebarToggle.addEventListener('click', function () {
+					sidebar.classList.toggle('active');
+					sidebarToggle.classList.toggle('active');
+					sidebarOverlay.classList.toggle('active');
+					document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : 'auto';
+				});
+
+				// Close sidebar when overlay is clicked
+				sidebarOverlay.addEventListener('click', function () {
+					sidebar.classList.remove('active');
+					sidebarToggle.classList.remove('active');
+					sidebarOverlay.classList.remove('active');
+					document.body.style.overflow = 'auto';
+				});
+
+				// Close sidebar when a link is clicked
+				document.querySelectorAll('.sidebar-nav a').forEach(link => {
+					link.addEventListener('click', function () {
+						sidebar.classList.remove('active');
+						sidebarToggle.classList.remove('active');
+						sidebarOverlay.classList.remove('active');
+						document.body.style.overflow = 'auto';
+					});
+				});
+
+				
+			});
+		</script>
+		
+		<script>
+            function toggleFaq(faqId) {
+                const answer = document.getElementById(`answer-${faqId}`);
+                const icon = document.getElementById(`icon-${faqId}`);
+
+                answer.classList.toggle("active");
+                
+                if (answer.classList.contains("active")) {
+                    icon.classList.remove("fa-plus");
+                    icon.classList.add("fa-minus");
+                } else {
+                    icon.classList.remove("fa-minus");
+                    icon.classList.add("fa-plus");
+                }
+            }
+        </script>
+
+
+</body>
+
+</html>

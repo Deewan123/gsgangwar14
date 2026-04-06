@@ -1,0 +1,1122 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Service || JustisVista</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Place favicon.ico in the root directory -->
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!--All Css Here-->
+    
+	<!-- Droid Font CSS-->
+    <link rel="stylesheet" href="css/droid.css">
+	<!-- Icofont CSS-->
+    <link rel="stylesheet" href="css/icofont.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Animate CSS-->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Owl Carousel CSS-->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<!-- Datepicker CSS-->
+	<link rel="stylesheet" href="css/jquery.datepicker.css">
+	<!-- Calendar CSS-->
+	<link rel="stylesheet" href="css/zabuto_calendar.css">
+	<!-- Meanmenu CSS-->
+	<!-- Venobox CSS-->
+	<link rel="stylesheet" href="css/venobox.css">
+	<!-- Bootstrap CSS-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="style.css">
+	<!-- Responsive CSS -->
+	<link rel="stylesheet" href="css/responsive.css">
+
+	 <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+	 <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+	<!-- Modernizr Js -->
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+	<style>
+
+		/* Added sidebar navigation styles */
+		:root {
+			--primary-color: #254B9D;
+			--secondary-color: #019df0;
+			--dark-bg: #1a1a1a;
+			--sidebar-width: 280px;
+		}
+
+		/* Sidebar Styles */
+		.sidebar {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: var(--sidebar-width);
+			height: 100vh;
+			background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a70 100%);
+			box-shadow: 2px 0 15px rgba(37, 75, 157, 0.3);
+			z-index: 998;
+			overflow-y: auto;
+			padding-top: 80px;
+			transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			transform: translateX(-100%);
+		}
+
+		.sidebar.active {
+			transform: translateX(0);
+		}
+
+		.sidebar-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0);
+			z-index: 997;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+		}
+
+		.sidebar-overlay.active {
+			background: rgba(0, 0, 0, 0.7);
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.sidebar-nav {
+			list-style: none;
+			padding: 20px 0;
+			margin: 0;
+		}
+
+		.sidebar-nav li {
+			margin: 0;
+		}
+
+		.sidebar-nav a {
+			display: flex;
+			align-items: center;
+			padding: 18px 25px;
+			color: #ffffff;
+			text-decoration: none;
+			font-size: 15px;
+			font-weight: 600;
+			transition: all 0.3s ease;
+			border-left: 4px solid transparent;
+			position: relative;
+		}
+
+		.sidebar-nav a:hover {
+			background: rgba(255, 255, 255, 0.1);
+			border-left-color: var(--secondary-color);
+			padding-left: 35px;
+			color: var(--secondary-color);
+		}
+
+		.sidebar-nav a i {
+			margin-right: 15px;
+			font-size: 18px;
+			width: 25px;
+			text-align: center;
+		}
+
+		.sidebar-nav a.active {
+			background: rgba(255, 255, 255, 0.15);
+			border-left-color: var(--secondary-color);
+			color: var(--secondary-color);
+		}
+
+		/* Hamburger Menu Styles */
+		.sidebar-toggle {
+			display: none;
+			width: 50px;
+			height: 50px;
+			background: none;
+			border: none;
+			border-radius: 0;
+			cursor: pointer;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			z-index: 999;
+			position: relative;
+			top: auto;
+			left: auto;
+		}
+
+		.sidebar-toggle span {
+			width: 28px;
+			height: 3px;
+			background: var(--primary-color);
+			margin: 4px 0;
+			transition: all 0.3s ease;
+			border-radius: 2px;
+			display: block;
+		}
+
+		.sidebar-toggle.active span:nth-child(1) {
+			transform: rotate(45deg) translate(8px, 8px);
+		}
+
+		.sidebar-toggle.active span:nth-child(2) {
+			opacity: 0;
+		}
+
+		.sidebar-toggle.active span:nth-child(3) {
+			transform: rotate(-45deg) translate(7px, -7px);
+		}
+
+		/* Header Top Area adjustment */
+		.header-bottom-area {
+			position: relative;
+			z-index: 100;
+		}
+
+		/* Main content wrapper */
+		body.sidebar-open {
+			overflow: hidden;
+		}
+
+
+		  /* Updated sidebar toggle positioning for 768-984px range */
+		  @media (max-width: 984px) and (min-width: 768px) {
+			.sidebar-toggle {
+				display: flex;
+				position: absolute;
+				top: 50%;
+				left: 15px;
+				transform: translateY(-50%);
+				z-index: 1001;
+			}
+
+			.header-menu-area {
+				display: none;
+			}
+
+			.sidebar {
+				width: var(--sidebar-width);
+			}
+
+			.header-logo {
+				text-align: center;
+				position: relative;
+				padding-left: 60px;
+			}
+			
+			.header-bottom-area .row {
+				position: relative;
+			}
+		}
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.header-logo {
+				position: relative;
+				display: flex;
+				align-items: center;
+				height: 60px;
+			}
+			.sidebar-toggle {
+				display: flex;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 1001;
+				margin-left: 0;
+				margin-right: 12px;
+				background: rgba(255,255,255,0.95);
+				border: 2px solid var(--primary-color);
+				box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+				border-radius: 8px;
+			}
+			.header-logo img {
+				margin-left: 60px;
+			}
+		}
+
+			@media (max-width: 992px) {
+  .header-menu-area ul.main-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media (max-width: 768px) {
+  .main-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+		@media (max-width: 576px) {
+			:root {
+				--sidebar-width: 250px;
+			}
+
+			.sidebar-nav a {
+				padding: 15px 20px;
+				font-size: 14px;
+			}
+
+			.sidebar-nav a i {
+				margin-right: 12px;
+				font-size: 16px;
+			}
+
+			.sidebar-toggle {
+				width: 44px;
+				height: 44px;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+			}
+		}
+
+
+
+		/* Loading Animation */
+		.page-loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #111d1b;
+			z-index: 9999;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			animation: fadeOut 1s ease-in-out 2s forwards;
+		}
+
+
+		.spinner {
+			width: 50px;
+			height: 50px;
+			border: 3px solid rgba(255,255,255,0.3);
+			border-top: 3px solid #fff;
+			border-radius: 50%;
+			animation: spin 1s linear infinite;
+			margin: 0 auto 20px;
+		}
+
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+
+		@keyframes fadeOut {
+			to { opacity: 0; visibility: hidden; }
+		}
+
+		.social-link {
+			transition: all 0.3s ease;
+			display: inline-block;
+		}
+
+		.social-link:hover {
+			transform: translateY(-3px) scale(1.2);
+			color: #ff6b35;
+		}
+
+		.glow-on-hover {
+			transition: all 0.3s ease;
+		}
+
+		.glow-on-hover:hover {
+				box-shadow: 0 0 20px rgba(53, 191, 255, 0.666);
+			text-shadow: 0 0 10px rgba(53, 127, 255, 0.518);	}
+
+		.main-menu li {
+			animation: fadeInUp 0.6s ease-out both;
+		}
+
+		.main-menu li:nth-child(1) { animation-delay: 1.2s; }
+		.main-menu li:nth-child(2) { animation-delay: 1.3s; }
+		.main-menu li:nth-child(3) { animation-delay: 1.4s; }
+		.main-menu li:nth-child(4) { animation-delay: 1.5s; }
+		.main-menu li:nth-child(5) { animation-delay: 1.6s; }
+		.main-menu li:nth-child(6) { animation-delay: 1.7s; }
+		.main-menu li:nth-child(7) {
+			animation-delay: 1.8s;
+		}
+
+		.main-menu a {
+			position: relative;
+			transition: all 0.3s ease;
+			overflow: hidden;
+		}
+
+		.main-menu a::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: -100%;
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(90deg, #006aff, #001d7b);
+			transition: left 0.3s ease;
+		}
+
+		.main-menu a:hover::before {
+			left: 0;
+		}
+
+		.main-menu a:hover {
+			transform: translateY(-2px);
+			color: #4294C8;
+		}
+
+		.brand-active img {
+			max-height: 150px;
+			/* keeps logos uniform height */
+			object-fit: contain;
+		}
+
+		.brand-active .single-brand img {
+			width: 60px;
+			/* Set the desired width */
+			height: 60px;
+			/* Set the desired height */
+			border-radius: 50%;
+			/* Make the image circular */
+			object-fit: cover;
+			/* Ensure the image covers the area without distortion */
+		}
+
+
+.bg-animate {
+            background-size: 120% 120%;
+            animation: backgroundMove 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundMove {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+	
+
+ .single-service-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+ .single-service-content {
+    flex: 1 1 auto;
+    padding-top: 12px;
+}
+
+.service-banner-img img{
+	border-radius: 7%;
+}
+	</style>
+</head>
+<body>
+	<!--[if lt IE 8]>
+	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+		<!-- Added page loader with animation -->
+		<div class="page-loader">
+			<div class="loader-content">
+				<div class="spinner"></div>
+				<h3>Loading...</h3>
+			</div>
+		</div>
+	
+
+	<div class="wrapper">
+		<!--Header Area Start-->
+		<header>
+			<div class="header-container">
+				<!--Header Top Area Start-->
+				<div class="header-top-area default-bg">
+					<div class="container">
+						<div class="row ">
+							<div class="header-top-wrap col-12">
+								<div class="row">
+									<!--Header Top Left Area Start-->
+									<div class="col-md-4 col-xl-3">
+										<div class="header-top-left">
+										<p class="glow-on-hover">CALL US : <a href="#"> +0120 4961761</a></p>
+										</div>
+									</div>
+									<!--Header Top Left Area End-->
+									<!--Header Top Middle Area Start-->
+									<div class="col-md-4 col-xl-6">
+										<div class="header-top-middle text-center">
+											<ul class="social-link">
+												<li><a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a></li>
+											<li><a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a></li>
+											<li><a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr" class="social-link"><i class="fa-brands fa-instagram"></i></a></li>
+											<li><a href="#" class="social-link"><i class="fa-brands fa-google"></i></a></li>
+										</ul>
+										</div>
+									</div>
+									<!--Header Top Middle Area End-->
+									<!--Header Top Right Area Start-->
+									<div class="col-md-4 col-xl-3">
+										<div class="header-top-right">
+										<p class="glow-on-hover">MAIL US :<a href="mailto:info@jurisvista.in">info@jurisvista.in</a></p>
+										</div>
+									</div>
+									<!--Header Top Right Area End-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Header Top Area End-->
+				<!--Header Bottom Area Start-->
+				<div class="header-bottom-area header-sticky">
+					<div class="container">
+						<div class="row ">
+							<!--Header Logo Start-->
+							<div class="col-md-3">
+								<div class="header-logo">
+									<!--Sidebar Toggle Button-->
+									<button class="sidebar-toggle" id="sidebarToggle">
+										<span></span>
+										<span></span>
+										<span></span>
+									</button>
+									<a href="index.html"><img src="img/bg/logojv4.png"
+											style="max-width: 180px; min-height: 50px;" alt=""></a>
+								</div>
+							</div>
+							<!--Header Logo End-->
+							<!--Header Menu Start-->
+							<div class="col-md-9">
+								<div class="header-menu-area ">
+									<nav>
+										<ul class="main-menu">
+											<li ><a href="index.html" class="nav-link-bold">HOME</a>
+											</li>
+											<li><a href="about.html" class="nav-link-bold">ABOUT</a></li>
+											<li><a href="team.html" class="nav-link-bold">TEAM</a></li>
+											<li class="active" ><a href="service.html" class="nav-link-bold">PRACTICE AREA</a></li>
+											<li><a href="blog.html" class="nav-link-bold">NEWS LETTER</a>
+												
+											</li>
+											<li><a href="careers.html" class="nav-link-bold">CAREERS</a></li>
+											<li><a href="contact.html" class="nav-link-bold">CONTACT</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<!--Header Menu End-->
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<!--Mobile Menu Area Start-->
+								<div class="mobile-menu d-lg-none d-xl-none"></div>
+								<!--Mobile Menu Area End-->
+								<!--Sidebar Toggle Button-->
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Header Bottom Area End-->
+			</div>
+		</header>
+		
+		<!--Sidebar Overlay-->
+		<div class="sidebar-overlay" id="sidebarOverlay"></div>
+		
+		<!--Sidebar Navigation-->
+		<nav class="sidebar" id="sidebar">
+			<ul class="sidebar-nav">
+				<li><a href="index.html" class="nav-link"><i class="fa fa-home"></i> HOME</a></li>
+				<li><a href="about.html" class="nav-link"><i class="fa fa-info-circle"></i> ABOUT</a></li>
+				<li><a href="team.html" class="nav-link"><i class="fa fa-users"></i> TEAM</a></li>
+				<li><a href="service.html" class="nav-link active"><i class="fa fa-briefcase"></i> PRACTICE AREA</a></li>
+				<li><a href="blog.html" class="nav-link"><i class="fa fa-newspaper-o"></i> NEWS LETTER</a></li>
+				<li><a href="careers.html" class="nav-link"><i class="fa fa-graduation-cap"></i> CAREERS</a></li>
+				<li><a href="contact.html" class="nav-link"><i class="fa fa-envelope"></i> CONTACT</a></li>
+			</ul>
+		</nav>
+		<!--Header Area End-->
+
+
+		<!-- Page Banner Area Start-->
+		<div class="page-banner-area bg-img-3 bg-animate pt-15 pb-10">
+		    <div class="container">
+		        <div class="row">
+		            <div class="page-banner-content col-12 text-center">
+                        <h2>Services</h2>
+                        <p class="text-justify">At Jurisvista, we offer a comprehensive range of legal services across diverse sectors, blending in-depth expertise with practical, business-oriented solutions. Our team of lawyers brings specialized knowledge and experience in their respective fields, ensuring that every matter is handled with precision, strategy, and dedication.</p>
+		               
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- Page Banner Area End-->
+		<!-- Service Page Banner Area Start-->
+		<div class="service-page-banner pt-20 pb-20" style="background-color: aliceblue;">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-lg-8 ml-auto mr-auto col-12">
+		                <div class="service-banner-img img-full">
+		                    <img src="img/service/single-service/servicemainimage.jpg" alt="">
+		                </div>
+		            </div>
+		        </div>
+		        <div class="row">
+		            <div class="col-12">
+		                <!--Section Title Start-->
+                        <div class="section-title text-center mb-30">
+                            <h2>Our <span>Practice Areas</span></h2>           
+                            <p class="text-justify">We are committed to delivering the highest standards of legal excellence, providing clients with tailored advice, effective representation, and results-driven solutions. At Jurisvista, we believe in going beyond conventional advocacy, combining innovation, foresight, and professionalism to serve our clients best interests.</p>
+                        </div>
+                        <!--Section Title End-->
+		            </div>
+		        </div>
+		        <div class="row">
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                        <img src="img/service/single-service/arbitration.jpeg" alt=""></a>
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Arbitration & Dispute Resolution</h4>
+		                        <p>At JurisVista LLP, we handle both domestic and international arbitration, providing end-to-end support from drafting arbitration agreements to representing clients in proceedings. Our expertise includes commercial and contractual disputes, enforcement of domestic and foreign arbitral awards, and alternative dispute resolution methods such as conciliation and mediation.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                       <img src="img/service/single-service/Corporate & Commercial Laws.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Corporate & Commercial Laws</h4>
+		                        <p>Our team advises clients on all aspects of corporate governance, general corporate matters, and commercial compliance, including company formation, regulatory compliance, mergers, acquisitions, joint ventures, corporate restructuring, due diligence, and shareholder disputes. We also handle corporate litigation, ensuring clients receive practical, business-focused legal solutions.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+					<!--Single Service Start-->
+					<div class="col-lg-4 col-md-6">
+						<div class="single-service mb-50">
+							<div class="single-service-img img-full">
+								<img src="img/service/single-service/Intellectual Property Rights.jpg" alt="">
+							</div>
+							<div class="single-service-content">
+								<h4>Intellectual Property Rights (IPR)</h4>
+								<p>Our IPR practice helps clients protect and enforce their intellectual property, including patents, trademarks, copyrights, and designs. We assist with licensing agreements, IP commercialization, litigation, dispute resolution, and enforcement against infringement.</p>
+							</div>
+						</div>
+					</div>
+					<!--Single Service End-->
+					<!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                       <img src="img/service/single-service/Insolvency & Bankruptcy.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Insolvency & Bankruptcy</h4>
+		                        <p>We focus on corporate restructuring and debt recovery under the Insolvency and Bankruptcy Code (IBC). Our services include advising creditors and debtors on resolution plans, representing clients in NCLT and other forums, and handling corporate rescue and liquidation processes.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                        <img src="img/service/single-service/service-dummy-5.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Consumer Law</h4>
+		                        <p>We protect consumer rights and ensure fair market practices. Our team handles disputes involving defective goods, deficient services, unfair trade practices, false advertising, and e-commerce issues. We appear before consumer commissions at all levels, including the National Consumer Disputes Redressal Commission (NCDRC), delivering effective strategies to secure compensation and enforce accountability.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                        <img src="img/service/single-service/Real Estate & Property Law.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Real Estate & Property Law</h4>
+		                        <p>We offer comprehensive support in real estate and property matters, covering property acquisition, leasing agreements, RERA compliance, land acquisition, zoning, infrastructure projects, and real estate litigation and recovery.</p>
+		                    </div>
+		               	</div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                      <img src="img/service/single-service/Employment & Labour Law.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Employment & Labour Laws</h4>
+		                        <p>We advise and represent clients on employment and industrial relations matters, including employment contracts, HR compliance, industrial disputes, service matters, workplace investigations, compliance audits, and representation before labour tribunals.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                        <img src="img/service/single-service/service-dummy-8.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Constitutional & Administrative Law</h4>
+		                        <p>Our public law practice covers writ petitions, public interest litigation, regulatory compliance, and government contracts. We represent clients before courts and tribunals, ensuring protection of their rights and adherence to legal frameworks.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                       <img src="img/service/single-service/Banking, Finance & Insurance .jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Banking, Finance & Insurance</h4>
+		                        <p>We provide legal support across banking, financial services, and insurance law, covering loan agreements, recovery, securitization, regulatory compliance, dispute resolution, insurance claims and litigation, structured finance, and project financing.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                       <img src="img/service/single-service/Securities Market & SEBI Law.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Securities Market & SEBI Law</h4>
+		                        <p>Our team provides specialized advisory and litigation services in capital markets and securities law. We handle SEBI compliance audits, public offerings, IPOs, insider trading and market manipulation investigations, and representation before SEBI, stock exchanges, and appellate authorities. We also advise on corporate governance and disclosure obligations for listed companies.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                       <img src="img/service/single-service/White Collar Crimes & Investigations.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>White-Collar Crimes & Investigations</h4>
+		                        <p>We handle corporate investigations and white-collar crime matters, including fraud, mismanagement, corporate governance violations, cybercrime, and digital investigations. We represent clients before investigative agencies and courts, providing strategic and effective solutions.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                        <img src="img/service/single-service/The-ins-and-outs-of-family-law.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Matrimonial & Family Law</h4>
+		                        <p>We provide sensitive and expert guidance in family law matters, including divorce, maintenance, alimony, child custody, adoption, property disputes, and settlements. Our approach balances compassion with strategic advocacy to achieve favorable outcomes.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                        <img src="img/service/single-service/mining-industry-flyability-2.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Mines, Minerals & Infrastructure</h4>
+		                        <p>We provide legal support in natural resources and infrastructure projects, including mining leases, project approvals, infrastructure contracts, dispute resolution, and environmental compliance and litigation.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                        <img src="img/service/single-service/DEBT-RECOVERY-GUIDE.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Debt Recovery & Securitization</h4>
+		                        <p>We assist banks, financial institutions, and corporates in debt recovery and securitization matters, including recovery proceedings under DRT and SARFAESI, structuring recovery and securitization arrangements, and advising on negotiation and litigation strategies.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                        <img src="img/service/single-service/images (2).jpeg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Contracts & Deeds</h4>
+		                        <p>Our team ensures robust contractual frameworks for clients, covering drafting and vetting agreements for commercial transactions, conveyances, deeds, property documentation, and negotiation and risk mitigation strategies.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                        <img src="img/service/single-service/Startup Support.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Startup Support</h4>
+		                        <p>We offer specialized Startup Support, assisting emerging businesses with entity formation, compliance, funding documentation, ESOP structuring, IP protection, and commercial agreements. Our goal is to provide startups with the right legal foundation to innovate, grow, and scale confidently.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-img img-full">
+		                        <img src="img/service/single-service/Maritime & Aviation Law.jpeg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h4>Maritime & Aviation Law</h4>
+		                        <p>We advise clients on maritime and aviation matters, including shipping contracts, charter agreements, aviation leasing, regulatory compliance, liability claims, and dispute resolution in domestic and international forums. Our team provides strategic solutions tailored to the complex regulatory frameworks of these specialized sectors.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+		        </div>
+		    </div>
+		</div>
+		<!-- Service Page Banner Area End-->
+		<!--Fun Factor Area Start-->
+	
+		<!--Fun Factor Area End-->
+		<!--Brand Area Start-->
+<div class="brand-area py-2 py-md-3">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+        <!-- Mobile Layout (flexbox) - visible on mobile only -->
+        <div class="brand-mobile d-flex d-md-none flex-wrap justify-content-center align-items-center gap-2 text-center">
+          <!-- Facebook -->
+          <div class="single-brand text-center mb-2">
+            <a href="#">
+              <img src="img/logo/facebooklogo.png" 
+                   alt="Facebook Logo" 
+                   class="img-fluid brand-logo-img" 
+                   style="max-height: 60px; width: auto;">
+            </a>
+          </div>
+          <!-- LinkedIn -->
+          <div class="single-brand text-center mb-2">
+            <a href="https://www.linkedin.com/company/jurisvistalawoffices/" target="_blank">
+              <img src="img/logo/linkedInlogo.jpg" 
+                   alt="LinkedIn Logo" 
+                   class="img-fluid brand-logo-img" 
+                   style="max-height: 50px; width: auto;">
+            </a>
+          </div>
+          <!-- Instagram -->
+          <div class="single-brand text-center mb-2">
+            <a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr">
+              <img src="img/logo/instalogo.jpg" 
+                   alt="Instagram Logo" 
+                   class="img-fluid brand-logo-img" 
+                   style="max-height: 50px; width: auto;">
+            </a>
+          </div>
+          <!-- YouTube -->
+          <div class="single-brand text-center mb-2">
+            <a href="#">
+              <img src="img/logo/youtubelogo.jpg" 
+                   alt="YouTube Logo" 
+                   class="img-fluid brand-logo-img" 
+                   style="max-height: 50px; width: auto;">
+            </a>
+          </div>
+          <!-- Twitter -->
+          <div class="single-brand text-center mb-2">
+            <a href="#">
+              <img src="img/logo/twitter.jpg" 
+                   alt="Twitter Logo" 
+                   class="img-fluid brand-logo-img" 
+                   style="max-height: 50px; width: auto;">
+            </a>
+          </div>
+        </div>
+
+        <!-- Desktop Layout (carousel) - visible on laptop/desktop only -->
+        <div class="brand-active owl-carousel d-none d-md-block">
+          <!-- Single Brand Start -->
+          <div class="single-brand text-center">
+            <a href="#">
+              <img src="img/logo/facebooklogo.png" alt="Facebook Logo">
+            </a>
+          </div>
+          <div class="single-brand text-center">
+            <a href="https://www.linkedin.com/company/jurisvistalawoffices/" target="_blank">
+              <img src="img/logo/linkedInlogo.jpg" alt="LinkedIn Logo">
+            </a>
+          </div>
+          <!-- Single Brand End -->
+          <!-- Single Brand Start -->
+          <div class="single-brand text-center">
+            <a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr">
+              <img src="img/logo/instalogo.jpg" class="img-fluid" alt="Instagram Logo">
+            </a>
+          </div>
+          <!-- Single Brand End -->
+          <!-- Single Brand Start -->
+          <div class="single-brand text-center">
+            <a href="#">
+              <img src="img/logo/youtubelogo.jpg" class="img-fluid" alt="YouTube Logo">
+            </a>
+          </div>
+          <!-- Single Brand End -->
+          <!-- Single Brand Start -->
+          <div class="single-brand text-center">
+            <a href="#">
+              <img src="img/logo/twitter.jpg" class="img-fluid" alt="Twitter Logo">
+            </a>
+          </div>
+          <!-- Single Brand End -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Brand Area End-->
+		<!--Brand Area End-->
+		<!--Footer Area Start-->
+		<footer>
+			<div class="footer-container">
+				<!--Footer Top Area Start-->
+				<div class="footer-top-area black-bg pt-20 pb-9">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-lg-3">
+								<!--Single Footer Widget Start-->
+								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+									<a class="footer-logo" href="index.html"><img src="img/bg/logojv4.png"
+											style="max-height: 150px; max-width: 190px;" alt="Jurisvista LLP Logo"></a>
+									<!-- CHANGE> Updated company description to be more comprehensive and professional  -->
+									<p>Jurisvista LLP is a premier full-service Indian law firm specializing in
+										corporate law, litigation, arbitration, and regulatory compliance. With offices
+										in Delhi NCR and Mumbai, we provide innovative legal solutions backed by deep
+										expertise and unwavering commitment to client success.</p>
+									
+								</div>
+								<!--Single Footer Widget End-->
+							</div>
+							<!--Single Footer Widget Start-->
+							<div class="col-md-6 col-lg-3 footer-menu">
+								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+									<!-- CHANGE> Updated menu title and links to be more law firm specific  -->
+									<h3 class="footer-title">Our Services</h3>
+									<ul>
+										<li><a href="about.html">About Jurisvista</a></li>
+										<li><a href="service.html">Legal Practice Areas</a></li>
+										<li><a href="contact.html">Schedule Consultation</a></li>
+										<li><a href="contact.html">Client Resources</a></li>
+										<li><a href="about.html">Legal Insights</a></li>
+										<li><a href="careers.html">Career Opportunities</a></li>
+									</ul>
+								</div>
+							</div>
+							<!--Single Footer Widget End-->
+							<!--Single Footer Widget Start-->
+							<div class="col-md-6 col-lg-3">
+								<div class="single-footer-widget  animate-on-scroll stagger-animation">
+									<!-- CHANGE> Updated to showcase recent legal achievements instead of generic tweets  -->
+									<h3 class="footer-title">Contact Info</h3>
+									<p class="contact-info">
+										<strong>Phone:</strong><br>
+										<a href="tel:+911204961761">+0120 4961761</a>
+										<a href="tel:+919717211123">+91-9717211123</a>
+									</p>
+									<p class="contact-info">
+										<strong>Email & Web:</strong><br>
+										<a href="mailto:info@jurisvista.in">info@jurisvista.in</a>
+										<a href="https://www.jurisvista.in" target="_blank">www.jurisvista.in</a>
+									</p>
+									<div class="business-hours" style="margin-top: 15px;">
+										<p><strong>Business Hours:</strong><br>
+											Mon - Fri: 9:00 AM - 7:00 PM<br>
+											Sat: 10:00 AM - 4:00 PM</p>
+									</div>
+								</div>
+							</div>
+							<!--Single Footer Widget End-->
+							<!--Single Footer Widget Start-->
+							<div class="col-md-6 col-lg-3">
+								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+									<!-- CHANGE> Enhanced contact information with more professional presentation  -->
+									<h3 class="footer-title">Get In Touch</h3>
+									<div class="contact-details">
+										<p><strong>Delhi NCR Office:</strong><br>
+											Off: 1134, Tower-A, i-thum,<br>
+											Plot No. A-40, Sector-62,<br>
+											Noida-201301, (Delhi- NCR), India</p>
+										<p><strong>Mumbai Office:</strong><br>
+											32, Raja Bahadur Mansion,<br>
+											Off. No. 3, First Floor, Ambalal Doshi Marg,<br>
+											Fort, Mumbai - 400023</p>
+									</div>
+
+								</div>
+							</div>
+							<!--Single Footer Widget End-->
+						</div>
+					</div>
+				</div>
+				<!--Footer Top Area End-->
+				<!--Footer Bottom Area Start-->
+				<div class="footer-bottom-area pt-20 pb-20">
+					<div class="container text-center">
+						<!-- CHANGE> Updated copyright text to be more comprehensive and professional  -->
+						<p class="animate-on-scroll">
+							<span>&copy;</span> 2024 Jurisvista LLP. All rights reserved. |
+							<a href="#" style="margin: 0 10px;">Privacy Policy</a> |
+							<a href="#" style="margin: 0 10px;">Terms of Service</a> |
+							<a href="#" style="margin: 0 10px;">Disclaimer</a>
+						</p>
+					</div>
+				</div>
+				<!--Footer Bottom Area End-->
+			</div>
+		</footer>
+		<!--Footer Area End-->
+	</div>
+
+
+
+
+
+    <!--All Js Here-->
+    
+	<!--Jquery 1.12.4-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!--Waypoints-->
+	<script src="js/waypoints.min.js"></script>
+	<!--Counterup-->
+	<script src="js/jquery.counterup.min.js"></script>
+	<!--Carousel-->
+	<script src="js/owl.carousel.min.js"></script>
+	<!--Meanmenu-->
+	<script src="js/jquery.meanmenu.min.js"></script>
+	<!--Instafeed-->
+	<script src="js/instafeed.min.js"></script>
+	<!--Datepicker-->
+	<script src="js/jquery.datepicker.min.js"></script>
+	<!--Calendar-->
+	<script src="js/zabuto-calendar.min.js"></script>
+	<!--ScrollUp-->
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<!--Wow-->
+	<script src="js/wow.min.js"></script>
+	<!--Venobox-->
+	<script src="js/venobox.min.js"></script>
+	<!--Popper-->
+	<script src="js/popper.min.js"></script>
+	<!--Bootstrap-->
+	<script src="js/bootstrap.min.js"></script>
+	<!--Plugins-->
+	<script src="js/plugins.js"></script>
+	<!--Main Js-->
+	<script src="js/main.js"></script>
+
+		<!-- Sidebar Toggle Script -->
+		<script>
+			$(document).ready(function () {
+				const sidebar = document.getElementById('sidebar');
+				const sidebarToggle = document.getElementById('sidebarToggle');
+				const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+				// Open sidebar
+				sidebarToggle.addEventListener('click', function () {
+					sidebar.classList.toggle('active');
+					sidebarToggle.classList.toggle('active');
+					sidebarOverlay.classList.toggle('active');
+					document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : 'auto';
+				});
+
+				// Close sidebar when overlay is clicked
+				sidebarOverlay.addEventListener('click', function () {
+					sidebar.classList.remove('active');
+					sidebarToggle.classList.remove('active');
+					sidebarOverlay.classList.remove('active');
+					document.body.style.overflow = 'auto';
+				});
+
+				// Close sidebar when a link is clicked
+				document.querySelectorAll('.sidebar-nav a').forEach(link => {
+					link.addEventListener('click', function () {
+						sidebar.classList.remove('active');
+						sidebarToggle.classList.remove('active');
+						sidebarOverlay.classList.remove('active');
+						document.body.style.overflow = 'auto';
+					});
+				});
+			});
+		</script>
+		
+
+		
+	<script>
+		$(document).ready(function () {
+				
+				// Hide page loader after 2 seconds
+				setTimeout(function() {
+					$('.page-loader').fadeOut(500);
+				}, 500);
+			}
+				);
+
+				// Initialize brand carousel
+			if ($('.brand-active').length) {
+    $('.brand-active').owlCarousel({
+        items: 2,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        dots: false,
+        nav: false,
+        responsive: {
+            0: { items: 2 },
+            768: { items: 4 },
+            992: { items: 6 }
+        }
+    });
+}
+			
+		</script>
+</body>
+</html>

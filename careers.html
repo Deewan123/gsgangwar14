@@ -1,0 +1,775 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Careers || Jurisvista LLP</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!--All Css Here-->
+    <link rel="stylesheet" href="css/droid.css">
+    <link rel="stylesheet" href="css/icofont.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jquery.datepicker.css">
+    <link rel="stylesheet" href="css/zabuto_calendar.css">
+    <link rel="stylesheet" href="css/venobox.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        /* Added sidebar navigation styles to match index.html */
+        :root { --primary-color: #254B9D; --secondary-color: #019df0; --dark-bg: #1a1a1a; --sidebar-width: 280px; }
+        .sidebar { position: fixed; left: 0; top: 0; width: var(--sidebar-width); height: 100vh; background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a70 100%); box-shadow: 2px 0 15px rgba(37, 75, 157, 0.3); z-index: 998; overflow-y: auto; padding-top: 80px; transition: all .4s cubic-bezier(.25,.46,.45,.94); transform: translateX(-100%); }
+        .sidebar.active { transform: translateX(0); }
+        .sidebar-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0); z-index: 997; opacity: 0; visibility: hidden; transition: all .3s ease; }
+        .sidebar-overlay.active { background: rgba(0,0,0,.7); opacity: 1; visibility: visible; }
+        .sidebar-nav { list-style: none; padding: 20px 0; margin: 0; }
+        .sidebar-nav li { margin: 0; }
+        .sidebar-nav a { display: flex; align-items: center; padding: 18px 25px; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; transition: all .3s ease; border-left: 4px solid transparent; position: relative; }
+        .sidebar-nav a:hover { background: rgba(255,255,255,.1); border-left-color: var(--secondary-color); padding-left: 35px; color: var(--secondary-color); }
+        .sidebar-nav a i { margin-right: 15px; font-size: 18px; width: 25px; text-align: center; }
+        .sidebar-nav a.active { background: rgba(255,255,255,.15); border-left-color: var(--secondary-color); color: var(--secondary-color); }
+        .sidebar-toggle { display: none; width: 50px; height: 50px; background: none; border: none; border-radius: 0; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; z-index: 999; position: relative; top: auto; left: auto; }
+        .sidebar-toggle span { width: 28px; height: 3px; background: var(--primary-color); margin: 4px 0; transition: all .3s ease; border-radius: 2px; display: block; }
+        .sidebar-toggle.active span:nth-child(1){ transform: rotate(45deg) translate(8px,8px); }
+        .sidebar-toggle.active span:nth-child(2){ opacity: 0; }
+        .sidebar-toggle.active span:nth-child(3){ transform: rotate(-45deg) translate(7px,-7px); }
+        .header-bottom-area { position: relative; z-index: 100; }
+        body.sidebar-open { overflow: hidden; }
+        
+        /* Updated sidebar toggle positioning for 768-984px range */
+        @media (max-width: 984px) and (min-width: 768px) {
+            .sidebar-toggle {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+                z-index: 1001;
+            }
+
+            .header-menu-area {
+                display: none;
+            }
+
+            .sidebar {
+                width: var(--sidebar-width);
+            }
+
+            .header-logo {
+                text-align: center;
+                position: relative;
+                padding-left: 60px;
+            }
+            
+            .header-bottom-area .row {
+                position: relative;
+                display: flex;
+                align-items: center;
+                min-height: 80px;
+            }
+            
+            /* Ensure logo and toggle are properly aligned */
+            .header-logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .header-logo a {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) { 
+            .header-logo {
+                position: relative;
+                display: flex;
+                align-items: center;
+                height: 60px;
+            }
+            .sidebar-toggle {
+                display: flex;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1001;
+                margin-left: 0;
+                margin-right: 12px;
+                background: rgba(255,255,255,0.95);
+                border: 2px solid var(--primary-color);
+                box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+                border-radius: 8px;
+            }
+            .header-logo img {
+                margin-left: 60px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+                    .opportunity-card {
+                        padding: 18px 10px !important;
+                        border-radius: 14px !important;
+                    }
+                    .opportunity-icon {
+                        width: 60px !important;
+                        height: 60px !important;
+                        font-size: 24px !important;
+                    }
+                    .opportunity-card h4 {
+                        font-size: 1.1rem !important;
+                    }
+                    .opportunity-card p {
+                        font-size: 0.97rem !important;
+                    }
+                }
+
+        	@media (max-width: 992px) {
+  .header-menu-area ul.main-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media (max-width: 768px) {
+  .main-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+
+        @media (max-width: 576px) { 
+            :root { --sidebar-width: 250px; } 
+            .sidebar-nav a { padding: 15px 20px; font-size: 14px; } 
+            .sidebar-nav a i { margin-right: 12px; font-size: 16px; } 
+            .sidebar-toggle {
+                width: 44px;
+                height: 44px;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+        .page-loader{position:fixed;top:0;left:0;width:100%;height:100%;background:#111d1b;z-index:9999;display:flex;justify-content:center;align-items:center;animation:fadeOut 1s ease-in-out 2s forwards}
+        .spinner{width:50px;height:50px;border:3px solid rgba(255,255,255,.3);border-top:3px solid #fff;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 20px}
+        @keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+        @keyframes fadeOut{to{opacity:0;visibility:hidden}}
+
+        .bg-animate{background-size:120% 120%;animation:backgroundMove 20s ease-in-out infinite}
+        @keyframes backgroundMove{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+        .main-menu a{position:relative;transition:all .3s ease;overflow:hidden}
+        .main-menu a::before{content:'';position:absolute;bottom:0;left:-100%;width:100%;height:2px;background:linear-gradient(90deg,#019df0,#254B9D);transition:left .3s ease}
+        .main-menu a:hover::before{left:0}
+        .main-menu a:hover{transform:translateY(-2px);color:#019df0}
+
+        .section-title h2{margin-bottom:10px}
+        .careers-hero{color:white;position:relative;overflow:hidden}
+        @keyframes float{0%,100%{transform:translateY(0px)}50%{transform:translateY(-10px)}}
+
+        .careers-card{background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,.08);padding:32px;margin-bottom:12px;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);border:1px solid rgba(59,130,246,.1);position:relative;overflow:hidden}
+        .careers-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#3b82f6,#1e40af);transform:scaleX(0);transition:transform .3s ease;transform-origin:left}
+        .careers-card:hover::before{transform:scaleX(1)}
+        .careers-card:hover{transform:translateY(-8px);box-shadow:0 20px 48px rgba(0,0,0,.15)}
+
+        .opportunity-card{background:#fff;border-radius:20px;padding:40px 32px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.08);transition:all .4s cubic-bezier(0.4, 0, 0.2, 1);border:2px solid transparent;position:relative;overflow:hidden}
+        .opportunity-card::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(59,130,246,.05),rgba(30,64,175,.05));opacity:0;transition:opacity .3s ease}
+        .opportunity-card:hover::before{opacity:1}
+        .opportunity-card:hover{transform:translateY(-12px);box-shadow:0 24px 60px rgba(59,130,246,.2);border-color:rgba(59,130,246,.3)}
+
+        .opportunity-icon{width:80px;height:80px;margin:0 auto 24px;background:linear-gradient(135deg,#3b82f6,#1e40af);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:32px;transition:transform .3s ease}
+        .opportunity-card:hover .opportunity-icon{transform:scale(1.1) rotate(5deg)}
+
+        .pill{display:inline-block;padding:8px 20px;border-radius:50px;background:linear-gradient(135deg,#dbeafe,#bfdbfe);color:#1e40af;font-weight:600;font-size:14px;margin-bottom:16px}
+        .btn-apply{display:inline-block;background:linear-gradient(135deg,#3b82f6,#1e40af);color:#fff;padding:14px 28px;border-radius:50px;text-decoration:none;font-weight:600;transition:all .3s ease;box-shadow:0 4px 16px rgba(59,130,246,.3);position:relative;overflow:hidden}
+        .btn-apply::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s ease}
+        .btn-apply:hover::before{left:100%}
+        .btn-apply:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,130,246,.4);color:#fff}
+
+        .highlight{color:#3b82f6;font-weight:700}
+        .blue-section{color:white;position:relative}
+
+        .trait-card{background:#fff;border-radius:12px;padding:24px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.06);transition:all .3s ease;border-left:4px solid #3b82f6;margin-bottom:24px}
+        .trait-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.12)}
+        .trait-card h5{color:#1e40af;margin-bottom:12px;font-weight:700}
+
+        .section-divider{height:2px;background:linear-gradient(90deg,transparent,#3b82f6,transparent);margin:60px 0}
+
+        .animate-on-scroll{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(0.4, 0, 0.2, 1)}
+        .animate-on-scroll.animated{opacity:1;transform:translateY(0)}
+
+        .stats-counter{font-size:48px;font-weight:700;color:#3b82f6;display:block}
+        .stats-label{font-size:16px;color:#64748b;margin-top:8px}
+
+        .testimonial-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 8px 32px rgba(0,0,0,.08);margin-bottom:32px;position:relative}
+        .testimonial-card::before{content:'"';position:absolute;top:16px;left:24px;font-size:48px;color:#3b82f6;opacity:0.3;font-family:serif}
+
+        @media (max-width: 768px) {
+            .opportunity-card{padding:24px 20px}
+            .careers-card{padding:24px}
+            .stats-counter{font-size:36px}
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <h3>Loading...</h3>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <!--Header Area Start-->
+        <header>
+            <div class="header-container">
+                <div class="header-top-area default-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="header-top-wrap col-12">
+                                <div class="row">
+                                    <div class="col-md-4 col-xl-3">
+                                        <div class="header-top-left">
+                                            <p class="glow-on-hover">CALL US : <a href="#"> +0120 4961761</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xl-6">
+                                        <div class="header-top-middle text-center">
+                                            <ul class="social-link">
+                                                <li><a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a></li>
+                                                <li><a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                                <li><a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr" class="social-link"><i class="fa-brands fa-instagram"></i></a></li>
+                                                <li><a href="#" class="social-link"><i class="fa-brands fa-google"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xl-3">
+                                        <div class="header-top-right">
+                                            <p class="glow-on-hover">MAIL US :<a href="#">info@jurisvista.in</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom-area header-sticky">
+                    <div class="container">
+                        <div class="row align-items-center">
+                           <div class="col-md-3">
+								<div class="header-logo">
+									<!--Sidebar Toggle Button-->
+									<button class="sidebar-toggle" id="sidebarToggle">
+										<span></span>
+										<span></span>
+										<span></span>
+									</button>
+									<a href="index.html"><img src="img/bg/logojv4.png"
+											style="max-width: 180px; min-height: 50px;" alt=""></a>
+								</div>
+							</div>
+                            <div class="col-md-9">
+                                <div class="header-menu-area ">
+                                    <nav>
+                                        <ul class="main-menu">
+                                            <li><a href="index.html" class="nav-link-bold">HOME</a></li>
+                                            <li><a href="about.html" class="nav-link-bold">ABOUT</a></li>
+                                            <li><a href="team.html" class="nav-link-bold">TEAM</a></li>
+                                            <li><a href="service.html" class="nav-link-bold">PRACTICE AREA</a></li>
+                                            <li><a href="blog.html" class="nav-link-bold">NEWS LETTER</a></li>
+                                            <li class="active"><a href="careers.html" class="nav-link-bold">CAREERS</a></li>
+                                            <li><a href="contact.html" class="nav-link-bold">CONTACT</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mobile-menu d-lg-none d-xl-none"></div>
+                        <!-- Sidebar Toggle Button (mobile) -->
+                       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Header Area End-->
+
+        <!--Sidebar Overlay-->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!--Sidebar Navigation-->
+        <nav class="sidebar" id="sidebar">
+            <ul class="sidebar-nav">
+                <li><a href="index.html" class="nav-link"><i class="fa fa-home"></i> HOME</a></li>
+                <li><a href="about.html" class="nav-link"><i class="fa fa-info-circle"></i> ABOUT</a></li>
+                <li><a href="team.html" class="nav-link"><i class="fa fa-users"></i> TEAM</a></li>
+                <li><a href="service.html" class="nav-link"><i class="fa fa-briefcase"></i> PRACTICE AREA</a></li>
+                <li><a href="blog.html" class="nav-link"><i class="fa fa-newspaper-o"></i> NEWS LETTER</a></li>
+                <li><a href="careers.html" class="nav-link active"><i class="fa fa-graduation-cap"></i> CAREERS</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fa fa-envelope"></i> CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero/Banner -->
+        <div class="page-banner-area careers-hero pt-20 pb-20" style="background-image: url(img/slider/bgimg.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="page-banner-content col-12 text-center animate-on-scroll">
+                        <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 24px; color: white">Careers at Jurisvista LLP</h1>
+                        <p class="text-justify" style="color: rgba(255,255,255,0.9); font-size: 18px;">Join a team that blends excellence with innovation. Work with experienced partners and industry professionals in a collaborative, growth-focused culture</p>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join Our Team Section -->
+        <div class="blue-section pt-10 pb-10" style="background-image: url(img/slider/bgimg.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-60 animate-on-scroll" >
+                            <h2 style=" font-size: 42px; margin-bottom: 16px; color: white">Join Our Team</h2>
+                            <p class="text-justify" style="color: rgba(255,255,255,0.9); font-size: 18px;">Flourish under the mentorship of our highly experienced team</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-lg-4 mb-4 animate-on-scroll">
+                        <div class="opportunity-card h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="opportunity-icon">
+                                    <i class="fa fa-graduation-cap"></i>
+                                </div>
+                                <h4 style="color: #1e40af; margin-bottom: 16px; font-weight: 700;">Internship</h4>
+                                <p class="text-justify" style="color: #64748b; margin-bottom: 24px;">Year-round programme crafted to give your career a head start. Work with placement committees.</p>
+                            </div>
+                            <a href="contact.html" class="btn-apply mt-auto">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 mb-4 animate-on-scroll">
+                        <div class="opportunity-card h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="opportunity-icon">
+                                    <i class="fa fa-briefcase"></i>
+                                </div>
+                                <h4 style="color: #1e40af; margin-bottom: 16px; font-weight: 700;">Professional Lateral</h4>
+                                <p class="text-justify" style="color: #64748b; margin-bottom: 24px;">Accelerate your growth with challenging mandates exposure in our dynamic legal environment.</p>
+                            </div>
+                            <a href="contact.html" class="btn-apply mt-auto">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 mb-4 animate-on-scroll">
+                        <div class="opportunity-card h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="opportunity-icon">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                <h4 style="color: #1e40af; margin-bottom: 16px; font-weight: 700;">Management and Support</h4>
+                                <p class="text-justify" style="color: #64748b; margin-bottom: 24px;">Critical roles in knowledge management, business development, HR, IT, finance, and operations.</p>
+                            </div>
+                            <a href="contact.html" class="btn-apply mt-auto">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+               
+                </div>
+            </div>
+        </div>
+
+        <!-- Opportunities Section -->
+        <div class="pt-10 pb-10" style="background-color: #f8fafc;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-60 animate-on-scroll">
+                            <span class="pill">Opportunities</span>
+                                <h2 class="career-paths-title">Career Paths at Jurisvista</h2>
+                                <p class="career-paths-desc text-justify">JurisVista talent with various levels of experience and expertise. We are as committed to accelerating the career graphs of seasoned professionals as we are to mentoring young minds. Explore the roles you can join us in:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internships Section -->
+                <div class="row mb-10">
+                    <div class="col-12 animate-on-scroll">
+                        <div style="border-left: 4px solid #3b82f6; padding-left: 24px; margin-bottom: 40px;">
+                            <h3 style="color: #1e40af; font-size: 28px; margin-bottom: 24px; font-weight: 700;">Internships</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-8 animate-on-scroll">
+                        <div class="careers-card">
+                            <p class="text-justify" style="color: #64748b; line-height: 1.7; margin-bottom: 20px;">
+                                At Jurisvista LLP, Advocates & Solicitors, our internship programme runs throughout the year and is designed to provide aspiring legal professionals with practical exposure, mentorship, and a strong foundation for their future careers.
+                            </p>
+                            <p class="text-justify" style="color: #64748b; line-height: 1.7; margin-bottom: 20px;">
+                                We collaborate with placement committees of leading law schools across the country, as well as directly process individual internship applications. Our interns get the opportunity to work alongside our lawyers, gaining firsthand insight into diverse areas of practice and the workings of a modern law firm.
+                            </p>
+                            <p class="text-justify" style="color: #64748b; line-height: 1.7;">
+                                If you are a student from a law school where we already have a coordinated internship programme, please contact your Campus Internship or Placement Committee for further details.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-on-scroll">
+                        <div style="background: linear-gradient(135deg, #3b82f6, #1e40af); border-radius: 16px; padding: 32px; color: white; text-align: center;">
+                            <h4 style="margin-bottom: 16px;">Program Highlights</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 12px;"><i class="fa fa-check" style="margin-right: 8px;"></i> Guided Learning</li>
+                                <li style="margin-bottom: 12px;"><i class="fa fa-check" style="margin-right: 8px;"></i> Hands-On Experience</li>
+                                <li style="margin-bottom: 12px;"><i class="fa fa-check" style="margin-right: 8px;"></i> Professional Growth</li>
+                                <li><i class="fa fa-check" style="margin-right: 8px;"></i> Career Mentorship</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professionals Section -->
+                <div class="row">
+                    <div class="col-12 animate-on-scroll">
+                        <div style="border-left: 4px solid #3b82f6; padding-left: 24px; margin-bottom: 40px;">
+                            <h3 style="color: #1e40af; font-size: 28px; margin-bottom: 24px; font-weight: 700;">Professionals</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-8 animate-on-scroll">
+                        <div class="careers-card">
+                            <p class="text-justify" style="color: #64748b; line-height: 1.7; margin-bottom: 20px;">
+                                The world of business and law is changing fast and there's never been a better time to be part of Jurisvista LLP.
+                            </p>
+                            <p class="text-justify" style="color: #64748b; line-height: 1.7; margin-bottom: 20px;">
+                                We're more than just lawyers; we're trusted advisors who go the extra mile to help our clients succeed. Whether it's solving complex legal challenges, handling big transactions, or navigating disputes, our team is known for its dedication, creativity, and professionalism.
+                            </p>
+                            <p class="text-justify" style="color: #64748b; line-height: 1.7; margin-bottom: 20px;">
+                                At Jurisvista LLP, Advocates & Solicitors, we welcome talented Lawyers, Management, and Support Professionals who are ready to grow, learn, and make an impact. We believe in thinking boldly, acting with integrity, and working together to deliver our best every single day.
+                            </p>
+                            <p class="text-justify" style="color: #64748b; line-height: 1.7; margin-bottom: 20px;">
+                                We value diverse ideas, backgrounds, and experiences, that's what drives innovation and excellence. Here, ambition is encouraged, hard work is recognized, and success is shared.
+                            </p>
+                            <p class="text-justify" style="color: #64748b; line-height: 1.7;">
+                                If you're passionate about your work and want to be part of a team that's shaping the future of law with purpose and integrity, Jurisvista LLP is the place for you.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-on-scroll">
+                        <div style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 8px 32px rgba(0,0,0,.08); text-align: center;">
+                            <h4 style="color: #1e40af; margin-bottom: 24px;">What We Offer</h4>
+                            <div style="margin-bottom: 20px;">
+                                <div class="stats-label">Dynamic team with diverse expertise</div>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <div class="stats-label">Client-focused and solution-driven approach</div>
+                            </div>
+                            <div>
+                                <div class="stats-label">Collaborative and growth-oriented culture</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What We Look For -->
+        <div class="pt-10 pb-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-60 animate-on-scroll">
+                            <span class="pill">What We Look For</span>
+                            <h2 style="color: #1e40af; font-size: 36px;">Traits We Value</h2>
+                            <p class="text-justify" style="color: #64748b;">Commitment, excellence, integrity, knowledge, respect, openness, teamwork and trust are our bedrock values.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 animate-on-scroll">
+                        <div class="trait-card">
+                            <h5>Core Values </h5>
+                            <p class="text-justify" style="color: #64748b;">At Jurisvista LLP, we value commitment, integrity, excellence, curiosity, respect, and teamwork. These principles guide everything we do and form the foundation of our culture.
+</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 animate-on-scroll">
+                        <div class="trait-card">
+                            <h5>Drive & Learning </h5>
+                            <p class="text-justify" style="color: #64748b;">We look for individuals with a proactive attitude and a strong desire to learn, adapt, and grow in a fast-paced legal environment.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 animate-on-scroll">
+                        <div class="trait-card">
+                            <h5>Legal & Analytical Skills </h5>
+                            <p class="text-justify" style="color: #64748b;">Solid legal knowledge, sharp analytical abilities, and practical problem-solving skills are essential to deliver meaningful results for our clients.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 animate-on-scroll">
+                        <div class="trait-card"><h5>Business Awareness</h5>
+                            <p class="text-justify" style="color: #64748b;">Understanding how legal advice fits within a client's business objectives helps us provide solutions that are both practical and strategic.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 animate-on-scroll">
+                        <div class="trait-card">
+                            <h5>Communication & Collaboration</h5>
+                            <p class="text-justify" style="color: #64748b;">Strong interpersonal skills, clear communication, and the ability to work effectively across teams and practice areas are key to our collaborative culture.
+</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 animate-on-scroll">
+                        <div class="trait-card">
+                            <h5>Tech-Savvy Approach</h5>
+                            <p class="text-justify" style="color: #64748b;">Comfort with digital tools and technology-driven legal solutions is highly valued in today's evolving legal landscape.
+</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 animate-on-scroll">
+                        <div class="trait-card">
+                            <h5>Innovation & Creativity </h5>
+                            <p class="text-justify" style="color: #64748b;">We appreciate professionals who can think creatively, challenge conventional approaches, and find solutions that drive impact.
+</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 animate-on-scroll ">
+                        <div class="trait-card">
+                            <h5>Global Outlook</h5>
+                            <p class="text-justify" style="color: #64748b; ">A broader perspective on international business and legal practices helps us serve clients in an increasingly connected world.
+</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="pt-10 pb-10" style="background-color: #f8fafc;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-60 animate-on-scroll">
+                            <span class="pill">Why Choose Us</span>
+                           
+                            <h2 class="why-jurisvista-title">Why <span class="highlight">Jurisvista LLP</span></h2>
+                            <p style="color: #64748b;">In our journey towards excellence, we attract, invest in, and retain top talent. Our reputation is owed to exceptionally talented professionals whose ideas drive the firm forward.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 animate-on-scroll">
+                        <div class="careers-card">
+                            <h4 style="color: #1e40af; margin-bottom: 16px;">Challenging Opportunities</h4>
+                            <p style="color: #64748b;">Work on complex, high-stakes matters across multiple practice areas and jurisdictions with industry-leading clients.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 animate-on-scroll">
+                        <div class="careers-card">
+                            <h4 style="color: #1e40af; margin-bottom: 16px;">World Class Infrastructure</h4>
+                            <p style="color: #64748b;">Modern tools, research-driven processes, and seamless knowledge sharing platforms to enhance your productivity.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 animate-on-scroll">
+                        <div class="careers-card">
+                            <h4 style="color: #1e40af; margin-bottom: 16px;">Performance Driven Rewards</h4>
+                            <p style="color: #64748b;">Meritocratic culture that recognises excellence with clear growth paths and competitive compensation packages.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 animate-on-scroll">
+                        <div class="careers-card">
+                            <h4 style="color: #1e40af; margin-bottom: 16px;">Learning and Development</h4>
+                            <p style="color: #64748b;">Continuous learning through mentoring, specialized trainings, and structured professional development programmes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer Area Start-->
+   <footer>
+			<div class="footer-container">
+				<!--Footer Top Area Start-->
+				<div class="footer-top-area black-bg pt-20 pb-9">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-lg-3">
+								<!--Single Footer Widget Start-->
+								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+									<a class="footer-logo" href="index.html"><img src="img/bg/logojv4.png"
+											style="max-height: 150px; max-width: 190px;" alt="Jurisvista LLP Logo"></a>
+									<!-- CHANGE> Updated company description to be more comprehensive and professional  -->
+									<p>Jurisvista LLP is a premier full-service Indian law firm specializing in
+										corporate law, litigation, arbitration, and regulatory compliance. With offices
+										in Delhi NCR and Mumbai, we provide innovative legal solutions backed by deep
+										expertise and unwavering commitment to client success.</p>
+									
+								</div>
+								<!--Single Footer Widget End-->
+							</div>
+							<!--Single Footer Widget Start-->
+							<div class="col-md-6 col-lg-3 footer-menu">
+								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+									<!-- CHANGE> Updated menu title and links to be more law firm specific  -->
+									<h3 class="footer-title">Our Services</h3>
+									<ul>
+										<li><a href="about.html">About Jurisvista</a></li>
+										<li><a href="service.html">Legal Practice Areas</a></li>
+										<li><a href="contact.html">Schedule Consultation</a></li>
+										<li><a href="contact.html">Client Resources</a></li>
+										<li><a href="about.html">Legal Insights</a></li>
+										<li><a href="careers.html">Career Opportunities</a></li>
+									</ul>
+								</div>
+							</div>
+							<!--Single Footer Widget End-->
+							<!--Single Footer Widget Start-->
+							<div class="col-md-6 col-lg-3">
+								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+									<!-- CHANGE> Updated to showcase recent legal achievements instead of generic tweets  -->
+									<h3 class="footer-title">Contact Info</h3>
+									<p class="contact-info">
+										<strong>Phone:</strong><br>
+										<a href="tel:+911204961761">+0120 4961761</a>
+										<a href="tel:+919717211123">+91-9717211123</a>
+									</p>
+									<p class="contact-info">
+										<strong>Email & Web:</strong><br>
+										<a href="mailto:info@jurisvista.in">info@jurisvista.in</a>
+										<a href="https://www.jurisvista.in" target="_blank">www.jurisvista.in</a>
+									</p>
+									<div class="business-hours" style="margin-top: 15px;">
+										<p><strong>Business Hours:</strong><br>
+											Mon - Fri: 9:00 AM - 7:00 PM<br>
+											Sat: 10:00 AM - 4:00 PM</p>
+									</div>
+								</div>
+							</div>
+							<!--Single Footer Widget End-->
+							<!--Single Footer Widget Start-->
+							<div class="col-md-6 col-lg-3">
+								<div class="single-footer-widget animate-on-scroll stagger-animation">
+									<!-- CHANGE> Enhanced contact information with more professional presentation  -->
+									<h3 class="footer-title">Get In Touch</h3>
+									<div class="contact-details">
+										<p><strong>Delhi NCR Office:</strong><br>
+											Off: 1134, Tower-A, i-thum,<br>
+											Plot No. A-40, Sector-62,<br>
+											Noida-201301, (Delhi- NCR), India</p>
+										<p><strong>Mumbai Office:</strong><br>
+											32, Raja Bahadur Mansion,<br>
+											Off. No. 3, First Floor, Ambalal Doshi Marg,<br>
+											Fort, Mumbai - 400023</p>
+									</div>
+
+								</div>
+							</div>
+							<!--Single Footer Widget End-->
+						</div>
+					</div>
+				</div>
+				<!--Footer Top Area End-->
+				<!--Footer Bottom Area Start-->
+				<div class="footer-bottom-area pt-20 pb-20">
+					<div class="container text-center">
+						<!-- CHANGE> Updated copyright text to be more comprehensive and professional  -->
+						<p class="animate-on-scroll">
+							<span>&copy;</span> 2024 Jurisvista LLP. All rights reserved. |
+							<a href="#" style="margin: 0 10px;">Privacy Policy</a> |
+							<a href="#" style="margin: 0 10px;">Terms of Service</a> |
+							<a href="#" style="margin: 0 10px;">Disclaimer</a>
+						</p>
+					</div>
+				</div>
+				<!--Footer Bottom Area End-->
+			</div>
+		</footer>
+    </div>
+
+    <!--All Js Here-->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/instafeed.min.js"></script>
+    <script src="js/jquery.datepicker.min.js"></script>
+    <script src="js/zabuto-calendar.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="js/venobox.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Sidebar Toggle Script (matches index.html) -->
+    <script>
+        $(document).ready(function () {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+            if (sidebar && sidebarToggle && sidebarOverlay) {
+                // Open sidebar
+                sidebarToggle.addEventListener('click', function () {
+                    sidebar.classList.toggle('active');
+                    sidebarToggle.classList.toggle('active');
+                    sidebarOverlay.classList.toggle('active');
+                    document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : 'auto';
+                });
+
+                // Close sidebar when overlay is clicked
+                sidebarOverlay.addEventListener('click', function () {
+                    sidebar.classList.remove('active');
+                    sidebarToggle.classList.remove('active');
+                    sidebarOverlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+
+                // Close sidebar when a link is clicked
+                document.querySelectorAll('.sidebar-nav a').forEach(link => {
+                    link.addEventListener('click', function () {
+                        sidebar.classList.remove('active');
+                        sidebarToggle.classList.remove('active');
+                        sidebarOverlay.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                    });
+                });
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            setTimeout(function(){ $('.page-loader').fadeOut(500); }, 500);
+            
+            // Animate on scroll
+            function animateOnScroll() {
+                $('.animate-on-scroll').each(function() {
+                    var elementTop = $(this).offset().top;
+                    var elementBottom = elementTop + $(this).outerHeight();
+                    var viewportTop = $(window).scrollTop();
+                    var viewportBottom = viewportTop + $(window).height();
+                    
+                    if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                        $(this).addClass('animated');
+                    }
+                });
+            }
+            
+            $(window).on('scroll resize', animateOnScroll);
+            animateOnScroll(); // Initial check
+            
+           
+        });
+    </script>
+</body>
+</html>

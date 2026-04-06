@@ -1,0 +1,836 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Blog Post || JustisVista</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/droid.css">
+    <link rel="stylesheet" href="css/icofont.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <style>
+        .blog-post-header {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        
+        .blog-post-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .blog-post-content h3 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .blog-post-content h4 {
+            font-size: 1.4em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #34495e;
+            font-weight: 600;
+        }
+
+        .blog-post-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .blog-post-content ul, .blog-post-content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .blog-post-content li {
+            margin-bottom: 8px;
+        }
+        
+        .blog-post-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        
+        .blog-post-meta {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .blog-post-meta span {
+            margin-right: 20px;
+        }
+        
+        .blog-post-body {
+            margin-bottom: 60px;
+        }
+        
+        .blog-post-navigation {
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+            margin-top: 30px;
+        }
+
+        .blog-post-navigation .btn {
+            background-color: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .blog-post-navigation .btn:hover {
+            background-color: #1e3a8a;
+            color: white;
+            text-decoration: none;
+        }
+
+        .blog-post-navigation .btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #blogContent {
+            min-height: 500px;
+        }
+
+        .social-link {
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px) scale(1.2);
+            color: #ff6b35;
+        }
+
+        .glow-on-hover {
+            transition: all 0.3s ease;
+        }
+
+        .glow-on-hover:hover {
+            box-shadow: 0 0 20px rgba(53, 191, 255, 0.666);
+            text-shadow: 0 0 10px rgba(53, 127, 255, 0.518);
+        }
+
+        .main-menu li {
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .main-menu li:nth-child(1) { animation-delay: 1.2s; }
+        .main-menu li:nth-child(2) { animation-delay: 1.3s; }
+        .main-menu li:nth-child(3) { animation-delay: 1.4s; }
+        .main-menu li:nth-child(4) { animation-delay: 1.5s; }
+        .main-menu li:nth-child(5) { animation-delay: 1.6s; }
+        .main-menu li:nth-child(6) { animation-delay: 1.7s; }
+        .main-menu li:nth-child(7) { animation-delay: 1.8s; }
+
+        .main-menu a {
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .main-menu a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #006aff, #001d7b);
+            transition: left 0.3s ease;
+        }
+
+        .main-menu a:hover::before {
+            left: 0;
+        }
+
+        .main-menu a:hover {
+            transform: translateY(-2px);
+            color: #1cabe9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-top-area default-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-top-wrap col-12">
+                            <div class="row">
+                                <div class="col-md-4 col-xl-3">
+                                    <div class="header-top-left">
+                                        <p class="glow-on-hover">CALL US : <a href="#"> 01204961761</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-xl-6">
+                                    <div class="header-top-middle text-center">
+                                        <ul class="social-link">
+                                            <li><a href="#" class="social-link"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="#" class="social-link"><i class="fa fa-google-plus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-xl-3">
+                                    <div class="header-top-right">
+                                        <p class="glow-on-hover">MAIL US :<a href="mailto:info@jurisvista.in">info@jurisvista.in</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-bottom-area header-sticky">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="header-logo">
+                                <a href="index.html"><img src="img/bg/logojv4.png" style="max-width: 180px; min-height: 50px;" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="header-menu-area">
+                                <nav>
+                                    <ul class="main-menu">
+                                        <li><a href="index.html" class="nav-link-bold">HOME</a></li>
+                                        <li><a href="about.html" class="nav-link-bold">ABOUT</a></li>
+                                        <li><a href="team.html" class="nav-link-bold">TEAM</a></li>
+                                        <li><a href="service.html" class="nav-link-bold">PRACTICE AREA</a></li>
+                                        <li class="active"><a href="blog.html" class="nav-link-bold">NEWS LETTER</a></li>
+                                        <li><a href="careers.html" class="nav-link-bold">CAREERS</a></li>
+                                        <li><a href="contact.html" class="nav-link-bold">CONTACT</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="blog-post-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 id="blogTitle"></h1>
+                    <div class="blog-post-meta">
+                        <span><i class="fa fa-user"></i> By <span id="blogAuthor"></span></span>
+                        <span><i class="fa fa-calendar"></i> <span id="blogDate"></span></span>
+                        <span><i class="fa fa-folder"></i> <span id="blogCategory"></span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="blog-post-body">
+                    <img src="/placeholder.svg" id="blogImage" alt="Blog Post Image" class="blog-post-image">
+                    
+                    <div class="blog-post-content" id="blogContent">
+                    </div>
+
+                    <div class="blog-post-navigation">
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="#" id="prevPost" class="btn"><i class="fa fa-arrow-left"></i> Previous Post</a>
+                            </div>
+                            <div class="col-6 text-right">
+                                <a href="#" id="nextPost" class="btn">Next Post <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top-area black-bg pt-20 pb-9">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+                                <a class="footer-logo" href="index.html"><img src="img/bg/logojv4.png" style="max-height: 150px; max-width: 190px;" alt="Jurisvista LLP Logo"></a>
+                                <p>Jurisvista LLP is a premier full-service Indian law firm specializing in corporate law, litigation, arbitration, and regulatory compliance. With offices in Delhi NCR and Mumbai, we provide innovative legal solutions backed by deep expertise and unwavering commitment to client success.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 footer-menu">
+                            <div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+                                <h3 class="footer-title">Our Services</h3>
+                                <ul>
+                                    <li><a href="about.html">About Jurisvista</a></li>
+                                    <li><a href="service.html">Legal Practice Areas</a></li>
+                                    <li><a href="contact.html">Schedule Consultation</a></li>
+                                    <li><a href="contact.html">Client Resources</a></li>
+                                    <li><a href="about.html">Legal Insights</a></li>
+                                    <li><a href="careers.html">Career Opportunities</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+                                <h3 class="footer-title">Contact Info</h3>
+                                <p class="contact-info">
+                                    <strong>Phone:</strong><br>
+                                    <a href="tel:+911204961761">+0120 4961761</a>
+                                    <a href="tel:+919717211123">+91-9717211123</a>
+                                </p>
+                                <p class="contact-info">
+                                    <strong>Email & Web:</strong><br>
+                                    <a href="mailto:info@jurisvista.in">info@jurisvista.in</a>
+                                    <a href="https://www.jurisvista.in" target="_blank">www.jurisvista.in</a>
+                                </p>
+                                <div class="business-hours" style="margin-top: 15px;">
+                                    <p><strong>Business Hours:</strong><br>
+                                        Mon - Fri: 9:00 AM - 7:00 PM<br>
+                                        Sat: 10:00 AM - 4:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+                                <h3 class="footer-title">Get In Touch</h3>
+                                <div class="contact-details">
+                                    <p><strong>Delhi NCR Office:</strong><br>
+                                        Off: 1134, Tower-A, i-thum,<br>
+                                        Plot No. A-40, Sector-62,<br>
+                                        Noida-201301, (Delhi- NCR), India</p>
+                                    <p><strong>Mumbai Office:</strong><br>
+                                        32, Raja Bahadur Mansion,<br>
+                                        Off. No. 3, First Floor, Ambalal Doshi Marg,<br>
+                                        Fort, Mumbai - 400023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-area pt-20 pb-20">
+                <div class="container text-center">
+                    <p class="animate-on-scroll">
+                        <span>&copy;</span> 2024 Jurisvista LLP. All rights reserved. |
+                        <a href="#" style="margin: 0 10px;">Privacy Policy</a> |
+                        <a href="#" style="margin: 0 10px;">Terms of Service</a> |
+                        <a href="#" style="margin: 0 10px;">Disclaimer</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/instafeed.min.js"></script>
+    <script src="js/jquery.datepicker.min.js"></script>
+    <script src="js/zabuto-calendar.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/venobox.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        const blogPosts = {
+            'ibc-future': {
+                title: 'The Future of Insolvency Resolution under the IBC',
+                author: 'G.S. Gangwar',
+                date: 'February 02, 2025',
+                category: 'Insolvency Law',
+                image: 'img/blog/large/The Future of Insolvency.jpg',
+                content: `
+                    <p>The Insolvency and Bankruptcy Code (IBC) has emerged as a transformative piece of legislation in India's economic landscape, fundamentally altering how business failures are addressed and resolved. As we look ahead, several key developments and challenges warrant attention for the continued evolution of this framework.</p>
+
+                    <h3>Key Achievements</h3>
+                    <p>Since its inception, the IBC has facilitated the resolution of numerous distressed companies, returning significant value to creditors and ensuring business continuity where viable. The Code has instilled a sense of urgency in debt resolution, with time-bound processes and clear accountability.</p>
+
+                    <h3>Current Challenges</h3>
+                    <p>However, several challenges persist in the implementation of the IBC:</p>
+                    <ul>
+                        <li>Judicial delays extending beyond the stipulated timeline</li>
+                        <li>Limited infrastructure and capacity at NCLTs</li>
+                        <li>Complex interpretation issues leading to litigation</li>
+                        <li>Shortage of qualified resolution professionals</li>
+                    </ul>
+
+                    <h3>Proposed Reforms</h3>
+                    <p>To address these challenges and strengthen the insolvency framework, several reforms are crucial:</p>
+                    <ol>
+                        <li>Expanding NCLT infrastructure and appointing more members</li>
+                        <li>Implementing pre-packaged insolvency resolution process for wider categories</li>
+                        <li>Developing a more robust market for distressed assets</li>
+                        <li>Strengthening the role and capacity of resolution professionals</li>
+                        <li>Harmonizing various laws affecting insolvency resolution</li>
+                    </ol>
+
+                    <h3>Looking Ahead</h3>
+                    <p>The future of insolvency resolution in India depends on our ability to address these challenges while preserving the core principles of the IBC. With appropriate reforms and continued commitment from all stakeholders, India can establish itself as a business-friendly jurisdiction with an efficient insolvency resolution framework.</p>
+
+                    <p>The success of the IBC will be measured not just by the number of resolutions but by its ability to foster a culture of credit discipline and responsible borrowing while ensuring fair and efficient resolution of business failures.</p>`
+            },
+            'corporate-governance': {
+                title: 'Corporate Governance in India: Between Regulation and Reality',
+                author: 'G.S. Gangwar',
+                date: 'February 05, 2025',
+                category: 'Corporate Law',
+                image: 'img/blog/large/cgii.jpg',
+                content: `
+                    <p>Corporate governance in India stands at a crucial crossroads, balancing traditional business practices with modern regulatory demands. This comprehensive analysis examines the evolution of corporate governance over the past three decades and its impact on Indian businesses.</p>
+
+                    <h3>Historical Context</h3>
+                    <p>The journey of corporate governance in India has been marked by significant milestones:</p>
+                    <ul>
+                        <li>Introduction of the Companies Act, 2013</li>
+                        <li>SEBI's evolving regulatory framework</li>
+                        <li>Implementation of various committee recommendations</li>
+                        <li>Integration of international best practices</li>
+                    </ul>
+
+                    <h3>Current Framework and Challenges</h3>
+                    <p>Today's corporate governance landscape in India faces several key challenges:</p>
+                    <ol>
+                        <li>Balancing promoter interests with minority shareholder rights</li>
+                        <li>Ensuring true independence of independent directors</li>
+                        <li>Implementing effective risk management systems</li>
+                        <li>Managing related party transactions</li>
+                        <li>Enhancing board diversity and effectiveness</li>
+                    </ol>
+
+                    <h3>Role of Independent Directors</h3>
+                    <p>Independent directors play a crucial role in ensuring good corporate governance. Their effectiveness depends on:</p>
+                    <ul>
+                        <li>Selection process transparency</li>
+                        <li>Access to company information</li>
+                        <li>Protection of minority interests</li>
+                        <li>Professional expertise and commitment</li>
+                    </ul>
+
+                    <h3>Shareholder Activism</h3>
+                    <p>Recent years have seen a rise in shareholder activism, leading to:</p>
+                    <ul>
+                        <li>Increased scrutiny of board decisions</li>
+                        <li>Better disclosure practices</li>
+                        <li>Enhanced shareholder engagement</li>
+                        <li>Improved corporate accountability</li>
+                    </ul>
+
+                    <h3>Future Outlook</h3>
+                    <p>The future of corporate governance in India will likely be shaped by:</p>
+                    <ul>
+                        <li>Technology integration in governance processes</li>
+                        <li>Enhanced focus on ESG parameters</li>
+                        <li>Stronger whistleblower protection</li>
+                        <li>Greater emphasis on board evaluation</li>
+                    </ul>
+
+                    <p>As India continues its journey toward becoming a global economic powerhouse, robust corporate governance will be crucial for sustainable growth and attracting international investment.</p>`
+            },
+            'arbitral-awards': {
+                title: 'Enforcement of International Arbitral Awards: Challenges for Indian Courts',
+                author: 'Umang Gangwar',
+                date: 'January 28, 2025',
+                category: 'International Arbitration',
+                image: 'img/blog/large/Enforcement of International Arbitral .jpg',
+                content: `
+                    <p>The enforcement of international arbitral awards in India presents unique challenges and opportunities in the evolving landscape of international commercial arbitration. This analysis examines India's approach to recognition and enforcement of foreign awards compared to leading arbitration jurisdictions.</p>
+
+                    <h3>Legal Framework</h3>
+                    <p>India's framework for enforcing international arbitral awards is primarily governed by:</p>
+                    <ul>
+                        <li>The Arbitration and Conciliation Act, 1996</li>
+                        <li>The New York Convention principles</li>
+                        <li>Bilateral investment treaties</li>
+                        <li>Reciprocal arrangements with other nations</li>
+                    </ul>
+
+                    <h3>Comparative Analysis</h3>
+                    <p>Key differences in approach between India and other jurisdictions:</p>
+                    <h4>Singapore:</h4>
+                    <ul>
+                        <li>More streamlined enforcement process</li>
+                        <li>Limited grounds for refusing enforcement</li>
+                        <li>Faster disposal of enforcement applications</li>
+                    </ul>
+                    <h4>United Kingdom:</h4>
+                    <ul>
+                        <li>Pro-enforcement bias in courts</li>
+                        <li>Clear precedents on public policy</li>
+                        <li>Efficient case management</li>
+                    </ul>
+                    <h4>United States:</h4>
+                    <ul>
+                        <li>Liberal approach to enforcement</li>
+                        <li>Strong presumption in favor of arbitration</li>
+                        <li>Clear federal policy supporting international arbitration</li>
+                    </ul>
+
+                    <h3>Current Challenges</h3>
+                    <p>Major obstacles in the Indian context include:</p>
+                    <ol>
+                        <li>Interpretation of public policy grounds</li>
+                        <li>Judicial delays in enforcement proceedings</li>
+                        <li>Inconsistent approach across different High Courts</li>
+                        <li>Complex procedural requirements</li>
+                    </ol>
+
+                    <h3>Recent Developments</h3>
+                    <p>Positive changes in recent years:</p>
+                    <ul>
+                        <li>Progressive judicial interpretations</li>
+                        <li>Amendments to the Arbitration Act</li>
+                        <li>Specialized arbitration benches</li>
+                        <li>Reduced intervention in foreign awards</li>
+                    </ul>
+
+                    <h3>Way Forward</h3>
+                    <p>Recommendations for improving the enforcement regime:</p>
+                    <ol>
+                        <li>Streamlining enforcement procedures</li>
+                        <li>Establishing specialized commercial courts</li>
+                        <li>Training judiciary in international arbitration</li>
+                        <li>Harmonizing interpretation of public policy</li>
+                        <li>Enhancing cooperation with foreign jurisdictions</li>
+                    </ol>
+
+                    <p>The effective enforcement of international arbitral awards is crucial for India's position as a reliable jurisdiction for international business disputes.</p>`
+            },
+            'tech-law': {
+                title: 'Technology and Law: The Coming Era of Cyber Disputes',
+                author: 'Umang Gangwar',
+                date: 'January 25, 2025',
+                category: 'Technology Law',
+                image: 'img/blog/large/Technology and Law.jpg',
+                content: `
+                    <p>As technology continues to reshape every aspect of business and society, the legal framework must evolve to address new challenges in cybersecurity, data protection, and digital disputes. This analysis explores the intersection of technology and law in India's digital age.</p>
+
+                    <h3>Emerging Legal Challenges</h3>
+                    <p>Key areas requiring legal attention:</p>
+                    <ul>
+                        <li>Cybersecurity breaches and liability</li>
+                        <li>Data protection and privacy rights</li>
+                        <li>Digital intellectual property rights</li>
+                        <li>Cross-border data flows</li>
+                        <li>AI and algorithmic accountability</li>
+                    </ul>
+
+                    <h3>Current Legal Framework</h3>
+                    <p>India's digital legal framework includes:</p>
+                    <ul>
+                        <li>Information Technology Act, 2000</li>
+                        <li>Personal Data Protection Bill</li>
+                        <li>Cybersecurity Guidelines</li>
+                        <li>Sector-specific regulations</li>
+                    </ul>
+
+                    <h3>Cybersecurity Challenges</h3>
+                    <p>Critical issues in cybersecurity:</p>
+                    <ol>
+                        <li>Rising sophistication of cyber attacks</li>
+                        <li>Attribution challenges</li>
+                        <li>Jurisdictional complexities</li>
+                        <li>Evidence collection and preservation</li>
+                    </ol>
+
+                    <h3>Data Protection</h3>
+                    <p>Key aspects of data protection regulation:</p>
+                    <ul>
+                        <li>Consent requirements</li>
+                        <li>Data localization norms</li>
+                        <li>Cross-border transfer restrictions</li>
+                        <li>Rights of data principals</li>
+                    </ul>
+
+                    <h3>Digital Innovation</h3>
+                    <p>Legal implications of new technologies:</p>
+                    <ul>
+                        <li>Blockchain and smart contracts</li>
+                        <li>Artificial Intelligence and ML</li>
+                        <li>Internet of Things (IoT)</li>
+                        <li>Cloud computing services</li>
+                    </ul>
+
+                    <h3>Future Roadmap</h3>
+                    <p>Recommendations for strengthening India's tech-legal framework:</p>
+                    <ol>
+                        <li>Updating regulatory frameworks</li>
+                        <li>Enhancing enforcement mechanisms</li>
+                        <li>Building technical capacity</li>
+                        <li>International cooperation</li>
+                        <li>Industry self-regulation</li>
+                    </ol>
+
+                    <p>As technology continues to evolve, the legal framework must balance innovation with protection, ensuring India's digital growth remains secure and sustainable.</p>`
+            },
+            'public-policy': {
+                title: 'Public Policy Doctrine in Arbitration: A Double-Edged Sword',
+                author: 'Shyam Sundar',
+                date: 'January 20, 2025',
+                category: 'Arbitration Law',
+                image: 'img/blog/large/Public Policy Doctrine.jpg',
+                content: `
+                    <p>The public policy doctrine in arbitration serves as both a safeguard and a potential barrier to effective dispute resolution. This analysis examines how Indian courts interpret and apply the public policy exception in arbitration matters.</p>
+
+                    <h3>Understanding Public Policy</h3>
+                    <p>Key aspects of public policy in arbitration:</p>
+                    <ul>
+                        <li>Fundamental policy of Indian law</li>
+                        <li>Interest of India</li>
+                        <li>Justice and morality</li>
+                        <li>Patent illegality</li>
+                    </ul>
+
+                    <h3>Judicial Evolution</h3>
+                    <p>Landmark decisions shaping the doctrine:</p>
+                    <ol>
+                        <li>Renusagar Power Co. case</li>
+                        <li>Saw Pipes judgment</li>
+                        <li>Western Geco interpretation</li>
+                        <li>Associate Builders clarification</li>
+                    </ol>
+
+                    <h3>International Perspective</h3>
+                    <p>Comparative analysis with other jurisdictions:</p>
+                    <ul>
+                        <li>New York Convention approach</li>
+                        <li>UNCITRAL Model Law</li>
+                        <li>Different national interpretations</li>
+                        <li>International best practices</li>
+                    </ul>
+
+                    <h3>Current Challenges</h3>
+                    <p>Issues in applying public policy:</p>
+                    <ul>
+                        <li>Varying judicial interpretations</li>
+                        <li>Scope of court intervention</li>
+                        <li>Balancing competing interests</li>
+                        <li>International obligations</li>
+                    </ul>
+
+                    <h3>Impact on Arbitration</h3>
+                    <p>Effects on arbitration process:</p>
+                    <ol>
+                        <li>Enforcement delays</li>
+                        <li>Increased litigation</li>
+                        <li>Uncertainty in outcomes</li>
+                        <li>International perception</li>
+                    </ol>
+
+                    <h3>Way Forward</h3>
+                    <p>Recommendations for reform:</p>
+                    <ul>
+                        <li>Narrow interpretation of public policy</li>
+                        <li>Clear legislative guidelines</li>
+                        <li>Judicial restraint</li>
+                        <li>International harmonization</li>
+                    </ul>
+
+                    <p>The challenge lies in finding the right balance between protecting national interests and promoting arbitration as an effective dispute resolution mechanism.</p>`
+            },
+            'labour-law': {
+                title: 'Labour and Employment Law: Striking a Balance between Employers and Workers',
+                author: 'Manoj Pathak',
+                date: 'February 10, 2025',
+                category: 'Labour Law',
+                image: 'img/blog/large/Labour and Employment Law.jpg',
+                content: `
+                    <p>India's labour law framework is undergoing significant transformation with the implementation of new labour codes. This analysis examines the impact on both employers and workers, highlighting key changes and challenges.</p>
+
+                    <h3>Labour Code Reforms</h3>
+                    <p>Major changes under the new codes:</p>
+                    <ul>
+                        <li>Code on Wages</li>
+                        <li>Industrial Relations Code</li>
+                        <li>Social Security Code</li>
+                        <li>Occupational Safety Code</li>
+                    </ul>
+
+                    <h3>Key Changes</h3>
+                    <p>Significant reforms include:</p>
+                    <ol>
+                        <li>Universal minimum wage</li>
+                        <li>Simplified compliance requirements</li>
+                        <li>Enhanced social security coverage</li>
+                        <li>Fixed-term employment provisions</li>
+                    </ol>
+
+                    <h3>Impact on Employers</h3>
+                    <p>Changes affecting businesses:</p>
+                    <ul>
+                        <li>Compliance simplification</li>
+                        <li>Flexibility in workforce management</li>
+                        <li>Modified retrenchment provisions</li>
+                        <li>Enhanced penalties for violations</li>
+                    </ul>
+
+                    <h3>Worker Benefits</h3>
+                    <p>Improvements for workers:</p>
+                    <ul>
+                        <li>Extended social security coverage</li>
+                        <li>Better working conditions</li>
+                        <li>Grievance redressal mechanisms</li>
+                        <li>Gender equality provisions</li>
+                    </ul>
+
+                    <h3>Implementation Challenges</h3>
+                    <p>Key issues in reform implementation:</p>
+                    <ol>
+                        <li>State-level adaptations</li>
+                        <li>Infrastructure requirements</li>
+                        <li>Training and awareness</li>
+                        <li>Transition management</li>
+                    </ol>
+
+                    <h3>Future Outlook</h3>
+                    <p>Expected developments:</p>
+                    <ul>
+                        <li>Digital compliance systems</li>
+                        <li>Enhanced dispute resolution</li>
+                        <li>Skill development focus</li>
+                        <li>International standards alignment</li>
+                    </ul>
+
+                    <p>The success of labour reforms depends on effective implementation and balancing the interests of all stakeholders.</p>`
+            },
+            'young-lawyers': {
+                title: 'The Role of Young Lawyers in Shaping India\'s Arbitration Landscape',
+                author: 'Jatin',
+                date: 'February 10, 2025',
+                category: 'Legal Practice',
+                image: 'img/blog/large/royl.jpg',
+                content: `
+                    <p>The new generation of legal professionals is bringing fresh perspectives and innovative approaches to arbitration practice in India. This analysis explores how young lawyers are contributing to the evolution of arbitration.</p>
+
+                    <h3>Technological Integration</h3>
+                    <p>Young lawyers are driving:</p>
+                    <ul>
+                        <li>Virtual arbitration platforms</li>
+                        <li>Digital evidence management</li>
+                        <li>AI-powered legal research</li>
+                        <li>Online case management</li>
+                    </ul>
+
+                    <h3>International Exposure</h3>
+                    <p>Impact of global experience:</p>
+                    <ul>
+                        <li>Cross-border expertise</li>
+                        <li>International best practices</li>
+                        <li>Cultural sensitivity</li>
+                        <li>Network building</li>
+                    </ul>
+
+                    <h3>Innovation in Practice</h3>
+                    <p>New approaches to arbitration:</p>
+                    <ol>
+                        <li>Efficient case management</li>
+                        <li>Cost-effective solutions</li>
+                        <li>Environmental consciousness</li>
+                        <li>Client-centric service</li>
+                    </ol>
+
+                    <h3>Skill Development</h3>
+                    <p>Focus areas for young practitioners:</p>
+                    <ul>
+                        <li>Technical expertise</li>
+                        <li>Soft skills enhancement</li>
+                        <li>Multi-disciplinary knowledge</li>
+                        <li>Professional networking</li>
+                    </ul>
+
+                    <h3>Future Trends</h3>
+                    <p>Emerging developments:</p>
+                    <ul>
+                        <li>Specialized arbitration practices</li>
+                        <li>Technology-driven solutions</li>
+                        <li>International collaboration</li>
+                        <li>Sustainable practices</li>
+                    </ul>
+
+                    <p>Young lawyers are key to modernizing India's arbitration practice and ensuring its competitiveness in the global legal market.</p>`
+            }
+        };
+
+        function getOrderedPosts() {
+            return Object.keys(blogPosts).map(key => ({
+                id: key,
+                date: new Date(blogPosts[key].date)
+            })).sort((a, b) => b.date - a.date);
+        }
+
+        function loadBlogPost() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('post') || 'ibc-future';
+
+            const post = blogPosts[postId];
+            if (post) {
+                document.title = post.title + ' || JustisVista';
+                document.getElementById('blogTitle').textContent = post.title;
+                document.getElementById('blogAuthor').textContent = post.author;
+                document.getElementById('blogDate').textContent = post.date;
+                document.getElementById('blogCategory').textContent = post.category;
+                document.getElementById('blogImage').src = post.image;
+                document.getElementById('blogContent').innerHTML = post.content;
+
+                const orderedPosts = getOrderedPosts();
+                const currentIndex = orderedPosts.findIndex(p => p.id === postId);
+                
+                const prevPost = document.getElementById('prevPost');
+                const nextPost = document.getElementById('nextPost');
+                
+                if (currentIndex > 0) {
+                    prevPost.href = `blog-post.html?post=${orderedPosts[currentIndex - 1].id}`;
+                    prevPost.style.display = 'inline-block';
+                } else {
+                    prevPost.style.display = 'none';
+                }
+                
+                if (currentIndex < orderedPosts.length - 1) {
+                    nextPost.href = `blog-post.html?post=${orderedPosts[currentIndex + 1].id}`;
+                    nextPost.style.display = 'inline-block';
+                } else {
+                    nextPost.style.display = 'none';
+                }
+            } else {
+                window.location.href = 'blog.html';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadBlogPost);
+        window.onpopstate = loadBlogPost;
+    </script>
+</body>
+</html>

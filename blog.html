@@ -1,0 +1,1449 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>Blog || JustisVista</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/gavel.png">
+    <!--All Css Here-->
+    
+    <!-- Droid Font CSS-->
+    <link rel="stylesheet" href="css/droid.css">
+    <!-- Icofont CSS-->
+    <link rel="stylesheet" href="css/icofont.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Animate CSS-->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Owl Carousel CSS-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Datepicker CSS-->
+    <link rel="stylesheet" href="css/jquery.datepicker.css">
+    <!-- Calendar CSS-->
+    <link rel="stylesheet" href="css/zabuto_calendar.css">
+    <!-- Meanmenu CSS-->
+    <!-- Venobox CSS-->
+    <link rel="stylesheet" href="css/venobox.css">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+    <!-- Modernizr Js -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+
+        /* Added sidebar navigation styles to match index.html */
+        :root { --primary-color: #254B9D; --secondary-color: #019df0; --dark-bg: #1a1a1a; --sidebar-width: 280px; }
+        .sidebar { position: fixed; left: 0; top: 0; width: var(--sidebar-width); height: 100vh; background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a70 100%); box-shadow: 2px 0 15px rgba(37, 75, 157, 0.3); z-index: 998; overflow-y: auto; padding-top: 80px; transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); transform: translateX(-100%); }
+        .sidebar.active { transform: translateX(0); }
+        .sidebar-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0); z-index: 997; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+        .sidebar-overlay.active { background: rgba(0, 0, 0, 0.7); opacity: 1; visibility: visible; }
+        .sidebar-nav { list-style: none; padding: 20px 0; margin: 0; }
+        .sidebar-nav li { margin: 0; }
+        .sidebar-nav a { display: flex; align-items: center; padding: 18px 25px; color: #ffffff; text-decoration: none; font-size: 15px; font-weight: 600; transition: all 0.3s ease; border-left: 4px solid transparent; position: relative; }
+        .sidebar-nav a:hover { background: rgba(255, 255, 255, 0.1); border-left-color: var(--secondary-color); padding-left: 35px; color: var(--secondary-color); }
+        .sidebar-nav a i { margin-right: 15px; font-size: 18px; width: 25px; text-align: center; }
+        .sidebar-nav a.active { background: rgba(255, 255, 255, 0.15); border-left-color: var(--secondary-color); color: var(--secondary-color); }
+        .sidebar-toggle { display: none; width: 50px; height: 50px; background: none; border: none; border-radius: 0; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; z-index: 999; position: relative; }
+        .sidebar-toggle span { width: 28px; height: 3px; background: var(--primary-color); margin: 4px 0; transition: all 0.3s ease; border-radius: 2px; display: block; }
+        .sidebar-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+        .sidebar-toggle.active span:nth-child(2) { opacity: 0; }
+        .sidebar-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+        .header-bottom-area { position: relative; z-index: 100; }
+        body.sidebar-open { overflow: hidden; }
+        
+        /* Loading Animation */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #111d1b;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeOut 1s ease-in-out 2s forwards;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top: 3px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeOut {
+            to { opacity: 0; visibility: hidden; }
+        }
+
+        .social-link {
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px) scale(1.2);
+            color: #ff6b35;
+        }
+
+        .glow-on-hover {
+            transition: all 0.3s ease;
+        }
+
+        .glow-on-hover:hover {
+            box-shadow: 0 0 20px rgba(53, 191, 255, 0.666);
+            text-shadow: 0 0 10px rgba(53, 127, 255, 0.518);
+        }
+
+        .main-menu li {
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .main-menu li:nth-child(1) { animation-delay: 1.2s; }
+        .main-menu li:nth-child(2) { animation-delay: 1.3s; }
+        .main-menu li:nth-child(3) { animation-delay: 1.4s; }
+        .main-menu li:nth-child(4) { animation-delay: 1.5s; }
+        .main-menu li:nth-child(5) { animation-delay: 1.6s; }
+        .main-menu li:nth-child(6) { animation-delay: 1.7s; }
+        .main-menu li:nth-child(7) { animation-delay: 1.8s; }
+
+        .main-menu a {
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .main-menu a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #006aff, #001d7b);
+            transition: left 0.3s ease;
+        }
+
+        .main-menu a:hover::before {
+            left: 0;
+        }
+
+        .main-menu a:hover {
+            transform: translateY(-2px);
+            color: #1cabe9;
+        }
+
+        .bg-animate {
+            background-size: 120% 120%;
+            animation: backgroundMove 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundMove {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .single-blog .blog-img { height: 280px; overflow: hidden; }
+        .single-blog .blog-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .brand-active .single-brand img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Newsletter Slideshow Styles */
+        .newsletter-slideshow-area {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            background: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+            padding: 60px 40px;
+            text-align: center;
+            min-height: 500px;
+            max-height: 500px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        }
+
+        .slide.active {
+            display: block;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-content h3 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .slide-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Added explore section styles */
+        .explore-section {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            min-height: 500px;
+        }
+
+        .explore-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .explore-section .filter-buttons {
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .explore-section .filter-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .explore-section .filter-btn:hover,
+        .explore-section .filter-btn.active {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .explore-section .form-group {
+            margin-bottom: 20px;
+        }
+
+        .explore-section .form-control {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 12px 15px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .explore-section .form-control::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .explore-section .form-control:focus {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.5);
+            box-shadow: none;
+            color: white;
+        }
+
+        .explore-section select.form-control option {
+            background: #2c5aa0;
+            color: white;
+        }
+
+        .news-and-events h2{
+            color: white;
+        }
+
+        /* Blog grid styles */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .blog-card-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .blog-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-card-img img {
+            transform: scale(1.05);
+        }
+
+        .blog-card-content {
+            padding: 20px;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #777;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .blog-card-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .blog-card-desc {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-card-readmore {
+            color: #2c5aa0;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card-readmore:hover {
+            color: #1e3a8a;
+        }
+
+        .blog-card-readmore i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card-readmore:hover i {
+            transform: translateX(3px);
+        }
+
+        .filter-results {
+            margin-top: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .header-top-wrap .row {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .header-top-left,
+            .header-top-middle,
+            .header-top-right {
+                text-align: center;
+            }
+
+            .explore-section {
+                min-height: auto;
+                margin-bottom: 30px;
+            }
+
+            .explore-section h2 {
+                font-size: 2rem;
+            }
+
+            .slideshow-container {
+                margin-top: 30px;
+            }
+        }
+
+        /* Updated sidebar toggle positioning for 768-984px range - FIXED */
+        @media (max-width: 984px) and (min-width: 768px) {
+            .sidebar-toggle {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+                z-index: 1001;
+            }
+
+            .header-menu-area {
+                display: none;
+            }
+
+            .sidebar {
+                width: var(--sidebar-width);
+            }
+
+            .header-logo {
+                text-align: center;
+                position: relative;
+                padding-left: 60px;
+            }
+            
+            .header-bottom-area .row {
+                position: relative;
+                display: flex;
+                align-items: center;
+                min-height: 80px;
+            }
+            
+            /* Ensure logo and toggle are properly aligned */
+            .header-logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .header-logo a {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar-toggle { 
+                display: flex; 
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1001;
+            }
+            
+            .header-menu-area { 
+                display: none; 
+            }
+            
+            .sidebar { 
+                width: var(--sidebar-width); 
+            }
+            
+            .header-logo { 
+                text-align: center;
+                position: relative;
+            }
+            
+            .header-logo a {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .slide {
+                padding: 40px 20px;
+                min-height: auto;
+                max-height: none;
+            }
+            
+            .slide-content h3 {
+                font-size: 1.8rem;
+            }
+            
+            .slide-content p {
+                font-size: 0.95rem;
+            }
+
+            .explore-section {
+                padding: 30px 20px;
+                margin-bottom: 30px;
+            }
+
+            .explore-section h2 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+
+            .explore-section .filter-buttons {
+                margin-bottom: 20px;
+            }
+
+            .explore-section .filter-btn {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+
+            .blog-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+                margin-top: 30px;
+            }
+
+            .single-blog .blog-img {
+                height: 200px;
+            }
+
+            .blog-card-title {
+                font-size: 16px;
+            }
+
+            .blog-card-meta {
+                font-size: 12px;
+            }
+
+            .blog-card-content {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            :root { --sidebar-width: 250px; }
+            
+            .sidebar-nav a { padding: 15px 20px; font-size: 14px; }
+            .sidebar-nav a i { margin-right: 12px; font-size: 16px; }
+
+            .header-top-area .container {
+                padding: 0 10px;
+            }
+
+            .header-logo img {
+                max-width: 150px !important;
+            }
+
+            .slide {
+                padding: 30px 15px;
+            }
+
+            .slide-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .slide-content p {
+                font-size: 0.9rem;
+            }
+
+            .explore-section {
+                padding: 20px 15px;
+            }
+
+            .explore-section h2 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+
+            .explore-section .filter-buttons {
+                margin-bottom: 15px;
+            }
+
+            .explore-section .filter-btn {
+                padding: 6px 12px;
+                font-size: 11px;
+            }
+
+            .explore-section .form-group {
+                margin-bottom: 15px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .single-blog .blog-img {
+                height: 200px;
+            }
+
+            .blog-card-title {
+                font-size: 15px;
+            }
+
+            .blog-card-meta {
+                font-size: 11px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .page-banner-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .brand-active .single-brand img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .footer-top-area .container {
+                padding: 0 10px;
+            }
+
+            .single-footer-widget {
+                margin-bottom: 20px !important;
+            }
+
+            .social-link li {
+                margin: 0 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide {
+                padding: 20px 12px;
+            }
+
+            .slide-content h3 {
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+
+            .explore-section {
+                padding: 15px 12px;
+            }
+
+            .explore-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .explore-section .filter-btn {
+                padding: 5px 10px;
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header-menu-area ul.main-menu {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-menu {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <h3>Loading...</h3>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <div class="header-top-area default-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="header-top-wrap col-12">
+                                <div class="row">
+                                    <div class="col-md-4 col-xl-3">
+                                        <div class="header-top-left">
+                                        <p class="glow-on-hover">CALL US : <a href="#">  +0120 4961761</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xl-6">
+                                        <div class="header-top-middle text-center">
+                                            <ul class="social-link">
+                                                <li><a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a></li>
+                                                <li><a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                               <li><a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+												</li>
+                                                 <li><a href="#" class="social-link"><i class="fa-brands fa-google"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xl-3">
+                                        <div class="header-top-right">
+                                            <p class="glow-on-hover">MAIL US :<a href="mailto:info@jurisvista.in">info@jurisvista.in</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-bottom-area header-sticky">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <div class="header-logo">
+									<!--Sidebar Toggle Button-->
+									<button class="sidebar-toggle" id="sidebarToggle">
+										<span></span>
+										<span></span>
+										<span></span>
+									</button>
+									<a href="index.html"><img src="img/bg/logojv4.png"
+											style="max-width: 180px; min-height: 50px;" alt=""></a>
+								</div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="header-menu-area">
+                                    <nav>
+                                        <ul class="main-menu">
+                                            <li><a href="index.html" class="nav-link-bold">HOME</a></li>
+                                            <li><a href="about.html" class="nav-link-bold">ABOUT</a></li>
+                                            <li><a href="team.html" class="nav-link-bold">TEAM</a></li>
+                                            <li><a href="service.html" class="nav-link-bold">PRACTICE AREA</a></li>
+                                            <li class="active"><a href="blog.html" class="nav-link-bold">NEWS LETTER</a></li>
+                                            <li><a href="careers.html" class="nav-link-bold">CAREERS</a></li>
+                                            <li><a href="contact.html" class="nav-link-bold">CONTACT</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <!--Mobile Menu Area Start-->
+                                <div class="mobile-menu d-lg-none d-xl-none"></div>
+                                <!--Mobile Menu Area End-->
+                                <!--Sidebar Toggle Button-->
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!--Sidebar Overlay-->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        
+        <!--Sidebar Navigation-->
+        <nav class="sidebar" id="sidebar">
+            <ul class="sidebar-nav">
+                <li><a href="index.html" class="nav-link"><i class="fa fa-home"></i> HOME</a></li>
+                <li><a href="about.html" class="nav-link"><i class="fa fa-info-circle"></i> ABOUT</a></li>
+                <li><a href="team.html" class="nav-link"><i class="fa fa-users"></i> TEAM</a></li>
+                <li><a href="service.html" class="nav-link"><i class="fa fa-briefcase"></i> PRACTICE AREA</a></li>
+                <li><a href="blog.html" class="nav-link active"><i class="fa fa-newspaper-o"></i> NEWS LETTER</a></li>
+                <li><a href="careers.html" class="nav-link"><i class="fa fa-graduation-cap"></i> CAREERS</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fa fa-envelope"></i> CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="page-banner-area bg-img-3 bg-animate pt-10">
+            <div class="container">
+                <div class="row">
+                    <div class="page-banner-content col-12 text-center">
+                        <h2>Newsletter</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Banner Area End-->
+
+        <!-- Newsletter Slideshow Area Start-->
+        <!-- Modified to create two-column layout with explore section on left and slider on right -->
+        <div class="page-banner-area bg-img-3 bg-animate pt-40 pb-20">
+            <div class="container">
+                <div class="row">
+                    <!-- Left Column - Explore Section -->
+                    <div class="col-lg-5 col-md-12">
+                        <div class="explore-section news-and-events">
+                            <h2>Explore<br>News and Events</h2>
+                            
+                            <div class="filter-buttons">
+                                <button class="filter-btn active" data-type="all">All</button>
+                                <button class="filter-btn" data-type="event">Events</button>
+                                <button class="filter-btn" data-type="news">News</button>
+                                <button class="filter-btn" data-type="webinar">Webinar</button>
+                                <button class="filter-btn" data-type="blog">Blogs</button>
+                                <button class="filter-btn" data-type="article" >Articles</button>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="date" class="form-control" id="fromDate" placeholder="From Date">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="date" class="form-control" id="toDate" placeholder="To Date">
+                                    </div>
+                                </div>
+                            </div>
+
+                           
+                            
+                            <div class="filter-results" id="filterResults">
+                                <!-- Showing 10 events -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Slideshow -->
+                    <div class="col-lg-7 col-md-12">
+                        <div class="slideshow-container">
+                            <!-- Slide 1 -->
+                            <div class="slide active">
+                                <div class="slide-content text-center">
+                                    <h3>Expert Legal Consultation</h3>
+                                    <p class="text-justify">GS Gangwar and Associates is the best Law Firm.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="slide">
+                                <div class="slide-content text-center">
+                                    <h3>Corporate Law Excellence</h3>
+                                    <p class="text-justify">GS Gangwar and Associates is the best Law Firm.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 3 -->
+                            <div class="slide">
+                                <div class="slide-content text-center">
+                                    <h3>Criminal Defense Specialists</h3>
+                                    <p class="text-justify">GS Gangwar and Associates is the best Law Firm.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 4 -->
+                            <div class="slide">
+                                <div class="slide-content text-center">
+                                    <h3>Family Law Solutions</h3>
+                                    <p class="text-justify">GS Gangwar and Associates is the best Law Firm.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 5 -->
+                            <div class="slide">
+                                <div class="slide-content text-center">
+                                    <h3>24/7 Legal Support</h3>
+                                    <p class="text-justify">GS Gangwar and Associates is the best Law Firm.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Newsletter Slideshow Area End-->
+
+        <!-- Blog Area Start-->
+       <!-- Blog Area Start-->
+		<div class="blog-area pt-20" style="background-color: aliceblue;">
+		    <div class="container">
+		        <div class="row">
+                    <!--Single Blog End--> 
+                    <!--Single Blog Start-->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single-blog mb-30">
+                            <div class="blog-img">
+                                <img src="img/blog/large/cgii.jpg" alt="Corporate Governance">
+                            </div>
+                            <div class="blog-content">
+                                <ul class="blog-meta">
+                                    <li>February 05</li>
+                                    <li><a href="#">GS Gangwar</a></li>
+                                    <li><a href="#">2 comments</a></li>
+                                </ul>
+                                <h3><a href="blog-post.html?post=corporate-governance">Corporate Governance in India: Between Regulation and Reality</a></h3>
+                                <p class="text-justify">Mr. GS Gangwar reflects on how corporate governance in India has evolved over the past three decades, highlighting both achievements and persistent gaps. The editorial explores the role of independent directors, shareholder activism, and SEBI regulations in ensuring accountability.</p>
+                                <a href="blog-post.html?post=corporate-governance" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single-blog mb-30">
+                            <div class="blog-img">
+                                <img src="img/blog/large/The Future of Insolvency.jpg" alt="Insolvency Resolution">
+                            </div>
+                            <div class="blog-content">
+                                <ul class="blog-meta">
+                                    <li>February 02</li>
+                                    <li><a href="#">GS Gangwar</a></li>
+                                    <li><a href="#">8 comments</a></li>
+                                </ul>
+                                <h3><a href="blog-post.html?post=ibc-future">The Future of Insolvency Resolution under the IBC</a></h3>
+                                <p class="text-justify">A forward-looking piece analyzing the Insolvency and Bankruptcy Code, its achievements in restructuring distressed companies, and the challenges in judicial delays. Mr. Gangwar proposes reforms for making India a more business-friendly insolvency jurisdiction.</p>
+                                <a href="blog-post.html?post=ibc-future" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single-blog mb-30">
+                            <div class="blog-img">
+                                <img src="img/blog/large/Enforcement of International Arbitral .jpg" alt="Arbitral Awards">
+                            </div>
+                            <div class="blog-content">
+                                <ul class="blog-meta">
+                                    <li>January 28</li>
+                                    <li><a href="#">Umang Gangwar</a></li>
+                                    <li><a href="#">18 comments</a></li>
+                                </ul>
+                                <h3><a href="blog-post.html?post=arbitral-awards">Enforcement of International Arbitral Awards: Challenges for Indian Courts</a></h3>
+                                <p class="text-justify">Building on his academic research, Mr. Umang Gangwar examines India's approach to recognizing and enforcing arbitral awards compared to jurisdictions like Singapore, the UK, and the USA. The editorial highlights the importance of balancing sovereignty with international cooperation in arbitration law.</p>
+                                <a href="blog-post.html?post=arbitral-awards" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single-blog mb-30">
+                            <div class="blog-img">
+                                <img src="img/blog/large/Technology and Law.jpg" alt="Technology and Law">
+                            </div>
+                            <div class="blog-content">
+                                <ul class="blog-meta">
+                                    <li>January 25</li>
+                                    <li><a href="#">Umang Gangwar</a></li>
+                                    <li><a href="#">10 comments</a></li>
+                                </ul>
+                                <h3><a href="blog-post.html?post=tech-law">Technology and Law: The Coming Era of Cyber Disputes</a></h3>
+                                <p class="text-justify">Mr. Gangwar discusses the growing intersection of technology and law, covering issues like cybersecurity breaches, data protection, and cross-border digital disputes. The piece offers a roadmap for strengthening India's regulatory framework while supporting digital innovation.</p>
+                                <a href="blog-post.html?post=tech-law" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single-blog mb-30">
+                            <div class="blog-img">
+                                <img src="img/blog/large/Public Policy Doctrine.jpg" alt="Public Policy Doctrine">
+                            </div>
+                            <div class="blog-content">
+                                <ul class="blog-meta">
+                                    <li>January 20</li>
+                                    <li><a href="#">Shyam Sundar</a></li>
+                                    <li><a href="#">4 comments</a></li>
+                                </ul>
+                                <h3><a href="blog-post.html?post=public-policy">Public Policy Doctrine in Arbitration: A Double-Edged Sword</a></h3>
+                                <p class="text-justify">Mr. Sundar evaluates how Indian courts interpret "public policy" in arbitration, comparing domestic and international approaches. The editorial demonstrates his expertise in dispute resolution and highlights the need for judicial restraint to promote arbitration as a reliable mechanism.</p>
+                                <a href="blog-post.html?post=public-policy" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single-blog mb-30">
+                            <div class="blog-img">
+                                <img src="img/blog/large/Labour and Employment Law.jpg" alt="Labour and Employment">
+                            </div>
+                            <div class="blog-content">
+                                <ul class="blog-meta">
+                                    <li>February 10</li>
+                                    <li><a href="#">Manoj Pathak</a></li>
+                                    <li><a href="#">12 comments</a></li>
+                                </ul>
+                                <h3><a href="blog-post.html?post=labour-law">Labour and Employment Law: Striking a Balance between Employers and Workers</a></h3>
+                                <p class="text-justify">Mr. Pathak's editorial provides deep insights into the complexities of employment law, workplace compliance, and industrial relations. His perspective is rooted in practical advisory experience for corporations navigating labour reforms and compliance with statutory obligations.</p>
+                                <a href="blog-post.html?post=labour-law" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 7 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single-blog mb-30">
+                            <div class="blog-img">
+                                <img src="img/blog/large/royl.jpg" alt="Young Lawyers">
+                            </div>
+                            <div class="blog-content">
+                                <ul class="blog-meta">
+                                    <li>February 10</li>
+                                    <li><a href="#">Jatin</a></li>
+                                    <li><a href="#">12 comments</a></li>
+                                </ul>
+                                <h3><a href="blog-post.html?post=young-lawyers">The Role of Young Lawyers in Shaping India's Arbitration Landscape</a></h3>
+                                <p class="text-justify">Jatin contributes a youthful perspective on how the new generation of legal professionals is bringing fresh energy to arbitration practice. His editorial highlights the role of technology, international exposure, and adaptability in redefining the profession.</p>
+                                <a href="blog-post.html?post=young-lawyers" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       	<!--Brand Area Start-->
+<div class="brand-area py-2 py-md-3">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+        <!-- Mobile Layout (flexbox) - visible on mobile only -->
+        <div class="brand-mobile d-flex d-md-none flex-wrap justify-content-center align-items-center gap-2 text-center">
+          <!-- Facebook -->
+          <div class="single-brand text-center mb-2">
+            <a href="#">
+              <img src="img/logo/facebooklogo.png" 
+                   alt="Facebook Logo" 
+                   class="img-fluid brand-logo-img" 
+                   style="max-height: 60px; width: auto;">
+            </a>
+          </div>
+          <!-- LinkedIn -->
+          <div class="single-brand text-center mb-2">
+            <a href="https://www.linkedin.com/company/jurisvistalawoffices/" target="_blank">
+              <img src="img/logo/linkedInlogo.jpg" 
+                   alt="LinkedIn Logo" 
+                   class="img-fluid brand-logo-img" 
+                   style="max-height: 50px; width: auto;">
+            </a>
+          </div>
+          <!-- Instagram -->
+          <div class="single-brand text-center mb-2">
+            <a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr">
+              <img src="img/logo/instalogo.jpg" 
+                   alt="Instagram Logo" 
+                   class="img-fluid brand-logo-img" 
+                   style="max-height: 50px; width: auto;">
+            </a>
+          </div>
+          <!-- YouTube -->
+         
+          <!-- Twitter -->
+          <div class="single-brand text-center mb-2">
+            <a href="#">
+              <img src="img/logo/twitter.jpg" 
+                   alt="Twitter Logo" 
+                   class="img-fluid brand-logo-img" 
+                   style="max-height: 50px; width: auto;">
+            </a>
+          </div>
+        </div>
+
+        <!-- Desktop Layout (carousel) - visible on laptop/desktop only -->
+        <div class="brand-active owl-carousel d-none d-md-block">
+          <!-- Single Brand Start -->
+          <div class="single-brand text-center">
+            <a href="#">
+              <img src="img/logo/facebooklogo.png" alt="Facebook Logo">
+            </a>
+          </div>
+          <div class="single-brand text-center">
+            <a href="https://www.linkedin.com/company/jurisvistalawoffices/" target="_blank">
+              <img src="img/logo/linkedInlogo.jpg" alt="LinkedIn Logo">
+            </a>
+          </div>
+          <!-- Single Brand End -->
+          <!-- Single Brand Start -->
+          <div class="single-brand text-center">
+            <a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr">
+              <img src="img/logo/instalogo.jpg" class="img-fluid" alt="Instagram Logo">
+            </a>
+          </div>
+          <!-- Single Brand End -->
+          <!-- Single Brand Start -->
+          <div class="single-brand text-center">
+            <a href="#">
+              <img src="img/logo/youtubelogo.jpg" class="img-fluid" alt="YouTube Logo">
+            </a>
+          </div>
+          <!-- Single Brand End -->
+          <!-- Single Brand Start -->
+          <div class="single-brand text-center">
+            <a href="#">
+              <img src="img/logo/twitter.jpg" class="img-fluid" alt="Twitter Logo">
+            </a>
+          </div>
+          <!-- Single Brand End -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Brand Area End-->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-top-area black-bg pt-20 pb-9">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+                                    <a class="footer-logo" href="index.html"><img src="img/bg/logojv4.png" style="max-height: 150px; max-width: 190px;" alt="Jurisvista LLP Logo"></a>
+                                    <p>Jurisvista LLP is a premier full-service Indian law firm specializing in corporate law, litigation, arbitration, and regulatory compliance. With offices in Delhi NCR and Mumbai, we provide innovative legal solutions backed by deep expertise and unwavering commitment to client success.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 footer-menu">
+                                <div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+                                    <h3 class="footer-title">Our Services</h3>
+                                    <ul>
+                                        <li><a href="about.html">About Jurisvista</a></li>
+                                        <li><a href="service.html">Legal Practice Areas</a></li>
+                                        <li><a href="contact.html">Schedule Consultation</a></li>
+                                        <li><a href="contact.html">Client Resources</a></li>
+                                        <li><a href="about.html">Legal Insights</a></li>
+                                        <li><a href="careers.html">Career Opportunities</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+                                    <h3 class="footer-title">Contact Info</h3>
+                                    <p class="contact-info">
+                                        <strong>Phone:</strong><br>
+                                        <a href="tel:+911204961761">+0120 4961761</a>
+                                        <a href="tel:+919717211123">+91-9717211123</a>
+                                    </p>
+                                    <p class="contact-info">
+                                        <strong>Email & Web:</strong><br>
+                                        <a href="mailto:info@jurisvista.in">info@jurisvista.in</a>
+                                        <a href="https://www.jurisvista.in" target="_blank">www.jurisvista.in</a>
+                                    </p>
+                                    <div class="business-hours" style="margin-top: 15px;">
+                                        <p><strong>Business Hours:</strong><br>
+                                            Mon - Fri: 9:00 AM - 7:00 PM<br>
+                                            Sat: 10:00 AM - 4:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="single-footer-widget animate-on-scroll stagger-animation">
+                                    <h3 class="footer-title">Get In Touch</h3>
+                                    <div class="contact-details">
+                                        <p><strong>Delhi NCR Office:</strong><br>
+                                            Off: 1134, Tower-A, i-thum,<br>
+                                            Plot No. A-40, Sector-62,<br>
+                                            Noida-201301, (Delhi- NCR), India</p>
+                                        <p><strong>Mumbai Office:</strong><br>
+                                            32, Raja Bahadur Mansion,<br>
+                                            Off. No. 3, First Floor, Ambalal Doshi Marg,<br>
+                                            Fort, Mumbai - 400023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom-area pt-20 pb-20">
+                    <div class="container text-center">
+                        <p class="animate-on-scroll">
+                            <span>&copy;</span> 2024 Jurisvista LLP. All rights reserved. |
+                            <a href="#" style="margin: 0 10px;">Privacy Policy</a> |
+                            <a href="#" style="margin: 0 10px;">Terms of Service</a> |
+                            <a href="#" style="margin: 0 10px;">Disclaimer</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/instafeed.min.js"></script>
+    <script src="js/jquery.datepicker.min.js"></script>
+    <script src="js/zabuto-calendar.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/venobox.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Sidebar Toggle Script -->
+    <script>
+        $(document).ready(function () {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+            // Open sidebar
+            sidebarToggle.addEventListener('click', function () {
+                sidebar.classList.toggle('active');
+                sidebarToggle.classList.toggle('active');
+                sidebarOverlay.classList.toggle('active');
+                document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : 'auto';
+            });
+
+            // Close sidebar when overlay is clicked
+            sidebarOverlay.addEventListener('click', function () {
+                sidebar.classList.remove('active');
+                sidebarToggle.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+
+            // Close sidebar when a link is clicked
+            document.querySelectorAll('.sidebar-nav a').forEach(link => {
+                link.addEventListener('click', function () {
+                    sidebar.classList.remove('active');
+                    sidebarToggle.classList.remove('active');
+                    sidebarOverlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            });
+        });
+    </script>
+    
+    <script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('.page-loader').fadeOut(500);
+        }, 500);
+
+        if ($('.brand-active').length) {
+            $('.brand-active').owlCarousel({
+                items: 2,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                dots: false,
+                nav: false,
+                responsive: {
+                    0: { items: 2 },
+                    768: { items: 4 },
+                    992: { items: 6 }
+                }
+            });
+        }
+
+        // Newsletter Slideshow Functionality
+        let currentSlide = 0;
+        let slides = $('.slide');
+        let totalSlides = slides.length;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.removeClass('active');
+            slides.eq(index).addClass('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function startSlideshow() {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+            }
+            slideInterval = setInterval(nextSlide, 3000);
+        }
+
+        // Start initial slideshow
+        startSlideshow();
+
+        let currentEventType = 'all';
+        let currentFromDate = null;
+        let currentToDate = null;
+
+
+		// Fallback content used when server is down or returns no data
+		const FALLBACK_EVENTS = [
+			{
+				subject: 'Jurisvista Weekly Update',
+				eventType: 'News',
+				desc: 'Key highlights from our litigation and corporate advisory practice this week.'
+			},
+			{
+				subject: 'Upcoming Webinar: Arbitration 101',
+				eventType: 'Webinar',
+				desc: 'A practical guide to arbitration in India: drafting, strategy and enforcement.'
+			},
+			{
+				subject: 'Client Advisory: Companies Act Changes',
+				eventType: 'Article',
+				desc: 'Recent MCA updates impacting board processes and compliance timelines.'
+			},
+			{
+				subject: 'Event Recap: Insolvency Reforms Panel',
+				eventType: 'Event',
+				desc: 'Key takeaways from our panel discussion on IBC efficiencies and timelines.'
+			},
+			{
+				subject: 'Practice Note: Contract Risk Mitigation',
+				eventType: 'Blog',
+				desc: 'Five actionable clauses to reduce disputes in high-value commercial contracts.'
+			}
+		];
+
+		function renderFallbackSlides() {
+			// Filter by current type if not 'all'
+			let list = [...FALLBACK_EVENTS];
+			if (currentEventType && currentEventType !== 'all') {
+				const typeLc = String(currentEventType).toLowerCase();
+				list = list.filter(e => String(e.eventType).toLowerCase() === typeLc);
+				if (list.length === 0) list = [...FALLBACK_EVENTS];
+			}
+			// Shuffle and take a few
+			const shuffled = list.sort(() => Math.random() - 0.5).slice(0, 4);
+			renderEventsInSlideshow(shuffled);
+			$('#filterResults').text('Showing curated highlights');
+		}
+
+
+
+
+        // Initialize filter buttons
+        $('.filter-btn').on('click', function() {
+            $('.filter-btn').removeClass('active');
+            $(this).addClass('active');
+            currentEventType = $(this).data('type');
+            fetchEvents();
+        });
+
+        $('#fromDate, #toDate').on('change', function() {
+            currentFromDate = $('#fromDate').val();
+            currentToDate = $('#toDate').val();
+            fetchEvents();
+        });
+
+        function fetchEvents() {
+            $('.slideshow-container').html(`
+                <div class="slide active">
+                    <div class="slide-content text-center">
+                        <div class="spinner"></div>
+                        <h3>Loading Events...</h3>
+                        <p>Please wait while we fetch the latest events for you.</p>
+                    </div>
+                </div>
+            `);
+            
+            const params = new URLSearchParams();
+            // Always send eventType parameter, even when it's 'all'
+            params.append('eventType', currentEventType);
+            
+            if (currentFromDate) {
+                params.append('fromDate', currentFromDate + 'T00:00:00');
+            }
+            
+            if (currentToDate) {
+                params.append('toDate', currentToDate + 'T23:59:59');
+            }
+
+            const apiUrl = `http://localhost:8082/events/filter?${params.toString()}`;
+            
+            console.log('Fetching from:', apiUrl);
+
+            fetch(apiUrl, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                console.log('Response status:', response.status);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('API Response:', data);
+                
+                if (data.status === 200 && data.response) {
+                    renderEventsInSlideshow(data.response);
+                    $('#filterResults').text(`Showing ${data.response.length} events`);
+                } else {
+                    renderFallbackSlides();
+                }
+            })
+            .catch(error => {
+                renderFallbackSlides();
+                console.error('Error fetching events:', error);
+            });
+        }
+
+        function renderEventsInSlideshow(events) {
+            if (!events || events.length === 0) {
+                $('.slideshow-container').html(`
+                    <div class="slide active">
+                        <div class="slide-content text-center">
+                            <h3>No Events Found</h3>
+                            <p>No events found matching your criteria. Please try different filters.</p>
+                        </div>
+                    </div>
+                `);
+                return;
+            }
+
+            const slidesHtml = events.map((event, index) => `
+                <div class="slide ${index === 0 ? 'active' : ''}">
+                    <div class="slide-content text-center">
+                        <h3>${event.subject || 'Untitled Event'}</h3>
+                        <h4>${event.eventType || 'Event'}</h4>
+                        <p>${event.desc || 'No description available for this event.'}</p>
+                        ${event.eventDate ? `<small>Date: ${new Date(event.eventDate).toLocaleDateString()}</small>` : ''}
+                    </div>
+                </div>
+            `).join('');
+
+            $('.slideshow-container').html(slidesHtml);
+            
+            slides = $('.slide');
+            totalSlides = slides.length;
+            currentSlide = 0;
+            startSlideshow();
+        }
+
+        // Initial fetch
+        fetchEvents();
+    });
+</script>
+</body>
+</html>
