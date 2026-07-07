@@ -1,1440 +1,1751 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Our Team || G.S. Gangwar & Associates</title>
-    <meta name="description" content="Meet our experienced legal team at G.S. Gangwar & Associates">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Meet our experienced legal team at G.S. Gangwar & Associates"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     <!--All Css Here-->
 
     <!-- Droid Font CSS-->
-    <link rel="stylesheet" href="css/droid.css">
+    <link rel="stylesheet" href="css/droid.css" />
     <!-- Icofont CSS-->
-    <link rel="stylesheet" href="css/icofont.css">
+    <link rel="stylesheet" href="css/icofont.css" />
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
 
     <!-- Animate CSS-->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/animate.css" />
     <!-- Owl Carousel CSS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <!-- Datepicker CSS-->
-    <link rel="stylesheet" href="css/jquery.datepicker.css">
+    <link rel="stylesheet" href="css/jquery.datepicker.css" />
     <!-- Calendar CSS-->
-    <link rel="stylesheet" href="css/zabuto_calendar.css">
+    <link rel="stylesheet" href="css/zabuto_calendar.css" />
     <!-- Meanmenu CSS-->
     <!-- Venobox CSS-->
-    <link rel="stylesheet" href="css/venobox.css">
+    <link rel="stylesheet" href="css/venobox.css" />
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- Style CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive.css" />
 
-     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <!-- Modernizr Js -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
+      /* Added sidebar navigation styles */
+      :root {
+        --primary-color: #254b9d;
+        --secondary-color: #019df0;
+        --dark-bg: #1a1a1a;
+        --sidebar-width: 280px;
+      }
 
-        /* Added sidebar navigation styles */
-		:root {
-			--primary-color: #254B9D;
-			--secondary-color: #019df0;
-			--dark-bg: #1a1a1a;
-			--sidebar-width: 280px;
-		}
+      /* Sidebar Styles */
+      .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: var(--sidebar-width);
+        height: 100vh;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          #1a3a70 100%
+        );
+        box-shadow: 2px 0 15px rgba(37, 75, 157, 0.3);
+        z-index: 998;
+        overflow-y: auto;
+        padding-top: 80px;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform: translateX(-100%);
+      }
 
-		/* Sidebar Styles */
-		.sidebar {
-			position: fixed;
-			left: 0;
-			top: 0;
-			width: var(--sidebar-width);
-			height: 100vh;
-			background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a70 100%);
-			box-shadow: 2px 0 15px rgba(37, 75, 157, 0.3);
-			z-index: 998;
-			overflow-y: auto;
-			padding-top: 80px;
-			transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-			transform: translateX(-100%);
-		}
+      .sidebar.active {
+        transform: translateX(0);
+      }
 
-		.sidebar.active {
-			transform: translateX(0);
-		}
+      .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        z-index: 997;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
 
-		.sidebar-overlay {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(0, 0, 0, 0);
-			z-index: 997;
-			opacity: 0;
-			visibility: hidden;
-			transition: all 0.3s ease;
-		}
+      .sidebar-overlay.active {
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 1;
+        visibility: visible;
+      }
 
-		.sidebar-overlay.active {
-			background: rgba(0, 0, 0, 0.7);
-			opacity: 1;
-			visibility: visible;
-		}
+      .sidebar-nav {
+        list-style: none;
+        padding: 20px 0;
+        margin: 0;
+      }
 
-		.sidebar-nav {
-			list-style: none;
-			padding: 20px 0;
-			margin: 0;
-		}
+      .sidebar-nav li {
+        margin: 0;
+      }
 
-		.sidebar-nav li {
-			margin: 0;
-		}
+      .sidebar-nav a {
+        display: flex;
+        align-items: center;
+        padding: 18px 25px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border-left: 4px solid transparent;
+        position: relative;
+      }
 
-		.sidebar-nav a {
-			display: flex;
-			align-items: center;
-			padding: 18px 25px;
-			color: #ffffff;
-			text-decoration: none;
-			font-size: 15px;
-			font-weight: 600;
-			transition: all 0.3s ease;
-			border-left: 4px solid transparent;
-			position: relative;
-		}
+      .sidebar-nav a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-left-color: var(--secondary-color);
+        padding-left: 35px;
+        color: var(--secondary-color);
+      }
 
-		.sidebar-nav a:hover {
-			background: rgba(255, 255, 255, 0.1);
-			border-left-color: var(--secondary-color);
-			padding-left: 35px;
-			color: var(--secondary-color);
-		}
+      .sidebar-nav a i {
+        margin-right: 15px;
+        font-size: 18px;
+        width: 25px;
+        text-align: center;
+      }
 
-		.sidebar-nav a i {
-			margin-right: 15px;
-			font-size: 18px;
-			width: 25px;
-			text-align: center;
-		}
+      .sidebar-nav a.active {
+        background: rgba(255, 255, 255, 0.15);
+        border-left-color: var(--secondary-color);
+        color: var(--secondary-color);
+      }
 
-		.sidebar-nav a.active {
-			background: rgba(255, 255, 255, 0.15);
-			border-left-color: var(--secondary-color);
-			color: var(--secondary-color);
-		}
+      /* Hamburger Menu Styles */
+      .sidebar-toggle {
+        display: none;
+        width: 50px;
+        height: 50px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        position: relative;
+      }
 
-		/* Hamburger Menu Styles */
-		.sidebar-toggle {
-			display: none;
-			width: 50px;
-			height: 50px;
-			background: none;
-			border: none;
-			cursor: pointer;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			z-index: 999;
-			position: relative;
-		}
+      .sidebar-toggle span {
+        width: 28px;
+        height: 3px;
+        background: var(--primary-color);
+        margin: 4px 0;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+        display: block;
+      }
 
-		.sidebar-toggle span {
-			width: 28px;
-			height: 3px;
-			background: var(--primary-color);
-			margin: 4px 0;
-			transition: all 0.3s ease;
-			border-radius: 2px;
-			display: block;
-		}
+      .sidebar-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+      }
 
-		.sidebar-toggle.active span:nth-child(1) {
-			transform: rotate(45deg) translate(8px, 8px);
-		}
+      .sidebar-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
 
-		.sidebar-toggle.active span:nth-child(2) {
-			opacity: 0;
-		}
+      .sidebar-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
 
-		.sidebar-toggle.active span:nth-child(3) {
-			transform: rotate(-45deg) translate(7px, -7px);
-		}
+      /* Header Top Area adjustment */
+      .header-bottom-area {
+        position: relative;
+        z-index: 100;
+      }
 
-		/* Header Top Area adjustment */
-		.header-bottom-area {
-			position: relative;
-			z-index: 100;
-		}
+      /* Main content wrapper */
+      body.sidebar-open {
+        overflow: hidden;
+      }
 
-		/* Main content wrapper */
-		body.sidebar-open {
-			overflow: hidden;
-		}
+      /* Responsive adjustments */
 
-		/* Responsive adjustments */
+      @media (max-width: 992px) {
+        .header-menu-area ul.main-menu {
+          flex-direction: column;
+          gap: 0;
+        }
+      }
+      @media (max-width: 768px) {
+        .main-menu {
+          flex-direction: column;
+          gap: 0;
+        }
+      }
 
-        	@media (max-width: 992px) {
-  .header-menu-area ul.main-menu {
-    flex-direction: column;
-    gap: 0;
-  }
-}
-@media (max-width: 768px) {
-  .main-menu {
-    flex-direction: column;
-    gap: 0;
-  }
-}
-
-        /* Updated sidebar toggle positioning for 768-984px range */
-		@media (max-width: 984px) and (min-width: 768px) {
-			.sidebar-toggle {
-				display: flex;
-				position: absolute;
-				top: 50%;
-				left: 15px;
-				transform: translateY(-50%);
-				z-index: 1001;
-			}
-
-			.header-menu-area {
-				display: none;
-			}
-
-			.sidebar {
-				width: var(--sidebar-width);
-			}
-
-			.header-logo {
-				text-align: center;
-				position: relative;
-				padding-left: 60px;
-			}
-			
-			.header-bottom-area .row {
-				position: relative;
-			}
-		}
-
-		@media (max-width: 768px) {
-			.header-logo {
-				position: relative;
-				display: flex;
-				align-items: center;
-				height: 60px;
-			}
-			.sidebar-toggle {
-				display: flex;
-				position: absolute;
-				left: 0;
-				top: 50%;
-				transform: translateY(-50%);
-				z-index: 1001;
-				margin-left: 0;
-				margin-right: 12px;
-				background: rgba(255,255,255,0.95);
-				border: 2px solid var(--primary-color);
-				box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-				border-radius: 8px;
-			}
-			.header-logo img {
-				margin-left: 60px;
-			}
-		}
-
-		@media (max-width: 576px) {
-			:root {
-				--sidebar-width: 250px;
-			}
-
-			.sidebar-nav a {
-				padding: 15px 20px;
-				font-size: 14px;
-			}
-
-			.sidebar-nav a i {
-				margin-right: 12px;
-				font-size: 16px;
-			}
-
-			.sidebar-toggle {
-				width: 44px;
-				height: 44px;
-				top: 50%;
-				left: 0;
-				transform: translateY(-50%);
-			}
-		}
-
-        /* Loading Animation */
-        .page-loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #111d1b;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: fadeOut 1s ease-in-out 2s forwards;
+      /* Updated sidebar toggle positioning for 768-984px range */
+      @media (max-width: 984px) and (min-width: 768px) {
+        .sidebar-toggle {
+          display: flex;
+          position: absolute;
+          top: 50%;
+          left: 15px;
+          transform: translateY(-50%);
+          z-index: 1001;
         }
 
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-top: 3px solid #fff;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
+        .header-menu-area {
+          display: none;
         }
 
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
+        .sidebar {
+          width: var(--sidebar-width);
         }
 
-        @keyframes fadeOut {
-            to {
-                opacity: 0;
-                visibility: hidden;
-            }
+        .header-logo {
+          text-align: center;
+          position: relative;
+          padding-left: 60px;
         }
 
-        /* Enhanced animations from main page */
-        @keyframes fadeInUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        .header-bottom-area .row {
+          position: relative;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-logo {
+          position: relative;
+          display: flex;
+          align-items: center;
+          height: 60px;
+        }
+        .sidebar-toggle {
+          display: flex;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1001;
+          margin-left: 0;
+          margin-right: 12px;
+          background: rgba(255, 255, 255, 0.95);
+          border: 2px solid var(--primary-color);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+          border-radius: 8px;
+        }
+        .header-logo img {
+          margin-left: 60px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        :root {
+          --sidebar-width: 250px;
         }
 
-        @keyframes fadeInDown {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        .sidebar-nav a {
+          padding: 15px 20px;
+          font-size: 14px;
         }
 
-        @keyframes slideInLeft {
-            from {
-                transform: translateX(-100px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
+        .sidebar-nav a i {
+          margin-right: 12px;
+          font-size: 16px;
         }
 
-        @keyframes slideInRight {
-            from {
-                transform: translateX(100px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
+        .sidebar-toggle {
+          width: 44px;
+          height: 44px;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+
+      /* Loading Animation */
+      .page-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #111d1b;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeOut 1s ease-in-out 2s forwards;
+      }
+
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid #fff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 20px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
 
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
+        100% {
+          transform: rotate(360deg);
         }
+      }
 
-        @keyframes rotateIn {
-            from {
-                transform: rotate(-200deg);
-                opacity: 0;
-            }
-            to {
-                transform: rotate(0);
-                opacity: 1;
-            }
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          visibility: hidden;
         }
+      }
 
-        /* Scroll Animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease;
+      /* Enhanced animations from main page */
+      @keyframes fadeInUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
         }
-
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
+        to {
+          transform: translateY(0);
+          opacity: 1;
         }
+      }
 
-        /* Background Animations */
-        .bg-animate {
-            background-size: 120% 120%;
-            animation: backgroundMove 20s ease-in-out infinite;
+      @keyframes fadeInDown {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
         }
-
-        @keyframes backgroundMove {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+        to {
+          transform: translateY(0);
+          opacity: 1;
         }
+      }
 
-        .social-link {
-            transition: all 0.3s ease;
-            display: inline-block;
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-100px);
+          opacity: 0;
         }
-
-        .social-link:hover {
-            transform: translateY(-3px) scale(1.2);
-            color: #019df0;
+        to {
+          transform: translateX(0);
+          opacity: 1;
         }
+      }
 
-        .glow-on-hover {
-            transition: all 0.3s ease;
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100px);
+          opacity: 0;
         }
-
-        .glow-on-hover:hover {
-          	box-shadow: 0 0 20px rgba(53, 191, 255, 0.666);
-			text-shadow: 0 0 10px rgba(53, 127, 255, 0.518);  }
-
-        .main-menu li {
-            animation: fadeInUp 0.6s ease-out both;
+        to {
+          transform: translateX(0);
+          opacity: 1;
         }
+      }
 
-        .main-menu li:nth-child(1) {
-            animation-delay: 1.2s;
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
         }
-
-        .main-menu li:nth-child(2) {
-            animation-delay: 1.3s;
+        50% {
+          transform: scale(1.05);
         }
+      }
 
-        .main-menu li:nth-child(3) {
-            animation-delay: 1.4s;
+      @keyframes rotateIn {
+        from {
+          transform: rotate(-200deg);
+          opacity: 0;
         }
-
-        .main-menu li:nth-child(4) {
-            animation-delay: 1.5s;
+        to {
+          transform: rotate(0);
+          opacity: 1;
         }
+      }
 
-        .main-menu li:nth-child(5) {
-            animation-delay: 1.6s;
+      /* Scroll Animations */
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+
+      .animate-on-scroll.animated {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Background Animations */
+      .bg-animate {
+        background-size: 120% 120%;
+        animation: backgroundMove 20s ease-in-out infinite;
+      }
+
+      @keyframes backgroundMove {
+        0%,
+        100% {
+          background-position: 0% 50%;
         }
-
-        .main-menu li:nth-child(6) {
-            animation-delay: 1.7s;
+        50% {
+          background-position: 100% 50%;
         }
+      }
 
-        .main-menu li:nth-child(7) {
-			animation-delay: 1.8s;
-		}
+      .social-link {
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
 
-        .main-menu a {
-            position: relative;
-            transition: all 0.3s ease;
-            overflow: hidden;
-        }
+      .social-link:hover {
+        transform: translateY(-3px) scale(1.2);
+        color: #019df0;
+      }
 
-        .main-menu a::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: -100%;
-            width: 100%;
-            height: 2px;
-			background: linear-gradient(90deg, #019df0, #254B9D);
-            transition: left 0.3s ease;
-        }
+      .glow-on-hover {
+        transition: all 0.3s ease;
+      }
 
-        .main-menu a:hover::before {
-            left: 0;
-        }
-        .main-menu a:hover {
-			transform: translateY(-2px);
-			color: #019df0;
-		}
+      .glow-on-hover:hover {
+        box-shadow: 0 0 20px rgba(53, 191, 255, 0.666);
+        text-shadow: 0 0 10px rgba(53, 127, 255, 0.518);
+      }
 
-        /* Fixed team card sizing to auto-adjust height and show all content */
+      .main-menu li {
+        animation: fadeInUp 0.6s ease-out both;
+      }
+
+      .main-menu li:nth-child(1) {
+        animation-delay: 1.2s;
+      }
+      .main-menu li:nth-child(2) {
+        animation-delay: 1.3s;
+      }
+      .main-menu li:nth-child(3) {
+        animation-delay: 1.4s;
+      }
+      .main-menu li:nth-child(4) {
+        animation-delay: 1.5s;
+      }
+      .main-menu li:nth-child(5) {
+        animation-delay: 1.6s;
+      }
+      .main-menu li:nth-child(6) {
+        animation-delay: 1.7s;
+      }
+      .main-menu li:nth-child(7) {
+        animation-delay: 1.8s;
+      }
+
+      .main-menu a {
+        position: relative;
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+
+      .main-menu a::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #019df0, #254b9d);
+        transition: left 0.3s ease;
+      }
+
+      .main-menu a:hover::before {
+        left: 0;
+      }
+      .main-menu a:hover {
+        transform: translateY(-2px);
+        color: #019df0;
+      }
+
+      /* Fixed team card sizing to auto-adjust height and show all content */
+      .team-member {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        margin-bottom: 30px;
+        overflow: hidden;
+        height: 600px; /* Fixed height */
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        animation: fadeInUp 0.8s ease-out both;
+        cursor: pointer; /* Add cursor pointer for clickability */
+      }
+
+      /* Stagger animation for team cards */
+      .team-member:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .team-member:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      .team-member:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      .team-member:nth-child(4) {
+        animation-delay: 0.8s;
+      }
+
+      .team-member:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 20px 50px rgba(37, 75, 157, 0.2);
+        border: 2px solid rgba(37, 75, 157, 0.15);
+      }
+
+      .team-member::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(53, 117, 255, 0.1),
+          transparent
+        );
+        transition: left 0.6s ease;
+        z-index: 1;
+      }
+
+      .team-member:hover::before {
+        left: 100%;
+      }
+
+      .team-member-img {
+        position: relative;
+        overflow: hidden;
+        height: 280px; /* Fixed height for all images */
+        width: 100%;
+        flex-shrink: 0;
+      }
+
+      .team-member-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.4s ease;
+      }
+
+      .team-member:hover .team-member-img img {
+        filter: brightness(1.1);
+      }
+
+      .team-member-content {
+        padding: 25px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Changed from space-between to flex-start */
+        position: relative;
+        overflow: visible; /* Scroll content within fixed card height */
+      }
+
+      /* Added styles for better content spacing */
+      .team-member-content h3 {
+        margin-bottom: 8px;
+        color: #333;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .team-member-content .position {
+        color: #254b9d;
+        font-weight: 500;
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+
+      .team-member-content p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        color: #666;
+      }
+
+      .team-contact-info {
+        margin-bottom: 20px;
+      }
+
+      .contact-item {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .contact-item i {
+        margin-right: 10px;
+        color: #254b9d;
+        width: 16px;
+      }
+
+      .practice-areas,
+      .education-section {
+        margin-bottom: 15px;
+      }
+
+      .practice-areas h5,
+      .education-section h5 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .practice-areas ul,
+      .education-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .practice-areas li,
+      .education-section li {
+        padding: 4px 0;
+        color: #666;
+        font-size: 14px;
+        position: relative;
+        padding-left: 15px;
+      }
+
+      .practice-areas li:before,
+      .education-section li:before {
+        content: "•";
+        color: #254b9d;
+        position: absolute;
+        left: 0;
+      }
+
+      .practice-areas ul li:hover {
+        color: #019df0;
+        transform: translateX(3px);
+      }
+
+      .education-section ul li:hover {
+        color: #019df0;
+      }
+
+      /* Section title animations */
+      .section-title {
+        animation: fadeInDown 1s ease-out both;
+      }
+
+      .section-title img {
+        animation: rotateIn 1s ease-out 0.5s both;
+      }
+
+      /* Page banner animations */
+      .page-banner-content h2 {
+        animation: fadeInUp 1s ease-out 0.3s both;
+      }
+
+      .page-banner-content p {
+        animation: fadeInUp 1s ease-out 0.5s both;
+      }
+
+      .breadcrumb-pagination {
+        animation: fadeInUp 1s ease-out 0.7s both;
+      }
+
+      /* Fun factor animations */
+      .fun-factor-wrap {
+        animation: fadeInUp 0.8s ease-out both;
+        transition: all 0.3s ease;
+      }
+
+      .fun-factor-wrap:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .fun-factor-wrap:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      .fun-factor-wrap:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      .fun-factor-wrap:nth-child(4) {
+        animation-delay: 0.8s;
+      }
+      .fun-factor-wrap:nth-child(5) {
+        animation-delay: 1s;
+      }
+
+      .fun-factor-wrap:hover {
+        transform: translateY(-10px) scale(1.05);
+        color: #254b9d;
+      }
+
+      /* Footer animations */
+      .footer-container {
+        animation: fadeInUp 1s ease-out both;
+      }
+
+      .single-footer-widget {
+        animation: fadeInUp 0.8s ease-out both;
+      }
+
+      .single-footer-widget:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .single-footer-widget:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      .single-footer-widget:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      .single-footer-widget:nth-child(4) {
+        animation-delay: 0.8s;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
         .team-member {
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-            margin-bottom: 30px;
-            overflow: hidden;
-            height: 600px; /* Fixed height */
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            animation: fadeInUp 0.8s ease-out both;
-            cursor: pointer; /* Add cursor pointer for clickability */
+          height: 600px;
+          min-height: 600px;
         }
-
-        /* Stagger animation for team cards */
-        .team-member:nth-child(1) { animation-delay: 0.2s; }
-        .team-member:nth-child(2) { animation-delay: 0.4s; }
-        .team-member:nth-child(3) { animation-delay: 0.6s; }
-        .team-member:nth-child(4) { animation-delay: 0.8s; }
 
         .team-member:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(37, 75, 157, 0.2);
-            border: 2px solid rgba(37, 75, 157, 0.15);
-        }
-
-        .team-member::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(53, 117, 255, 0.1), transparent);
-            transition: left 0.6s ease;
-            z-index: 1;
-        }
-
-        .team-member:hover::before {
-            left: 100%;
-        }
-
-        .team-member-img {
-            position: relative;
-            overflow: hidden;
-            height: 280px; /* Fixed height for all images */
-            width: 100%;
-            flex-shrink: 0;
-        }
-
-        .team-member-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.4s ease;
-        }
-
-        .team-member:hover .team-member-img img {
-          
-            filter: brightness(1.1);
-        }
-
-        .team-member-content {
-            padding: 25px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; /* Changed from space-between to flex-start */
-            position: relative;
-            overflow: visible; /* Scroll content within fixed card height */
-        }
-
-        /* Added styles for better content spacing */
-        .team-member-content h3 {
-            margin-bottom: 8px;
-            color: #333;
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .team-member-content .position {
-            color: #254B9D;
-            font-weight: 500;
-            margin-bottom: 15px;
-            font-size: 16px;
+          transform: translateY(-10px);
         }
 
         .team-member-content p {
-            margin-bottom: 20px;
-            line-height: 1.6;
-            color: #666;
+          -webkit-line-clamp: 4;
         }
+      }
 
-        .team-contact-info {
-            margin-bottom: 20px;
+      /* Added modal styles for lawyer detail pages */
+      .lawyer-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        animation: fadeIn 0.3s ease;
+      }
+
+      .lawyer-modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        background: #fff;
+        border-radius: 20px;
+        max-width: 800px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        animation: slideInUp 0.4s ease;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .modal-header {
+        padding: 30px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .modal-header img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .modal-header-info h2 {
+        margin: 0 0 5px 0;
+        color: #333;
+        font-size: 28px;
+      }
+
+      .modal-header-info .position {
+        color: #254b9d;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .modal-body {
+        padding: 30px;
+      }
+
+      .modal-section {
+        margin-bottom: 30px;
+      }
+
+      .modal-section h3 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 20px;
+        border-bottom: 2px solid #254b9d;
+        padding-bottom: 5px;
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 30px;
+        cursor: pointer;
+        color: #999;
+        transition: color 0.3s ease;
+      }
+
+      .close-modal:hover {
+        color: #254b9d;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
-
-        .contact-item {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            font-size: 14px;
+        to {
+          opacity: 1;
         }
+      }
 
-        .contact-item i {
-            margin-right: 10px;
-            color: #254B9D;
-            width: 16px;
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px) scale(0.9);
         }
-
-        .practice-areas, .education-section {
-            margin-bottom: 15px;
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
         }
-
-        .practice-areas h5, .education-section h5 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .practice-areas ul, .education-section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .practice-areas li, .education-section li {
-            padding: 4px 0;
-            color: #666;
-            font-size: 14px;
-            position: relative;
-            padding-left: 15px;
-        }
-
-        .practice-areas li:before, .education-section li:before {
-            content: "•";
-            color: #254B9D;
-            position: absolute;
-            left: 0;
-        }
-
-        .practice-areas ul li:hover {
-            color: #019df0;
-            transform: translateX(3px);
-        }
-
-        .education-section ul li:hover {
-            color: #019df0;
-        }
-
-        /* Section title animations */
-        .section-title {
-            animation: fadeInDown 1s ease-out both;
-        }
-
-        .section-title img {
-            animation: rotateIn 1s ease-out 0.5s both;
-        }
-
-        /* Page banner animations */
-        .page-banner-content h2 {
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        .page-banner-content p {
-            animation: fadeInUp 1s ease-out 0.5s both;
-        }
-
-        .breadcrumb-pagination {
-            animation: fadeInUp 1s ease-out 0.7s both;
-        }
-
-        /* Fun factor animations */
-        .fun-factor-wrap {
-            animation: fadeInUp 0.8s ease-out both;
-            transition: all 0.3s ease;
-        }
-
-        .fun-factor-wrap:nth-child(1) { animation-delay: 0.2s; }
-        .fun-factor-wrap:nth-child(2) { animation-delay: 0.4s; }
-        .fun-factor-wrap:nth-child(3) { animation-delay: 0.6s; }
-        .fun-factor-wrap:nth-child(4) { animation-delay: 0.8s; }
-        .fun-factor-wrap:nth-child(5) { animation-delay: 1.0s; }
-
-        .fun-factor-wrap:hover {
-            transform: translateY(-10px) scale(1.05);
-            color: #254B9D;
-        }
-
-        /* Footer animations */
-        .footer-container {
-            animation: fadeInUp 1s ease-out both;
-        }
-
-        .single-footer-widget {
-            animation: fadeInUp 0.8s ease-out both;
-        }
-
-        .single-footer-widget:nth-child(1) { animation-delay: 0.2s; }
-        .single-footer-widget:nth-child(2) { animation-delay: 0.4s; }
-        .single-footer-widget:nth-child(3) { animation-delay: 0.6s; }
-        .single-footer-widget:nth-child(4) { animation-delay: 0.8s; }
-
-
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .team-member {
-                height: 600px;
-                min-height: 600px;
-            }
-            
-            .team-member:hover {
-                transform: translateY(-10px);
-            }
-            
-            .team-member-content p {
-                -webkit-line-clamp: 4;
-            }
-        }
-
-        /* Added modal styles for lawyer detail pages */
-        .lawyer-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            animation: fadeIn 0.3s ease;
-        }
-
-        .lawyer-modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            background: #fff;
-            border-radius: 20px;
-            max-width: 800px;
-            width: 90%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            animation: slideInUp 0.4s ease;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        .modal-header {
-            padding: 30px;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .modal-header img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .modal-header-info h2 {
-            margin: 0 0 5px 0;
-            color: #333;
-            font-size: 28px;
-        }
-
-        .modal-header-info .position {
-            color: #254B9D;
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .modal-body {
-            padding: 30px;
-        }
-
-        .modal-section {
-            margin-bottom: 30px;
-        }
-
-        .modal-section h3 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 20px;
-            border-bottom: 2px solid #254B9D;
-            padding-bottom: 5px;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 25px;
-            font-size: 30px;
-            cursor: pointer;
-            color: #999;
-            transition: color 0.3s ease;
-        }
-
-        .close-modal:hover {
-            color: #254B9D;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideInUp {
-            from { 
-                opacity: 0;
-                transform: translateY(50px) scale(0.9);
-            }
-            to { 
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--[if lt IE 8]>
-	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
 
     <!-- Added page loader with animation -->
     <div class="page-loader">
-        <div class="loader-content">
-            <div class="spinner"></div>
-            <h3>Loading...</h3>
-        </div>
+      <div class="loader-content">
+        <div class="spinner"></div>
+        <h3>Loading...</h3>
+      </div>
     </div>
 
     <div class="wrapper">
-        <!--Header Area Start-->
-        <header>
-            <div class="header-container">
-                <!--Header Top Area Start-->
-                <div class="header-top-area default-bg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="header-top-wrap col-12">
-                                <div class="row">
-                                    <!--Header Top Left Area Start-->
-                                    <div class="col-md-4 col-xl-3">
-                                        <div class="header-top-left">
-                                            <p class="glow-on-hover">CALL US : <a href="#"> +0120 4961761</a></p>
-                                        </div>
-                                    </div>
-                                    <!--Header Top Left Area End-->
-                                    <!--Header Top Middle Area Start-->
-                                    <div class="col-md-4 col-xl-6">
-                                        <div class="header-top-middle text-center">
-                                            <ul class="social-link">
-                                                <li><a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-                                                </li>
-                                                <li><a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
-                                                </li>
-                                                <li><a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                                                </li>
-                                                <li><a href="#" class="social-link"><i
-                                                            class="fa-brands fa-google"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--Header Top Middle Area End-->
-                                    <!--Header Top Right Area Start-->
-                                    <div class="col-md-4 col-xl-3">
-                                        <div class="header-top-right">
-                                            <p class="glow-on-hover">MAIL US :<a href="#">info@jurisvista.in</a></p>
-                                        </div>
-                                    </div>
-                                    <!--Header Top Right Area End-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Header Top Area End-->
-                <!--Header Bottom Area Start-->
-                <div class="header-bottom-area header-sticky">
-                    <div class="container">
-                        <div class="row ">
-                            <!--Header Logo Start-->
-                            <div class="col-md-3">
-								<div class="header-logo">
-									<!--Sidebar Toggle Button-->
-									<button class="sidebar-toggle" id="sidebarToggle">
-										<span></span>
-										<span></span>
-										<span></span>
-									</button>
-									<a href="index.html"><img src="img/bg/logojv4.png"
-											style="max-width: 180px; min-height: 50px;" alt=""></a>
-								</div>
-							</div>
-                            <!--Header Logo End-->
-                            <!--Header Menu Start-->
-                            <div class="col-md-9">
-                                <div class="header-menu-area ">
-                                    <nav>
-                                        <ul class="main-menu">
-                                            <li><a href="index.html" class="nav-link-bold">HOME</a>
-                                            </li>
-                                            <li><a href="about.html" class="nav-link-bold">ABOUT</a></li>
-                                            <li class="active"><a href="team.html" class="nav-link-bold">TEAM</a></li>
-                                            <li><a href="service.html" class="nav-link-bold">PRACTICE AREA</a></li>
-                                            <li><a href="blog.html" class="nav-link-bold">NEWS LETTER</a>
-
-                                            </li>
-                                            <li><a href="careers.html" class="nav-link-bold">CAREERS</a></li>
-                                            <li><a href="contact.html" class="nav-link-bold">CONTACT</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <!--Header Menu End-->
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <!--Mobile Menu Area Start-->
-                                <div class="mobile-menu d-lg-none d-xl-none"></div>
-                                <!--Mobile Menu Area End-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Header Bottom Area End-->
-            </div>
-        </header>
-        
-        <!--Sidebar Overlay-->
-        <div class="sidebar-overlay" id="sidebarOverlay"></div>
-        
-        <!--Sidebar Navigation-->
-        <nav class="sidebar" id="sidebar">
-            <ul class="sidebar-nav">
-                <li><a href="index.html" class="nav-link"><i class="fa fa-home"></i> HOME</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fa fa-info-circle"></i> ABOUT</a></li>
-                <li><a href="team.html" class="nav-link active"><i class="fa fa-users"></i> TEAM</a></li>
-                <li><a href="service.html" class="nav-link"><i class="fa fa-briefcase"></i> PRACTICE AREA</a></li>
-                <li><a href="blog.html" class="nav-link"><i class="fa fa-newspaper-o"></i> NEWS LETTER</a></li>
-                <li><a href="careers.html" class="nav-link"><i class="fa fa-graduation-cap"></i> CAREERS</a></li>
-                <li><a href="contact.html" class="nav-link"><i class="fa fa-envelope"></i> CONTACT</a></li>
-            </ul>
-        </nav>
-        <!--Header Area End-->
-
-        <!-- Page Banner Area Start-->
-        <div class="page-banner-area bg-img-3 pt-15 pb-10 bg-animate">
+      <!--Header Area Start-->
+      <header>
+        <div class="header-container">
+          <!--Header Top Area Start-->
+          <div class="header-top-area default-bg">
             <div class="container">
-                <div class="row">
-                    <div class="page-banner-content col-12 text-center">
-                        <h2>Our Legal Team</h2>
-                        <p class="text-justify">Meet our experienced team of legal professionals dedicated to providing exceptional legal
-                            services across various practice areas. Our team combines extensive experience with
-                            personalized attention to deliver the best outcomes for our clients.</p>
-                       
+              <div class="row">
+                <div class="header-top-wrap col-12">
+                  <div class="row">
+                    <!--Header Top Left Area Start-->
+                    <div class="col-md-4 col-xl-3">
+                      <div class="header-top-left">
+                        <p class="glow-on-hover">
+                          CALL US : <a href="#"> +0120 4961761</a>
+                        </p>
+                      </div>
                     </div>
+                    <!--Header Top Left Area End-->
+                    <!--Header Top Middle Area Start-->
+                    <div class="col-md-4 col-xl-6">
+                      <div class="header-top-middle text-center">
+                        <ul class="social-link">
+                          <li>
+                            <a href="#" class="social-link"
+                              ><i class="fa-brands fa-facebook"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#" class="social-link"
+                              ><i class="fa-brands fa-x-twitter"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr"
+                              class="social-link"
+                              ><i class="fa-brands fa-instagram"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#" class="social-link"
+                              ><i class="fa-brands fa-google"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!--Header Top Middle Area End-->
+                    <!--Header Top Right Area Start-->
+                    <div class="col-md-4 col-xl-3">
+                      <div class="header-top-right">
+                        <p class="glow-on-hover">
+                          MAIL US :<a href="#">info@jurisvista.in</a>
+                        </p>
+                      </div>
+                    </div>
+                    <!--Header Top Right Area End-->
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-        <!-- Page Banner Area End-->
-
-        <!-- Team Section Start -->
-        <div class="team-area pt-20 pb-10">
+          </div>
+          <!--Header Top Area End-->
+          <!--Header Bottom Area Start-->
+          <div class="header-bottom-area header-sticky">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <!--Section Title Start-->
-                        <div class="section-title mb-60 text-center animate-on-scroll">
-                            <i class="fa fa-gavel" style="color:#2E4A98; font-size:40px;"></i>
-                            <h4>Our Team</h4>
-                            <h2>Meet Our Legal Experts</h2>
-                            <p class="text-justify">Our team of experienced lawyers and legal professionals are committed to providing
-                                exceptional legal services with personalized attention and proven results.</p>
-                        </div>
-                        <!--Section Title End-->
-                    </div>
+              <div class="row">
+                <!--Header Logo Start-->
+                <div class="col-md-3">
+                  <div class="header-logo">
+                    <!--Sidebar Toggle Button-->
+                    <button class="sidebar-toggle" id="sidebarToggle">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </button>
+                    <a href="index.html"
+                      ><img
+                        src="img/bg/logojv4.png"
+                        style="max-width: 180px; min-height: 50px"
+                        alt=""
+                    /></a>
+                  </div>
                 </div>
-
-                <div class="row">
-                    <!-- Added onclick handlers to open detail modals -->
-                    <!-- G.S. Gangwar - Founder -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="team-member animate-on-scroll" onclick="openLawyerModal('gangwar')">
-                            <div class="team-member-img">
-                                <img src="img/team/team1.jpg" alt="G.S. Gangwar">
-                            </div>
-                            <div class="team-member-content">
-                                <h3>G.S. Gangwar</h3>
-                                <div class="position">Founder</div>
-                                <p class="text-justify">Mr. G. S. Gangwar is the Founder of Jurisvista LLP and a distinguished advocate with decades of experience. Mr. Gangwar has successfully represented clients before the Supreme Court of India, High Courts, and numerous Tribunals across the country. His core practice focuses on Commercial Disputes, Arbitration, IPR (Intellectual Property Rights), and Regulatory matters.
-</p>
-
-                                <div class="team-contact-info">
-                                    <div class="contact-item">
-                                        <i class="fa fa-map-marker"></i>
-                                        <span>Noida, India</span>
-                                    </div>
-                                    <div class="contact-item">
-                                        <i class="fa fa-envelope"></i>
-                                        <a href="mailto:gangwar@jurisvista.in">gangwar@jurisvista.in</a>
-                                    </div>
-                                    <div class="contact-item">
-                                        <i class="fa fa-phone"></i>
-                                        <a href="tel:+919717211123">+91-9717211123</a>
-                                    </div>
-                                </div>
-
-                                <div class="practice-areas">
-                                    <h5>Practice Areas:</h5>
-                                    <ul>
-                                        <li>Commercial Disputes</li>
-                                        <li>Arbitration,</li>
-                                        <li>IPR (Intellectual Property Rights)</li>
-                                        <li>Regulatory matters</li>
-                                    </ul>
-                                </div>
-
-                                <div class="education-section">
-                                    <h5>Education:</h5>
-                                    <ul>
-                                        <li>B.Sc. (Ag.), Kanpur University</li>
-                                        <li>LL.B., University of Delhi (2001)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Umang Gangwar - Partner -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="team-member animate-on-scroll" onclick="openLawyerModal('umang')">
-                            <div class="team-member-img">
-                                <img src="img/team/team2.jpg" alt="Umang Gangwar">
-                            </div>
-                            <div class="team-member-content">
-                                <h3>Umang Gangwar</h3>
-                                <div class="position">Partner</div>
-                                <p class="text-justify">Mr. Gangwar plays a pivotal role in leading the firm’s Arbitration, IPR and Corporate Litigation practice. With a strong academic background and significant experience in corporate law and dispute resolution, he brings a modern, research-oriented, and globally attuned perspective to Jurisvista LLP’s practice.
-</p>
-                                
-                                <div class="team-contact-info">
-                                    <div class="contact-item">
-                                        <i class="fa fa-map-marker"></i>
-                                        <span>Delhi, India</span>
-                                    </div>
-                                    <div class="contact-item">
-                                        <i class="fa fa-envelope"></i>
-                                        <a href="mailto:umang@jurisvista.in">umang@jurisvista.in</a>
-                                    </div>
-                                    <div class="contact-item">
-                                        <i class="fa fa-phone"></i>
-                                        <a href="tel:+919810211123">+91-9810211123</a>
-                                    </div>
-                                </div>
-
-                                <div class="practice-areas">
-                                    <h5>Practice Areas:</h5>
-                                    <ul>
-                                        <li>Commercial Arbitration</li>
-                                        <li>Insolvency & Bankruptcy</li>
-                                        <li>Corporate Advisory</li>
-                                    </ul>
-                                </div>
-
-                                <div class="education-section">
-                                    <h5>Education:</h5>
-                                    <ul>
-                                        <li>LL.M., National Law University</li>
-                                        <li>LL.B., University of Delhi</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Shyam Sunder - Senior Associate -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="team-member animate-on-scroll" onclick="openLawyerModal('shyam')">
-                            <div class="team-member-img">
-                                <img src="img/team/team3.jpg" alt="Shyam Sunder">
-                            </div>
-                            <div class="team-member-content">
-                                <h3>Shyam Sunder</h3>
-                                <div class="position">Senior Associate</div>
-                                <p class="text-justify">Mr. Shyam Sundar is a seasoned legal professional, enrolled with the Bar Council of Delhi since 1996, bringing nearly three decades of rich experience in civil disputes, commercial litigation, dispute resolution, and regulatory matters. He has successfully represented clients in a wide spectrum of cases, including commercial disputes, debt recovery, arbitration proceedings, and consumer matters.
-</p>
-
-                                <div class="team-contact-info">
-                                    <div class="contact-item">
-                                        <i class="fa fa-map-marker"></i>
-                                        <span>Delhi, India</span>
-                                    </div>
-                                    <div class="contact-item">
-                                        <i class="fa fa-envelope"></i>
-                                        <a href="mailto:shyamsunder@jurisvista.in">shyamsunder@jurisvista.in</a>
-                                    </div>
-                                    <div class="contact-item">
-                                        <i class="fa fa-phone"></i>
-                                        <a href="tel:+91-98102 11123">+91-98102 11123</a>
-                                    </div>
-                                </div>
-
-                                <div class="practice-areas">
-                                    <h5>Practice Areas:</h5>
-                                    <ul>
-                                        <li>Corporate Law</li>
-                                        <li>Arbitration</li>
-                                        <li>Regulatory Matters</li>
-                                        <li>Debt Recovery</li>
-                                    </ul>
-                                </div>
-
-                                <div class="education-section">
-                                    <h5>Education:</h5>
-                                    <ul>
-                                        <li>B.A., Delhi University</li>
-                                        <li>LL.B., Rohilkhand University (1996)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Manoj Pathak - Senior Associate -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="team-member animate-on-scroll" onclick="openLawyerModal('manoj')">
-                            <div class="team-member-img">
-                                <img src="img/team/team4.jpg" alt="Manoj Pathak">
-                            </div>
-                            <div class="team-member-content">
-                                <h3>Manoj Pathak</h3>
-                                <div class="position">Senior Associate</div>
-                                <p class="text-justify">Mr. Manoj Pathak is a Senior Associate with a diverse practice encompassing criminal law, consumer disputes, real estate matters, and NI Act cases. He has successfully represented clients before Consumer Commissions, RERA, District Courts, and other forums.</p>
-
-                                <div class="team-contact-info">
-                                    <div class="contact-item">
-                                        <i class="fa fa-map-marker"></i>
-                                        <span>Noida, India</span>
-                                    </div>
-                                    <div class="contact-item">
-                                        <i class="fa fa-envelope"></i>
-                                        <a href="mailto:manoj@jurisvista.in">manoj@jurisvista.in</a>
-                                    </div>
-                                    <div class="contact-item">
-                                        <i class="fa fa-phone"></i>
-                                        <a href="tel:+918368258022">+91-8368258022</a>
-                                    </div>
-                                </div>
-
-                                <div class="practice-areas">
-                                    <h5>Practice Areas:</h5>
-                                    <ul>
-                                        <li>Criminal Law</li>
-                                        <li>Consumer Disputes</li>
-                                        <li>Real Estate Matters</li>
-                                        <li>NI Act Cases</li>
-                                    </ul>
-                                </div>
-
-                                <div class="education-section">
-                                    <h5>Education:</h5>
-                                    <ul>
-                                        <li>B.A., Delhi University</li>
-                                        <li>LL.B., Ch. Charan Singh University (2016)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- D.K. Chaudhary - Associate -->
-<div class="col-lg-4 col-md-6">
-    <div class="team-member animate-on-scroll" onclick="openLawyerModal('dkchaudhary')">
-        <div class="team-member-img">
-            <img src="img/team/team5.jpg" alt="D.K. Chaudhary">
+                <!--Header Logo End-->
+                <!--Header Menu Start-->
+                <div class="col-md-9">
+                  <div class="header-menu-area">
+                    <nav>
+                      <ul class="main-menu">
+                        <li>
+                          <a href="index.html" class="nav-link-bold">HOME</a>
+                        </li>
+                        <li>
+                          <a href="about.html" class="nav-link-bold">ABOUT</a>
+                        </li>
+                        <li class="active">
+                          <a href="team.html" class="nav-link-bold">TEAM</a>
+                        </li>
+                        <li>
+                          <a href="service.html" class="nav-link-bold"
+                            >PRACTICE AREA</a
+                          >
+                        </li>
+                        <li>
+                          <a href="blog.html" class="nav-link-bold"
+                            >NEWS LETTER</a
+                          >
+                        </li>
+                        <li>
+                          <a href="careers.html" class="nav-link-bold"
+                            >CAREERS</a
+                          >
+                        </li>
+                        <li>
+                          <a href="contact.html" class="nav-link-bold"
+                            >CONTACT</a
+                          >
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!--Header Menu End-->
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <!--Mobile Menu Area Start-->
+                  <div class="mobile-menu d-lg-none d-xl-none"></div>
+                  <!--Mobile Menu Area End-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Header Bottom Area End-->
         </div>
-        <div class="team-member-content">
-            <h3>D.K. Chaudhary</h3>
-            <div class="position">Associate</div>
-            <p class="text-justify">Mr. Chaudhary is an Associate at Jurisvista LLP and Indian Patent Agent with substantial experience in IPR prosecution and litigation before various courts and authorities, covering Patents, Trademarks, and Copyrights. He has developed expertise in Freedom to Operate (FTO) analyses for new products, IP infringement assessments, and interpretation of technology in patents. His practice further extends to competitive intelligence, commercial suits, misbranding matters, and IP infringement cases, along with advising on international and domestic agreements. With his strong technical insight and legal acumen, Mr. Chaudhary delivers effective strategies and solutions that align with both business and legal objectives of the clients.</p>
+      </header>
 
-            <div class="team-contact-info">
-                <div class="contact-item">
-                    <i class="fa fa-map-marker"></i>
-                    <span>Delhi, India</span>
+      <!--Sidebar Overlay-->
+      <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+      <!--Sidebar Navigation-->
+      <nav class="sidebar" id="sidebar">
+        <ul class="sidebar-nav">
+          <li>
+            <a href="index.html" class="nav-link"
+              ><i class="fa fa-home"></i> HOME</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="nav-link"
+              ><i class="fa fa-info-circle"></i> ABOUT</a
+            >
+          </li>
+          <li>
+            <a href="team.html" class="nav-link active"
+              ><i class="fa fa-users"></i> TEAM</a
+            >
+          </li>
+          <li>
+            <a href="service.html" class="nav-link"
+              ><i class="fa fa-briefcase"></i> PRACTICE AREA</a
+            >
+          </li>
+          <li>
+            <a href="blog.html" class="nav-link"
+              ><i class="fa fa-newspaper-o"></i> NEWS LETTER</a
+            >
+          </li>
+          <li>
+            <a href="careers.html" class="nav-link"
+              ><i class="fa fa-graduation-cap"></i> CAREERS</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link"
+              ><i class="fa fa-envelope"></i> CONTACT</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!--Header Area End-->
+
+      <!-- Page Banner Area Start-->
+      <div class="page-banner-area bg-img-3 pt-15 pb-10 bg-animate">
+        <div class="container">
+          <div class="row">
+            <div class="page-banner-content col-12 text-center">
+              <h2>Our Legal Team</h2>
+              <p class="text-justify">
+                Meet our experienced team of legal professionals dedicated to
+                providing exceptional legal services across various practice
+                areas. Our team combines extensive experience with personalized
+                attention to deliver the best outcomes for our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Page Banner Area End-->
+
+      <!-- Team Section Start -->
+      <div class="team-area pt-20 pb-10">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <!--Section Title Start-->
+              <div class="section-title mb-60 text-center animate-on-scroll">
+                <i
+                  class="fa fa-gavel"
+                  style="color: #2e4a98; font-size: 40px"
+                ></i>
+                <h4>Our Team</h4>
+                <h2>Meet Our Legal Experts</h2>
+                <p class="text-justify">
+                  Our team of experienced lawyers and legal professionals are
+                  committed to providing exceptional legal services with
+                  personalized attention and proven results.
+                </p>
+              </div>
+              <!--Section Title End-->
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- G.S. Gangwar - Founder -->
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="team-member animate-on-scroll"
+                onclick="openLawyerModal('gangwar')"
+              >
+                <div class="team-member-img">
+                  <img src="img/team/team1.jpg" alt="G.S. Gangwar" />
                 </div>
-                <div class="contact-item">
-                    <i class="fa fa-envelope"></i>
-                    <a href="mailto:dkchaudhary@jurisvista.in">dkchaudhary@jurisvista.in</a>
+                <div class="team-member-content">
+                  <h3>G. S. Gangwar</h3>
+                  <div class="position">Founder | gangwar@jurisvista.in</div>
+
+                  <p class="text-justify">
+                    Mr. G. S. Gangwar is the Founding Partner of Jurisvista LLP.
+                    He is the distinguished leader whose vision established our
+                    firm, building directly on the strong foundation of the
+                    erstwhile G.S. Gangwar & Associates.
+                  </p>
+                  <p class="text-justify">
+                    Since 2002, he has been known as a formidable advocate with
+                    decades of experience in high-stakes litigation,
+                    arbitration, and comprehensive corporate advisory. His
+                    reputation is built on strategic thinking and a deep mastery
+                    of complex disputes.
+                  </p>
+                  <p class="text-justify">
+                    Mr. Gangwar has successfully represented clients before the
+                    Supreme Court of India, High Courts, and numerous Tribunals
+                    across the country. His core practice focuses on Commercial
+                    Disputes, Arbitration, IPR (Intellectual Property Rights),
+                    and Regulatory matters.
+                  </p>
+
+                  <p class="text-justify">
+                    As a respected trusted advisor, his leadership ensures the
+                    entire firm operates with the highest standards of integrity
+                    and precision, delivering world-class legal representation
+                    to every client.
+                  </p>
+
+                  <div class="team-contact-info">
+                    <div class="contact-item">
+                      <i class="fa fa-map-marker"></i>
+                      <span>Noida, India</span>
+                    </div>
+                    <div class="contact-item">
+                      <i class="fa fa-phone"></i>
+                      <a href="tel:+919717211123">+91-9717211123</a>
+                    </div>
+                  </div>
+
+                  <div class="practice-areas">
+                    <h5>Practice Areas:</h5>
+                    <ul>
+                      <li>Commercial Disputes</li>
+                      <li>Arbitration,</li>
+                      <li>IPR (Intellectual Property Rights)</li>
+                      <li>Regulatory matters</li>
+                    </ul>
+                  </div>
+
+                  <div class="education-section">
+                    <h5>Education:</h5>
+                    <ul>
+                      <li>B.Sc. (Ag.), Kanpur University</li>
+                      <li>LL.B., University of Delhi (2001)</li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fa fa-phone"></i>
-                    <a href="tel:+91 98736 63419">+91 98736 63419</a>
-                </div>
+              </div>
             </div>
 
-            <div class="practice-areas">
-                <h5>Practice Areas:</h5>
-                <ul>
-                    <li>patent prosecution</li>
-                    <li>trademark registration</li>
-                    <li>copyright protection</li>
-                    <li>freedom to operate (FTO) analysis</li>
-                    <li>IP infringement assessment</li>
-                    <li>competitive intelligence</li>
-                </ul>
-            </div>
-
-          
-        </div>
-    </div>
-</div>
-                    
-                    <!-- Jatin - Associate -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="team-member animate-on-scroll" onclick="openLawyerModal('jatin')">
-                            <div class="team-member-img">
-                                <img src="img/team/jatin.jpg" alt="Jatin">
-                            </div>
-                            <div class="team-member-content">
-                                <h3>Jatin</h3>
-                                <div class="position">Associate</div>
-                                <p class="text-justify">Mr. Jatin is an Associate at Jurisvista LLP with a focus on Commercial disputes, Insolvency and Bankruptcy matters, Writ petitions, Quashing matters, and family disputes. He actively supports senior counsels in high-value and complex cases, ensuring thorough preparation and effective strategy.</p>
-                                <p class="text-justify">His practice spans a wide range of areas, including commercial court litigation, matrimonial disputes, intellectual property rights disputes, and white-collar crime matter. Known for his meticulous attention to detail and methodical approach, he ensures accuracy in contractual documentation, arbitration filings, and litigation submissions.</p>
-                                <p class="text-justify">By combining analytical clarity with practical legal insight, Mr. Jatin provides reliable support and effective solutions, assisting clients in achieving favorable outcomes across diverse legal domains.
-</p>
-
-                                <div class="team-contact-info">
-                                    <div class="contact-item">
-                                        <i class="fa fa-map-marker"></i>
-                                        <span>Delhi, India</span>
-                                    </div>
-                                    <div class="contact-item">
-                                        <i class="fa fa-envelope"></i>
-                                        <a href="mailto:jatin@jurisvista.in">jatin@jurisvista.in</a>
-                                    </div>
-                                </div>
-
-                                <div class="practice-areas">
-                                    <h5>Practice Areas:</h5>
-                                    <ul>
-                                        <li>Commercial Court Litigation</li>
-                                        <li>Insolvency & Bankruptcy</li>
-                                        <li>Writ Petitions & Quashing Matters</li>
-                                        <li>Matrimonial / Family Disputes</li>
-                                        <li>Intellectual Property Disputes</li>
-                                        <li>White-collar Crime Matters</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Amanat - Associate -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="team-member animate-on-scroll" onclick="openLawyerModal('amanat')">
-                            <div class="team-member-img">
-                                <img src="img/team/team14.jpg" alt="Amanat">
-                            </div>
-                            <div class="team-member-content">
-                                <h3>Amanat</h3>
-                                <div class="position">Associate</div>
-                                <p class="text-justify">With over a decade of experience in criminal law, complex NDPS cases, white-collar crimes, and matrimonial disputes, Mr. Amanat has built strong expertise in handling high-stakes and sensitive matters. He has played a significant role in matters involving criminal litigation, NDPS disputes, and other complex contentious issues, where he combines deep legal knowledge with practical, solution-oriented strategies.</p>
-
-                                <div class="team-contact-info">
-                                    <div class="contact-item">
-                                        <i class="fa fa-map-marker"></i>
-                                        <span>Mumbai, India</span>
-                                    </div>
-                                    <div class="contact-item">
-                                        <i class="fa fa-envelope"></i>
-                                        <a href="mailto:amanat@jurisvista.in">amanat@jurisvista.in</a>
-                                    </div>
-                                </div>
-
-                                <div class="practice-areas">
-                                    <h5>Practice Areas:</h5>
-                                    <ul>
-                                        <li>Criminal Litigation</li>
-                                        <li>NDPS & Complex NDPS Cases</li>
-                                        <li>White-collar Crime</li>
-                                        <li>Matrimonial / Family Disputes</li>
-                                        <li>High-stakes Criminal Defense</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Haridutt Mishra - Senior Associate -->
-                    <!-- <div class="col-lg-4 col-md-6">
-                        <div class="team-member animate-on-scroll" onclick="openLawyerModal('haridutt')">
-                            <div class="team-member-img">
-                                <img src="img/team/team8.jpg" alt="Haridutt Mishra">
-                            </div>
-                            <div class="team-member-content">
-                                <h3>Haridutt Mishra</h3>
-                                <div class="position">Senior Associate</div>
-                                <p class="text-justify">Mr. Haridutt Mishra is a Senior Associate and Intellectual Property Attorney, playing a key role in the firm's IPR practice. He is an expert in IPR disputes, with extensive experience in handling matters related to copyright, trademark, and patent law.</p>
-
-                                <div class="team-contact-info">
-                                    <div class="contact-item">
-                                        <i class="fa fa-map-marker"></i>
-                                        <span>Mumbai, India</span>
-                                    </div>
-                                    <div class="contact-item">
-                                        <i class="fa fa-envelope"></i>
-                                        <a href="mailto:haridutt@jurisvista.com">haridutt@jurisvista.com</a>
-                                    </div>
-                                </div>
-
-                                <div class="practice-areas">
-                                    <h5>Practice Areas:</h5>
-                                    <ul>
-                                        <li>Intellectual Property Rights (IPR)</li>
-                                        <li>IP Litigation & Dispute Resolution</li>
-                                        <li>Patent, Trademark & Copyright Prosecution</li>
-                                        <li>Mediation and Alternative Dispute Resolution</li>
-                                        <li>IP Advisory & Freedom-to-Operate</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div> -->
+            <!-- Umang Gangwar - Partner -->
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="team-member animate-on-scroll"
+                onclick="openLawyerModal('umang')"
+              >
+                <div class="team-member-img">
+                  <img src="img/team/team2.jpg" alt="Umang Gangwar" />
                 </div>
+                <div class="team-member-content">
+                  <h3>Umang Gangwar</h3>
+                  <div class="position">Partner | umang@jurisvista.in</div>
+
+                  <p class="text-justify">
+                    Mr. Gangwar plays a pivotal role in leading the firm’s
+                    Arbitration, IPR and Corporate Litigation practice. With a
+                    strong academic background and significant experience in
+                    corporate law and dispute resolution, he brings a modern,
+                    research-oriented, and globally attuned perspective to
+                    Jurisvista LLP’s practice.
+                  </p>
+                  <p class="text-justify">
+                    His core expertise spans commercial arbitration, insolvency
+                    & bankruptcy law, general corporate, and intellectual
+                    property rights. Recognized for his analytical precision and
+                    persuasive advocacy, Mr. Gangwar has successfully advised
+                    and represented clients before various courts and tribunals
+                    across India.
+                  </p>
+                  <p class="text-justify">
+                    As a dynamic young leader, he blends innovative,
+                    forward-looking solutions with the enduring strengths of
+                    traditional advocacy, ensuring that the firm remains both
+                    adaptive and future-ready in an evolving legal landscape.
+                  </p>
+
+                  <div class="team-contact-info">
+                    <div class="contact-item">
+                      <i class="fa fa-map-marker"></i>
+                      <span>Delhi, India</span>
+                    </div>
+                    <div class="contact-item">
+                      <i class="fa fa-phone"></i>
+                      <a href="tel:+919810211123">+91-9810211123</a>
+                    </div>
+                  </div>
+
+                  <div class="practice-areas">
+                    <h5>Practice Areas:</h5>
+                    <ul>
+                      <li>Commercial Arbitration</li>
+                      <li>Insolvency & Bankruptcy</li>
+                      <li>Corporate Advisory</li>
+                    </ul>
+                  </div>
+
+                  <div class="education-section">
+                    <h5>Education:</h5>
+                    <ul>
+                      <li>LL.M., National Law University</li>
+                      <li>LL.B., University of Delhi</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <!-- Shyam Sunder - Senior Associate -->
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="team-member animate-on-scroll"
+                onclick="openLawyerModal('shyam')"
+              >
+                <div class="team-member-img">
+                  <img src="img/team/team3.jpg" alt="Shyam Sunder" />
+                </div>
+                <div class="team-member-content">
+                  <h3>Shyam Sunder</h3>
+                  <div class="position">
+                    Senior Associate | shyamsunder@jurisvista.in
+                  </div>
+                  <p class="text-justify">
+                    Mr. Shyam Sundar is a seasoned legal professional, enrolled
+                    with the Bar Council of Delhi since 1996, bringing nearly
+                    three decades of rich experience in civil disputes,
+                    commercial litigation, dispute resolution, and regulatory
+                    matters. He has successfully represented clients in a wide
+                    spectrum of cases, including commercial disputes, debt
+                    recovery, arbitration proceedings, and consumer matters.
+                  </p>
+                  <p class="text-justify">
+                    He has been empanelled with the Indian Railways, advising
+                    and representing them in high-stakes disputes, an engagement
+                    that has significantly broadened his sectoral expertise. His
+                    practice spans multiple forums, with appearances before
+                    various High Courts across India.
+                  </p>
+                  <p class="text-justify">
+                    Alongside his courtroom practice, he is actively engaged in
+                    transactional advisory, contract negotiation, and drafting,
+                    ensuring clients remain compliant with regulatory
+                    requirements while safeguarding their commercial interests.
+                  </p>
+                  <p class="text-justify">
+                    With his extensive experience, balanced approach, and strong
+                    advocacy skills, Mr. Shyam Sundar delivers practical,
+                    business-oriented, and comprehensive legal solutions to a
+                    wide range of corporate and individual clients.
+                  </p>
+                  <div class="team-contact-info">
+                    <div class="contact-item">
+                      <i class="fa fa-map-marker"></i>
+                      <span>Delhi, India</span>
+                    </div>
+                    <div class="contact-item">
+                      <i class="fa fa-phone"></i>
+                      <a href="tel:+91-98102 11123">+91-98102 11123</a>
+                    </div>
+                  </div>
+
+                  <div class="practice-areas">
+                    <h5>Practice Areas:</h5>
+                    <ul>
+                      <li>Corporate Law</li>
+                      <li>Arbitration</li>
+                      <li>Regulatory Matters</li>
+                      <li>Debt Recovery</li>
+                    </ul>
+                  </div>
+
+                  <div class="education-section">
+                    <h5>Education:</h5>
+                    <ul>
+                      <li>B.A., Delhi University</li>
+                      <li>LL.B., Rohilkhand University (1996)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Manoj Pathak - Senior Associate -->
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="team-member animate-on-scroll"
+                onclick="openLawyerModal('manoj')"
+              >
+                <div class="team-member-img">
+                  <img src="img/team/team4.jpg" alt="Manoj Pathak" />
+                </div>
+                <div class="team-member-content">
+                  <h3>Manoj Pathak</h3>
+                  <div class="position">
+                    Senior Associate | manoj@jurisvista.in
+                  </div>
+                  <p class="text-justify">
+                    Enrolled with the Bar Council of Delhi since 2017, Mr.
+                    Pathak is a Senior Associate with a diverse practice
+                    spanning civil disputes, white-collar crimes, financial
+                    offences, consumer disputes, real estate matters, and cases
+                    under the Negotiable Instruments Act. He has successfully
+                    represented clients before High Courts, Consumer
+                    Commissions, RERA, District Courts, and other forums,
+                    handling matters ranging from service deficiency and
+                    property disputes to cheque dishonour and money-related
+                    offences.
+                  </p>
+                  <p class="text-justify">
+                    Known for his dedication, strategic approach, and
+                    client-first mindset, Mr. Pathak ensures robust
+                    representation both in litigation and pre-litigation
+                    advisory, helping clients safeguard their rights while
+                    minimizing risks. His expertise also extends to family law
+                    and service matters, making him a versatile and dependable
+                    member of the firm's litigation team.
+                  </p>
+                  <p class="text-justify">
+                    With a proven record of delivering favourable outcomes, he
+                    blends practical legal insight with persuasive advocacy,
+                    ensuring clients receive comprehensive, solution-oriented,
+                    and business-sensitive legal support across a wide range of
+                    disputes.
+                  </p>
+                  <div class="team-contact-info">
+                    <div class="contact-item">
+                      <i class="fa fa-map-marker"></i>
+                      <span>Noida, India</span>
+                    </div>
+                    <div class="contact-item">
+                      <i class="fa fa-phone"></i>
+                      <a href="tel:+918368258022">+91-8368258022</a>
+                    </div>
+                  </div>
+
+                  <div class="practice-areas">
+                    <h5>Practice Areas:</h5>
+                    <ul>
+                      <li>Criminal Law</li>
+                      <li>Consumer Disputes</li>
+                      <li>Real Estate Matters</li>
+                      <li>NI Act Cases</li>
+                    </ul>
+                  </div>
+
+                  <div class="education-section">
+                    <h5>Education:</h5>
+                    <ul>
+                      <li>B.A., Delhi University</li>
+                      <li>LL.B., Ch. Charan Singh University (2016)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- D.K. Chaudhary - Associate -->
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="team-member animate-on-scroll"
+                onclick="openLawyerModal('dkchaudhary')"
+              >
+                <div class="team-member-img">
+                  <img src="img/team/team5.jpg" alt="D.K. Chaudhary" />
+                </div>
+                <div class="team-member-content">
+                  <h3>D. K. Chaudhary</h3>
+                  <div class="position">
+                    Associate | dkchaudhary@jurisvista.in
+                  </div>
+                  <p class="text-justify">
+                    Mr. Chaudhary is an Associate at Jurisvista LLP and Indian
+                    Patent Agent with substantial experience in IPR prosecution
+                    and litigation before various courts and authorities,
+                    covering Patents, Trademarks, and Copyrights. He has
+                    developed expertise in Freedom to Operate (FTO) analyses for
+                    new products, IP infringement assessments, and
+                    interpretation of technology in patents. His practice
+                    further extends to competitive intelligence, commercial
+                    suits, misbranding matters, and IP infringement cases, along
+                    with advising on international and domestic agreements. With
+                    his strong technical insight and legal acumen, Mr. Chaudhary
+                    delivers effective strategies and solutions that align with
+                    both business and legal objectives of the clients.
+                  </p>
+
+                  <div class="team-contact-info">
+                    <div class="contact-item">
+                      <i class="fa fa-map-marker"></i>
+                      <span>Delhi, India</span>
+                    </div>
+                    <div class="contact-item">
+                      <i class="fa fa-phone"></i>
+                      <a href="tel:+91 98736 63419">+91 98736 63419</a>
+                    </div>
+                  </div>
+
+                  <div class="practice-areas">
+                    <h5>Practice Areas:</h5>
+                    <ul>
+                      <li>patent prosecution</li>
+                      <li>trademark registration</li>
+                      <li>copyright protection</li>
+                      <li>freedom to operate (FTO) analysis</li>
+                      <li>IP infringement assessment</li>
+                      <li>competitive intelligence</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Jatin - Associate -->
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="team-member animate-on-scroll"
+                onclick="openLawyerModal('jatin')"
+              >
+                <div class="team-member-img">
+                  <img src="img/team/jatin.jpg" alt="Jatin" />
+                </div>
+                <div class="team-member-content">
+                  <h3>Jatin</h3>
+                  <div class="position">Associate | jatin@jurisvista.in</div>
+                  <p class="text-justify">
+                    Mr. Jatin is an Associate at Jurisvista LLP with a focus on
+                    Commercial disputes, Insolvency and Bankruptcy matters, Writ
+                    petitions, Quashing matters, and family disputes. He
+                    actively supports senior counsels in high-value and complex
+                    cases, ensuring thorough preparation and effective strategy.
+                  </p>
+                  <p class="text-justify">
+                    His practice spans a wide range of areas, including
+                    commercial court litigation, matrimonial disputes,
+                    intellectual property rights disputes, and white-collar
+                    crime matter. Known for his meticulous attention to detail
+                    and methodical approach, he ensures accuracy in contractual
+                    documentation, arbitration filings, and litigation
+                    submissions.
+                  </p>
+                  <p class="text-justify">
+                    By combining analytical clarity with practical legal
+                    insight, Mr. Jatin provides reliable support and effective
+                    solutions, assisting clients in achieving favorable outcomes
+                    across diverse legal domains.
+                  </p>
+
+                  <div class="team-contact-info">
+                    <div class="contact-item">
+                      <i class="fa fa-map-marker"></i>
+                      <span>Delhi, India</span>
+                    </div>
+                  </div>
+
+                  <div class="practice-areas">
+                    <h5>Practice Areas:</h5>
+                    <ul>
+                      <li>Commercial Court Litigation</li>
+                      <li>Insolvency & Bankruptcy</li>
+                      <li>Writ Petitions & Quashing Matters</li>
+                      <li>Matrimonial / Family Disputes</li>
+                      <li>Intellectual Property Disputes</li>
+                      <li>White-collar Crime Matters</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Amanat - Associate -->
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="team-member animate-on-scroll"
+                onclick="openLawyerModal('amanat')"
+              >
+                <div class="team-member-img">
+                  <img src="img/team/team14.jpg" alt="Amanat" />
+                </div>
+                <div class="team-member-content">
+                  <h3>Amanat</h3>
+                  <div class="position">Associate | amanat@jurisvista.in</div>
+                  <p class="text-justify">
+                    With over a decade of experience in criminal law, complex
+                    NDPS cases, white-collar crimes, and matrimonial disputes,
+                    Mr. Amanat has built strong expertise in handling
+                    high-stakes and sensitive matters.
+                  </p>
+                  <p class="text-justify">
+                    He has played a significant role in matters involving
+                    criminal litigation, NDPS disputes, and other complex
+                    contentious issues, where he combines deep legal knowledge
+                    with practical, solution-oriented strategies.
+                  </p>
+                  <p class="text-justify">
+                    Known for his thorough preparation, persuasive advocacy, and
+                    client-focused approach, Mr. Amanat ensures clients receive
+                    effective and comprehensive representation before diverse
+                    judicial and quasi-judicial forums. His extensive experience
+                    and courtroom acumen make him a trusted counsel in
+                    navigating some of the most challenging disputes.
+                  </p>
+                  <div class="team-contact-info">
+                    <div class="contact-item">
+                      <i class="fa fa-map-marker"></i>
+                      <span>Mumbai, India</span>
+                    </div>
+                  </div>
+
+                  <div class="practice-areas">
+                    <h5>Practice Areas:</h5>
+                    <ul>
+                      <li>Criminal Litigation</li>
+                      <li>NDPS & Complex NDPS Cases</li>
+                      <li>White-collar Crime</li>
+                      <li>Matrimonial / Family Disputes</li>
+                      <li>High-stakes Criminal Defense</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- **** NEW: ANANYA - OFFICE ASSISTANT **** -->
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="team-member animate-on-scroll"
+                onclick="openLawyerModal('ananya')"
+              >
+                <div class="team-member-img">
+                                    <img src="img/team/team9.jpeg" alt="Ananya image" />
+
+                </div>
+                <div class="team-member-content">
+                  <h3>Ananya</h3>
+                  <div class="position">Office Assistant | ananya@jurisvista.in</div>
+                  <p class="text-justify">
+                    Ananya is a dedicated and detail-oriented professional currently pursuing her B.A. LL.B. (Graduation). She brings strong organizational skills and a proactive approach to managing daily office operations in a legal environment.
+                  </p>
+                  <p class="text-justify">
+                    She is experienced in handling clerical responsibilities, maintaining documentation, and ensuring smooth communication within the office. With a keen eye for accuracy and confidentiality, Ananya effectively manages sensitive legal records and supports the team in maintaining efficiency and professionalism.
+                  </p>
+                  <p class="text-justify">
+                    Her commitment to learning, combined with her ability to multitask in a high-volume setting, makes her a reliable support resource in legal administrative functions.
+                  </p>
+
+                  <div class="team-contact-info">
+                    <div class="contact-item">
+                      <i class="fa fa-map-marker"></i>
+                      <span>Noida, India</span>
+                    </div>
+                    <div class="contact-item">
+                      <i class="fa fa-envelope"></i>
+                      <a href="mailto:ananya@jurisvista.in">ananya@jurisvista.in</a>
+                    </div>
+                  </div>
+
+                  <div class="practice-areas">
+                    <h5>Practice Support Areas</h5>
+                    <ul>
+                      <li>Office Administration</li>
+                      <li>Legal Documentation Handling</li>
+                      <li>Client Coordination</li>
+                      <li>Record Management</li>
+                      <li>Communication Support</li>
+                    </ul>
+                  </div>
+
+                  <div class="education-section">
+                    <h5>Key Strengths</h5>
+                    <ul>
+                      <li>Detail-Oriented & Organized</li>
+                      <li>Confidentiality Management</li>
+                      <li>Multitasking Ability</li>
+                      <li>Professional Communication</li>
+                      <li>Time Management</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <!-- Team Section End -->
+      </div>
+      <!-- Team Section End -->
 
-        <!--Fun Factor Area Start-->
-       
-        <!--Fun Factor Area End-->
+      <!--Fun Factor Area Start-->
 
-    <footer>
-			<div class="footer-container">
-				<!--Footer Top Area Start-->
-				<div class="footer-top-area black-bg pt-20 pb-9">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6 col-lg-3">
-								<!--Single Footer Widget Start-->
-								<div class="single-footer-widget animate-on-scroll stagger-animation">
-									<a class="footer-logo" href="index.html"><img src="img/bg/logojv4.png"
-											style="max-height: 150px; max-width: 190px;" alt="Jurisvista LLP Logo"></a>
-									<!-- CHANGE> Updated company description to be more comprehensive and professional  -->
-									<p>Jurisvista LLP is a premier full-service Indian law firm specializing in
-										corporate law, litigation, arbitration, and regulatory compliance. With offices
-										in Delhi NCR and Mumbai, we provide innovative legal solutions backed by deep
-										expertise and unwavering commitment to client success.</p>
-									
-								</div>
-								<!--Single Footer Widget End-->
-							</div>
-							<!--Single Footer Widget Start-->
-							<div class="col-md-6 col-lg-3 footer-menu">
-								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
-									<!-- CHANGE> Updated menu title and links to be more law firm specific  -->
-									<h3 class="footer-title">Our Services</h3>
-									<ul>
-										<li><a href="about.html">About Jurisvista</a></li>
-										<li><a href="service.html">Legal Practice Areas</a></li>
-										<li><a href="contact.html">Schedule Consultation</a></li>
-										<li><a href="contact.html">Client Resources</a></li>
-										<li><a href="about.html">Legal Insights</a></li>
-										<li><a href="careers.html">Career Opportunities</a></li>
-									</ul>
-								</div>
-							</div>
-							<!--Single Footer Widget End-->
-							<!--Single Footer Widget Start-->
-							<div class="col-md-6 col-lg-3">
-								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
-									<!-- CHANGE> Updated to showcase recent legal achievements instead of generic tweets  -->
-									<h3 class="footer-title">Contact Info</h3>
-									<p class="contact-info">
-										<strong>Phone:</strong><br>
-										<a href="tel:+911204961761">+0120 4961761</a>
-										<a href="tel:+919717211123">+91-9717211123</a>
-									</p>
-									<p class="contact-info">
-										<strong>Email & Web:</strong><br>
-										<a href="mailto:info@jurisvista.in">info@jurisvista.in</a>
-										<a href="https://www.jurisvista.in" target="_blank">www.jurisvista.in</a>
-									</p>
-									<div class="business-hours" style="margin-top: 15px;">
-										<p><strong>Business Hours:</strong><br>
-											Mon - Fri: 9:00 AM - 7:00 PM<br>
-											Sat: 10:00 AM - 4:00 PM</p>
-									</div>
-								</div>
-							</div>
-							<!--Single Footer Widget End-->
-							<!--Single Footer Widget Start-->
-							<div class="col-md-6 col-lg-3">
-								<div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
-									<!-- CHANGE> Enhanced contact information with more professional presentation  -->
-									<h3 class="footer-title">Get In Touch</h3>
-									<div class="contact-details">
-										<p><strong>Delhi NCR Office:</strong><br>
-											Off: 1134, Tower-A, i-thum,<br>
-											Plot No. A-40, Sector-62,<br>
-											Noida-201301, (Delhi- NCR), India</p>
-										<p><strong>Mumbai Office:</strong><br>
-											32, Raja Bahadur Mansion,<br>
-											Off. No. 3, First Floor, Ambalal Doshi Marg,<br>
-											Fort, Mumbai - 400023</p>
-									</div>
+      <!--Fun Factor Area End-->
 
-								</div>
-							</div>
-							<!--Single Footer Widget End-->
-						</div>
-					</div>
-				</div>
-				<!--Footer Top Area End-->
-				<!--Footer Bottom Area Start-->
-				<div class="footer-bottom-area pt-20 pb-20">
-					<div class="container text-center">
-						<!-- CHANGE> Updated copyright text to be more comprehensive and professional  -->
-						<p class="animate-on-scroll">
-							<span>&copy;</span> 2024 Jurisvista LLP. All rights reserved. |
-							<a href="#" style="margin: 0 10px;">Privacy Policy</a> |
-							<a href="#" style="margin: 0 10px;">Terms of Service</a> |
-							<a href="#" style="margin: 0 10px;">Disclaimer</a>
-						</p>
-					</div>
-				</div>
-				<!--Footer Bottom Area End-->
-			</div>
-		</footer>
-        <!--Footer Area End-->
+      <footer>
+        <div class="footer-container">
+          <!--Footer Top Area Start-->
+          <div class="footer-top-area black-bg pt-20 pb-9">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-lg-3">
+                  <!--Single Footer Widget Start-->
+                  <div
+                    class="single-footer-widget animate-on-scroll stagger-animation"
+                  >
+                    <a class="footer-logo" href="index.html"
+                      ><img
+                        src="img/bg/logojv4.png"
+                        style="max-height: 150px; max-width: 190px"
+                        alt="Jurisvista LLP Logo"
+                    /></a>
+                    <p>
+                      Jurisvista LLP is a premier full-service Indian law firm
+                      specializing in corporate law, litigation, arbitration,
+                      and regulatory compliance. With offices in Delhi NCR and
+                      Mumbai, we provide innovative legal solutions backed by
+                      deep expertise and unwavering commitment to client
+                      success.
+                    </p>
+                  </div>
+                  <!--Single Footer Widget End-->
+                </div>
+                <!--Single Footer Widget Start-->
+                <div class="col-md-6 col-lg-3 footer-menu">
+                  <div
+                    class="single-footer-widget mb-30 animate-on-scroll stagger-animation"
+                  >
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul>
+                      <li><a href="about.html">About Jurisvista</a></li>
+                      <li><a href="service.html">Legal Practice Areas</a></li>
+                      <li><a href="contact.html">Schedule Consultation</a></li>
+                      <li><a href="contact.html">Client Resources</a></li>
+                      <li><a href="about.html">Legal Insights</a></li>
+                      <li><a href="careers.html">Career Opportunities</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!--Single Footer Widget End-->
+                <!--Single Footer Widget Start-->
+                <div class="col-md-6 col-lg-3">
+                  <div
+                    class="single-footer-widget mb-30 animate-on-scroll stagger-animation"
+                  >
+                    <h3 class="footer-title">Contact Info</h3>
+                    <p class="contact-info">
+                      <strong>Phone:</strong><br />
+                      <a href="tel:+911204961761">+0120 4961761</a>
+                      <a href="tel:+919717211123">+91-9717211123</a>
+                    </p>
+                    <p class="contact-info">
+                      <strong>Email & Web:</strong><br />
+                      <a href="mailto:info@jurisvista.in">info@jurisvista.in</a>
+                      <a href="https://www.jurisvista.in" target="_blank"
+                        >www.jurisvista.in</a
+                      >
+                    </p>
+                    <div class="business-hours" style="margin-top: 15px">
+                      <p>
+                        <strong>Business Hours:</strong><br />
+                        Mon - Fri: 9:00 AM - 7:00 PM<br />
+                        Sat: 10:00 AM - 4:00 PM
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!--Single Footer Widget End-->
+                <!--Single Footer Widget Start-->
+                <div class="col-md-6 col-lg-3">
+                  <div
+                    class="single-footer-widget mb-30 animate-on-scroll stagger-animation"
+                  >
+                    <h3 class="footer-title">Get In Touch</h3>
+                    <div class="contact-details">
+                      <p>
+                        <strong>Delhi NCR Office:</strong><br />
+                        Off: 1134, Tower-A, i-thum,<br />
+                        Plot No. A-40, Sector-62,<br />
+                        Noida-201301, (Delhi- NCR), India
+                      </p>
+                      <p>
+                        <strong>Mumbai Office:</strong><br />
+                        32, Raja Bahadur Mansion,<br />
+                        Off. No. 3, First Floor, Ambalal Doshi Marg,<br />
+                        Fort, Mumbai - 400023
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!--Single Footer Widget End-->
+              </div>
+            </div>
+          </div>
+          <!--Footer Top Area End-->
+          <!--Footer Bottom Area Start-->
+          <div class="footer-bottom-area pt-20 pb-20">
+            <div class="container text-center">
+              <p class="animate-on-scroll">
+                <span>&copy;</span> 2024 Jurisvista LLP. All rights reserved. |
+                <a href="#" style="margin: 0 10px">Privacy Policy</a> |
+                <a href="#" style="margin: 0 10px">Terms of Service</a> |
+                <a href="#" style="margin: 0 10px">Disclaimer</a>
+              </p>
+            </div>
+          </div>
+          <!--Footer Bottom Area End-->
+        </div>
+      </footer>
+      <!--Footer Area End-->
     </div>
 
     <!--All Js Here-->
@@ -1471,566 +1782,717 @@
 
     <!-- Sidebar Toggle Script -->
     <script>
-        $(document).ready(function () {
-            const sidebar = document.getElementById('sidebar');
-            const sidebarToggle = document.getElementById('sidebarToggle');
-            const sidebarOverlay = document.getElementById('sidebarOverlay');
+      $(document).ready(function () {
+        const sidebar = document.getElementById("sidebar");
+        const sidebarToggle = document.getElementById("sidebarToggle");
+        const sidebarOverlay = document.getElementById("sidebarOverlay");
 
-            // Open sidebar
-            sidebarToggle.addEventListener('click', function () {
-                sidebar.classList.toggle('active');
-                sidebarToggle.classList.toggle('active');
-                sidebarOverlay.classList.toggle('active');
-                document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : 'auto';
-            });
-
-            // Close sidebar when overlay is clicked
-            sidebarOverlay.addEventListener('click', function () {
-                sidebar.classList.remove('active');
-                sidebarToggle.classList.remove('active');
-                sidebarOverlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
-
-            // Close sidebar when a link is clicked
-            document.querySelectorAll('.sidebar-nav a').forEach(link => {
-                link.addEventListener('click', function () {
-                    sidebar.classList.remove('active');
-                    sidebarToggle.classList.remove('active');
-                    sidebarOverlay.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                });
-            });
+        // Open sidebar
+        sidebarToggle.addEventListener("click", function () {
+          sidebar.classList.toggle("active");
+          sidebarToggle.classList.toggle("active");
+          sidebarOverlay.classList.toggle("active");
+          document.body.style.overflow = sidebar.classList.contains("active")
+            ? "hidden"
+            : "auto";
         });
+
+        // Close sidebar when overlay is clicked
+        sidebarOverlay.addEventListener("click", function () {
+          sidebar.classList.remove("active");
+          sidebarToggle.classList.remove("active");
+          sidebarOverlay.classList.remove("active");
+          document.body.style.overflow = "auto";
+        });
+
+        // Close sidebar when a link is clicked
+        document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+          link.addEventListener("click", function () {
+            sidebar.classList.remove("active");
+            sidebarToggle.classList.remove("active");
+            sidebarOverlay.classList.remove("active");
+            document.body.style.overflow = "auto";
+          });
+        });
+      });
     </script>
 
     <!-- Added JavaScript functions for modal functionality -->
     <script>
-        $(document).ready(function () {
-            // Hide page loader after 2 seconds
-            setTimeout(function () {
-                $('.page-loader').fadeOut(500);
-            }, 500);
+      $(document).ready(function () {
+        // Hide page loader after 2 seconds
+        setTimeout(function () {
+          $(".page-loader").fadeOut(500);
+        }, 500);
 
-            function animateOnScroll() {
-                $('.animate-on-scroll').each(function() {
-                    var elementTop = $(this).offset().top;
-                    var elementBottom = elementTop + $(this).outerHeight();
-                    var viewportTop = $(window).scrollTop();
-                    var viewportBottom = viewportTop + $(window).height();
+        function animateOnScroll() {
+          $(".animate-on-scroll").each(function () {
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
 
-                    if (elementBottom > viewportTop && elementTop < viewportBottom) {
-                        $(this).addClass('animated');
-                    }
-                });
+            if (elementBottom > viewportTop && elementTop < viewportBottom) {
+              $(this).addClass("animated");
             }
+          });
+        }
 
-            // Run on scroll
-            $(window).on('scroll', animateOnScroll);
-            // Run on load
-            animateOnScroll();
+        // Run on scroll
+        $(window).on("scroll", animateOnScroll);
+        // Run on load
+        animateOnScroll();
 
-            $('.counter').each(function(index) {
-                var $this = $(this);
-                var countTo = $this.text();
-                
-                setTimeout(function() {
-                    $({ countNum: 0 }).animate({
-                        countNum: countTo
-                    }, {
-                        duration: 2000,
-                        easing: 'swing',
-                        step: function() {
-                            $this.text(Math.floor(this.countNum));
-                        },
-                        complete: function() {
-                            $this.text(this.countNum);
-                        }
-                    });
-                }, index * 200); // Stagger the animations
-            });
+        $(".counter").each(function (index) {
+          var $this = $(this);
+          var countTo = $this.text();
 
-            $('.team-member').hover(
-                function() {
-                    $(this).find('.team-member-img img').addClass('animated');
-                    $(this).find('.contact-item i').addClass('animated');
+          setTimeout(function () {
+            $({ countNum: 0 }).animate(
+              {
+                countNum: countTo,
+              },
+              {
+                duration: 2000,
+                easing: "swing",
+                step: function () {
+                  $this.text(Math.floor(this.countNum));
                 },
-                function() {
-                    $(this).find('.team-member-img img').removeClass('animated');
-                    $(this).find('.contact-item i').removeClass('animated');
-                }
+                complete: function () {
+                  $this.text(this.countNum);
+                },
+              }
             );
-
-            $('a[href^="#"]').on('click', function(event) {
-                var target = $(this.getAttribute('href'));
-                if( target.length ) {
-                    event.preventDefault();
-                    $('html, body').stop().animate({
-                        scrollTop: target.offset().top - 100
-                    }, 1000);
-                }
-            });
+          }, index * 200); // Stagger the animations
         });
 
-        function openLawyerModal(lawyerId) {
-            const modal = document.getElementById(lawyerId + '-modal');
-            if (modal) {
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            }
+        $(".team-member").hover(
+          function () {
+            $(this).find(".team-member-img img").addClass("animated");
+            $(this).find(".contact-item i").addClass("animated");
+          },
+          function () {
+            $(this).find(".team-member-img img").removeClass("animated");
+            $(this).find(".contact-item i").removeClass("animated");
+          }
+        );
+
+        $('a[href^="#"]').on("click", function (event) {
+          var target = $(this.getAttribute("href"));
+          if (target.length) {
+            event.preventDefault();
+            $("html, body")
+              .stop()
+              .animate(
+                {
+                  scrollTop: target.offset().top - 100,
+                },
+                1000
+              );
+          }
+        });
+      });
+
+      function openLawyerModal(lawyerId) {
+        const modal = document.getElementById(lawyerId + "-modal");
+        if (modal) {
+          modal.classList.add("active");
+          document.body.style.overflow = "hidden"; // Prevent background scrolling
         }
+      }
 
-        function closeLawyerModal(lawyerId) {
-            const modal = document.getElementById(lawyerId + '-modal');
-            if (modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto'; // Restore scrolling
-            }
+      function closeLawyerModal(lawyerId) {
+        const modal = document.getElementById(lawyerId + "-modal");
+        if (modal) {
+          modal.classList.remove("active");
+          document.body.style.overflow = "auto"; // Restore scrolling
         }
+      }
 
-        // Close modal when clicking outside the content
-        document.addEventListener('click', function(event) {
-            if (event.target.classList.contains('lawyer-modal')) {
-                const modalId = event.target.id.replace('-modal', '');
-                closeLawyerModal(modalId);
-            }
-        });
+      // Close modal when clicking outside the content
+      document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("lawyer-modal")) {
+          const modalId = event.target.id.replace("-modal", "");
+          closeLawyerModal(modalId);
+        }
+      });
 
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const activeModal = document.querySelector('.lawyer-modal.active');
-                if (activeModal) {
-                    const modalId = activeModal.id.replace('-modal', '');
-                    closeLawyerModal(modalId);
-                }
-            }
-        });
+      // Close modal with Escape key
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          const activeModal = document.querySelector(".lawyer-modal.active");
+          if (activeModal) {
+            const modalId = activeModal.id.replace("-modal", "");
+            closeLawyerModal(modalId);
+          }
+        }
+      });
     </script>
 
-    <!-- Added modal containers for each lawyer -->
+    <!-- Modal for Ananya (Office Assistant) -->
+    <div id="ananya-modal" class="lawyer-modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeLawyerModal('ananya')">&times;</span>
+        <div class="modal-header">
+          
+          <img src="img/team/team9.jpeg" alt="Ananya image" />
+
+          <div class="modal-header-info">
+            <h2>Ananya</h2>
+            <div class="position">Office Assistant</div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-section">
+            <h3>About</h3>
+            <p class="text-justify">
+              Ananya is a dedicated and detail-oriented professional currently pursuing her B.A. LL.B. (Graduation). She brings strong organizational skills and a proactive approach to managing daily office operations in a legal environment.
+            </p>
+            <p class="text-justify">
+              She is experienced in handling clerical responsibilities, maintaining documentation, and ensuring smooth communication within the office. With a keen eye for accuracy and confidentiality, Ananya effectively manages sensitive legal records and supports the team in maintaining efficiency and professionalism.
+            </p>
+            <p class="text-justify">
+              Her commitment to learning, combined with her ability to multitask in a high-volume setting, makes her a reliable support resource in legal administrative functions.
+            </p>
+          </div>
+
+          <div class="modal-section">
+            <h3>Practice Support Areas</h3>
+            <ul>
+              <li>Office Administration</li>
+              <li>Legal Documentation Handling</li>
+              <li>Client Coordination</li>
+              <li>Record Management</li>
+              <li>Communication Support</li>
+            </ul>
+          </div>
+
+          <div class="modal-section">
+            <h3>Key Strengths</h3>
+            <ul>
+              <li>Detail-Oriented & Organized</li>
+              <li>Confidentiality Management</li>
+              <li>Multitasking Ability</li>
+              <li>Professional Communication</li>
+              <li>Time Management</li>
+            </ul>
+          </div>
+
+          <div class="modal-section">
+            <h3>Contact Information</h3>
+            <div class="team-contact-info">
+              <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <span>Noida, India</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:ananya@jurisvista.in">ananya@jurisvista.in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- G.S. Gangwar Modal -->
     <div id="gangwar-modal" class="lawyer-modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeLawyerModal('gangwar')">&times;</span>
-            <div class="modal-header">
-                <img src="img/team/team1.jpg" alt="G.S. Gangwar">
-                <div class="modal-header-info">
-                    <h2>G.S. Gangwar</h2>
-                    <div class="position">Founder</div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3>About</h3>
-                    <p class="text-justify">Mr. G. S. Gangwar is the Founding Partner of Jurisvista LLP. He is the distinguished leader whose vision established our firm, building directly on the strong foundation of the erstwhile G.S. Gangwar & Associates.
-Since 2002, he has been known as a formidable advocate with decades of experience in high-stakes litigation, arbitration, and comprehensive corporate advisory. His reputation is built on strategic thinking and a deep mastery of complex disputes.
-<p>Mr. Gangwar has successfully represented clients before the Supreme Court of India, High Courts, and numerous Tribunals across the country. His core practice focuses on Commercial Disputes, Arbitration, IPR (Intellectual Property Rights), and Regulatory matters.</p>
-As a respected trusted advisor, his leadership ensures the entire firm operates with the highest standards of integrity and precision, delivering world-class legal representation to every client.
-</p>
-                </div>
-                
-                <div class="modal-section">
-                    <h3>Contact Information</h3>
-                    <div class="team-contact-info">
-                        <div class="contact-item">
-                            <i class="fa fa-map-marker"></i>
-                            <span>Noida, India</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-envelope"></i>
-                            <a href="mailto:gangwar@jurisvista.in">gangwar@jurisvista.in</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-phone"></i>
-                            <a href="tel:+919717211123">+91-9717211123</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3>Practice Areas</h3>
-                    <ul>
-                                        <li>Commercial Disputes</li>
-                                        <li>Arbitration</li>
-                                        <li>IPR (Intellectual Property Rights)</li>
-                                        <li>Regulatory matters</li>
-                                    </ul>
-                </div>
-
-               
-            </div>
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeLawyerModal('gangwar')"
+          >&times;</span
+        >
+        <div class="modal-header">
+          <img src="img/team/team1.jpg" alt="G.S. Gangwar" />
+          <div class="modal-header-info">
+            <h2>G.S. Gangwar</h2>
+            <div class="position">Founder</div>
+          </div>
         </div>
+        <div class="modal-body">
+          <div class="modal-section">
+            <h3>About</h3>
+            <p class="text-justify">
+              Mr. G. S. Gangwar is the Founding Partner of Jurisvista LLP. He is
+              the distinguished leader whose vision established our firm,
+              building directly on the strong foundation of the erstwhile G.S.
+              Gangwar & Associates.
+            </p>
+            <p class="text-justify">
+              Since 2002, he has been known as a formidable advocate with
+              decades of experience in high-stakes litigation, arbitration, and
+              comprehensive corporate advisory. His reputation is built on
+              strategic thinking and a deep mastery of complex disputes.
+            </p>
+            <p class="text-justify">
+              Mr. Gangwar has successfully represented clients before the
+              Supreme Court of India, High Courts, and numerous Tribunals across
+              the country. His core practice focuses on Commercial Disputes,
+              Arbitration, IPR (Intellectual Property Rights), and Regulatory
+              matters.
+            </p>
+
+            <p class="text-justify">
+              As a respected trusted advisor, his leadership ensures the entire
+              firm operates with the highest standards of integrity and
+              precision, delivering world-class legal representation to every
+              client.
+            </p>
+          </div>
+
+          <div class="modal-section">
+            <h3>Contact Information</h3>
+            <div class="team-contact-info">
+              <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <span>Noida, India</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:gangwar@jurisvista.in">gangwar@jurisvista.in</a>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-phone"></i>
+                <a href="tel:+919717211123">+91-9717211123</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-section">
+            <h3>Practice Areas</h3>
+            <ul>
+              <li>Commercial Disputes</li>
+              <li>Arbitration</li>
+              <li>IPR (Intellectual Property Rights)</li>
+              <li>Regulatory matters</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Umang Gangwar Modal -->
     <div id="umang-modal" class="lawyer-modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeLawyerModal('umang')">&times;</span>
-            <div class="modal-header">
-                <img src="img/team/team2.jpg" alt="Umang Gangwar">
-                <div class="modal-header-info">
-                    <h2>Umang Gangwar</h2>
-                    <div class="position">Partner</div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3>About</h3>
-                    <p class="text-justify">Mr. Gangwar plays a pivotal role in leading the firm's Arbitration, IPR and Corporate Litigation practice. With a strong academic background and significant experience in corporate law and dispute resolution
-                        <p>He brings a modern, research-oriented, and globally attuned perspective to Jurisvista LLP's practice.</p>
-                        <p class="text-justify">His core expertise spans commercial arbitration, insolvency & bankruptcy law, general corporate, and intellectual property rights. Recognized for his analytical precision and persuasive advocacy, Mr. Gangwar has successfully advised and represented clients before various courts and tribunals across India.
-                            As a dynamic young leader, he blends innovative, forward-looking solutions with the enduring strengths of traditional advocacy, ensuring that the firm remains both adaptive and future-ready in an evolving legal landscape.</p>
-</p>
-                </div>
-                
-                <div class="modal-section">
-                    <h3>Contact Information</h3>
-                    <div class="team-contact-info">
-                        <div class="contact-item">
-                            <i class="fa fa-map-marker"></i>
-                            <span>Delhi, India</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-envelope"></i>
-                            <a href="mailto:umang@jurisvista.in">umang@jurisvista.in</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-phone"></i>
-                            <a href="tel:+919810211123">+91-8318285078</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3>Practice Areas</h3>
-                    <ul>
-                        <li>Commercial Arbitration</li>
-                        <li>Insolvency & Bankruptcy</li>
-                        <li>Corporate Advisory</li>
-                        <li>Cross-border Enforcement</li>
-                    </ul>
-                </div>
-
-                
-            </div>
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeLawyerModal('umang')"
+          >&times;</span
+        >
+        <div class="modal-header">
+          <img src="img/team/team2.jpg" alt="Umang Gangwar" />
+          <div class="modal-header-info">
+            <h2>Umang Gangwar</h2>
+            <div class="position">Partner</div>
+          </div>
         </div>
+        <div class="modal-body">
+          <div class="modal-section">
+            <h3>About</h3>
+            <p class="text-justify">
+              Mr. Gangwar plays a pivotal role in leading the firm’s
+              Arbitration, IPR and Corporate Litigation practice. With a strong
+              academic background and significant experience in corporate law
+              and dispute resolution, he brings a modern, research-oriented, and
+              globally attuned perspective to Jurisvista LLP’s practice.
+            </p>
+            <p class="text-justify">
+              His core expertise spans commercial arbitration, insolvency &
+              bankruptcy law, general corporate, and intellectual property
+              rights. Recognized for his analytical precision and persuasive
+              advocacy, Mr. Gangwar has successfully advised and represented
+              clients before various courts and tribunals across India.
+            </p>
+            <p class="text-justify">
+              As a dynamic young leader, he blends innovative, forward-looking
+              solutions with the enduring strengths of traditional advocacy,
+              ensuring that the firm remains both adaptive and future-ready in
+              an evolving legal landscape.
+            </p>
+          </div>
+
+          <div class="modal-section">
+            <h3>Contact Information</h3>
+            <div class="team-contact-info">
+              <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <span>Delhi, India</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:umang@jurisvista.in">umang@jurisvista.in</a>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-phone"></i>
+                <a href="tel:+918318285078">+91-8318285078</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-section">
+            <h3>Practice Areas</h3>
+            <ul>
+              <li>Commercial Arbitration</li>
+              <li>Insolvency & Bankruptcy</li>
+              <li>Corporate Advisory</li>
+              <li>Cross-border Enforcement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Shyam Sunder Modal -->
     <div id="shyam-modal" class="lawyer-modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeLawyerModal('shyam')">&times;</span>
-            <div class="modal-header">
-                <img src="img/team/team3.jpg" alt="Shyam Sunder">
-                <div class="modal-header-info">
-                    <h2>Shyam Sunder</h2>
-                    <div class="position">Senior Associate</div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3>About</h3>
-                    <p class="text-justify">Mr. Shyam Sundar is a seasoned legal professional, enrolled with the Bar Council of Delhi since 1996, bringing nearly three decades of rich experience in civil disputes, commercial litigation, dispute resolution, and regulatory matters. He has successfully represented clients in a wide spectrum of cases, including commercial disputes, debt recovery, arbitration proceedings, and consumer matters.
-</p>
-<p class="text-justify">He has been empanelled with the Indian Railways, advising and representing them in high-stakes disputes, an engagement that has significantly broadened his sectoral expertise. His practice spans multiple forums, with appearances before various High Courts across India.
-</p>
-<p class="text-justify">With his extensive experience, balanced approach, and strong advocacy skills, Mr. Shyam Sundar delivers practical, business-oriented, and comprehensive legal solutions to a wide range of corporate and individual clients.
-</p>
-                </div>
-                
-                <div class="modal-section">
-                    <h3>Contact Information</h3>
-                    <div class="team-contact-info">
-                        <div class="contact-item">
-                            <i class="fa fa-map-marker"></i>
-                            <span>Delhi, India</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-envelope"></i>
-                            <a href="mailto:shyamsunder@jurisvista.in">shyamsunder@jurisvista.in</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-phone"></i>
-                            <a href="tel:+91-98102 11123">+91-98102 11123</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3>Practice Areas</h3>
-                    <ul>
-                        <li>Corporate Law</li>
-                        <li>Arbitration</li>
-                        <li>Regulatory Matters</li>
-                        <li>Debt Recovery</li>
-                    </ul>
-                </div>
-
-               
-            </div>
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeLawyerModal('shyam')"
+          >&times;</span
+        >
+        <div class="modal-header">
+          <img src="img/team/team3.jpg" alt="Shyam Sunder" />
+          <div class="modal-header-info">
+            <h2>Shyam Sunder</h2>
+            <div class="position">Senior Associate</div>
+          </div>
         </div>
+        <div class="modal-body">
+          <div class="modal-section">
+            <h3>About</h3>
+            <p class="text-justify">
+              Mr. Shyam Sundar is a seasoned legal professional, enrolled with
+              the Bar Council of Delhi since 1996, bringing nearly three decades
+              of rich experience in civil disputes, commercial litigation,
+              dispute resolution, and regulatory matters. He has successfully
+              represented clients in a wide spectrum of cases, including
+              commercial disputes, debt recovery, arbitration proceedings, and
+              consumer matters.
+            </p>
+            <p class="text-justify">
+              He has been empanelled with the Indian Railways, advising and
+              representing them in high-stakes disputes, an engagement that has
+              significantly broadened his sectoral expertise. His practice spans
+              multiple forums, with appearances before various High Courts
+              across India.
+            </p>
+            <p class="text-justify">
+              Alongside his courtroom practice, he is actively engaged in
+              transactional advisory, contract negotiation, and drafting,
+              ensuring clients remain compliant with regulatory requirements
+              while safeguarding their commercial interests.
+            </p>
+            <p class="text-justify">
+              With his extensive experience, balanced approach, and strong
+              advocacy skills, Mr. Shyam Sundar delivers practical,
+              business-oriented, and comprehensive legal solutions to a wide
+              range of corporate and individual clients.
+            </p>
+          </div>
+
+          <div class="modal-section">
+            <h3>Contact Information</h3>
+            <div class="team-contact-info">
+              <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <span>Delhi, India</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:shyamsunder@jurisvista.in"
+                  >shyamsunder@jurisvista.in</a
+                >
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-phone"></i>
+                <a href="tel:+91-9810211123">+91-9810211123</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-section">
+            <h3>Practice Areas</h3>
+            <ul>
+              <li>Corporate Law</li>
+              <li>Arbitration</li>
+              <li>Regulatory Matters</li>
+              <li>Debt Recovery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Manoj Pathak Modal -->
     <div id="manoj-modal" class="lawyer-modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeLawyerModal('manoj')">&times;</span>
-            <div class="modal-header">
-                <img src="img/team/team4.jpg" alt="Manoj Pathak">
-                <div class="modal-header-info">
-                    <h2>Manoj Pathak</h2>
-                    <div class="position">Senior Associate</div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3>About</h3>
-                    <p class="text-justify">Enrolled with the Bar Council of Delhi since 2017, Mr. Pathak is a Senior Associate with a diverse practice spanning civil disputes, white-collar crimes, financial offences, consumer disputes, real estate matters, and cases under the Negotiable Instruments Act. He has successfully represented clients before High Courts, Consumer Commissions, RERA, District Courts, and other forums, handling matters ranging from service deficiency and property disputes to cheque dishonour and money-related offences.
-</p>
-<p class="text-justify">Known for his dedication, strategic approach, and client-first mindset, Mr. Pathak ensures robust representation both in litigation and pre-litigation advisory, helping clients safeguard their rights while minimizing risks. His expertise also extends to family law and service matters, making him a versatile and dependable member of the firm's litigation team.
-</p>
-                </div>
-                
-                <div class="modal-section">
-                    <h3>Contact Information</h3>
-                    <div class="team-contact-info">
-                        <div class="contact-item">
-                            <i class="fa fa-map-marker"></i>
-                            <span>Noida, India</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-envelope"></i>
-                            <a href="mailto:manoj@jurisvista.in">manoj@jurisvista.in</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-phone"></i>
-                            <a href="tel:+918368258022">+91-8368258022</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3>Practice Areas</h3>
-                    <ul>
-                        <li>Criminal Law</li>
-                        <li>Consumer Disputes</li>
-                        <li>Real Estate Matters</li>
-                        <li>NI Act Cases</li>
-                    </ul>
-                </div>
-
-               
-            </div>
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeLawyerModal('manoj')"
+          >&times;</span
+        >
+        <div class="modal-header">
+          <img src="img/team/team4.jpg" alt="Manoj Pathak" />
+          <div class="modal-header-info">
+            <h2>Manoj Pathak</h2>
+            <div class="position">Senior Associate</div>
+          </div>
         </div>
+        <div class="modal-body">
+          <div class="modal-section">
+            <h3>About</h3>
+            <p class="text-justify">
+              Enrolled with the Bar Council of Delhi since 2017, Mr. Pathak is a
+              Senior Associate with a diverse practice spanning civil disputes,
+              white-collar crimes, financial offences, consumer disputes, real
+              estate matters, and cases under the Negotiable Instruments Act. He
+              has successfully represented clients before High Courts, Consumer
+              Commissions, RERA, District Courts, and other forums, handling
+              matters ranging from service deficiency and property disputes to
+              cheque dishonour and money-related offences.
+            </p>
+            <p class="text-justify">
+              Known for his dedication, strategic approach, and client-first
+              mindset, Mr. Pathak ensures robust representation both in
+              litigation and pre-litigation advisory, helping clients safeguard
+              their rights while minimizing risks. His expertise also extends to
+              family law and service matters, making him a versatile and
+              dependable member of the firm's litigation team.
+            </p>
+            <p class="text-justify">
+              With a proven record of delivering favourable outcomes, he blends
+              practical legal insight with persuasive advocacy, ensuring clients
+              receive comprehensive, solution-oriented, and business-sensitive
+              legal support across a wide range of disputes.
+            </p>
+          </div>
+
+          <div class="modal-section">
+            <h3>Contact Information</h3>
+            <div class="team-contact-info">
+              <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <span>Noida, India</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:manoj@jurisvista.in">manoj@jurisvista.in</a>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-phone"></i>
+                <a href="tel:+918368258022">+91-8368258022</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-section">
+            <h3>Practice Areas</h3>
+            <ul>
+              <li>Criminal Law</li>
+              <li>Consumer Disputes</li>
+              <li>Real Estate Matters</li>
+              <li>NI Act Cases</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Jatin Modal -->
     <div id="jatin-modal" class="lawyer-modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeLawyerModal('jatin')">&times;</span>
-            <div class="modal-header">
-                <img src="img/team/jatin.jpg" alt="Jatin">
-                <div class="modal-header-info">
-                    <h2>Jatin</h2>
-                    <div class="position">Associate</div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3>About</h3>
-                     <p class="text-justify">Mr. Jatin is an Associate at Jurisvista LLP with a focus on Commercial disputes, Insolvency and Bankruptcy matters, Writ petitions, Quashing matters, and family disputes. He actively supports senior counsels in high-value and complex cases, ensuring thorough preparation and effective strategy.</p>
-                                <p class="text-justify">His practice spans a wide range of areas, including commercial court litigation, matrimonial disputes, intellectual property rights disputes, and white-collar crime matter. Known for his meticulous attention to detail and methodical approach, he ensures accuracy in contractual documentation, arbitration filings, and litigation submissions.</p>
-                                <p class="text-justify">By combining analytical clarity with practical legal insight, Mr. Jatin provides reliable support and effective solutions, assisting clients in achieving favorable outcomes across diverse legal domains.
-</p>
-
-                </div>
-
-                <div class="modal-section">
-                    <h3>Contact Information</h3>
-                    <div class="team-contact-info">
-                        <div class="contact-item">
-                            <i class="fa fa-map-marker"></i>
-                            <span>Delhi, India</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-envelope"></i>
-                            <a href="mailto:jatin@jurisvista.in">jatin@jurisvista.in</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3>Practice Areas</h3>
-                    <ul>
-                        <li>Commercial Court Litigation</li>
-                        <li>Insolvency & Bankruptcy</li>
-                        <li>Writ Petitions & Quashing Matters</li>
-                        <li>Matrimonial / Family Disputes</li>
-                        <li>Intellectual Property Disputes</li>
-                        <li>White-collar Crime Matters</li>
-                    </ul>
-                </div>
-
-            </div>
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeLawyerModal('jatin')"
+          >&times;</span
+        >
+        <div class="modal-header">
+          <img src="img/team/jatin.jpg" alt="Jatin" />
+          <div class="modal-header-info">
+            <h2>Jatin</h2>
+            <div class="position">Associate</div>
+          </div>
         </div>
+        <div class="modal-body">
+          <div class="modal-section">
+            <h3>About</h3>
+            <p class="text-justify">
+              Mr. Jatin is an Associate at Jurisvista LLP with a focus on
+              Commercial disputes, Insolvency and Bankruptcy matters, Writ
+              petitions, Quashing matters, and family disputes. He actively
+              supports senior counsels in high-value and complex cases, ensuring
+              thorough preparation and effective strategy.
+            </p>
+            <p class="text-justify">
+              His practice spans a wide range of areas, including commercial
+              court litigation, matrimonial disputes, intellectual property
+              rights disputes, and white-collar crime matter. Known for his
+              meticulous attention to detail and methodical approach, he ensures
+              accuracy in contractual documentation, arbitration filings, and
+              litigation submissions.
+            </p>
+            <p class="text-justify">
+              By combining analytical clarity with practical legal insight, Mr.
+              Jatin provides reliable support and effective solutions, assisting
+              clients in achieving favorable outcomes across diverse legal
+              domains.
+            </p>
+          </div>
+
+          <div class="modal-section">
+            <h3>Contact Information</h3>
+            <div class="team-contact-info">
+              <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <span>Delhi, India</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:jatin@jurisvista.in">jatin@jurisvista.in</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-section">
+            <h3>Practice Areas</h3>
+            <ul>
+              <li>Commercial Court Litigation</li>
+              <li>Insolvency & Bankruptcy</li>
+              <li>Writ Petitions & Quashing Matters</li>
+              <li>Matrimonial / Family Disputes</li>
+              <li>Intellectual Property Disputes</li>
+              <li>White-collar Crime Matters</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Amanat Modal -->
     <div id="amanat-modal" class="lawyer-modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeLawyerModal('amanat')">&times;</span>
-            <div class="modal-header">
-                <img src="img/team/team14.jpg" alt="Amanat">
-                <div class="modal-header-info">
-                    <h2>Amanat</h2>
-                    <div class="position">Associate</div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3>About</h3>
-                    <p class="text-justify">With over a decade of experience in criminal law, complex NDPS cases, white-collar crimes, and matrimonial disputes, Mr. Amanat has built strong expertise in handling high-stakes and sensitive matters. He has played a significant role in matters involving criminal litigation, NDPS disputes, and other complex contentious issues, where he combines deep legal knowledge with practical, solution-oriented strategies. Known for his thorough preparation, persuasive advocacy, and client-focused approach, Mr. Amanat ensures clients receive effective and comprehensive representation before diverse judicial and quasi-judicial forums. His extensive experience and courtroom acumen make him a trusted counsel in navigating some of the most challenging disputes.</p>
-                </div>
-
-                <div class="modal-section">
-                    <h3>Contact Information</h3>
-                    <div class="team-contact-info">
-                        <div class="contact-item">
-                            <i class="fa fa-map-marker"></i>
-                            <span>Mumbai, India</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-envelope"></i>
-                            <a href="mailto:amanat@jurisvista.in">amanat@jurisvista.in</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3>Practice Areas</h3>
-                    <ul>
-                        <li>Criminal Litigation</li>
-                        <li>NDPS & Complex NDPS Cases</li>
-                        <li>White-collar Crime</li>
-                        <li>Matrimonial / Family Disputes</li>
-                        <li>High-stakes Criminal Defense</li>
-                    </ul>
-                </div>
-
-            </div>
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeLawyerModal('amanat')"
+          >&times;</span
+        >
+        <div class="modal-header">
+          <img src="img/team/team14.jpg" alt="Amanat" />
+          <div class="modal-header-info">
+            <h2>Amanat</h2>
+            <div class="position">Associate</div>
+          </div>
         </div>
+        <div class="modal-body">
+          <div class="modal-section">
+            <h3>About</h3>
+            <p class="text-justify">
+              With over a decade of experience in criminal law, complex NDPS
+              cases, white-collar crimes, and matrimonial disputes, Mr. Amanat
+              has built strong expertise in handling high-stakes and sensitive
+              matters.
+            </p>
+            <p class="text-justify">
+              He has played a significant role in matters involving criminal
+              litigation, NDPS disputes, and other complex contentious issues,
+              where he combines deep legal knowledge with practical,
+              solution-oriented strategies.
+            </p>
+            <p class="text-justify">
+              Known for his thorough preparation, persuasive advocacy, and
+              client-focused approach, Mr. Amanat ensures clients receive
+              effective and comprehensive representation before diverse judicial
+              and quasi-judicial forums. His extensive experience and courtroom
+              acumen make him a trusted counsel in navigating some of the most
+              challenging disputes.
+            </p>
+          </div>
+
+          <div class="modal-section">
+            <h3>Contact Information</h3>
+            <div class="team-contact-info">
+              <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <span>Mumbai, India</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:amanat@jurisvista.in">amanat@jurisvista.in</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-section">
+            <h3>Practice Areas</h3>
+            <ul>
+              <li>Criminal Litigation</li>
+              <li>NDPS & Complex NDPS Cases</li>
+              <li>White-collar Crime</li>
+              <li>Matrimonial / Family Disputes</li>
+              <li>High-stakes Criminal Defense</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-
-
-
-
-
 
     <div id="dkchaudhary-modal" class="lawyer-modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeLawyerModal('dkchaudhary')">&times;</span>
-            <div class="modal-header">
-                <img src="img/team/team5.jpg" alt="D. K. Chaudhary">
-                <div class="modal-header-info">
-                    <h2>D. K. Chaudhary</h2>
-                    <div class="position">Associate</div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3>About</h3>
-                    <p class="text-justify">Mr. Chaudhary is an Associate at Jurisvista LLP and Indian Patent Agent with substantial experience in IPR prosecution and litigation before various courts and authorities, covering Patents, Trademarks, and Copyrights. He has developed expertise in Freedom to Operate (FTO) analyses for new products, IP infringement assessments, and interpretation of technology in patents.
-</p>
-<p class="text-justify"> His practice further extends to competitive intelligence, commercial suits, misbranding matters, and IP infringement cases, along with advising on international and domestic agreements. With his strong technical insight and legal acumen, Mr. Chaudhary delivers effective strategies and solutions that align with both business and legal objectives of the clients.</p>
-                </div>
-
-                <div class="modal-section">
-                    <h3>Contact Information</h3>
-                    <div class="team-contact-info">
-                        <div class="contact-item">
-                            <i class="fa fa-map-marker"></i>
-                            <span>Delhi, India</span>
-                        </div>
-                        
-                         <div class="contact-item">
-                            <i class="fa fa-envelope"></i>
-                            <a href="mailto:dkchaudhary@jurisvista.in">dkchaudhary@jurisvista.in</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-phone"></i>
-                            <a href="tel:+91 98736 63419">+91 98736 63419</a>
-                        </div>
-                    </div>
-                </div>
-
-                
-
-                <div class="modal-section">
-                    <h3>Practice Areas</h3>
-                    <ul>
-                        <li>Patent Prosecution</li>
-                        <li>Trademark Registration</li>
-                        <li>Copyright Protection</li>
-                        <li>Freedom To Operate(FTO) Analysis</li>
-                        <li>IP Infringement Assessment</li>
-
-                        <li>Competitive Intelligence</li>
-                    </ul>
-                </div>
-
-            </div>
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeLawyerModal('dkchaudhary')"
+          >&times;</span
+        >
+        <div class="modal-header">
+          <img src="img/team/team5.jpg" alt="D. K. Chaudhary" />
+          <div class="modal-header-info">
+            <h2>D. K. Chaudhary</h2>
+            <div class="position">Associate</div>
+          </div>
         </div>
+        <div class="modal-body">
+          <div class="modal-section">
+            <h3>About</h3>
+            <p class="text-justify">
+              Mr. Chaudhary is an Associate at Jurisvista LLP and Indian Patent
+              Agent with substantial experience in IPR prosecution and
+              litigation before various courts and authorities, covering
+              Patents, Trademarks, and Copyrights. He has developed expertise in
+              Freedom to Operate (FTO) analyses for new products, IP
+              infringement assessments, and interpretation of technology in
+              patents.
+            </p>
+            <p class="text-justify">
+              His practice further extends to competitive intelligence,
+              commercial suits, misbranding matters, and IP infringement cases,
+              along with advising on international and domestic agreements. With
+              his strong technical insight and legal acumen, Mr. Chaudhary
+              delivers effective strategies and solutions that align with both
+              business and legal objectives of the clients.
+            </p>
+          </div>
+
+          <div class="modal-section">
+            <h3>Contact Information</h3>
+            <div class="team-contact-info">
+              <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <span>Delhi, India</span>
+              </div>
+
+              <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:dkchaudhary@jurisvista.in"
+                  >dkchaudhary@jurisvista.in</a
+                >
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-phone"></i>
+                <a href="tel:+91 98736 63419">+91 98736 63419</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-section">
+            <h3>Practice Areas</h3>
+            <ul>
+              <li>Patent Prosecution</li>
+              <li>Trademark Registration</li>
+              <li>Copyright Protection</li>
+              <li>Freedom To Operate(FTO) Analysis</li>
+              <li>IP Infringement Assessment</li>
+              <li>Competitive Intelligence</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- Haridutt Mishra Modal -->
-    <!-- <div id="haridutt-modal" class="lawyer-modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeLawyerModal('haridutt')">&times;</span>
-            <div class="modal-header">
-                <img src="img/team/team8.jpg" alt="Haridutt Mishra">
-                <div class="modal-header-info">
-                    <h2>Haridutt Mishra</h2>
-                    <div class="position">Senior Associate</div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3>About</h3>
-                    <p class="text-justify">Mr. Haridutt Mishra is a Senior Associate and Intellectual Property Attorney, playing a key role in the firm's IPR practice. He is an expert in IPR disputes, with extensive experience in handling matters related to copyright, trademark, and patent law. Mr. Mishra regularly appears before the High Courts and District Courts in cases involving IP infringement disputes, and represents clients before the Trademark Registry in filing and prosecuting copyright, trademark, and patent applications.</p>
-                    <p class="text-justify">In addition to his IP practice, Mr. Mishra is a recognised mediator and actively participates in the firm's Dispute Resolution practice, focusing primarily on mediation. He assists clients in resolving disputes efficiently and amicably, helping them avoid prolonged litigation while safeguarding their interests.</p>
-                    <p class="text-justify">By combining litigation, advisory, IP prosecution, and mediation expertise, Mr. Mishra provides clients with comprehensive, practical, and business-oriented solutions for both contentious and non-contentious matters. His in-depth knowledge of IP law and alternative dispute resolution ensures clients receive effective, strategic, and future-ready legal guidance.</p>
-                </div>
-
-                <div class="modal-section">
-                    <h3>Contact Information</h3>
-                    <div class="team-contact-info">
-                        <div class="contact-item">
-                            <i class="fa fa-map-marker"></i>
-                            <span>Delhi, India</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-envelope"></i>
-                            <a href="mailto:haridutt@jurisvista.com">haridutt@jurisvista.com</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3>Practice Areas</h3>
-                    <ul>
-                        <li>Copyright, Trademark & Patent Litigation</li>
-                        <li>IP Prosecution & Registrations</li>
-                        <li>IP Strategy & Freedom-to-Operate</li>
-                        <li>Mediation & Dispute Resolution</li>
-                        <li>IP Advisory for Businesses</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </div> -->
-
-</body>
-
+  </body>
 </html>

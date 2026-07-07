@@ -1,13 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="en">
+
 <head>
     <title>Blog || JustisVista</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="img/gavel.png">
     <!--All Css Here-->
-    
+
     <!-- Droid Font CSS-->
     <link rel="stylesheet" href="css/droid.css">
     <!-- Icofont CSS-->
@@ -24,6 +23,7 @@
     <!-- Calendar CSS-->
     <link rel="stylesheet" href="css/zabuto_calendar.css">
     <!-- Meanmenu CSS-->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
     <!-- Venobox CSS-->
     <link rel="stylesheet" href="css/venobox.css">
     <!-- Bootstrap CSS-->
@@ -32,35 +32,9 @@
     <link rel="stylesheet" href="style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
-
-     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
     <!-- Modernizr Js -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
-
-        /* Added sidebar navigation styles to match index.html */
-        :root { --primary-color: #254B9D; --secondary-color: #019df0; --dark-bg: #1a1a1a; --sidebar-width: 280px; }
-        .sidebar { position: fixed; left: 0; top: 0; width: var(--sidebar-width); height: 100vh; background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a70 100%); box-shadow: 2px 0 15px rgba(37, 75, 157, 0.3); z-index: 998; overflow-y: auto; padding-top: 80px; transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); transform: translateX(-100%); }
-        .sidebar.active { transform: translateX(0); }
-        .sidebar-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0); z-index: 997; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
-        .sidebar-overlay.active { background: rgba(0, 0, 0, 0.7); opacity: 1; visibility: visible; }
-        .sidebar-nav { list-style: none; padding: 20px 0; margin: 0; }
-        .sidebar-nav li { margin: 0; }
-        .sidebar-nav a { display: flex; align-items: center; padding: 18px 25px; color: #ffffff; text-decoration: none; font-size: 15px; font-weight: 600; transition: all 0.3s ease; border-left: 4px solid transparent; position: relative; }
-        .sidebar-nav a:hover { background: rgba(255, 255, 255, 0.1); border-left-color: var(--secondary-color); padding-left: 35px; color: var(--secondary-color); }
-        .sidebar-nav a i { margin-right: 15px; font-size: 18px; width: 25px; text-align: center; }
-        .sidebar-nav a.active { background: rgba(255, 255, 255, 0.15); border-left-color: var(--secondary-color); color: var(--secondary-color); }
-        .sidebar-toggle { display: none; width: 50px; height: 50px; background: none; border: none; border-radius: 0; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; z-index: 999; position: relative; }
-        .sidebar-toggle span { width: 28px; height: 3px; background: var(--primary-color); margin: 4px 0; transition: all 0.3s ease; border-radius: 2px; display: block; }
-        .sidebar-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
-        .sidebar-toggle.active span:nth-child(2) { opacity: 0; }
-        .sidebar-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
-        .header-bottom-area { position: relative; z-index: 100; }
-        body.sidebar-open { overflow: hidden; }
-        
         /* Loading Animation */
         .page-loader {
             position: fixed;
@@ -79,7 +53,7 @@
         .spinner {
             width: 50px;
             height: 50px;
-            border: 3px solid rgba(255,255,255,0.3);
+            border: 3px solid rgba(255, 255, 255, 0.3);
             border-top: 3px solid #fff;
             border-radius: 50%;
             animation: spin 1s linear infinite;
@@ -87,12 +61,20 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes fadeOut {
-            to { opacity: 0; visibility: hidden; }
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
         }
 
         .social-link {
@@ -118,13 +100,33 @@
             animation: fadeInUp 0.6s ease-out both;
         }
 
-        .main-menu li:nth-child(1) { animation-delay: 1.2s; }
-        .main-menu li:nth-child(2) { animation-delay: 1.3s; }
-        .main-menu li:nth-child(3) { animation-delay: 1.4s; }
-        .main-menu li:nth-child(4) { animation-delay: 1.5s; }
-        .main-menu li:nth-child(5) { animation-delay: 1.6s; }
-        .main-menu li:nth-child(6) { animation-delay: 1.7s; }
-        .main-menu li:nth-child(7) { animation-delay: 1.8s; }
+        .main-menu li:nth-child(1) {
+            animation-delay: 1.2s;
+        }
+
+        .main-menu li:nth-child(2) {
+            animation-delay: 1.3s;
+        }
+
+        .main-menu li:nth-child(3) {
+            animation-delay: 1.4s;
+        }
+
+        .main-menu li:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        .main-menu li:nth-child(5) {
+            animation-delay: 1.6s;
+        }
+
+        .main-menu li:nth-child(6) {
+            animation-delay: 1.7s;
+        }
+
+        .main-menu li:nth-child(7) {
+            animation-delay: 1.8s;
+        }
 
         .main-menu a {
             position: relative;
@@ -158,18 +160,39 @@
         }
 
         @keyframes backgroundMove {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
         }
 
-        .single-blog .blog-img { height: 280px; overflow: hidden; }
-        .single-blog .blog-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        /* Uniform blog card image sizing */
+        .single-blog .blog-img {
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .single-blog .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
         .brand-active .single-brand img {
             width: 60px;
+            /* Set the desired width */
             height: 60px;
+            /* Set the desired height */
             border-radius: 50%;
+            /* Make the image circular */
             object-fit: cover;
+            /* Ensure the image covers the area without distortion */
         }
 
         /* Newsletter Slideshow Styles */
@@ -179,11 +202,11 @@
 
         .slideshow-container {
             position: relative;
-            max-width: 100%;
+            max-width: 800px;
             margin: 0 auto;
             background: rgb(255, 255, 255);
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
 
@@ -202,8 +225,15 @@
         }
 
         @keyframes slideIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .slide-content h3 {
@@ -227,7 +257,7 @@
             color: white;
             padding: 40px 30px;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             min-height: 500px;
         }
 
@@ -240,26 +270,23 @@
 
         .explore-section .filter-buttons {
             margin-bottom: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
         }
 
         .explore-section .filter-btn {
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             color: white;
             padding: 8px 20px;
+            margin: 5px;
             border-radius: 25px;
             font-size: 14px;
             transition: all 0.3s ease;
-            white-space: nowrap;
         }
 
         .explore-section .filter-btn:hover,
         .explore-section .filter-btn.active {
-            background: rgba(255,255,255,0.3);
-            border-color: rgba(255,255,255,0.5);
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
         .explore-section .form-group {
@@ -267,21 +294,20 @@
         }
 
         .explore-section .form-control {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             color: white;
             padding: 12px 15px;
             border-radius: 5px;
-            width: 100%;
         }
 
         .explore-section .form-control::placeholder {
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
         }
 
         .explore-section .form-control:focus {
-            background: rgba(255,255,255,0.15);
-            border-color: rgba(255,255,255,0.5);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.5);
             box-shadow: none;
             color: white;
         }
@@ -291,7 +317,7 @@
             color: white;
         }
 
-        .news-and-events h2{
+        .news-and-events h2 {
             color: white;
         }
 
@@ -307,13 +333,13 @@
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .blog-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
         .blog-card-img {
@@ -342,8 +368,6 @@
             margin-bottom: 15px;
             font-size: 14px;
             color: #777;
-            flex-wrap: wrap;
-            gap: 10px;
         }
 
         .blog-card-title {
@@ -389,296 +413,35 @@
             text-align: center;
         }
 
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .header-top-wrap .row {
-                flex-direction: column;
-                gap: 15px;
+        @media (max-width: 768px) {
+            .slide {
+                padding: 40px 20px;
+                min-height: 250px;
             }
 
-            .header-top-left,
-            .header-top-middle,
-            .header-top-right {
-                text-align: center;
+            .slide-content h3 {
+                font-size: 2rem;
+            }
+
+            .slide-content p {
+                font-size: 1rem;
             }
 
             .explore-section {
-                min-height: auto;
                 margin-bottom: 30px;
             }
 
             .explore-section h2 {
                 font-size: 2rem;
             }
-
-            .slideshow-container {
-                margin-top: 30px;
-            }
         }
-
-        /* Updated sidebar toggle positioning for 768-984px range - FIXED */
-        @media (max-width: 984px) and (min-width: 768px) {
-            .sidebar-toggle {
-                display: flex;
-                position: absolute;
-                top: 50%;
-                left: 15px;
-                transform: translateY(-50%);
-                z-index: 1001;
-            }
-
-            .header-menu-area {
-                display: none;
-            }
-
-            .sidebar {
-                width: var(--sidebar-width);
-            }
-
-            .header-logo {
-                text-align: center;
-                position: relative;
-                padding-left: 60px;
-            }
-            
-            .header-bottom-area .row {
-                position: relative;
-                display: flex;
-                align-items: center;
-                min-height: 80px;
-            }
-            
-            /* Ensure logo and toggle are properly aligned */
-            .header-logo {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-            }
-            
-            .header-logo a {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .sidebar-toggle { 
-                display: flex; 
-                position: absolute;
-                left: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 1001;
-            }
-            
-            .header-menu-area { 
-                display: none; 
-            }
-            
-            .sidebar { 
-                width: var(--sidebar-width); 
-            }
-            
-            .header-logo { 
-                text-align: center;
-                position: relative;
-            }
-            
-            .header-logo a {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-            }
-
-            .slide {
-                padding: 40px 20px;
-                min-height: auto;
-                max-height: none;
-            }
-            
-            .slide-content h3 {
-                font-size: 1.8rem;
-            }
-            
-            .slide-content p {
-                font-size: 0.95rem;
-            }
-
-            .explore-section {
-                padding: 30px 20px;
-                margin-bottom: 30px;
-            }
-
-            .explore-section h2 {
-                font-size: 1.8rem;
-                margin-bottom: 20px;
-            }
-
-            .explore-section .filter-buttons {
-                margin-bottom: 20px;
-            }
-
-            .explore-section .filter-btn {
-                padding: 8px 15px;
-                font-size: 12px;
-            }
-
-            .blog-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 20px;
-                margin-top: 30px;
-            }
-
-            .single-blog .blog-img {
-                height: 200px;
-            }
-
-            .blog-card-title {
-                font-size: 16px;
-            }
-
-            .blog-card-meta {
-                font-size: 12px;
-            }
-
-            .blog-card-content {
-                padding: 15px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            :root { --sidebar-width: 250px; }
-            
-            .sidebar-nav a { padding: 15px 20px; font-size: 14px; }
-            .sidebar-nav a i { margin-right: 12px; font-size: 16px; }
-
-            .header-top-area .container {
-                padding: 0 10px;
-            }
-
-            .header-logo img {
-                max-width: 150px !important;
-            }
-
-            .slide {
-                padding: 30px 15px;
-            }
-
-            .slide-content h3 {
-                font-size: 1.5rem;
-            }
-
-            .slide-content p {
-                font-size: 0.9rem;
-            }
-
-            .explore-section {
-                padding: 20px 15px;
-            }
-
-            .explore-section h2 {
-                font-size: 1.5rem;
-                margin-bottom: 15px;
-            }
-
-            .explore-section .filter-buttons {
-                margin-bottom: 15px;
-            }
-
-            .explore-section .filter-btn {
-                padding: 6px 12px;
-                font-size: 11px;
-            }
-
-            .explore-section .form-group {
-                margin-bottom: 15px;
-            }
-
-            .blog-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .single-blog .blog-img {
-                height: 200px;
-            }
-
-            .blog-card-title {
-                font-size: 15px;
-            }
-
-            .blog-card-meta {
-                font-size: 11px;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-            }
-
-            .page-banner-content h2 {
-                font-size: 1.8rem;
-            }
-
-            .brand-active .single-brand img {
-                width: 50px;
-                height: 50px;
-            }
-
-            .footer-top-area .container {
-                padding: 0 10px;
-            }
-
-            .single-footer-widget {
-                margin-bottom: 20px !important;
-            }
-
-            .social-link li {
-                margin: 0 5px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .slide {
-                padding: 20px 12px;
-            }
-
-            .slide-content h3 {
-                font-size: 1.3rem;
-                margin-bottom: 15px;
-            }
-
-            .explore-section {
-                padding: 15px 12px;
-            }
-
-            .explore-section h2 {
-                font-size: 1.3rem;
-            }
-
-            .explore-section .filter-btn {
-                padding: 5px 10px;
-                font-size: 10px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .header-menu-area ul.main-menu {
-                flex-direction: column;
-                gap: 0;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .main-menu {
-                flex-direction: column;
-                gap: 0;
-            }
-        }
-
     </style>
 </head>
+
 <body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
     <div class="page-loader">
         <div class="loader-content">
             <div class="spinner"></div>
@@ -687,106 +450,104 @@
     </div>
 
     <div class="wrapper">
+        <!--Header Area Start-->
         <header>
             <div class="header-container">
+                <!--Header Top Area Start-->
                 <div class="header-top-area default-bg">
                     <div class="container">
                         <div class="row">
                             <div class="header-top-wrap col-12">
                                 <div class="row">
+                                    <!--Header Top Left Area Start-->
                                     <div class="col-md-4 col-xl-3">
                                         <div class="header-top-left">
-                                        <p class="glow-on-hover">CALL US : <a href="#">  +0120 4961761</a></p>
+                                            <p class="glow-on-hover">CALL US : <a href="#"> +008 12548 658 658</a></p>
                                         </div>
                                     </div>
+                                    <!--Header Top Left Area End-->
+                                    <!--Header Top Middle Area Start-->
                                     <div class="col-md-4 col-xl-6">
                                         <div class="header-top-middle text-center">
                                             <ul class="social-link">
-                                                <li><a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a></li>
-                                                <li><a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                               <li><a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-												</li>
-                                                 <li><a href="#" class="social-link"><i class="fa-brands fa-google"></i></a></li>
+                                                <li><a href="#" class="social-link"><i class="fa fa-facebook"></i></a>
+                                                </li>
+                                                <li><a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                                <li><a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
+                                                </li>
+                                                <li><a href="#" class="social-link"><i
+                                                            class="fa fa-google-plus"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
+                                    <!--Header Top Middle Area End-->
+                                    <!--Header Top Right Area Start-->
                                     <div class="col-md-4 col-xl-3">
                                         <div class="header-top-right">
-                                            <p class="glow-on-hover">MAIL US :<a href="mailto:info@jurisvista.in">info@jurisvista.in</a></p>
+                                            <p class="glow-on-hover">MAIL US :<a href="#">info@example.com</a></p>
                                         </div>
                                     </div>
+                                    <!--Header Top Right Area End-->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <!--Header Top Area End-->
+                <!--Header Bottom Area Start-->
                 <div class="header-bottom-area header-sticky">
                     <div class="container">
-                        <div class="row align-items-center">
+                        <div class="row ">
+                            <!--Header Logo Start-->
                             <div class="col-md-3">
                                 <div class="header-logo">
-									<!--Sidebar Toggle Button-->
-									<button class="sidebar-toggle" id="sidebarToggle">
-										<span></span>
-										<span></span>
-										<span></span>
-									</button>
-									<a href="index.html"><img src="img/bg/logojv4.png"
-											style="max-width: 180px; min-height: 50px;" alt=""></a>
-								</div>
+                                    <a href="index.html"><img src="img/bg/jurisvista.jpeg"
+                                            style="max-width: 80px; max-height: 70px;" alt=""></a>
+                                </div>
                             </div>
+                            <!--Header Logo End-->
+                            <!--Header Menu Start-->
                             <div class="col-md-9">
-                                <div class="header-menu-area">
+                                <div class="header-menu-area ">
                                     <nav>
                                         <ul class="main-menu">
-                                            <li><a href="index.html" class="nav-link-bold">HOME</a></li>
+                                            <li><a href="index.html" class="nav-link-bold">HOME</a>
+                                            </li>
                                             <li><a href="about.html" class="nav-link-bold">ABOUT</a></li>
                                             <li><a href="team.html" class="nav-link-bold">TEAM</a></li>
                                             <li><a href="service.html" class="nav-link-bold">PRACTICE AREA</a></li>
-                                            <li class="active"><a href="blog.html" class="nav-link-bold">NEWS LETTER</a></li>
+                                            <li class="active"><a href="blog.html" class="nav-link-bold">NEWS LETTER</a>
+
+                                            </li>
                                             <li><a href="careers.html" class="nav-link-bold">CAREERS</a></li>
                                             <li><a href="contact.html" class="nav-link-bold">CONTACT</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
+                            <!--Header Menu End-->
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <!--Mobile Menu Area Start-->
                                 <div class="mobile-menu d-lg-none d-xl-none"></div>
                                 <!--Mobile Menu Area End-->
-                                <!--Sidebar Toggle Button-->
-                              
                             </div>
                         </div>
                     </div>
                 </div>
+                <!--Header Bottom Area End-->
             </div>
         </header>
-        
-        <!--Sidebar Overlay-->
-        <div class="sidebar-overlay" id="sidebarOverlay"></div>
-        
-        <!--Sidebar Navigation-->
-        <nav class="sidebar" id="sidebar">
-            <ul class="sidebar-nav">
-                <li><a href="index.html" class="nav-link"><i class="fa fa-home"></i> HOME</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fa fa-info-circle"></i> ABOUT</a></li>
-                <li><a href="team.html" class="nav-link"><i class="fa fa-users"></i> TEAM</a></li>
-                <li><a href="service.html" class="nav-link"><i class="fa fa-briefcase"></i> PRACTICE AREA</a></li>
-                <li><a href="blog.html" class="nav-link active"><i class="fa fa-newspaper-o"></i> NEWS LETTER</a></li>
-                <li><a href="careers.html" class="nav-link"><i class="fa fa-graduation-cap"></i> CAREERS</a></li>
-                <li><a href="contact.html" class="nav-link"><i class="fa fa-envelope"></i> CONTACT</a></li>
-            </ul>
-        </nav>
-
-        <div class="page-banner-area bg-img-3 bg-animate pt-10">
+        <!--Header Area End-->
+        <!-- Page Banner Area Start-->
+        <div class="page-banner-area bg-img-3 bg-animate pt-20">
             <div class="container">
                 <div class="row">
                     <div class="page-banner-content col-12 text-center">
                         <h2>Newsletter</h2>
+
                     </div>
                 </div>
             </div>
@@ -802,14 +563,14 @@
                     <div class="col-lg-5 col-md-12">
                         <div class="explore-section news-and-events">
                             <h2>Explore<br>News and Events</h2>
-                            
+
                             <div class="filter-buttons">
                                 <button class="filter-btn active" data-type="all">All</button>
-                                <button class="filter-btn" data-type="event">Events</button>
                                 <button class="filter-btn" data-type="news">News</button>
+                                <button class="filter-btn" data-type="event">Event</button>
                                 <button class="filter-btn" data-type="webinar">Webinar</button>
-                                <button class="filter-btn" data-type="blog">Blogs</button>
-                                <button class="filter-btn" data-type="article" >Articles</button>
+                                <button class="filter-btn" data-type="blog">Blog</button>
+                                <button class="filter-btn" data-type="article">Article</button>
                             </div>
 
                             <div class="row">
@@ -825,8 +586,8 @@
                                 </div>
                             </div>
 
-                           
-                            
+
+
                             <div class="filter-results" id="filterResults">
                                 <!-- Showing 10 events -->
                             </div>
@@ -840,39 +601,51 @@
                             <div class="slide active">
                                 <div class="slide-content text-center">
                                     <h3>Expert Legal Consultation</h3>
-                                    <p class="text-justify">GS Gangwar and Associates is the best Law Firm.</p>
+                                    <p>GS Gangwar and Associates is the best Law Firm. We solve your problems tempora
+                                        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                                        minima veniam. Our expert team provides comprehensive legal solutions for all
+                                        your needs.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Slide 2 -->
                             <div class="slide">
                                 <div class="slide-content text-center">
                                     <h3>Corporate Law Excellence</h3>
-                                    <p class="text-justify">GS Gangwar and Associates is the best Law Firm.</p>
+                                    <p>GS Gangwar and Associates is the best Law Firm. We solve your problems tempora
+                                        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                                        minima veniam. Specializing in corporate law with proven track record of
+                                        success.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Slide 3 -->
                             <div class="slide">
                                 <div class="slide-content text-center">
                                     <h3>Criminal Defense Specialists</h3>
-                                    <p class="text-justify">GS Gangwar and Associates is the best Law Firm.</p>
+                                    <p>GS Gangwar and Associates is the best Law Firm. We solve your problems tempora
+                                        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                                        minima veniam. Defending your rights with dedication and expertise.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Slide 4 -->
                             <div class="slide">
                                 <div class="slide-content text-center">
                                     <h3>Family Law Solutions</h3>
-                                    <p class="text-justify">GS Gangwar and Associates is the best Law Firm.</p>
+                                    <p>GS Gangwar and Associates is the best Law Firm. We solve your problems tempora
+                                        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                                        minima veniam. Compassionate legal support for family matters and disputes.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Slide 5 -->
                             <div class="slide">
                                 <div class="slide-content text-center">
                                     <h3>24/7 Legal Support</h3>
-                                    <p class="text-justify">GS Gangwar and Associates is the best Law Firm.</p>
+                                    <p>GS Gangwar and Associates is the best Law Firm. We solve your problems tempora
+                                        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                                        minima veniam. Round-the-clock legal assistance when you need it most.</p>
                                 </div>
                             </div>
                         </div>
@@ -883,11 +656,11 @@
         <!-- Newsletter Slideshow Area End-->
 
         <!-- Blog Area Start-->
-       <!-- Blog Area Start-->
-		<div class="blog-area pt-20" style="background-color: aliceblue;">
-		    <div class="container">
-		        <div class="row">
-                    <!--Single Blog End--> 
+        <!-- Blog Area Start-->
+        <div class="blog-area pt-120" style="background-color: aliceblue;">
+            <div class="container">
+                <div class="row">
+                    <!--Single Blog End-->
                     <!--Single Blog Start-->
                     <div class="col-md-6 col-lg-4">
                         <div class="single-blog mb-30">
@@ -900,109 +673,138 @@
                                     <li><a href="#">GS Gangwar</a></li>
                                     <li><a href="#">2 comments</a></li>
                                 </ul>
-                                <h3><a href="blog-post.html?post=corporate-governance">Corporate Governance in India: Between Regulation and Reality</a></h3>
-                                <p class="text-justify">Mr. GS Gangwar reflects on how corporate governance in India has evolved over the past three decades, highlighting both achievements and persistent gaps. The editorial explores the role of independent directors, shareholder activism, and SEBI regulations in ensuring accountability.</p>
-                                <a href="blog-post.html?post=corporate-governance" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                                <h3><a href="blog-post.html?post=corporate-governance">Corporate Governance in India:
+                                        Between Regulation and Reality</a></h3>
+                                <p class="text-justify">Mr. GS Gangwar reflects on how corporate governance in India has
+                                    evolved over the past three decades, highlighting both achievements and persistent
+                                    gaps. The editorial explores the role of independent directors, shareholder
+                                    activism, and SEBI regulations in ensuring accountability.</p>
+                                <a href="blog-post.html?post=corporate-governance" class="blog-link"><span>Continue
+                                        Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Blog Post 2 -->
+                    <!--Single Blog End-->
+                    <!--Single Blog Start-->
                     <div class="col-md-6 col-lg-4">
                         <div class="single-blog mb-30">
                             <div class="blog-img">
-                                <img src="img/blog/large/The Future of Insolvency.jpg" alt="Insolvency Resolution">
+                                <img src="img/blog/large/The Future of Insolvency.jpg" alt="">
                             </div>
                             <div class="blog-content">
                                 <ul class="blog-meta">
                                     <li>February 02</li>
-                                    <li><a href="#">GS Gangwar</a></li>
+                                    <li><a href="#"> GS Gangwar</a></li>
                                     <li><a href="#">8 comments</a></li>
                                 </ul>
-                                <h3><a href="blog-post.html?post=ibc-future">The Future of Insolvency Resolution under the IBC</a></h3>
-                                <p class="text-justify">A forward-looking piece analyzing the Insolvency and Bankruptcy Code, its achievements in restructuring distressed companies, and the challenges in judicial delays. Mr. Gangwar proposes reforms for making India a more business-friendly insolvency jurisdiction.</p>
-                                <a href="blog-post.html?post=ibc-future" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                                <h3><a href="single-blog.html">The Future of Insolvency Resolution under the IBC</a>
+                                </h3>
+                                <p>A forward-looking piece analyzing the Insolvency and Bankruptcy Code, its
+                                    achievements in restructuring distressed companies, and the challenges in judicial
+                                    delays. Mr. Gangwar proposes reforms for making India a more business-friendly
+                                    insolvency jurisdiction.
+                                </p>
+                                <span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Blog Post 3 -->
+                    <!--Single Blog End-->
+                    <!--Single Blog Start-->
                     <div class="col-md-6 col-lg-4">
                         <div class="single-blog mb-30">
                             <div class="blog-img">
-                                <img src="img/blog/large/Enforcement of International Arbitral .jpg" alt="Arbitral Awards">
+                                <img src="img/blog/large/Enforcement of International Arbitral .jpg" alt="">
                             </div>
                             <div class="blog-content">
                                 <ul class="blog-meta">
-                                    <li>January 28</li>
-                                    <li><a href="#">Umang Gangwar</a></li>
-                                    <li><a href="#">18 comments</a></li>
+                                    <li>January 28.</li>
+                                    <li><a href="#"> Umang Gangwar.</a></li>
+                                    <li><a href="#"> 18 comments</a></li>
                                 </ul>
-                                <h3><a href="blog-post.html?post=arbitral-awards">Enforcement of International Arbitral Awards: Challenges for Indian Courts</a></h3>
-                                <p class="text-justify">Building on his academic research, Mr. Umang Gangwar examines India's approach to recognizing and enforcing arbitral awards compared to jurisdictions like Singapore, the UK, and the USA. The editorial highlights the importance of balancing sovereignty with international cooperation in arbitration law.</p>
-                                <a href="blog-post.html?post=arbitral-awards" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                                <h3><a href="single-blog.html">Enforcement of International Arbitral Awards: Challenges
+                                        for Indian Courts</a></h3>
+                                <p>Building on his academic research, Mr. Umang Gangwar examines India’s approach to
+                                    recognizing and enforcing arbitral awards compared to jurisdictions like Singapore,
+                                    the UK, and the USA. The editorial highlights the importance of balancing
+                                    sovereignty with international cooperation in arbitration law.
+                                </p>
+                                <span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Blog Post 4 -->
+                    <!--Single Blog End-->
+                    <!--Single Blog Start-->
                     <div class="col-md-6 col-lg-4">
                         <div class="single-blog mb-30">
                             <div class="blog-img">
-                                <img src="img/blog/large/Technology and Law.jpg" alt="Technology and Law">
+                                <img src="img/blog/large/Technology and Law.jpg" alt="">
                             </div>
                             <div class="blog-content">
                                 <ul class="blog-meta">
-                                    <li>January 25</li>
-                                    <li><a href="#">Umang Gangwar</a></li>
+                                    <li>January 25.</li>
+                                    <li><a href="#"> Umang Gangwar.</a></li>
                                     <li><a href="#">10 comments</a></li>
                                 </ul>
-                                <h3><a href="blog-post.html?post=tech-law">Technology and Law: The Coming Era of Cyber Disputes</a></h3>
-                                <p class="text-justify">Mr. Gangwar discusses the growing intersection of technology and law, covering issues like cybersecurity breaches, data protection, and cross-border digital disputes. The piece offers a roadmap for strengthening India's regulatory framework while supporting digital innovation.</p>
-                                <a href="blog-post.html?post=tech-law" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                                <h3><a href="single-blog.html">Technology and Law: The Coming Era of Cyber Disputes</a>
+                                </h3>
+                                <p>Mr. Gangwar discusses the growing intersection of technology and law, covering issues
+                                    like cybersecurity breaches, data protection, and cross-border digital disputes. The
+                                    piece offers a roadmap for strengthening India’s regulatory framework while
+                                    supporting digital innovation.
+
+                                </p>
+                                <span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Blog Post 5 -->
+                    <!--Single Blog End-->
+                    <!--Single Blog Start-->
                     <div class="col-md-6 col-lg-4">
                         <div class="single-blog mb-30">
                             <div class="blog-img">
-                                <img src="img/blog/large/Public Policy Doctrine.jpg" alt="Public Policy Doctrine">
+                                <img src="img/blog/large/Public Policy Doctrine.jpg" alt="">
                             </div>
                             <div class="blog-content">
                                 <ul class="blog-meta">
-                                    <li>January 20</li>
-                                    <li><a href="#">Shyam Sundar</a></li>
+                                    <li>january 20</li>
+                                    <li><a href="#">Shyam Sundar.</a></li>
                                     <li><a href="#">4 comments</a></li>
                                 </ul>
-                                <h3><a href="blog-post.html?post=public-policy">Public Policy Doctrine in Arbitration: A Double-Edged Sword</a></h3>
-                                <p class="text-justify">Mr. Sundar evaluates how Indian courts interpret "public policy" in arbitration, comparing domestic and international approaches. The editorial demonstrates his expertise in dispute resolution and highlights the need for judicial restraint to promote arbitration as a reliable mechanism.</p>
-                                <a href="blog-post.html?post=public-policy" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                                <h3><a href="single-blog.html">Public Policy Doctrine in Arbitration: A Double-Edged
+                                        Sword </a></h3>
+                                <p>Mr. Sundar evaluates how Indian courts interpret "public policy" in arbitration,
+                                    comparing domestic and international approaches. The editorial demonstrates his
+                                    expertise in dispute resolution and highlights the need for judicial restraint to
+                                    promote arbitration as a reliable mechanism.</p>
+                                <span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Blog Post 6 -->
+                    <!--Single Blog End-->
+                    <!--Single Blog Start-->
                     <div class="col-md-6 col-lg-4">
                         <div class="single-blog mb-30">
                             <div class="blog-img">
-                                <img src="img/blog/large/Labour and Employment Law.jpg" alt="Labour and Employment">
+                                <img src="img/blog/large/Labour and Employment Law.jpg" alt="">
                             </div>
                             <div class="blog-content">
                                 <ul class="blog-meta">
                                     <li>February 10</li>
-                                    <li><a href="#">Manoj Pathak</a></li>
+                                    <li><a href="#"> Manoj Pathak.</a></li>
                                     <li><a href="#">12 comments</a></li>
                                 </ul>
-                                <h3><a href="blog-post.html?post=labour-law">Labour and Employment Law: Striking a Balance between Employers and Workers</a></h3>
-                                <p class="text-justify">Mr. Pathak's editorial provides deep insights into the complexities of employment law, workplace compliance, and industrial relations. His perspective is rooted in practical advisory experience for corporations navigating labour reforms and compliance with statutory obligations.</p>
-                                <a href="blog-post.html?post=labour-law" class="blog-link"><span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                                <h3>Labour and Employment Law: Striking a Balance between Employers and Workers</h3>
+                                <p>Mr. Pathak’s editorial provides deep insights into the complexities of employment
+                                    law, workplace compliance, and industrial relations. His perspective is rooted in
+                                    practical advisory experience for corporations navigating labour reforms and
+                                    compliance with statutory obligations.
+                                </p>
+                                <span>Continue Reading</span> <i class="icofont icofont-long-arrow-right"></i>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Blog Post 7 -->
+
                     <div class="col-md-6 col-lg-4">
                         <div class="single-blog mb-30">
                             <div class="blog-img">
@@ -1020,134 +822,192 @@
                             </div>
                         </div>
                     </div>
+                    <!--Single Blog End-->
                 </div>
+
             </div>
         </div>
 
-       	<!--Brand Area Start-->
-<div class="brand-area py-2 py-md-3">
-  <div class="container">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-12">
-        <!-- Mobile Layout (flexbox) - visible on mobile only -->
-        <div class="brand-mobile d-flex d-md-none flex-wrap justify-content-center align-items-center gap-2 text-center">
-          <!-- Facebook -->
-          <div class="single-brand text-center mb-2">
-            <a href="#">
-              <img src="img/logo/facebooklogo.png" 
-                   alt="Facebook Logo" 
-                   class="img-fluid brand-logo-img" 
-                   style="max-height: 60px; width: auto;">
-            </a>
-          </div>
-          <!-- LinkedIn -->
-          <div class="single-brand text-center mb-2">
-            <a href="https://www.linkedin.com/company/jurisvistalawoffices/" target="_blank">
-              <img src="img/logo/linkedInlogo.jpg" 
-                   alt="LinkedIn Logo" 
-                   class="img-fluid brand-logo-img" 
-                   style="max-height: 50px; width: auto;">
-            </a>
-          </div>
-          <!-- Instagram -->
-          <div class="single-brand text-center mb-2">
-            <a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr">
-              <img src="img/logo/instalogo.jpg" 
-                   alt="Instagram Logo" 
-                   class="img-fluid brand-logo-img" 
-                   style="max-height: 50px; width: auto;">
-            </a>
-          </div>
-          <!-- YouTube -->
-         
-          <!-- Twitter -->
-          <div class="single-brand text-center mb-2">
-            <a href="#">
-              <img src="img/logo/twitter.jpg" 
-                   alt="Twitter Logo" 
-                   class="img-fluid brand-logo-img" 
-                   style="max-height: 50px; width: auto;">
-            </a>
-          </div>
+        <div class="fun-factor-area pt-95 pb-90" style="background-color: aliceblue;">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <!--Single Funfactor Area Start-->
+                    <div class="col fun-factor-wrap">
+                        <h2><span class="counter">969</span> </h2>
+                        <span>Solved Cases</span>
+                    </div>
+                    <!--Single Funfactor Area End-->
+                    <!--Single Funfactor Area Start-->
+                    <div class="col fun-factor-wrap">
+                        <h2><span class="counter">98</span> %</h2>
+                        <span>Winning Case</span>
+                    </div>
+                    <!--Single Funfactor Area End-->
+                    <!--Single Funfactor Area Start-->
+                    <div class="col fun-factor-wrap">
+                        <h2><span class="counter">327</span></h2>
+                        <span>Happy Clients</span>
+                    </div>
+                    <!--Single Funfactor Area End-->
+                    <!--Single Funfactor Area Start-->
+                    <div class="col fun-factor-wrap">
+                        <h2><span class="counter">120</span></h2>
+                        <span>Awards Win</span>
+                    </div>
+                    <!--Single Funfactor Area End-->
+                    <!--Single Funfactor Area Start-->
+                    <div class="col fun-factor-wrap">
+                        <h2><span class="counter">789</span></h2>
+                        <span>Cup Coffee</span>
+                    </div>
+                    <!--Single Funfactor Area End-->
+                </div>
+            </div>
         </div>
+        <!-- Blog Area End-->
+        <!--Brand Area Start-->
+        <div class="brand-area py-5" style="background-color: aliceblue;">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-12">
+                        <div class="brand-active owl-carousel">
+                            <!-- Single Brand Start -->
+                            <div class="single-brand text-center">
+                                <a href="#">
+                                    <img src="img/logo/facebooklogo.png" alt="Facebook Logo">
+                                </a>
+                            </div>
 
-        <!-- Desktop Layout (carousel) - visible on laptop/desktop only -->
-        <div class="brand-active owl-carousel d-none d-md-block">
-          <!-- Single Brand Start -->
-          <div class="single-brand text-center">
-            <a href="#">
-              <img src="img/logo/facebooklogo.png" alt="Facebook Logo">
-            </a>
-          </div>
-          <div class="single-brand text-center">
-            <a href="https://www.linkedin.com/company/jurisvistalawoffices/" target="_blank">
-              <img src="img/logo/linkedInlogo.jpg" alt="LinkedIn Logo">
-            </a>
-          </div>
-          <!-- Single Brand End -->
-          <!-- Single Brand Start -->
-          <div class="single-brand text-center">
-            <a href="https://www.instagram.com/jurisvistallp?igsh=MXJzMjhxdXQ4bXhnaw%3D%3D&utm_source=qr">
-              <img src="img/logo/instalogo.jpg" class="img-fluid" alt="Instagram Logo">
-            </a>
-          </div>
-          <!-- Single Brand End -->
-          <!-- Single Brand Start -->
-          <div class="single-brand text-center">
-            <a href="#">
-              <img src="img/logo/youtubelogo.jpg" class="img-fluid" alt="YouTube Logo">
-            </a>
-          </div>
-          <!-- Single Brand End -->
-          <!-- Single Brand Start -->
-          <div class="single-brand text-center">
-            <a href="#">
-              <img src="img/logo/twitter.jpg" class="img-fluid" alt="Twitter Logo">
-            </a>
-          </div>
-          <!-- Single Brand End -->
+                            <div class="single-brand text-center">
+                                <a href="#">
+                                    <img src="img/logo/linkedInlogo.jpg" alt="linkedIn Logo">
+                                </a>
+                            </div>
+                            <!-- Single Brand End -->
+
+                            <!-- Single Brand Start -->
+                            <div class="single-brand text-center">
+                                <a href="#">
+                                    <img src="img/logo/instalogo.jpg" class="img-fluid" alt="Instagram Logo">
+                                </a>
+                            </div>
+                            <!-- Single Brand End -->
+
+                            <!-- Single Brand Start -->
+                            <div class="single-brand text-center">
+                                <a href="#">
+                                    <img src="img/logo/youtubelogo.jpg" class="img-fluid" alt="YouTube Logo">
+                                </a>
+                            </div>
+                            <!-- Single Brand End -->
+
+                            <!-- Single Brand Start -->
+                            <div class="single-brand text-center">
+                                <a href="#">
+                                    <img src="img/logo/twitter.jpg" class="img-fluid" alt="Twitter Logo">
+                                </a>
+                            </div>
+                            <!-- Single Brand End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--Brand Area End-->
+        <!--Brand Area End-->
+        <!--Footer Area Start-->
         <footer>
             <div class="footer-container">
-                <div class="footer-top-area black-bg pt-20 pb-9">
+                <!--Footer Top Area Start-->
+                <div class="footer-top-area black-bg pt-100 pb-65">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 col-lg-3">
+                                <!--Single Footer Widget Start-->
                                 <div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
-                                    <a class="footer-logo" href="index.html"><img src="img/bg/logojv4.png" style="max-height: 150px; max-width: 190px;" alt="Jurisvista LLP Logo"></a>
-                                    <p>Jurisvista LLP is a premier full-service Indian law firm specializing in corporate law, litigation, arbitration, and regulatory compliance. With offices in Delhi NCR and Mumbai, we provide innovative legal solutions backed by deep expertise and unwavering commitment to client success.</p>
+                                    <a class="footer-logo" href="index.html"><img src="img/bg/jurisvista.jpeg"
+                                            style="max-height: 80px; max-width: 80px;" alt="Jurisvista LLP Logo"></a>
+                                    <!-- CHANGE> Updated company description to be more comprehensive and professional  -->
+                                    <p>Jurisvista LLP is a premier full-service Indian law firm specializing in
+                                        corporate law, litigation, arbitration, and regulatory compliance. With offices
+                                        in Delhi NCR and Mumbai, we provide innovative legal solutions backed by deep
+                                        expertise and unwavering commitment to client success.</p>
+                                    <h4 class="newslatter-title">Legal Updates Newsletter</h4>
+                                    <form
+                                        action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
+                                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                        class="footer-subscribe-form validate" target="_blank" novalidate>
+                                        <div id="mc_embed_signup_scroll">
+                                            <div id="mc-form" class="mc-form subscribe-form">
+                                                <input id="mc-email" type="email" autocomplete="off"
+                                                    placeholder="Subscribe for legal insights" />
+                                                <button id="mc-submit"><i class="fa fa-paper-plane-o"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
+                                <!--Single Footer Widget End-->
                             </div>
+                            <!--Single Footer Widget Start-->
                             <div class="col-md-6 col-lg-3 footer-menu">
                                 <div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+                                    <!-- CHANGE> Updated menu title and links to be more law firm specific  -->
                                     <h3 class="footer-title">Our Services</h3>
                                     <ul>
                                         <li><a href="about.html">About Jurisvista</a></li>
                                         <li><a href="service.html">Legal Practice Areas</a></li>
-                                        <li><a href="contact.html">Schedule Consultation</a></li>
-                                        <li><a href="contact.html">Client Resources</a></li>
-                                        <li><a href="about.html">Legal Insights</a></li>
-                                        <li><a href="careers.html">Career Opportunities</a></li>
+                                        <li><a href="appointment.html">Schedule Consultation</a></li>
+                                        <li><a href="#">Client Resources</a></li>
+                                        <li><a href="#">Legal Insights</a></li>
+                                        <li><a href="#">Career Opportunities</a></li>
                                     </ul>
                                 </div>
                             </div>
+                            <!--Single Footer Widget End-->
+                            <!--Single Footer Widget Start-->
                             <div class="col-md-6 col-lg-3">
                                 <div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
-                                    <h3 class="footer-title">Contact Info</h3>
+                                    <!-- CHANGE> Updated to showcase recent legal achievements instead of generic tweets  -->
+                                    <h3 class="footer-title">Recent Achievements</h3>
+                                    <ul class="footer-tweet">
+                                        <li>
+                                            <p><strong>Corporate Governance in India: </strong>Between Regulation and
+                                                Reality</p>
+                                            <span class=""><a href="#">2 days ago</a></span>
+                                        </li>
+                                        <li>
+                                            <p><strong>Enforcement of International Arbitral Awards: </strong>Challenges
+                                                for Indian Courts</p>
+                                            <span class="time"><a href="#">1 week ago</a></span>
+                                        </li>
+                                        <li>
+                                            <p><strong>Labour and Employment Law: </strong>Striking a Balance between
+                                                Employers and Workers</p>
+                                            <span class="time"><a href="#">2 weeks ago</a></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--Single Footer Widget End-->
+                            <!--Single Footer Widget Start-->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="single-footer-widget mb-30 animate-on-scroll stagger-animation">
+                                    <!-- CHANGE> Enhanced contact information with more professional presentation  -->
+                                    <h3 class="footer-title">Get In Touch</h3>
+                                    <div class="contact-details">
+                                        <p><strong>Delhi NCR Office:</strong><br>
+                                            Sector 62, Noida, Uttar Pradesh</p>
+                                        <p><strong>Mumbai Office:</strong><br>
+                                            Bandra Kurla Complex, Mumbai</p>
+                                    </div>
                                     <p class="contact-info">
                                         <strong>Phone:</strong><br>
-                                        <a href="tel:+911204961761">+0120 4961761</a>
-                                        <a href="tel:+919717211123">+91-9717211123</a>
+                                        <a href="tel:+919717211123">+91-9717211123</a><br>
+                                        <a href="tel:+911204338560">+91-0120-4338560</a>
                                     </p>
                                     <p class="contact-info">
                                         <strong>Email & Web:</strong><br>
-                                        <a href="mailto:info@jurisvista.in">info@jurisvista.in</a>
-                                        <a href="https://www.jurisvista.in" target="_blank">www.jurisvista.in</a>
+                                        <a href="mailto:info@jurisvista.com">info@jurisvista.com</a><br>
+                                        <a href="https://www.jurisvista.com" target="_blank">www.jurisvista.com</a>
                                     </p>
                                     <div class="business-hours" style="margin-top: 15px;">
                                         <p><strong>Business Hours:</strong><br>
@@ -1156,26 +1016,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="single-footer-widget animate-on-scroll stagger-animation">
-                                    <h3 class="footer-title">Get In Touch</h3>
-                                    <div class="contact-details">
-                                        <p><strong>Delhi NCR Office:</strong><br>
-                                            Off: 1134, Tower-A, i-thum,<br>
-                                            Plot No. A-40, Sector-62,<br>
-                                            Noida-201301, (Delhi- NCR), India</p>
-                                        <p><strong>Mumbai Office:</strong><br>
-                                            32, Raja Bahadur Mansion,<br>
-                                            Off. No. 3, First Floor, Ambalal Doshi Marg,<br>
-                                            Fort, Mumbai - 400023</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <!--Single Footer Widget End-->
                         </div>
                     </div>
                 </div>
+                <!--Footer Top Area End-->
+                <!--Footer Bottom Area Start-->
                 <div class="footer-bottom-area pt-20 pb-20">
                     <div class="container text-center">
+                        <!-- CHANGE> Updated copyright text to be more comprehensive and professional  -->
                         <p class="animate-on-scroll">
                             <span>&copy;</span> 2024 Jurisvista LLP. All rights reserved. |
                             <a href="#" style="margin: 0 10px;">Privacy Policy</a> |
@@ -1184,266 +1033,231 @@
                         </p>
                     </div>
                 </div>
+                <!--Footer Bottom Area End-->
             </div>
         </footer>
+        <!--Footer Area End-->
     </div>
 
+    <!--All Js Here-->
+
+    <!--Jquery 1.12.4-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--Waypoints-->
     <script src="js/waypoints.min.js"></script>
+    <!--Counterup-->
     <script src="js/jquery.counterup.min.js"></script>
+    <!--Carousel-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!--Meanmenu-->
     <script src="js/jquery.meanmenu.min.js"></script>
+    <!--Instafeed-->
     <script src="js/instafeed.min.js"></script>
+    <!--Datepicker-->
     <script src="js/jquery.datepicker.min.js"></script>
+    <!--Calendar-->
     <script src="js/zabuto-calendar.min.js"></script>
+    <!--ScrollUp-->
     <script src="js/jquery.scrollUp.min.js"></script>
+    <!--Wow-->
     <script src="js/wow.min.js"></script>
+    <!--Venobox-->
     <script src="js/venobox.min.js"></script>
+    <!--Popper-->
     <script src="js/popper.min.js"></script>
+    <!--Bootstrap-->
     <script src="js/bootstrap.min.js"></script>
+    <!--Plugins-->
     <script src="js/plugins.js"></script>
+    <!--Main Js-->
     <script src="js/main.js"></script>
-    
-    <!-- Sidebar Toggle Script -->
+    <!-- Added the working carousel initialization from about.html -->
     <script>
         $(document).ready(function () {
-            const sidebar = document.getElementById('sidebar');
-            const sidebarToggle = document.getElementById('sidebarToggle');
-            const sidebarOverlay = document.getElementById('sidebarOverlay');
+            // Hide page loader after 2 seconds
+            setTimeout(function () {
+                $('.page-loader').fadeOut(500);
+            }, 500);
 
-            // Open sidebar
-            sidebarToggle.addEventListener('click', function () {
-                sidebar.classList.toggle('active');
-                sidebarToggle.classList.toggle('active');
-                sidebarOverlay.classList.toggle('active');
-                document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : 'auto';
-            });
-
-            // Close sidebar when overlay is clicked
-            sidebarOverlay.addEventListener('click', function () {
-                sidebar.classList.remove('active');
-                sidebarToggle.classList.remove('active');
-                sidebarOverlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
-
-            // Close sidebar when a link is clicked
-            document.querySelectorAll('.sidebar-nav a').forEach(link => {
-                link.addEventListener('click', function () {
-                    sidebar.classList.remove('active');
-                    sidebarToggle.classList.remove('active');
-                    sidebarOverlay.classList.remove('active');
-                    document.body.style.overflow = 'auto';
+            // Initialize brand carousel
+            if ($('.brand-active').length) {
+                $('.brand-active').owlCarousel({
+                    items: 2,
+                    loop: true,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    dots: false,
+                    nav: false,
+                    responsive: {
+                        0: { items: 2 },
+                        768: { items: 4 },
+                        992: { items: 6 }
+                    }
                 });
-            });
-        });
-    </script>
-    
-    <script>
-    $(document).ready(function () {
-        setTimeout(function () {
-            $('.page-loader').fadeOut(500);
-        }, 500);
-
-        if ($('.brand-active').length) {
-            $('.brand-active').owlCarousel({
-                items: 2,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                dots: false,
-                nav: false,
-                responsive: {
-                    0: { items: 2 },
-                    768: { items: 4 },
-                    992: { items: 6 }
-                }
-            });
-        }
-
-        // Newsletter Slideshow Functionality
-        let currentSlide = 0;
-        let slides = $('.slide');
-        let totalSlides = slides.length;
-        let slideInterval;
-
-        function showSlide(index) {
-            slides.removeClass('active');
-            slides.eq(index).addClass('active');
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        function startSlideshow() {
-            if (slideInterval) {
-                clearInterval(slideInterval);
-            }
-            slideInterval = setInterval(nextSlide, 3000);
-        }
-
-        // Start initial slideshow
-        startSlideshow();
-
-        let currentEventType = 'all';
-        let currentFromDate = null;
-        let currentToDate = null;
-
-
-		// Fallback content used when server is down or returns no data
-		const FALLBACK_EVENTS = [
-			{
-				subject: 'Jurisvista Weekly Update',
-				eventType: 'News',
-				desc: 'Key highlights from our litigation and corporate advisory practice this week.'
-			},
-			{
-				subject: 'Upcoming Webinar: Arbitration 101',
-				eventType: 'Webinar',
-				desc: 'A practical guide to arbitration in India: drafting, strategy and enforcement.'
-			},
-			{
-				subject: 'Client Advisory: Companies Act Changes',
-				eventType: 'Article',
-				desc: 'Recent MCA updates impacting board processes and compliance timelines.'
-			},
-			{
-				subject: 'Event Recap: Insolvency Reforms Panel',
-				eventType: 'Event',
-				desc: 'Key takeaways from our panel discussion on IBC efficiencies and timelines.'
-			},
-			{
-				subject: 'Practice Note: Contract Risk Mitigation',
-				eventType: 'Blog',
-				desc: 'Five actionable clauses to reduce disputes in high-value commercial contracts.'
-			}
-		];
-
-		function renderFallbackSlides() {
-			// Filter by current type if not 'all'
-			let list = [...FALLBACK_EVENTS];
-			if (currentEventType && currentEventType !== 'all') {
-				const typeLc = String(currentEventType).toLowerCase();
-				list = list.filter(e => String(e.eventType).toLowerCase() === typeLc);
-				if (list.length === 0) list = [...FALLBACK_EVENTS];
-			}
-			// Shuffle and take a few
-			const shuffled = list.sort(() => Math.random() - 0.5).slice(0, 4);
-			renderEventsInSlideshow(shuffled);
-			$('#filterResults').text('Showing curated highlights');
-		}
-
-
-
-
-        // Initialize filter buttons
-        $('.filter-btn').on('click', function() {
-            $('.filter-btn').removeClass('active');
-            $(this).addClass('active');
-            currentEventType = $(this).data('type');
-            fetchEvents();
-        });
-
-        $('#fromDate, #toDate').on('change', function() {
-            currentFromDate = $('#fromDate').val();
-            currentToDate = $('#toDate').val();
-            fetchEvents();
-        });
-
-        function fetchEvents() {
-            $('.slideshow-container').html(`
-                <div class="slide active">
-                    <div class="slide-content text-center">
-                        <div class="spinner"></div>
-                        <h3>Loading Events...</h3>
-                        <p>Please wait while we fetch the latest events for you.</p>
-                    </div>
-                </div>
-            `);
-            
-            const params = new URLSearchParams();
-            // Always send eventType parameter, even when it's 'all'
-            params.append('eventType', currentEventType);
-            
-            if (currentFromDate) {
-                params.append('fromDate', currentFromDate + 'T00:00:00');
-            }
-            
-            if (currentToDate) {
-                params.append('toDate', currentToDate + 'T23:59:59');
             }
 
-            const apiUrl = `http://localhost:8082/events/filter?${params.toString()}`;
-            
-            console.log('Fetching from:', apiUrl);
+            // Newsletter Slideshow Functionality
+            let currentSlide = 0;
+            let slides = $('.slide');
+            let totalSlides = slides.length;
+            let slideInterval;
 
-            fetch(apiUrl, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
+            function showSlide(index) {
+                slides.removeClass('active');
+                slides.eq(index).addClass('active');
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            }
+
+            function startSlideshow() {
+                // Clear any existing interval
+                if (slideInterval) {
+                    clearInterval(slideInterval);
                 }
-            })
-            .then(response => {
-                console.log('Response status:', response.status);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('API Response:', data);
-                
-                if (data.status === 200 && data.response) {
-                    renderEventsInSlideshow(data.response);
-                    $('#filterResults').text(`Showing ${data.response.length} events`);
+                // Auto-advance slides every 3 seconds
+                slideInterval = setInterval(nextSlide, 3000);
+            }
+
+            // Start initial slideshow
+            startSlideshow();
+
+            let currentEventType = 'all';
+            let currentFromDate = null;
+            let currentToDate = null;
+
+            // Initialize filter buttons
+            $('.filter-btn').on('click', function () {
+                $('.filter-btn').removeClass('active');
+                $(this).addClass('active');
+                const filterType = $(this).data('type');
+
+                if (filterType === 'all') {
+                    currentEventType = 'all';
                 } else {
-                    renderFallbackSlides();
+                    currentEventType = filterType;
                 }
-            })
-            .catch(error => {
-                renderFallbackSlides();
-                console.error('Error fetching events:', error);
-            });
-        }
 
-        function renderEventsInSlideshow(events) {
-            if (!events || events.length === 0) {
+                // Auto-fetch when filter changes
+                fetchEvents();
+            });
+
+            $('#fromDate, #toDate').on('change', function () {
+                currentFromDate = $('#fromDate').val();
+                currentToDate = $('#toDate').val();
+                fetchEvents();
+            });
+
+            function fetchEvents() {
+                // Show loading state in slideshow
                 $('.slideshow-container').html(`
                     <div class="slide active">
                         <div class="slide-content text-center">
-                            <h3>No Events Found</h3>
-                            <p>No events found matching your criteria. Please try different filters.</p>
+                            <div class="spinner"></div>
+                            <h3>Loading Events...</h3>
+                            <p>Please wait while we fetch the latest events for you.</p>
                         </div>
                     </div>
                 `);
-                return;
+
+                // Build query parameters to match your Spring Boot backend
+                const params = new URLSearchParams();
+                if (currentEventType !== 'all') {
+                    params.append('eventType', currentEventType);
+                }
+
+                if (currentFromDate) {
+                    params.append('fromDate', currentFromDate + 'T00:00:00');
+                }
+
+                if (currentToDate) {
+                    params.append('toDate', currentToDate + 'T23:59:59');
+                }
+
+                const apiUrl = `https://jurisvista.in/jurivistaservices/api/events/filter?${params.toString()}`;
+
+                console.log('Fetching from:', apiUrl);
+
+                // Make API call to your Spring Boot backend
+                fetch(apiUrl, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        console.log('Response status:', response.status);
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('API Response:', data);
+
+                        // NEW RESPONSE STRUCTURE: data.data array with statusCode
+                        if (data.statusCode === 200 && data.data && data.data.length > 0) {
+                            renderEventsInSlideshow(data.data);
+                            $('#filterResults').text(`Showing ${data.data.length} events`);
+                        } else {
+                            throw new Error(data.message || 'No events found');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching events:', error);
+                        $('.slideshow-container').html(`
+                        <div class="slide active">
+                            <div class="slide-content text-center">
+                                <h3>Error Loading Events</h3>
+                                <p>Error: ${error.message}</p>
+                                <button onclick="location.reload()" class="btn btn-light mt-3">Retry</button>
+                            </div>
+                        </div>
+                    `);
+                        $('#filterResults').text('Failed to load events');
+                    });
             }
 
-            const slidesHtml = events.map((event, index) => `
-                <div class="slide ${index === 0 ? 'active' : ''}">
-                    <div class="slide-content text-center">
-                        <h3>${event.subject || 'Untitled Event'}</h3>
-                        <h4>${event.eventType || 'Event'}</h4>
-                        <p>${event.desc || 'No description available for this event.'}</p>
-                        ${event.eventDate ? `<small>Date: ${new Date(event.eventDate).toLocaleDateString()}</small>` : ''}
+            function renderEventsInSlideshow(events) {
+                if (!events || events.length === 0) {
+                    $('.slideshow-container').html(`
+                        <div class="slide active">
+                            <div class="slide-content text-center">
+                                <h3>No Events Found</h3>
+                                <p>No events found matching your criteria. Please try different filters.</p>
+                            </div>
+                        </div>
+                    `);
+                    return;
+                }
+
+                // Create slides from API events
+                const slidesHtml = events.map((event, index) => `
+                    <div class="slide ${index === 0 ? 'active' : ''}">
+                        <div class="slide-content text-center">
+                            <span style="display:inline-block; background:#2c5aa0; color:white; padding:5px 15px; border-radius:20px; font-size:0.8rem; margin-bottom:15px;">${(event.eventType || 'Event').toUpperCase()}</span>
+                            <h3>${event.subject || 'Untitled Event'}</h3>
+                            <p>${(event.desc || 'No description available for this event.').substring(0, 300)}${event.desc && event.desc.length > 300 ? '...' : ''}</p>
+                        </div>
                     </div>
-                </div>
-            `).join('');
+                `).join('');
 
-            $('.slideshow-container').html(slidesHtml);
-            
-            slides = $('.slide');
-            totalSlides = slides.length;
-            currentSlide = 0;
-            startSlideshow();
-        }
+                $('.slideshow-container').html(slidesHtml);
 
-        // Initial fetch
-        fetchEvents();
-    });
-</script>
+                // Update slides reference and restart slideshow
+                slides = $('.slide');
+                totalSlides = slides.length;
+                currentSlide = 0;
+                startSlideshow();
+            }
+
+            // Initial fetch
+            fetchEvents();
+        });
+    </script>
 </body>
+
 </html>
