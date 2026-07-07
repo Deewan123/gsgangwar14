@@ -1037,6 +1037,29 @@
             </div>
         </footer>
         <!--Footer Area End-->
+
+        <!-- Event Detail Modal -->
+        <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="eventModalLabel">Event Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 id="modalEventSubject"></h4>
+                        <span class="badge badge-primary" id="modalEventType"></span>
+                        <p id="modalEventDesc" style="white-space: pre-wrap;"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!--All Js Here-->
@@ -1073,6 +1096,9 @@
     <script src="js/main.js"></script>
     <!-- Added the working carousel initialization from about.html -->
     <script>
+        // Global array to store current events for modal access
+        let currentEvents = [];
+
         $(document).ready(function () {
             // Hide page loader after 2 seconds
             setTimeout(function () {
@@ -1123,6 +1149,30 @@
 
             // Start initial slideshow
             startSlideshow();
+
+            // Pause slideshow on hover
+            $('.slideshow-container').hover(
+                function() {
+                    clearInterval(slideInterval);
+                },
+                function() {
+                    if (slides.length > 0) {
+                        startSlideshow();
+                    }
+                }
+            );
+
+            // Modal click handler
+            $(document).on('click', '.read-more-btn', function() {
+                const index = $(this).data('event-index');
+                const event = currentEvents[index];
+                if (event) {
+                    $('#modalEventSubject').text(event.subject || 'Untitled Event');
+                    $('#modalEventType').text(event.eventType || 'Event');
+                    $('#modalEventDesc').text(event.desc || 'No description available.');
+                    $('#eventModal').modal('show');
+                }
+            });
 
             let currentEventType = 'all';
             let currentFromDate = null;
@@ -1222,6 +1272,9 @@
             }
 
             function renderEventsInSlideshow(events) {
+                // Store events globally for modal access
+                currentEvents = events;
+
                 if (!events || events.length === 0) {
                     $('.slideshow-container').html(`
                         <div class="slide active">
@@ -1234,13 +1287,14 @@
                     return;
                 }
 
-                // Create slides from API events
+                // Create slides from API events, adding Read More button
                 const slidesHtml = events.map((event, index) => `
                     <div class="slide ${index === 0 ? 'active' : ''}">
                         <div class="slide-content text-center">
                             <span style="display:inline-block; background:#2c5aa0; color:white; padding:5px 15px; border-radius:20px; font-size:0.8rem; margin-bottom:15px;">${(event.eventType || 'Event').toUpperCase()}</span>
                             <h3>${event.subject || 'Untitled Event'}</h3>
                             <p>${(event.desc || 'No description available for this event.').substring(0, 300)}${event.desc && event.desc.length > 300 ? '...' : ''}</p>
+                            <button class="btn btn-sm btn-outline-primary read-more-btn mt-3" data-event-index="${index}">Read More</button>
                         </div>
                     </div>
                 `).join('');
